@@ -1,0 +1,16 @@
+services:
+  postgres:
+    image: 'postgres:latest'
+    container_name: CrediYa_db
+    restart: unless-stopped
+    environment:
+      - 'POSTGRES_DB=APIBase'
+      - 'POSTGRES_PASSWORD=API.platzi'
+      - 'POSTGRES_USER=APIPlat'
+    ports:
+      - '5432:5432'
+    volumes:
+      - pgdata:/data/postgres
+
+volumes:
+  pgdata:
