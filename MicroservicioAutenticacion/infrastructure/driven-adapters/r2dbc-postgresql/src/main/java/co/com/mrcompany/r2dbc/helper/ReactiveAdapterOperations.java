@@ -29,7 +29,7 @@ public abstract class ReactiveAdapterOperations<E, D, I, R extends ReactiveCrudR
         return mapper.map(entity, dataClass);
     }
 
-    protected E toEntity(D data) {
+    protected boolean toEntity(D data) {
         return data != null ? toEntityFn.apply(data) : null;
     }
 

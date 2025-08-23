@@ -12,10 +12,10 @@ import static org.mockito.Mockito.when;
 class PostgreSQLConnectionPoolTest {
 
     @InjectMocks
-    private PostgreSQLConnectionPool connectionPool;
+    private MySQLConnectionPool connectionPool;
 
     @Mock
-    private PostgresqlConnectionProperties properties;
+    private MySqlConnectionProperties properties;
 
 
     @BeforeEach

@@ -1,17 +1,20 @@
-package co.com.mrcompany.model.user;
+package co.com.mrcompany.r2dbc.Entities;
 
-import lombok.*;
+import lombok.Data;
+import lombok.RequiredArgsConstructor;
+import co.com.mrcompany.model.user.User;
 
 import java.math.BigInteger;
 import java.util.Date;
 import java.util.UUID;
 
-@Getter
-@Setter
-@NoArgsConstructor
-@AllArgsConstructor
-@Builder(toBuilder = true)
-public class User {
+import org.springframework.data.annotation.Id;
+import org.springframework.data.relational.core.mapping.Table;
+
+@Data
+@Table("User")
+public class UserEntity {
+    @Id
     private UUID id;
     private String name;
     private String lastName;

@@ -1,18 +1,11 @@
-package co.com.mrcompany.model.user;
-
-import lombok.*;
+package co.com.mrcompany.api.Dto.Response;
 
 import java.math.BigInteger;
 import java.util.Date;
 import java.util.UUID;
 
-@Getter
-@Setter
-@NoArgsConstructor
-@AllArgsConstructor
-@Builder(toBuilder = true)
-public class User {
-    private UUID id;
+public class UserResponseDto {
+    private String id;
     private String name;
     private String lastName;
     private String email;

@@ -1,16 +1,17 @@
 services:
-  postgres:
-    image: 'postgres:latest'
+  mariadb:
+    image: 'mariadb:latest'
     container_name: CrediYa_db
     restart: unless-stopped
     environment:
-      - 'POSTGRES_DB=APIBase'
-      - 'POSTGRES_PASSWORD=API.platzi'
-      - 'POSTGRES_USER=APIPlat'
+      MYSQL_ROOT_PASSWORD: "zaA41\"Vv8%q96@Y>"
+      MYSQL_DATABASE: "auth"
+      MYSQL_USER: "CrediUserdata"
+      MYSQL_PASSWORD: "za.8%q96@Y>"
     ports:
-      - '5432:5432'
+      - "3306:3306" # Map host port 3306 to container port 3306
     volumes:
-      - pgdata:/data/postgres
-
+      - mariadb_data:/var/lib/mysql # Persist data to a Docker volume
+      - ./init-scripts:/docker-entrypoint-initdb.d # Optional: for initial SQL scripts
 volumes:
-  pgdata:
+  mariadb_data:

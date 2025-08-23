@@ -1,17 +1,10 @@
-package co.com.mrcompany.model.user;
-
-import lombok.*;
+package co.com.mrcompany.api.Dto.Request;
 
 import java.math.BigInteger;
 import java.util.Date;
 import java.util.UUID;
 
-@Getter
-@Setter
-@NoArgsConstructor
-@AllArgsConstructor
-@Builder(toBuilder = true)
-public class User {
+public class UserRequestDto {
     private UUID id;
     private String name;
     private String lastName;
