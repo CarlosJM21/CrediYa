@@ -10,9 +10,13 @@ public interface UserRepository{
 
     Mono<User> save(User user);
 
+    Mono<User> findByEmail(String email);
+
     Flux<User> findAll();
 
     Mono<User> findById(UUID id);
+
+    Mono<Boolean> existsByEmail(String email);
 
     Mono<Boolean> delete(UUID id);
 }

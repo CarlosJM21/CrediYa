@@ -18,7 +18,7 @@ public class User {
     private String email;
     private String DNI;
     private String cellphone;
-    private Date BithDate;
+    private Date BirthDate;
     private String Address;
     private Integer id_rol;
     private BigInteger BaseSalary;
