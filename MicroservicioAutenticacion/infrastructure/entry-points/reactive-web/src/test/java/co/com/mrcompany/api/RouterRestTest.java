@@ -8,12 +8,16 @@ import org.springframework.http.MediaType;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.web.reactive.server.WebTestClient;
 
-@ContextConfiguration(classes = {UserRouterRest.class, Handler.class})
+@ContextConfiguration(classes = {UserRouterRest.class, UserHandler.class})
 @WebFluxTest
 class RouterRestTest {
 
     @Autowired
-    private WebTestClient webTestClient;
+    private final WebTestClient webTestClient;
+
+    RouterRestTest(WebTestClient webTestClient) {
+        this.webTestClient = webTestClient;
+    }
 
     @Test
     void testListenGETUseCase() {
@@ -23,9 +27,7 @@ class RouterRestTest {
                 .exchange()
                 .expectStatus().isOk()
                 .expectBody(String.class)
-                .value(userResponse -> {
-                            Assertions.assertThat(userResponse).isEmpty();
-                        }
+                .value(userResponse -> Assertions.assertThat(userResponse).isEmpty()
                 );
     }
 
@@ -37,9 +39,7 @@ class RouterRestTest {
                 .exchange()
                 .expectStatus().isOk()
                 .expectBody(String.class)
-                .value(userResponse -> {
-                            Assertions.assertThat(userResponse).isEmpty();
-                        }
+                .value(userResponse -> Assertions.assertThat(userResponse).isEmpty()
                 );
     }
 
@@ -52,9 +52,7 @@ class RouterRestTest {
                 .exchange()
                 .expectStatus().isOk()
                 .expectBody(String.class)
-                .value(userResponse -> {
-                            Assertions.assertThat(userResponse).isEmpty();
-                        }
+                .value(userResponse -> Assertions.assertThat(userResponse).isEmpty()
                 );
     }
 }

@@ -4,6 +4,7 @@ import org.reactivecommons.utils.ObjectMapper;
 import org.springframework.data.domain.Example;
 import org.springframework.data.repository.query.ReactiveQueryByExampleExecutor;
 import org.springframework.data.repository.reactive.ReactiveCrudRepository;
+import org.springframework.transaction.reactive.TransactionalOperator;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
@@ -15,11 +16,13 @@ public abstract class ReactiveAdapterOperations<E, D, I, R extends ReactiveCrudR
     protected ObjectMapper mapper;
     private final Class<D> dataClass;
     private final Function<D, E> toEntityFn;
+    //private final TransactionalOperator transactionalOperator;
 
     @SuppressWarnings("unchecked")
-    protected ReactiveAdapterOperations(R repository, ObjectMapper mapper, Function<D, E> toEntityFn) {
+    protected ReactiveAdapterOperations(R repository, ObjectMapper mapper, Function<D, E> toEntityFn) { // , TransactionalOperator transactionalOperator
         this.repository = repository;
         this.mapper = mapper;
+        //this.transactionalOperator = transactionalOperator;
         ParameterizedType genericSuperclass = (ParameterizedType) this.getClass().getGenericSuperclass();
         this.dataClass = (Class<D>) genericSuperclass.getActualTypeArguments()[1];
         this.toEntityFn = toEntityFn;
@@ -29,13 +32,13 @@ public abstract class ReactiveAdapterOperations<E, D, I, R extends ReactiveCrudR
         return mapper.map(entity, dataClass);
     }
 
-    protected boolean toEntity(D data) {
+    protected E toEntity(D data) {
         return data != null ? toEntityFn.apply(data) : null;
     }
 
     public Mono<E> save(E entity) {
         return saveData(toData(entity))
-                .map(this::toEntity);
+                .map(this::toEntity); //.as(transactionalOperator::transactional);
     }
 
     protected Flux<E> saveAllEntities(Flux<E> entities) {
@@ -61,7 +64,6 @@ public abstract class ReactiveAdapterOperations<E, D, I, R extends ReactiveCrudR
     }
 
     public Flux<E> findAll() {
-        return repository.findAll()
-                .map(this::toEntity);
+        return repository.findAll().map(this::toEntity);
     }
 }

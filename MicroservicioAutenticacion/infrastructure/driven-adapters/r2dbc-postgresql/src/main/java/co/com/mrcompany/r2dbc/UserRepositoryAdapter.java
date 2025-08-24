@@ -7,12 +7,14 @@ import co.com.mrcompany.r2dbc.helper.ReactiveAdapterOperations;
 import org.reactivecommons.utils.ObjectMapper;
 import org.springframework.jmx.export.notification.ModelMBeanNotificationPublisher;
 import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Transactional;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
 import java.util.UUID;
 
 @Repository
+@Transactional
 public class UserRepositoryAdapter extends ReactiveAdapterOperations<
     User, UserEntity,UUID, UserR2Repository> implements UserRepository
 {

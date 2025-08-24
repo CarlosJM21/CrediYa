@@ -7,6 +7,7 @@ import org.reactivecommons.utils.ObjectMapper;
 import org.springframework.data.domain.Example;
 import org.springframework.data.repository.reactive.ReactiveCrudRepository;
 import org.springframework.data.repository.query.ReactiveQueryByExampleExecutor;
+import org.springframework.transaction.reactive.TransactionalOperator;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 import reactor.test.StepVerifier;
@@ -20,7 +21,9 @@ class ReactiveAdapterOperationsTest {
 
     private DummyRepository repository;
     private ObjectMapper mapper;
+    private TransactionalOperator transactionalOperator;
     private ReactiveAdapterOperations<DummyEntity, DummyData, String, DummyRepository> operations;
+
 
     @BeforeEach
     void setUp() {

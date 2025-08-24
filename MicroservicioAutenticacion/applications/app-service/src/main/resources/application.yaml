@@ -1,8 +1,13 @@
 server:
   port: 8080
+  data:
+    r2dbc:
+      repositories:
+        enabled: true
 spring:
   r2dbc:
-    host: "r2dbc:mariadb://localhost"
+    url: "r2dbc:mariadb//localhost:3306"
+    host: "localhost"
     port: "3306"
     database: "auth"
     username: "CrediUserdata"

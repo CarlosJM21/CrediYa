@@ -1,5 +1,7 @@
 package co.com.mrcompany.r2dbc;
 
+import co.com.mrcompany.model.user.User;
+import co.com.mrcompany.r2dbc.Entities.UserEntity;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
@@ -11,6 +13,14 @@ import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 import reactor.test.StepVerifier;
 
+import java.math.BigInteger;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.time.LocalDate;
+import java.util.Date;
+import java.util.Locale;
+import java.util.UUID;
+
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.when;
 
@@ -19,21 +29,22 @@ class MyReactiveRepositoryAdapterTest {
     // TODO: change four you own tests
 
     @InjectMocks
-    MyReactiveRepositoryAdapter repositoryAdapter;
+    UserRepositoryAdapter repositoryAdapter;
 
     @Mock
-    MyReactiveRepository repository;
+    UserR2Repository repository;
 
     @Mock
     ObjectMapper mapper;
 
     @Test
     void mustFindValueById() {
+        UserEntity output1 = new UserEntity();
 
-        when(repository.findById("1")).thenReturn(Mono.just("test"));
+        when(repository.findById(UUID.nameUUIDFromBytes("1".getBytes()))).thenReturn(Mono.just(output1));
         when(mapper.map("test", Object.class)).thenReturn("test");
 
-        Mono<Object> result = repositoryAdapter.findById("1");
+        Mono<User> result = repositoryAdapter.findById(UUID.nameUUIDFromBytes("1".getBytes()));
 
         StepVerifier.create(result)
                 .expectNextMatches(value -> value.equals("test"))
@@ -42,10 +53,12 @@ class MyReactiveRepositoryAdapterTest {
 
     @Test
     void mustFindAllValues() {
-        when(repository.findAll()).thenReturn(Flux.just("test"));
+        UserEntity output1 = new UserEntity();
+
+        when(repository.findAll()).thenReturn(Flux.just(output1));
         when(mapper.map("test", Object.class)).thenReturn("test");
 
-        Flux<Object> result = repositoryAdapter.findAll();
+        Flux<User> result = repositoryAdapter.findAll();
 
         StepVerifier.create(result)
                 .expectNextMatches(value -> value.equals("test"))
@@ -57,7 +70,7 @@ class MyReactiveRepositoryAdapterTest {
         when(repository.findAll(any(Example.class))).thenReturn(Flux.just("test"));
         when(mapper.map("test", Object.class)).thenReturn("test");
 
-        Flux<Object> result = repositoryAdapter.findByExample("test");
+        Flux<User> result = repositoryAdapter.findAll();
 
         StepVerifier.create(result)
                 .expectNextMatches(value -> value.equals("test"))
@@ -65,11 +78,16 @@ class MyReactiveRepositoryAdapterTest {
     }
 
     @Test
-    void mustSaveValue() {
-        when(repository.save("test")).thenReturn(Mono.just("test"));
+    void mustSaveValue() throws ParseException {
+        SimpleDateFormat formatter = new SimpleDateFormat("dd-MM-yyyy", Locale.ENGLISH);
+        Date date = formatter.parse ("24-12-2013");
+
+        User input = new User(null,"User1","Prueba","prueba@yopmail.com","1090100100","3101001001", date,"Cll 1", 1, BigInteger.valueOf(3000000));
+        User output = new User(UUID.nameUUIDFromBytes("1264".getBytes()),"User1","Prueba","prueba@yopmail.com","1090100100","3101001001", date,"Cll 1", 1,BigInteger.valueOf(3000000) );;
+
         when(mapper.map("test", Object.class)).thenReturn("test");
 
-        Mono<Object> result = repositoryAdapter.save("test");
+        Mono<User> result = repositoryAdapter.save(input);
 
         StepVerifier.create(result)
                 .expectNextMatches(value -> value.equals("test"))
