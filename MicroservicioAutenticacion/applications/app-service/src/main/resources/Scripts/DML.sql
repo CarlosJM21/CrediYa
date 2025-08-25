@@ -1,4 +1,4 @@
-USE Auth;
+USE auth;
 
 INSERT INTO Role (id, name, description)
 Values (1,'user', 'user general'),

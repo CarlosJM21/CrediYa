@@ -1,18 +1,28 @@
 package co.com.mrcompany.api.Dto.Response;
 
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
 import java.math.BigInteger;
+import java.time.LocalDate;
 import java.util.Date;
 import java.util.UUID;
 
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
 public class UserResponseDto {
-    private String id;
-    private String name;
-    private String lastName;
-    private String email;
-    private String DNI;
-    private String cellphone;
-    private Date BithDate;
-    private String Address;
-    private Integer id_rol;
-    private BigInteger BaseSalary;
+    public UUID       id;
+    public String     name;
+    public String     lastName;
+    public String     email;
+    public String     DNI;
+    public String     cellphone;
+    public LocalDate  birthDate;
+    public String     address;
+    public Integer    id_rol;
+    public BigInteger baseSalary;
 }

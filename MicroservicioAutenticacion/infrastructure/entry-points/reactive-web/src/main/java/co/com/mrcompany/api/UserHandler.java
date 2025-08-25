@@ -6,13 +6,16 @@ import co.com.mrcompany.usecase.user.IUserUseCase;
 import io.swagger.v3.oas.annotations.Operation;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.reactive.function.server.ServerRequest;
 import org.springframework.web.reactive.function.server.ServerResponse;
 import reactor.core.publisher.Mono;
 
 import java.util.UUID;
 
+
 @Component
+@Transactional
 @RequiredArgsConstructor
 public class UserHandler {
 private  final IUserUseCase UserUC;
@@ -23,6 +26,7 @@ private final UserMapper mapper;
     public Mono<ServerResponse> New(ServerRequest serverRequest) {
 
         return serverRequest.bodyToMono( UserRequestDto.class)
+                .log( "create" )
                 .map(mapper::toDomain)
                 .flatMap(UserUC::create)
                 .map(mapper::toResponse)

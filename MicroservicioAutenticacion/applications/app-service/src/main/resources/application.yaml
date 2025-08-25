@@ -11,7 +11,7 @@ spring:
     port: "3306"
     database: "auth"
     username: "CrediUserdata"
-    password: "zaA41\"Vv8%q96@Y>"
+    password: "za.8%q96@Y>"
   application:
     name: "CrediYa.Autenticacion"
   devtools:

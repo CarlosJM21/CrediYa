@@ -23,7 +23,8 @@ public class UserUseCase  implements  IUserUseCase{
             return Mono.error(new IllegalArgumentException("Required fields are missing"));
         }
 
-        if ( validRangeSalary(user.getBaseSalary())) {
+        System.out.println(user.getBaseSalary().toString());
+        if ( user.getBaseSalary() == null || !validRangeSalary(user.getBaseSalary())) {
             return Mono.error(new IllegalArgumentException("The values of field \"BaseSalary\" must be between 0 and 1500000"));
         }
 
