@@ -17,18 +17,9 @@ public class UserUseCase  implements  IUserUseCase{
 
     @Override
     public Mono<User> create(User user) {
-        return Mono.zip( repository.existsByEmail(user.getEmail()),
-                         validRangeSalary(user.getBaseSalary()) )
-                .flatMap(h -> {
-                        if(h.getT1()){
-                            return Mono.error(new IllegalArgumentException("Email already exists"));
-                        }
-
-                        if(!h.getT2()){
-                            return Mono.error(new IllegalArgumentException("The values of field \"BaseSalary\" must be between 0 and 1500000"));
-                        }
-                        return repository.save(user);
-                    });
+        return validRangeSalary(user)
+                .flatMap(this::NotExistsUser)
+                        .flatMap(repository::save);
     }
 
     @Override
@@ -38,16 +29,21 @@ public class UserUseCase  implements  IUserUseCase{
 
     @Override
     public Mono<User> findById(UUID id) {
-      return  validUUID(id).flatMap( i ->{ return repository.findById(i);});
+      return  repository.findById(id);
+    }
+
+    @Override
+    public Mono<User> findByEmail(String email) {
+        return repository.findByEmail(email);
     }
 
     @Override
     public Mono<Boolean> edit(User user) {
 
        return UserIsNull(user)
-               .flatMap(u ->repository.findById(u.getId()))
+               .flatMap(this::NotExistsUser)
                .flatMap(repository::save)
-               .map(u -> { return  u == null; });
+               .hasElement();
     }
 
     @Override
@@ -74,8 +70,24 @@ public class UserUseCase  implements  IUserUseCase{
         return Mono.just(user);
     }
 
-    private Mono<Boolean> validRangeSalary(BigInteger salary)
+    private Mono<User> validRangeSalary(User user)
     {
-        return  Mono.just(salary.compareTo( BigInteger.ZERO)  >= 0 && salary.compareTo(BigInteger.valueOf(15000000)) <= 0);
+        BigInteger salary = user.getBaseSalary();
+        if (salary.compareTo( BigInteger.ZERO)  >= 0 && salary.compareTo(BigInteger.valueOf(15000000)) <= 0)
+        {
+            return Mono.just(user);
+        }
+        return Mono.error( new IllegalArgumentException("The values of field \"BaseSalary\" must be between 0 and 1500000"));
+    }
+
+    private Mono<User> NotExistsUser(User user)
+    {
+       return repository.existsByEmail(user.getEmail())
+               .flatMap(v ->{
+                   if(v){
+                       return Mono.error(new IllegalArgumentException("Email already exists"));
+                   }
+                   return Mono.just(user);
+               });
     }
 }

@@ -5,8 +5,11 @@ import co.com.mrcompany.api.mappers.UserMapper;
 import co.com.mrcompany.usecase.user.IUserUseCase;
 import io.swagger.v3.oas.annotations.Operation;
 import lombok.RequiredArgsConstructor;
+import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.reactive.function.server.ServerRequest;
 import org.springframework.web.reactive.function.server.ServerResponse;
 import reactor.core.publisher.Mono;
@@ -34,10 +37,11 @@ private final UserMapper mapper;
 
     }
 
+    @GetMapping("/{id}")
+    @ResponseStatus(HttpStatus.OK)
     @Operation(summary = "Retreive User associated with Id.", description = "Fetch User Object associated with the Id provided.")
     public Mono<ServerResponse> User(ServerRequest serverRequest) {
-
-        UUID id = UUID.nameUUIDFromBytes(serverRequest.pathVariable( "Id").getBytes());
+        UUID id = UUID.fromString(serverRequest.pathVariable("Id")); // UUID.nameUUIDFromBytes(serverRequest.pathVariable( "Id").getBytes());
 
         return UserUC.findById(id)
                 .log("findByid")
@@ -51,7 +55,7 @@ private final UserMapper mapper;
         return UserUC.findAll()
                 .map(mapper::toResponse)
                 .collectList()
-                .flatMap( u -> ServerResponse.ok().bodyValue(u));
+                .flatMap(ServerResponse.ok()::bodyValue);
     }
 
     @Operation(summary = "Update User Information.", description = "Allow Edit user information for especified Id.")
@@ -64,7 +68,14 @@ private final UserMapper mapper;
 
     @Operation(summary = "Delete User Information.", description = "Allow Delete user for especified Id.")
     public Mono<ServerResponse> Delete(ServerRequest serverRequest) {
-        UUID id = UUID.nameUUIDFromBytes(serverRequest.pathVariable( "Id").getBytes());
-        return UserUC.delete(id).flatMap(ServerResponse.ok()::bodyValue);
+        UUID id = UUID.fromString(serverRequest.pathVariable("Id")); //UUID.nameUUIDFromBytes(serverRequest.pathVariable( "Id").getBytes());
+        return UserUC.delete(id)
+                     .flatMap(ServerResponse.ok()::bodyValue);
+    }
+
+    public Mono<ServerResponse> UserByEmail(ServerRequest serverRequest){
+        String email= serverRequest.pathVariable( "Email");
+        return UserUC.findByEmail (email)
+                     .flatMap(ServerResponse.ok()::bodyValue);
     }
 }

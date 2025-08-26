@@ -16,6 +16,8 @@ public interface IUserUseCase {
 
     Mono<User> findById(UUID id);
 
+    Mono<User> findByEmail(String email);
+
     Mono<Boolean> edit(User user);
 }
 

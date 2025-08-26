@@ -57,16 +57,24 @@ public class UserRouterRest {
         ),
         @RouterOperation( path = "/api/Users/{Id}",
                 produces = { MediaType.APPLICATION_JSON_VALUE }, method = RequestMethod.DELETE, beanClass = UserHandler.class, beanMethod = "Delete",
-                operation = @Operation( operationId = "Edit",
+                operation = @Operation( operationId = "Delete",
                 responses = { @ApiResponse( responseCode = "200", description = "Successful Operation",
                         content = @Content(schema =  @Schema( implementation = UserResponseDto.class )))},
                 parameters = { @Parameter(in = ParameterIn.PATH, name = "Id") })
         ),
+        @RouterOperation( path = "/api/Users/ByEmail/{Email}",
+                produces = { MediaType.APPLICATION_JSON_VALUE }, method = RequestMethod.GET, beanClass = UserHandler.class, beanMethod = "UserByEMail",
+                operation = @Operation( operationId = "UserByEmail",
+                        responses = { @ApiResponse( responseCode = "200", description = "Successful Operation",
+                                content = @Content(schema =  @Schema( implementation = UserResponseDto.class )))},
+                        parameters = { @Parameter(in = ParameterIn.PATH, name = "Email") })
+        )
     })
     public RouterFunction<ServerResponse> routerFunction(UserHandler handler) {
         return route(POST("/api/Users/New"), handler::New)
                 .andRoute(GET("/api/Users"), handler::Users)
                 .and(route(GET("/api/Users/{Id}"), handler::User))
+                .and(route(GET("/api/Users/ByEmail/{Email}"), handler::UserByEmail))
                 .and(route().PUT("/api/Users", handler::Edit).build())
                 .and(route().DELETE("/api/Users/{Id}", handler::Delete).build());
     }

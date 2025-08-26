@@ -64,13 +64,17 @@ class MyReactiveRepositoryAdapterTest {
 
     @Test
     void mustFindByExample() {
+        LocalDate date = LocalDate.parse ("2013-12-24");
+
+        User input = new User(null,"User1","Prueba","prueba@yopmail.com","1090100100","3101001001", date,"Cll 1", 1, BigInteger.valueOf(3000000));
+
         when(repository.findAll(any(Example.class))).thenReturn(Flux.just("test"));
         when(mapper.map("test", Object.class)).thenReturn("test");
 
         Flux<User> result = repositoryAdapter.findAll();
 
         StepVerifier.create(result)
-                .expectNextMatches(value -> value.equals("test"))
+                .expectNextMatches(value -> value.equals(input))
                 .verifyComplete();
     }
 
@@ -79,14 +83,14 @@ class MyReactiveRepositoryAdapterTest {
         LocalDate date = LocalDate.parse ("2013-12-24");
 
         User input = new User(null,"User1","Prueba","prueba@yopmail.com","1090100100","3101001001", date,"Cll 1", 1, BigInteger.valueOf(3000000));
-        User output = new User(UUID.nameUUIDFromBytes("1264".getBytes()),"User1","Prueba","prueba@yopmail.com","1090100100","3101001001", date,"Cll 1", 1,BigInteger.valueOf(3000000) );;
+        User output = new User(UUID.nameUUIDFromBytes("1264".getBytes()),"User1","Prueba","prueba@yopmail.com","1090100100","3101001001", date,"Cll 1", 1,BigInteger.valueOf(3000000) );
 
         when(mapper.map("test", Object.class)).thenReturn("test");
 
         Mono<User> result = repositoryAdapter.save(input);
 
         StepVerifier.create(result)
-                .expectNextMatches(value -> value.equals("test"))
+                .expectNextMatches(value -> value.equals(input))
                 .verifyComplete();
     }
 }
