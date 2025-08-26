@@ -1,18 +1,20 @@
 package co.com.mrcompany.r2dbc.Entities;
 
+import jakarta.persistence.GeneratedValue;
 import lombok.Data;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.relational.core.mapping.Column;
 import org.springframework.data.relational.core.mapping.Table;
 
 import java.math.BigInteger;
-import java.util.Date;
+import java.time.LocalDate;
 import java.util.UUID;
 
 @Data
 @Table("User")
 public class UserEntity {
     @Id
+    @Column("id")
     private UUID id;
     @Column("name")
     private String name;
@@ -25,8 +27,8 @@ public class UserEntity {
     @Column("cellphone")
     private String cellphone;
     @Column("birthdate")
-    private Date birthDate;
-    @Column("cellphone")
+    private LocalDate birthDate;
+    @Column("address")
     private String Address;
     @Column("id_rol")
     private Integer id_rol;

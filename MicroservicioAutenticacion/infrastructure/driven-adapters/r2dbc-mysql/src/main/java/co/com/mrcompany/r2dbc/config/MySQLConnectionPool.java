@@ -10,8 +10,14 @@ import org.mariadb.r2dbc.MariadbConnectionFactory;
 import org.mariadb.r2dbc.SslMode;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.core.convert.converter.Converter;
+import org.springframework.data.r2dbc.convert.R2dbcConverter;
+import org.springframework.data.r2dbc.convert.R2dbcCustomConversions;
+import org.springframework.data.r2dbc.dialect.MySqlDialect;
 
 import java.time.Duration;
+import java.util.ArrayList;
+import java.util.List;
 
 @Configuration
 public class MySQLConnectionPool {
@@ -45,6 +51,16 @@ public class MySQLConnectionPool {
 
         return new ConnectionPool(poolConfiguration);
     }
+
+    @Bean
+    R2dbcCustomConversions  customConversions()
+    {
+        List<Converter<?, ?>> converters = new ArrayList<>();
+        converters.add(new ReadConverterUUID());
+        converters.add(new WriterConverterUUID());
+        return R2dbcCustomConversions.of(MySqlDialect.INSTANCE, converters);
+    }
+
 
 	/*@Bean
 	public ConnectionPool getConnectionConfig(PostgresqlConnectionProperties properties) {

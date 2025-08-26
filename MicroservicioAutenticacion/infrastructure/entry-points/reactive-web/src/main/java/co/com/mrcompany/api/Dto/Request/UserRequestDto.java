@@ -33,7 +33,7 @@ public class UserRequestDto {
     public String   cellphone;
     public LocalDate birthDate;
     public String   address;
-    public Integer  id_rol;
+    public Integer  idRol;
 
     @NotNull(message = "The Field \"BaseSalay\" Not allowed null.")
     @Min(value = 1,message ="The value of \"BaseSalay\" must be Greatter than 0.")

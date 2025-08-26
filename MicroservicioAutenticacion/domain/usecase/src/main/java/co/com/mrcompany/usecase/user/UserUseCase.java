@@ -18,29 +18,18 @@ public class UserUseCase  implements  IUserUseCase{
 
     @Override
     public Mono<User> create(User user) {
+        return Mono.zip( repository.existsByEmail(user.getEmail()),
+                         validRangeSalary(user.getBaseSalary()) )
+                .flatMap(h -> {
+                        if(h.getT1()){
+                            return Mono.error(new IllegalArgumentException("Email already exists"));
+                        }
 
-        if (anyPropertyIsNull(user)) {
-            return Mono.error(new IllegalArgumentException("Required fields are missing"));
-        }
-
-        System.out.println(user.getBaseSalary().toString());
-        if ( user.getBaseSalary() == null || !validRangeSalary(user.getBaseSalary())) {
-            return Mono.error(new IllegalArgumentException("The values of field \"BaseSalary\" must be between 0 and 1500000"));
-        }
-
-        repository.findByEmail(user.getEmail()).switchIfEmpty( Mono.error(new IllegalArgumentException("Email already exists")));
-
-        return repository.save(user);
-    }
-
-    private boolean anyPropertyIsNull(User user){
-       return  Arrays.stream(user.getClass().getFields()).anyMatch(f -> f == null);
-    }
-
-
-    private boolean validRangeSalary(BigInteger salary)
-    {
-        return  salary.compareTo( BigInteger.ZERO)  >= 0 && salary.compareTo(BigInteger.valueOf(15000000)) <= 0;
+                        if(!h.getT2()){
+                            return Mono.error(new IllegalArgumentException("The values of field \"BaseSalary\" must be between 0 and 1500000"));
+                        }
+                        return repository.save(user);
+                    });
     }
 
     @Override
@@ -50,30 +39,44 @@ public class UserUseCase  implements  IUserUseCase{
 
     @Override
     public Mono<User> findById(UUID id) {
-        if(id == null && id.toString().trim().isEmpty()){
-            return Mono.error(new NullPointerException("The values of field \"Id\" don't allow null"));
-        }
-        return repository.findById(id);
+      return  validUUID(id).flatMap( i ->{ return repository.findById(i);});
     }
 
     @Override
     public Mono<Boolean> edit(User user) {
 
-        User currentUser = repository.findById(user.getId()).block( );
-
-        if(currentUser== null){
-            return Mono.just(false);
-        }
-        repository.save(user);
-
-        return Mono.just(true);
+       return UserIsNull(user)
+               .flatMap(u ->repository.findById(u.getId()))
+               .flatMap(repository::save)
+               .map(u -> { return  u == null; });
     }
 
     @Override
     public Mono<Boolean> delete(UUID id) {
+        return validUUID(id).flatMap(repository::delete);
+    }
+
+    private boolean anyPropertyIsNull(User user){
+        return  Arrays.stream(user.getClass().getFields()).anyMatch(f -> f == null);
+    }
+
+    private Mono<UUID> validUUID(UUID id){
         if(id == null && id.toString().trim().isEmpty()){
             return Mono.error(new NullPointerException("The values of field \"Id\" don't allow null"));
         }
-        return repository.delete(id);
+        return Mono.just(id);
+    }
+
+    private Mono<User> UserIsNull(User user)
+    {
+        if(user == null){
+            return Mono.error(new NullPointerException("The User to edit can't be null."));
+        }
+        return Mono.just(user);
+    }
+
+    private Mono<Boolean> validRangeSalary(BigInteger salary)
+    {
+        return  Mono.just(salary.compareTo( BigInteger.ZERO)  >= 0 && salary.compareTo(BigInteger.valueOf(15000000)) <= 0);
     }
 }

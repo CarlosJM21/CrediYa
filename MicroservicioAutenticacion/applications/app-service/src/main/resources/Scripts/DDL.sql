@@ -9,7 +9,7 @@ CREATE TABLE Role(
 );
 
 CREATE TABLE User(
-                     id         BINARY(16) PRIMARY KEY DEFAULT (UUID()),
+                     id         UUID PRIMARY    KEY DEFAULT (UUID()),
                      name 	    VARCHAR(100) 	Not Null,
                      lastname 	VARCHAR(100) 	Not Null,
                      birthdate 	Date 		    Not Null,

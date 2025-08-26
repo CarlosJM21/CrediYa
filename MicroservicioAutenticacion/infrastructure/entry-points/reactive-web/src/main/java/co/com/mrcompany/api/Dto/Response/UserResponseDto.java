@@ -23,6 +23,6 @@ public class UserResponseDto {
     public String     cellphone;
     public LocalDate  birthDate;
     public String     address;
-    public Integer    id_rol;
+    public Integer    idRol;
     public BigInteger baseSalary;
 }

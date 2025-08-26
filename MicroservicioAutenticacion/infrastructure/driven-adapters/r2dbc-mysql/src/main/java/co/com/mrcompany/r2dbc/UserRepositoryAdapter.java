@@ -22,13 +22,12 @@ public class UserRepositoryAdapter extends ReactiveAdapterOperations<
 
     @Override
     public Mono<User> findByEmail(String email) {
-        return repository.findAll().collectList()
-                .flatMap(l-> Mono.just(mapper.map(l.stream().anyMatch(u -> u.getEmail().equals(email)), User.class)));
+        return repository.findByEmail(email);
     }
 
     @Override
     public Mono<Boolean> existsByEmail(String email) {
-        return repository.findAll().collectList().map(l -> l.stream().anyMatch(u -> u.getEmail().equals(email))) ;
+        return repository.existsByEmail(email);
     }
 
     @Override

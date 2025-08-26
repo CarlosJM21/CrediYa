@@ -40,6 +40,7 @@ private final UserMapper mapper;
         UUID id = UUID.nameUUIDFromBytes(serverRequest.pathVariable( "Id").getBytes());
 
         return UserUC.findById(id)
+                .log("findByid")
                 .map(mapper::toResponse)
                 .flatMap(ServerResponse.ok()::bodyValue);
     }

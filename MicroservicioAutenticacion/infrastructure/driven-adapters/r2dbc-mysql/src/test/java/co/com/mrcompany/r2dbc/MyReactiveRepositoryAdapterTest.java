@@ -79,8 +79,7 @@ class MyReactiveRepositoryAdapterTest {
 
     @Test
     void mustSaveValue() throws ParseException {
-        SimpleDateFormat formatter = new SimpleDateFormat("dd-MM-yyyy", Locale.ENGLISH);
-        Date date = formatter.parse ("24-12-2013");
+        LocalDate date = LocalDate.parse ("2013-12-24");
 
         User input = new User(null,"User1","Prueba","prueba@yopmail.com","1090100100","3101001001", date,"Cll 1", 1, BigInteger.valueOf(3000000));
         User output = new User(UUID.nameUUIDFromBytes("1264".getBytes()),"User1","Prueba","prueba@yopmail.com","1090100100","3101001001", date,"Cll 1", 1,BigInteger.valueOf(3000000) );;
