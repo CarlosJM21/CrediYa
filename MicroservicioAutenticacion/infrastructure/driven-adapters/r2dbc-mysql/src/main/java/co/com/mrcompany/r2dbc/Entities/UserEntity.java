@@ -1,6 +1,5 @@
 package co.com.mrcompany.r2dbc.Entities;
 
-import jakarta.persistence.GeneratedValue;
 import lombok.Data;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.relational.core.mapping.Column;
