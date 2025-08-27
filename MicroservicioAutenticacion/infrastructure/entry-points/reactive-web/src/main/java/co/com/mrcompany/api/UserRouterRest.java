@@ -27,13 +27,13 @@ public class UserRouterRest {
 
     @Bean
     @RouterOperations({
-        @RouterOperation( path = "/api/Users/",
+        @RouterOperation( path = "/api/Users",
             produces = { MediaType.APPLICATION_JSON_VALUE }, method = RequestMethod.GET, beanClass = UserHandler.class, beanMethod = "Users",
             operation = @Operation( operationId = "Users",
             responses = { @ApiResponse(responseCode = "200", description = "Get All Users Successfully.",
                             content = @Content(schema = @Schema(implementation = UserRequestDto.class))) })
         ),
-        @RouterOperation( path = "/api/User/{Id}",
+        @RouterOperation( path = "/api/Users/{Id}",
             produces = { MediaType.APPLICATION_JSON_VALUE }, method = RequestMethod.GET, beanClass = UserHandler.class, beanMethod = "User",
             operation = @Operation( operationId = "User",
             responses = { @ApiResponse(responseCode = "200", description = "Get User Successfully.",
@@ -48,7 +48,7 @@ public class UserRouterRest {
                                 content = @Content(schema = @Schema( implementation = UserResponseDto.class )))},
                 requestBody = @RequestBody( content = @Content(schema = @Schema(implementation = UserRequestDto.class ))))
         ),
-        @RouterOperation( path = "/api/Users/",
+        @RouterOperation( path = "/api/Users",
                 produces = { MediaType.APPLICATION_JSON_VALUE }, method = RequestMethod.PUT, beanClass = UserHandler.class, beanMethod = "Edit",
                 operation = @Operation( operationId = "Edit",
                 responses = { @ApiResponse( responseCode = "200", description = "Successful Operation",

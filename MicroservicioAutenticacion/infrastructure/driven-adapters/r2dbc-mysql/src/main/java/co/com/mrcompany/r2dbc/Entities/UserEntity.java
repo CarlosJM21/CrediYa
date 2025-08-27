@@ -1,12 +1,15 @@
 package co.com.mrcompany.r2dbc.Entities;
 
+import jakarta.persistence.JoinColumn;
 import lombok.Data;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.relational.core.mapping.Column;
+import org.springframework.data.relational.core.mapping.MappedCollection;
 import org.springframework.data.relational.core.mapping.Table;
 
 import java.math.BigInteger;
 import java.time.LocalDate;
+import java.util.Set;
 import java.util.UUID;
 
 @Data
@@ -30,7 +33,11 @@ public class UserEntity {
     @Column("address")
     private String Address;
     @Column("id_rol")
+    @JoinColumn(referencedColumnName = "id_rol")
     private Integer id_rol;
     @Column("baseSalary")
     private BigInteger BaseSalary;
+
+    //@MappedCollection(idColumn = "id_rol")
+    //private Set<RoleEntity> Role;
 }

@@ -23,7 +23,6 @@ import java.util.UUID;
 public class UserHandler {
 private  final IUserUseCase UserUC;
 private final UserMapper mapper;
-    private ServerRequest serverRequest;
 
     @Operation(summary = "Create New User.", description = "Allow Add new User.")
     public Mono<ServerResponse> New(ServerRequest serverRequest) {
@@ -51,8 +50,8 @@ private final UserMapper mapper;
 
     @Operation(summary = "Retreive The List of Users.", description = "Fetch List of users.")
     public Mono<ServerResponse> Users(ServerRequest serverRequest) {
-        this.serverRequest = serverRequest;
         return UserUC.findAll()
+                .log("ListUsers")
                 .map(mapper::toResponse)
                 .collectList()
                 .flatMap(ServerResponse.ok()::bodyValue);
@@ -61,6 +60,7 @@ private final UserMapper mapper;
     @Operation(summary = "Update User Information.", description = "Allow Edit user information for especified Id.")
     public  Mono<ServerResponse> Edit (ServerRequest serverRequest){
         return serverRequest.bodyToMono( UserRequestDto.class)
+                .log("Edit")
                 .map(mapper::toDomain)
                 .flatMap(UserUC::edit)
                 .flatMap(ServerResponse.ok()::bodyValue);
@@ -70,12 +70,14 @@ private final UserMapper mapper;
     public Mono<ServerResponse> Delete(ServerRequest serverRequest) {
         UUID id = UUID.fromString(serverRequest.pathVariable("Id")); //UUID.nameUUIDFromBytes(serverRequest.pathVariable( "Id").getBytes());
         return UserUC.delete(id)
+                     .log("Delete")
                      .flatMap(ServerResponse.ok()::bodyValue);
     }
 
     public Mono<ServerResponse> UserByEmail(ServerRequest serverRequest){
         String email= serverRequest.pathVariable( "Email");
         return UserUC.findByEmail (email)
+                     .log("FindByEmail")
                      .flatMap(ServerResponse.ok()::bodyValue);
     }
 }
