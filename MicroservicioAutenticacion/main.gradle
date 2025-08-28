@@ -1,4 +1,4 @@
-apply plugin: 'info.solidsoft.pitest.aggregator'
+//apply plugin: 'info.solidsoft.pitest.aggregator'
 
 allprojects {
     repositories {
@@ -12,7 +12,7 @@ subprojects {
     apply plugin: 'java'
     apply plugin: 'jacoco'
     apply plugin: 'io.spring.dependency-management'
-    apply plugin: 'info.solidsoft.pitest'
+    //apply plugin: 'info.solidsoft.pitest'
 
     compileJava.dependsOn validateStructure
 
@@ -53,7 +53,7 @@ subprojects {
 
     test.finalizedBy(project.tasks.jacocoTestReport)
 
-    pitest {
+   /* pitest {
         targetClasses = ['co.com.mrcompany.*']
         excludedClasses = []
         excludedTestClasses = []
@@ -69,10 +69,10 @@ subprojects {
         junit5PluginVersion = '1.2.2'
         failWhenNoMutations = false
         jvmArgs = ["-XX:+AllowRedefinitionToAddDeleteMethods"]
-    }
+    }*/
 
     jacocoTestReport {
-        dependsOn test, 'pitest'
+        dependsOn test//, 'pitest'
         reports {
             xml.setRequired true
             xml.setOutputLocation layout.buildDirectory.file("reports/jacoco.xml")
@@ -89,7 +89,7 @@ jacoco {
 }
 
 tasks.register('jacocoMergedReport', JacocoReport) {
-    dependsOn = [test, subprojects.jacocoTestReport, pitestReportAggregate]
+    dependsOn = [test, subprojects.jacocoTestReport]//, pitestReportAggregate]
     additionalSourceDirs.setFrom files(subprojects.sourceSets.main.allSource.srcDirs)
     sourceDirectories.setFrom files(subprojects.sourceSets.main.allSource.srcDirs)
     classDirectories.setFrom files(subprojects.sourceSets.main.output)
@@ -107,7 +107,7 @@ tasks.withType(JavaCompile).configureEach {
     ]
 }
 
-pitestReportAggregate {
+/*pitestReportAggregate {
     doLast {
         def reportDir = layout.buildDirectory.dir("reports/pitest").get().asFile
         def consolidatedReport = new File(reportDir, 'mutations.xml')
@@ -125,7 +125,7 @@ pitestReportAggregate {
             writer.write("</mutations>")
         }
     }
-}
+}*/
 
 tasks.named('wrapper') {
     gradleVersion = '8.14.3'

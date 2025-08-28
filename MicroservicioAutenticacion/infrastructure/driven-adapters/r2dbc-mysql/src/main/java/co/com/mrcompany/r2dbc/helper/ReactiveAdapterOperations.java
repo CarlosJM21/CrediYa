@@ -16,13 +16,13 @@ public abstract class ReactiveAdapterOperations<E, D, I, R extends ReactiveCrudR
     protected ObjectMapper mapper;
     private final Class<D> dataClass;
     private final Function<D, E> toEntityFn;
-    //private final TransactionalOperator transactionalOperator;
+    private final TransactionalOperator tx;
 
     @SuppressWarnings("unchecked")
-    protected ReactiveAdapterOperations(R repository, ObjectMapper mapper, Function<D, E> toEntityFn) { // , TransactionalOperator transactionalOperator
+    protected ReactiveAdapterOperations(R repository, ObjectMapper mapper, Function<D, E> toEntityFn,TransactionalOperator transactionalOperator) { // , TransactionalOperator transactionalOperator
         this.repository = repository;
         this.mapper = mapper;
-        //this.transactionalOperator = transactionalOperator;
+        this.tx = transactionalOperator;
         ParameterizedType genericSuperclass = (ParameterizedType) this.getClass().getGenericSuperclass();
         this.dataClass = (Class<D>) genericSuperclass.getActualTypeArguments()[1];
         this.toEntityFn = toEntityFn;
@@ -38,11 +38,13 @@ public abstract class ReactiveAdapterOperations<E, D, I, R extends ReactiveCrudR
 
     public Mono<E> save(E entity) {
         return saveData(toData(entity))
+                .as(tx::transactional)
                 .map(this::toEntity); //.as(transactionalOperator::transactional);
     }
 
     protected Flux<E> saveAllEntities(Flux<E> entities) {
         return saveData(entities.map(this::toData))
+                .as(tx::transactional)
                 .map(this::toEntity);
     }
 
@@ -60,6 +62,7 @@ public abstract class ReactiveAdapterOperations<E, D, I, R extends ReactiveCrudR
 
     public Flux<E> findByExample(E entity) {
         return repository.findAll(Example.of(toData(entity)))
+                .as(tx::transactional)
                 .map(this::toEntity);
     }
 

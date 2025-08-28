@@ -2,6 +2,7 @@ package co.com.mrcompany.r2dbc.helper;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.reactivecommons.utils.ObjectMapper;
 import org.springframework.data.domain.Example;
@@ -21,6 +22,7 @@ class ReactiveAdapterOperationsTest {
 
     private DummyRepository repository;
     private ObjectMapper mapper;
+    @Mock
     private TransactionalOperator transactionalOperator;
     private ReactiveAdapterOperations<DummyEntity, DummyData, String, DummyRepository> operations;
 
@@ -29,8 +31,9 @@ class ReactiveAdapterOperationsTest {
     void setUp() {
         repository = Mockito.mock(DummyRepository.class);
         mapper = Mockito.mock(ObjectMapper.class);
+
         operations = new ReactiveAdapterOperations<DummyEntity, DummyData, String, DummyRepository>(
-                repository, mapper, DummyEntity::toEntity) {};
+                repository, mapper, DummyEntity::toEntity, transactionalOperator ) {};
     }
 
     @Test

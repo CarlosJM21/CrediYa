@@ -2,6 +2,7 @@ package co.com.mrcompany.r2dbc;
 
 import co.com.mrcompany.model.user.User;
 import co.com.mrcompany.r2dbc.Entities.UserEntity;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
@@ -23,7 +24,6 @@ import static org.mockito.Mockito.when;
 
 @ExtendWith(MockitoExtension.class)
 class MyReactiveRepositoryAdapterTest {
-    // TODO: change four you own tests
 
     @InjectMocks
     UserRepositoryAdapter repositoryAdapter;
@@ -34,63 +34,81 @@ class MyReactiveRepositoryAdapterTest {
     @Mock
     ObjectMapper mapper;
 
+    private User userRequest;
+    private User userSuccess;
+    private UserEntity entity;
+
+    private UUID id;
+    private String email;
+
+    @BeforeEach
+    void setUp(){
+
+        userRequest = new User();
+        userRequest.setName("Pedro");
+        userRequest.setLastName("Perez");
+        userRequest.setEmail("pedroPerez@yopmail.com");
+        userRequest.setDNI("1090200100");
+        userRequest.setId_rol(1);
+        userRequest.setBaseSalary( new BigInteger("2000000"));
+        userRequest.setBirthDate( LocalDate.of(2000, 12, 24));
+        userRequest.setCellphone("3102001001");
+        userRequest.setAddress("Cll 100 74 # 51");
+
+        userSuccess = userRequest;
+        userSuccess.setId( UUID.fromString("422b5cfb-83bb-11f0-9973-ca1e79762f6b"));
+
+        email = "pedroPerez@yopmail.com";
+
+        id= UUID.fromString("422b5cfb-83bb-11f0-9973-ca1e79762f6b");
+    }
+
     @Test
     void mustFindValueById() {
-        UserEntity output1 = new UserEntity();
+        when(repository.findById(id)).thenReturn(Mono.just(entity));
+        when(mapper.map(entity, User.class)).thenReturn(userSuccess);
 
-        when(repository.findById(UUID.nameUUIDFromBytes("1".getBytes()))).thenReturn(Mono.just(output1));
-        when(mapper.map("test", Object.class)).thenReturn("test");
-
-        Mono<User> result = repositoryAdapter.findById(UUID.nameUUIDFromBytes("1".getBytes()));
+        Mono<User> result = repositoryAdapter.findById(id);
 
         StepVerifier.create(result)
-                .expectNextMatches(value -> value.equals("test"))
+                .expectNextMatches(value -> value.equals(userSuccess))
                 .verifyComplete();
     }
 
     @Test
     void mustFindAllValues() {
-        UserEntity output1 = new UserEntity();
-
-        when(repository.findAll()).thenReturn(Flux.just(output1));
-        when(mapper.map("test", Object.class)).thenReturn("test");
+        when(repository.findAll()).thenReturn(Flux.just(entity));
+        when(mapper.map(entity, User.class)).thenReturn(userSuccess);
 
         Flux<User> result = repositoryAdapter.findAll();
 
         StepVerifier.create(result)
-                .expectNextMatches(value -> value.equals("test"))
+                .expectNextMatches(value -> value.equals(userSuccess))
                 .verifyComplete();
     }
 
     @Test
     void mustFindByExample() {
-        LocalDate date = LocalDate.parse ("2013-12-24");
+        when(repository.findById(id)).thenReturn(Mono.just(entity));
+        when(mapper.map(entity, User.class)).thenReturn(userSuccess);
 
-        User input = new User(null,"User1","Prueba","prueba@yopmail.com","1090100100","3101001001", date,"Cll 1", 1, BigInteger.valueOf(3000000));
-
-        when(repository.findAll(any(Example.class))).thenReturn(Flux.just("test"));
-        when(mapper.map("test", Object.class)).thenReturn("test");
-
-        Flux<User> result = repositoryAdapter.findAll();
+        Mono<User> result = repositoryAdapter.findById(id);
 
         StepVerifier.create(result)
-                .expectNextMatches(value -> value.equals(input))
+                .expectNextMatches(value -> value.equals(userSuccess))
                 .verifyComplete();
     }
 
     @Test
     void mustSaveValue() throws ParseException {
-        LocalDate date = LocalDate.parse ("2013-12-24");
 
-        User input = new User(null,"User1","Prueba","prueba@yopmail.com","1090100100","3101001001", date,"Cll 1", 1, BigInteger.valueOf(3000000));
-        User output = new User(UUID.nameUUIDFromBytes("1264".getBytes()),"User1","Prueba","prueba@yopmail.com","1090100100","3101001001", date,"Cll 1", 1,BigInteger.valueOf(3000000) );
+        when(repository.save(entity)).thenReturn(Mono.just(entity));
+        when(mapper.map(entity, User.class)).thenReturn(userSuccess);
 
-        when(mapper.map("test", Object.class)).thenReturn("test");
-
-        Mono<User> result = repositoryAdapter.save(input);
+        Mono<User> result = repositoryAdapter.save(userSuccess);
 
         StepVerifier.create(result)
-                .expectNextMatches(value -> value.equals(input))
+                .expectNextMatches(value -> value.equals(userSuccess))
                 .verifyComplete();
     }
 }

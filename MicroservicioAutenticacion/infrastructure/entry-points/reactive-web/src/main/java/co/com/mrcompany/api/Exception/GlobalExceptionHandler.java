@@ -5,9 +5,12 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.stream.Collectors;
 
-import co.com.mrcompany.api.Exception.Models.ErrorCode;
+import DomainException.EmailExistsException;
+import DomainException.UserNotFoundException;
+import DomainException.WrongSalaryRangeException;
 import co.com.mrcompany.api.Exception.Models.ValidationError;
 import co.com.mrcompany.api.Exception.Models.Validations;
+import co.com.mrcompany.api.Exception.Models.ErrorCode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import jakarta.validation.ConstraintViolation;
 import jakarta.validation.ConstraintViolationException;
@@ -29,6 +32,11 @@ import reactor.core.scheduler.Schedulers;
 public class GlobalExceptionHandler implements ErrorWebExceptionHandler {
 
     private final ObjectMapper om;
+
+    private static String message = "message";
+    private static String code = "code";
+    private static String validateFailed = "Validation failed";
+    private static String fieldErrors = "fieldErrors";
 
     public  GlobalExceptionHandler(ObjectMapper objectMapper)
     {
@@ -82,20 +90,17 @@ public class GlobalExceptionHandler implements ErrorWebExceptionHandler {
         Map<String, Object> body = new HashMap<>();
         body.put("status", status.value());
         body.put("error", status.getReasonPhrase());
-
+        body.put(code, ErrorCode.VALIDATION.name());
+        body.put(message, validateFailed);
 
         if (ex instanceof WebExchangeBindException bex) {
-            body.put("code", ErrorCode.VALIDATION.name());
-            body.put("message", "Validation failed");
-            body.put("fieldErrors", bex.getFieldErrors().stream()
+            body.put(fieldErrors, bex.getFieldErrors().stream()
                     .map(this::fieldErrorToMap)
-                    .collect(Collectors.toList()));
+                    .collect( Collectors.toList()));
             return body;
         }
 
         if (ex instanceof ConstraintViolationException cve) {
-            body.put("code", ErrorCode.VALIDATION.name());
-            body.put("message", "Validation failed");
             body.put("violations", cve.getConstraintViolations().stream()
                     .map(this::violationToMap)
                     .collect(Collectors.toList()));
@@ -103,34 +108,56 @@ public class GlobalExceptionHandler implements ErrorWebExceptionHandler {
         }
 
         if (ex instanceof Validations.ValidationErrors validationErrors) {
-            body.put("code", ErrorCode.VALIDATION.name());
-            body.put("message", "Validation failed");
-            body.put("fieldErrors", validationErrors.getErrors().stream()
+            body.put(fieldErrors, validationErrors.getErrors().stream()
                     .map(this::validationErrorToMap)
                     .collect(Collectors.toList()));
             return body;
         }
 
-        body.put("code", ErrorCode.INTERNAL.name());
-        body.put("message", safeMessage(ex.getMessage()));
+        if (ex instanceof EmailExistsException exc) {
+            body.put(fieldErrors, this.MessageErrorToMap(exc.getMessage(), exc.getField()));
+            body.put(code, ErrorCode.DUPLICATE.name());
+            return body;
+        }
+
+        if (ex instanceof WrongSalaryRangeException exc) {
+            body.put(fieldErrors, this.MessageErrorToMap(exc.getMessage(), exc.getField()));
+            body.put(code, ErrorCode.FORBIDDEN.name());
+            return body;
+        }
+
+        if (ex instanceof UserNotFoundException exc) {
+            body.put(fieldErrors, this.MessageErrorToMap(exc.getMessage(), exc.getField()));
+            body.put(code, ErrorCode.NOT_FOUND.name());
+            return body;
+        }
+
+        body.put(code, ErrorCode.INTERNAL.name());
+        body.put(message, safeMessage(ex.getMessage()));
         return body;
+    }
+
+    private Map<String, Object> MessageErrorToMap(String error, String field) {
+        Map<String, Object> m = new LinkedHashMap<>();
+        m.put("field", field);
+        m.put(message, error);
+        return m;
     }
 
     private Map<String, Object> validationErrorToMap(ValidationError error) {
         Map<String, Object> m = new LinkedHashMap<>();
         m.put("field", error.getField());
-        m.put("message", error.getMessage());
+        m.put(message, error.getMessage());
         return m;
     }
 
     private Map<String, Object> fieldErrorToMap(org.springframework.validation.FieldError fe) {
         Map<String, Object> m = new LinkedHashMap<>();
         m.put("field", fe.getField());
-        // rejectedValue puede ser null
-        if (fe.getRejectedValue() != null) {
+        if (fe.getRejectedValue() != null) {  // rejectedValue puede ser null
             m.put("rejectedValue", fe.getRejectedValue());
         }
-        m.put("message", fe.getDefaultMessage());
+        m.put(message, fe.getDefaultMessage());
         return m;
     }
 
@@ -144,7 +171,7 @@ public class GlobalExceptionHandler implements ErrorWebExceptionHandler {
         if (v.getInvalidValue() != null) {
             m.put("invalidValue", v.getInvalidValue());
         }
-        m.put("message", v.getMessage());
+        m.put(message, v.getMessage());
         return m;
     }
 }

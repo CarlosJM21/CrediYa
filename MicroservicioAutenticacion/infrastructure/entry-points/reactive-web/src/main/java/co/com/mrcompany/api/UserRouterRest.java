@@ -28,13 +28,13 @@ public class UserRouterRest {
     @Bean
     @RouterOperations({
         @RouterOperation( path = "/api/Users",
-            produces = { MediaType.APPLICATION_JSON_VALUE }, method = RequestMethod.GET, beanClass = UserHandler.class, beanMethod = "Users",
+            produces = { MediaType.APPLICATION_JSON_VALUE }, method = RequestMethod.GET, beanClass = UserHandler.class, beanMethod = "users",
             operation = @Operation( operationId = "Users",
             responses = { @ApiResponse(responseCode = "200", description = "Get All Users Successfully.",
                             content = @Content(schema = @Schema(implementation = UserRequestDto.class))) })
         ),
         @RouterOperation( path = "/api/Users/{Id}",
-            produces = { MediaType.APPLICATION_JSON_VALUE }, method = RequestMethod.GET, beanClass = UserHandler.class, beanMethod = "User",
+            produces = { MediaType.APPLICATION_JSON_VALUE }, method = RequestMethod.GET, beanClass = UserHandler.class, beanMethod = "user",
             operation = @Operation( operationId = "User",
             responses = { @ApiResponse(responseCode = "200", description = "Get User Successfully.",
                             content = @Content(schema = @Schema(implementation = UserResponseDto.class))),
@@ -49,21 +49,21 @@ public class UserRouterRest {
                 requestBody = @RequestBody( content = @Content(schema = @Schema(implementation = UserRequestDto.class ))))
         ),
         @RouterOperation( path = "/api/Users",
-                produces = { MediaType.APPLICATION_JSON_VALUE }, method = RequestMethod.PUT, beanClass = UserHandler.class, beanMethod = "Edit",
+                produces = { MediaType.APPLICATION_JSON_VALUE }, method = RequestMethod.PUT, beanClass = UserHandler.class, beanMethod = "edit",
                 operation = @Operation( operationId = "Edit",
                 responses = { @ApiResponse( responseCode = "200", description = "Successful Operation",
                         content = @Content(schema = @Schema( implementation = UserResponseDto.class )))},
                 requestBody = @RequestBody( content = @Content(schema = @Schema(implementation = UserRequestDto.class ))))
         ),
         @RouterOperation( path = "/api/Users/{Id}",
-                produces = { MediaType.APPLICATION_JSON_VALUE }, method = RequestMethod.DELETE, beanClass = UserHandler.class, beanMethod = "Delete",
+                produces = { MediaType.APPLICATION_JSON_VALUE }, method = RequestMethod.DELETE, beanClass = UserHandler.class, beanMethod = "delete",
                 operation = @Operation( operationId = "Delete",
                 responses = { @ApiResponse( responseCode = "200", description = "Successful Operation",
                         content = @Content(schema =  @Schema( implementation = UserResponseDto.class )))},
                 parameters = { @Parameter(in = ParameterIn.PATH, name = "Id") })
         ),
         @RouterOperation( path = "/api/Users/ByEmail/{Email}",
-                produces = { MediaType.APPLICATION_JSON_VALUE }, method = RequestMethod.GET, beanClass = UserHandler.class, beanMethod = "UserByEMail",
+                produces = { MediaType.APPLICATION_JSON_VALUE }, method = RequestMethod.GET, beanClass = UserHandler.class, beanMethod = "userByEMail",
                 operation = @Operation( operationId = "UserByEmail",
                         responses = { @ApiResponse( responseCode = "200", description = "Successful Operation",
                                 content = @Content(schema =  @Schema( implementation = UserResponseDto.class )))},
@@ -71,11 +71,12 @@ public class UserRouterRest {
         )
     })
     public RouterFunction<ServerResponse> routerFunction(UserHandler handler) {
-        return route(POST("/api/Users/New"), handler::New)
-                .andRoute(GET("/api/Users"), handler::Users)
-                .and(route(GET("/api/Users/{Id}"), handler::User))
-                .and(route(GET("/api/Users/ByEmail/{Email}"), handler::UserByEmail))
-                .and(route().PUT("/api/Users", handler::Edit).build())
-                .and(route().DELETE("/api/Users/{Id}", handler::Delete).build());
+        return route(POST("/api/Users/New"), handler::userNew)
+                .andRoute(GET("/api/Users"), handler::users)
+                .and(route(GET("/api/Users/{Id}"), handler::user))
+                .and(route(GET("/api/Users/ByEmail/{Email}"), handler::userByEmail))
+                .and(route().PUT("/api/Users", handler::edit).build())
+                .and(route().DELETE("/api/Users/{Id}", handler::delete).build());
+                //.filter(f ->GlobalExceptionHandler); //revisar filtros
     }
 }

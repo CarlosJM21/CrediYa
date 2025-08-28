@@ -1,13 +1,25 @@
 package co.com.mrcompany.config;
 
+import co.com.mrcompany.model.user.gateways.UserRepository;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
+import org.mockito.Mockito;
+import org.mockito.junit.jupiter.MockitoExtension;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
+import org.springframework.test.context.bean.override.mockito.MockitoBean;
+
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
+@ExtendWith(MockitoExtension.class)
 public class UseCasesConfigTest {
+
+    @Autowired
+    @MockitoBean
+    private UserRepository userRepository;
 
     @Test
     void testUseCaseBeansExist() {
@@ -34,6 +46,9 @@ public class UseCasesConfigTest {
         public MyUseCase myUseCase() {
             return new MyUseCase();
         }
+
+        @Bean
+        public UserRepository userRepository(){return Mockito.mock(UserRepository.class); }
     }
 
     static class MyUseCase {

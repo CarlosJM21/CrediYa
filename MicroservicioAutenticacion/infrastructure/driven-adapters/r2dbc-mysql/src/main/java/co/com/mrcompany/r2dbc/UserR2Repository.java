@@ -12,7 +12,6 @@ import java.util.UUID;
 
 public interface UserR2Repository extends ReactiveCrudRepository<UserEntity, UUID>, ReactiveQueryByExampleExecutor<UserEntity> {
 
-    //@Query("select u.* from User u join Role r on u.id_rol = r.id where u.email = :email")
     Mono<User> findByEmail(String email);
 
     Mono<Boolean> existsByEmail(String email);

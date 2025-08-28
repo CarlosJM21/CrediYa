@@ -1,5 +1,7 @@
 package co.com.mrcompany.usecase.user;
 
+import DomainException.EmailExistsException;
+import DomainException.WrongSalaryRangeException;
 import co.com.mrcompany.model.user.User;
 import co.com.mrcompany.model.user.gateways.UserRepository;
 import lombok.RequiredArgsConstructor;
@@ -7,7 +9,6 @@ import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
 import java.math.BigInteger;
-import java.util.Arrays;
 import java.util.UUID;
 
 @RequiredArgsConstructor
@@ -51,18 +52,14 @@ public class UserUseCase  implements  IUserUseCase{
         return validUUID(id).flatMap(repository::delete);
     }
 
-    private boolean anyPropertyIsNull(User user){
-        return  Arrays.stream(user.getClass().getFields()).anyMatch(f -> f == null);
-    }
-
-    private Mono<UUID> validUUID(UUID id){
+    protected Mono<UUID> validUUID(UUID id){
         if(id == null && id.toString().trim().isEmpty()){
             return Mono.error(new NullPointerException("The values of field \"Id\" don't allow null"));
         }
         return Mono.just(id);
     }
 
-    private Mono<User> UserIsNull(User user)
+    protected Mono<User> UserIsNull(User user)
     {
         if(user == null){
             return Mono.error(new NullPointerException("The User to edit can't be null."));
@@ -70,22 +67,22 @@ public class UserUseCase  implements  IUserUseCase{
         return Mono.just(user);
     }
 
-    private Mono<User> validRangeSalary(User user)
+    protected Mono<User> validRangeSalary(User user)
     {
         BigInteger salary = user.getBaseSalary();
         if (salary.compareTo( BigInteger.ZERO)  >= 0 && salary.compareTo(BigInteger.valueOf(15000000)) <= 0)
         {
             return Mono.just(user);
         }
-        return Mono.error( new IllegalArgumentException("The values of field \"BaseSalary\" must be between 0 and 1500000"));
+        return Mono.error( new WrongSalaryRangeException());
     }
 
-    private Mono<User> NotExistsUser(User user)
+    protected Mono<User> NotExistsUser(User user)
     {
        return repository.existsByEmail(user.getEmail())
                .flatMap(v ->{
                    if(v){
-                       return Mono.error(new IllegalArgumentException("Email already exists"));
+                       return Mono.error(new EmailExistsException());
                    }
                    return Mono.just(user);
                });
