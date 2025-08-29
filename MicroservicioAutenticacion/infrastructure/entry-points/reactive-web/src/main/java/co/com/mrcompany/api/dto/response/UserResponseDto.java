@@ -1,4 +1,4 @@
-package co.com.mrcompany.api.Dto.Response;
+package co.com.mrcompany.api.dto.response;
 
 import lombok.*;
 
@@ -16,7 +16,7 @@ public class UserResponseDto {
     public String     name;
     public String     lastName;
     public String     email;
-    public String     DNI;
+    public String     dni;
     public String     cellphone;
     public LocalDate  birthDate;
     public String     address;

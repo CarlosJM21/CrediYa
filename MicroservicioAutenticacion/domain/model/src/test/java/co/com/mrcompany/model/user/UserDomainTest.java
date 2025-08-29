@@ -2,21 +2,16 @@ package co.com.mrcompany.model.user;
 
 import co.com.mrcompany.model.user.gateways.UserRepository;
 import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
 import org.mockito.junit.jupiter.MockitoExtension;
-import reactor.core.publisher.Mono;
-import reactor.test.StepVerifier;
 
 import java.math.BigInteger;
 import java.time.LocalDate;
 import java.util.UUID;
 
-import static org.mockito.Mockito.*;
-
 @ExtendWith(MockitoExtension.class)
-public class UserDomainTest {
+class UserDomainTest {
 
     @InjectMocks
     private UserRepository userRepository;
@@ -33,8 +28,8 @@ public class UserDomainTest {
         userRequest.setName("Pedro");
         userRequest.setLastName("Perez");
         userRequest.setEmail("pedroPerez@yopmail.com");
-        userRequest.setDNI("1090200100");
-        userRequest.setId_rol(1);
+        userRequest.setDni("1090200100");
+        userRequest.setIdRol(1);
         userRequest.setBaseSalary( new BigInteger("2000000"));
         userRequest.setBirthDate( LocalDate.of(2000, 12, 24));
         userRequest.setCellphone("3102001001");
@@ -45,8 +40,8 @@ public class UserDomainTest {
         userSuccess.setName("Pedro");
         userSuccess.setLastName("Perez");
         userSuccess.setEmail("pedroPerez@yopmail.com");
-        userSuccess.setDNI("1090200100");
-        userSuccess.setId_rol(1);
+        userSuccess.setDni("1090200100");
+        userSuccess.setIdRol(1);
         userSuccess.setBaseSalary( new BigInteger("2000000"));
         userSuccess.setBirthDate( LocalDate.of(2000, 12, 24));
         userSuccess.setCellphone("3102001001");

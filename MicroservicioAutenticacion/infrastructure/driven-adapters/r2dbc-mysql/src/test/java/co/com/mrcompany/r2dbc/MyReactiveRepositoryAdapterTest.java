@@ -1,7 +1,7 @@
 package co.com.mrcompany.r2dbc;
 
 import co.com.mrcompany.model.user.User;
-import co.com.mrcompany.r2dbc.Entities.UserEntity;
+import co.com.mrcompany.r2dbc.entities.UserEntity;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -9,7 +9,8 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 import org.reactivecommons.utils.ObjectMapper;
-import org.springframework.data.domain.Example;
+import org.springframework.test.context.bean.override.mockito.MockitoBean;
+import org.springframework.transaction.reactive.TransactionalOperator;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 import reactor.test.StepVerifier;
@@ -31,6 +32,10 @@ class MyReactiveRepositoryAdapterTest {
     @Mock
     UserR2Repository repository;
 
+    @MockitoBean
+    TransactionalOperator tx;
+
+
     @Mock
     ObjectMapper mapper;
 
@@ -48,8 +53,8 @@ class MyReactiveRepositoryAdapterTest {
         userRequest.setName("Pedro");
         userRequest.setLastName("Perez");
         userRequest.setEmail("pedroPerez@yopmail.com");
-        userRequest.setDNI("1090200100");
-        userRequest.setId_rol(1);
+        userRequest.setDni("1090200100");
+        userRequest.setIdRol(1);
         userRequest.setBaseSalary( new BigInteger("2000000"));
         userRequest.setBirthDate( LocalDate.of(2000, 12, 24));
         userRequest.setCellphone("3102001001");
@@ -65,7 +70,7 @@ class MyReactiveRepositoryAdapterTest {
 
     @Test
     void mustFindValueById() {
-        when(repository.findById(id)).thenReturn(Mono.just(entity));
+        when(repository.findById(any(UUID.class))).thenReturn(Mono.just(entity));
         when(mapper.map(entity, User.class)).thenReturn(userSuccess);
 
         Mono<User> result = repositoryAdapter.findById(id);
@@ -89,8 +94,8 @@ class MyReactiveRepositoryAdapterTest {
 
     @Test
     void mustFindByExample() {
-        when(repository.findById(id)).thenReturn(Mono.just(entity));
-        when(mapper.map(entity, User.class)).thenReturn(userSuccess);
+        when(repository.findById(any(UUID.class))).thenReturn(Mono.just(entity));
+        when(mapper.map(UserEntity.class, User.class)).thenReturn(userSuccess);
 
         Mono<User> result = repositoryAdapter.findById(id);
 
@@ -102,7 +107,7 @@ class MyReactiveRepositoryAdapterTest {
     @Test
     void mustSaveValue() throws ParseException {
 
-        when(repository.save(entity)).thenReturn(Mono.just(entity));
+        when(repository.save(any(UserEntity.class))).thenReturn(Mono.just(entity));
         when(mapper.map(entity, User.class)).thenReturn(userSuccess);
 
         Mono<User> result = repositoryAdapter.save(userSuccess);
@@ -110,5 +115,18 @@ class MyReactiveRepositoryAdapterTest {
         StepVerifier.create(result)
                 .expectNextMatches(value -> value.equals(userSuccess))
                 .verifyComplete();
+    }
+
+    void ConfigTest()
+    {
+        /*@Bean
+        public R2dbcTransactionManager transactionManager(ConnectionFactory connectionFactory) {
+            return new R2dbcTransactionManager(connectionFactory);
+        }
+
+        @Bean
+        public TransactionalOperator transactionalOperator(ReactiveTransactionManager txManager) {
+            return TransactionalOperator.create(txManager);
+        }*/
     }
 }

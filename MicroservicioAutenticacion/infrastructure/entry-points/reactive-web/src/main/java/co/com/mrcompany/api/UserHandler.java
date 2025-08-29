@@ -1,7 +1,6 @@
 package co.com.mrcompany.api;
 
-import co.com.mrcompany.api.Dto.Request.UserRequestDto;
-import co.com.mrcompany.api.Exception.GlobalExceptionHandler;
+import co.com.mrcompany.api.dto.request.UserRequestDto;
 import co.com.mrcompany.api.mappers.UserMapper;
 import co.com.mrcompany.usecase.user.IUserUseCase;
 import io.swagger.v3.oas.annotations.Operation;
@@ -11,7 +10,6 @@ import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.ResponseStatus;
-import org.springframework.web.client.HttpClientErrorException;
 import org.springframework.web.reactive.function.server.ServerRequest;
 import org.springframework.web.reactive.function.server.ServerResponse;
 import reactor.core.publisher.Mono;

@@ -2,7 +2,7 @@ package co.com.mrcompany.r2dbc;
 
 import co.com.mrcompany.model.user.User;
 import co.com.mrcompany.model.user.gateways.UserRepository;
-import co.com.mrcompany.r2dbc.Entities.UserEntity;
+import co.com.mrcompany.r2dbc.entities.UserEntity;
 import co.com.mrcompany.r2dbc.helper.ReactiveAdapterOperations;
 import org.reactivecommons.utils.ObjectMapper;
 import org.springframework.data.r2dbc.repository.Query;

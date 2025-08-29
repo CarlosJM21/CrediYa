@@ -15,7 +15,7 @@ import org.springframework.test.context.bean.override.mockito.MockitoBean;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 @ExtendWith(MockitoExtension.class)
-public class UseCasesConfigTest {
+class UseCasesConfigTest {
 
     @Autowired
     @MockitoBean

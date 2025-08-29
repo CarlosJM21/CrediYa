@@ -1,4 +1,4 @@
-package co.com.mrcompany.api.Dto.Request;
+package co.com.mrcompany.api.dto.request;
 
 import jakarta.validation.constraints.*;
 import lombok.AllArgsConstructor;
@@ -15,11 +15,11 @@ import java.util.UUID;
 @NoArgsConstructor
 @AllArgsConstructor
 public class UserRequestDto {
-
     private UUID id;
 
     @NotBlank(message="The Field \"Name\" not Allowed null or blank values.")
     public String   name;
+
     @NotBlank(message="The Field \"LastName\" not Allowed null or blank values.")
     public String   lastName;
 
@@ -27,14 +27,21 @@ public class UserRequestDto {
     @Email(message = "The Field \"Email\" have a bad format." )
     public String   email;
 
+    @NotBlank(message="The Field \"DNI\" not Allowed null or blank values.")
     public String   dni;
+
+    @NotBlank(message="The Field \"Cellphone\" not Allowed null or blank values.")
     public String   cellphone;
     public LocalDate birthDate;
+
+    @NotBlank(message="The Field \"Address\" not Allowed null or blank values.")
     public String   address;
+
+    @NotBlank(message="The Field \"Address\" not Allowed null or blank values.")
     public Integer  idRol;
 
-    @NotNull(message = "The Field \"BaseSalay\" Not allowed null.")
-    @Min(value = 1,message ="The value of \"BaseSalay\" must be Greatter than 0.")
-    @Max(value = 15000000,message = "The value of \"BaseSalay\" must be Lower than 15000000.")
+    @NotNull(message = "The Field \"BaseSalary\" Not allowed null.")
+    @Min(value = 1,message ="The value of \"BaseSalary\" must be Greatter than 0.")
+    @Max(value = 15000000,message = "The value of \"BaseSalary\" must be Lower than 15000000.")
     public BigInteger baseSalary;
 }

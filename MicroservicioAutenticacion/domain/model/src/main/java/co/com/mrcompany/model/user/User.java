@@ -20,10 +20,10 @@ public class User {
     private String     name;
     private String     lastName;
     private String     email;
-    private String     DNI;
+    private String     dni;
     private String     cellphone;
     private LocalDate  birthDate;
     private String     address;
-    private Integer    id_rol;
+    private Integer    idRol;
     private BigInteger baseSalary;
 }

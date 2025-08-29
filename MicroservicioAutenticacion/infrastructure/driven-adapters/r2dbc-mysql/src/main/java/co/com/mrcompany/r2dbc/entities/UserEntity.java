@@ -1,10 +1,7 @@
-package co.com.mrcompany.r2dbc.Entities;
+package co.com.mrcompany.r2dbc.entities;
 
-import jakarta.persistence.ManyToOne;
-import jakarta.persistence.OneToOne;
 import lombok.Data;
 import org.springframework.data.annotation.Id;
-import org.springframework.data.annotation.Transient;
 import org.springframework.data.relational.core.mapping.Column;
 import org.springframework.data.relational.core.mapping.Table;
 
@@ -25,16 +22,16 @@ public class UserEntity {
     @Column("email")
     private String email;
     @Column("DNI")
-    private String DNI;
+    private String dni;
     @Column("cellphone")
     private String cellphone;
     @Column("birthdate")
     private LocalDate birthDate;
     @Column("address")
-    private String Address;
+    private String address;
     @Column("id_rol")
-    private Integer id_rol;
+    private Integer idrol;
     @Column("baseSalary")
-    private BigInteger BaseSalary;
+    private BigInteger baseSalary;
 
 }

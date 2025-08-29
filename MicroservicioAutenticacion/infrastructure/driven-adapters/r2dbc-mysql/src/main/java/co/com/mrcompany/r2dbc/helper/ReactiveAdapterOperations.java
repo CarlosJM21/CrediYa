@@ -39,7 +39,7 @@ public abstract class ReactiveAdapterOperations<E, D, I, R extends ReactiveCrudR
     public Mono<E> save(E entity) {
         return saveData(toData(entity))
                 .as(tx::transactional)
-                .map(this::toEntity); //.as(transactionalOperator::transactional);
+                .map(this::toEntity);
     }
 
     protected Flux<E> saveAllEntities(Flux<E> entities) {

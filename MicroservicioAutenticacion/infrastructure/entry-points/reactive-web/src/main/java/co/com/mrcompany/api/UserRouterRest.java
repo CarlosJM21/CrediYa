@@ -1,7 +1,7 @@
 package co.com.mrcompany.api;
 
-import co.com.mrcompany.api.Dto.Request.UserRequestDto;
-import co.com.mrcompany.api.Dto.Response.UserResponseDto;
+import co.com.mrcompany.api.dto.request.UserRequestDto;
+import co.com.mrcompany.api.dto.response.UserResponseDto;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.Parameter;
 import io.swagger.v3.oas.annotations.enums.ParameterIn;
