@@ -64,8 +64,8 @@ class RouterRestTest {
         user.setName("Pedro");
         user.setLastName("Perez");
         user.setEmail("pedroPerez@yopmail.com");
-        user.setDNI("1090200100");
-        user.setId_rol(1);
+        user.setDni("1090200100");
+        user.setIdRol(1);
         user.setBaseSalary(new BigInteger("2000000"));
         user.setBirthDate(LocalDate.of(2000, 12, 24));
         user.setCellphone("3102001001");
@@ -76,7 +76,7 @@ class RouterRestTest {
         userResponse.setName("Pedro");
         userResponse.setLastName("Perez");
         userResponse.setEmail("pedroPerez@yopmail.com");
-        userResponse.setDNI("1090200100");
+        userResponse.setDni("1090200100");
         userResponse.setIdRol(1);
         userResponse.setBaseSalary(new BigInteger("2000000"));
         userResponse.setBirthDate(LocalDate.of(2000, 12, 24));
