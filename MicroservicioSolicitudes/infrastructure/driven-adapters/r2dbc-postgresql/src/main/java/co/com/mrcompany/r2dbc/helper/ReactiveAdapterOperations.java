@@ -19,13 +19,13 @@ public abstract class ReactiveAdapterOperations<E, D, I, R extends ReactiveCrudR
     private final TransactionalOperator tx;
 
     @SuppressWarnings("unchecked")
-    protected ReactiveAdapterOperations(R repository, ObjectMapper mapper, Function<D, E> toEntityFn,TransactionalOperator transactionalOperator) {
+    protected ReactiveAdapterOperations(R repository, ObjectMapper mapper, Function<D, E> toEntityFn, TransactionalOperator transactionalOperator) {
         this.repository = repository;
         this.mapper = mapper;
-        this.tx = transactionalOperator;
         ParameterizedType genericSuperclass = (ParameterizedType) this.getClass().getGenericSuperclass();
         this.dataClass = (Class<D>) genericSuperclass.getActualTypeArguments()[1];
         this.toEntityFn = toEntityFn;
+        this.tx = transactionalOperator;
     }
 
     protected D toData(E entity) {
@@ -67,6 +67,8 @@ public abstract class ReactiveAdapterOperations<E, D, I, R extends ReactiveCrudR
     }
 
     public Flux<E> findAll() {
-        return repository.findAll().map(this::toEntity);
+        return repository.findAll()
+                .as(tx::transactional)
+                .map(this::toEntity);
     }
 }
