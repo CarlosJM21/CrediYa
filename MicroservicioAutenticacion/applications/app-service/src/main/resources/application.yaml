@@ -1,0 +1,38 @@
+server:
+  port: 8080
+  data:
+    r2dbc:
+      repositories:
+        enabled: true
+spring:
+  r2dbc:
+    url: "r2dbc:mariadb//localhost:3306"
+    host: "localhost"
+    port: "3306"
+    database: "auth"
+    username: "CrediUserdata"
+    password: "za.8%q96@Y>"
+  application:
+    name: "CrediYa.Autenticacion"
+  devtools:
+    add-properties: false
+  h2:
+    console:
+      enabled: true
+      path: "/h2"
+  profiles:
+    include: null
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "health,prometheus"
+  endpoint:
+    health:
+      probes:
+        enabled: true
+cors:
+  allowed-origins: "http://localhost:4200,http://localhost:8080"
+loggin:
+  level:
+    org.springframework.r2dbc=DEBUG:
