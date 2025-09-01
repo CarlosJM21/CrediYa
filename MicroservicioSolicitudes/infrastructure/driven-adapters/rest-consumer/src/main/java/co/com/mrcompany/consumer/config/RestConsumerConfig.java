@@ -18,7 +18,6 @@ import static java.util.concurrent.TimeUnit.MILLISECONDS;
 public class RestConsumerConfig {
 
     private final String url;
-
     private final int timeout;
 
     public RestConsumerConfig(@Value("${adapter.restconsumer.url}") String url,

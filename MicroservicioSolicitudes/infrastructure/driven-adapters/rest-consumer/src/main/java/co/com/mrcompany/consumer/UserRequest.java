@@ -12,7 +12,5 @@ import lombok.Setter;
 @AllArgsConstructor
 @Builder(toBuilder = true)
 public class UserRequest {
-
     private String email;
-
 }

@@ -2,6 +2,7 @@ package co.com.mrcompany.api.config.Operations;
 
 import co.com.mrcompany.model.loantype.LoanType;
 import io.swagger.v3.oas.annotations.Operation;
+import lombok.AllArgsConstructor;
 import lombok.Builder;
 import org.springdoc.core.annotations.RouterOperation;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -9,12 +10,15 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import java.lang.annotation.Annotation;
 
 @Builder
+@AllArgsConstructor
 public class RouteOperation implements RouterOperation {
 
     /*public RouteOperation(String path,@Nulla RequestMethod[] method = null,
                           String[] consumes, String[] produces) {
         super(path, method,consumes,produces);
     }*/
+
+
 
     @Override
     public String path() {

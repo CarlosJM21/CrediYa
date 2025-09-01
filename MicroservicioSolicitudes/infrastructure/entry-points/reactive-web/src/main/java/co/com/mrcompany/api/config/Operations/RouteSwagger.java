@@ -13,8 +13,11 @@ public class RouteSwagger {
 
     public  RouterOperation[]  Config()
     {
-        return { /*new RouteOperation(path = "/v1/note/{id}", method = RequestMethod.POST,
-                                beanClass = Handler.class, beanMethod = "applyToLoan"),*/
-               };
+        return new RouteOperation[]{ new RouteOperation(),
+                                     new RouteOperation()
+                                   };
+            /*new RouteOperation(path = "/v1/note/{id}", method = RequestMethod.POST,
+                                beanClass = Handler.class, beanMethod = "applyToLoan"),
+               };*/
     }
 }

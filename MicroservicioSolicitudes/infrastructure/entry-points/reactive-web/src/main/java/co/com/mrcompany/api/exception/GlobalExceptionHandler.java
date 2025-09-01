@@ -36,6 +36,7 @@ public class GlobalExceptionHandler implements ErrorWebExceptionHandler {
     private static String code = "code";
     private static String validateFailed = "Validation failed";
     private static String fieldErrors = "fieldErrors";
+    private static String sqlError = "Must be contact with admin.";
 
     public  GlobalExceptionHandler(ObjectMapper objectMapper)
         {
@@ -106,13 +107,12 @@ private Map<String, Object> toBody(Throwable ex, HttpStatus status) {
         return body;
     }
 
-    if (ex instanceof SQLDataException sqlex) {
-        body.put(fieldErrors, sqlex.spliterator().stream()
-                .map(this::fieldErrorToMap)
-                .collect( Collectors.toList()));
+    /*if (ex instanceof SQLDataException sqlex) {
+        body.put(fieldErrors, this.MessageErrorToMap(sqlError, sqlex.getSQLState()));
         body.put(code, ErrorCode.INTERNAL .name());
         return body;
-    }
+    }*/
+
 
     if (ex instanceof Validations.ValidationErrors validationErrors) {
         body.put(fieldErrors, validationErrors.getErrors().stream()
@@ -121,7 +121,7 @@ private Map<String, Object> toBody(Throwable ex, HttpStatus status) {
         return body;
     }
 
-    if (ex instanceof typeInvalidException exc) {
+    if (ex instanceof typeInvalidException exc ) {
         body.put(fieldErrors, this.MessageErrorToMap(exc.getMessage(), exc.getField()));
         body.put(code, ErrorCode.DUPLICATE.name());
         return body;

@@ -15,13 +15,13 @@ import java.util.UUID;
 @AllArgsConstructor
 @Builder(toBuilder = true)
 public class UserAuth {
-    public UUID id;
+    public UUID       id;
     public String     name;
     public String     lastName;
     public String     email;
     public String     dni;
     public String     cellphone;
-    public LocalDate birthDate;
+    public LocalDate  birthDate;
     public String     address;
     public Integer    idRol;
     public BigInteger baseSalary;
