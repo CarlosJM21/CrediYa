@@ -6,6 +6,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.math.BigInteger;
+import java.util.UUID;
 
 @Getter
 @Setter
@@ -13,10 +14,10 @@ import java.math.BigInteger;
 @AllArgsConstructor
 @Builder(toBuilder = true)
 public class Application {
-    private Integer    id;
-    private BigInteger Monto;
-    private Integer    plazo;
+    private UUID id;
+    private BigInteger amount;
+    private Integer    term;
     private String     email;
-    private Integer    idStatus;
+    private Integer    idStatus = 1;
     private Integer    idLoanType;
 }

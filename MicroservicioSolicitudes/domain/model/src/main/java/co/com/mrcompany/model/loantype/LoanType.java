@@ -15,9 +15,10 @@ import java.text.DecimalFormat;
 @Builder(toBuilder = true)
 public class LoanType {
     private Integer       id;
+    private String        typeName;
     private BigInteger    minAmount;
     private BigInteger    maxAmount;
-    private DecimalFormat rate;
+    private Double        rate;
     private String        rateType;
     private Boolean       autoValidation;
 }
