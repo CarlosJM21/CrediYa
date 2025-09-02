@@ -1,5 +1,8 @@
 package co.com.mrcompany.r2dbc.helper;
 
+import co.com.mrcompany.model.application.Application;
+import co.com.mrcompany.r2dbc.ApplicationR2Repository;
+import co.com.mrcompany.r2dbc.entities.ApplicationEntity;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mock;
@@ -13,93 +16,111 @@ import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 import reactor.test.StepVerifier;
 
+import java.math.BigInteger;
 import java.util.Objects;
+import java.util.UUID;
 
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.when;
 
 class ReactiveAdapterOperationsTest {
 
-    private DummyRepository repository;
+    @Mock
+    private ApplicationR2Repository repository;
+    @Mock
     private ObjectMapper mapper;
-    private ReactiveAdapterOperations<DummyEntity, DummyData, String, DummyRepository> operations;
+    private ReactiveAdapterOperations<Application, ApplicationEntity, UUID, ApplicationR2Repository> operations;
 
     @Mock
     private TransactionalOperator transactionalOperator;
 
+    private ApplicationEntity appRequest;
+    private ApplicationEntity appSuccess;
+    private Application app;
+
+    private UUID id;
+    private String email;
+
     @BeforeEach
     void setUp() {
-        repository = Mockito.mock(DummyRepository.class);
+        repository = Mockito.mock(ApplicationR2Repository.class);
         mapper = Mockito.mock(ObjectMapper.class);
-        operations = new ReactiveAdapterOperations<DummyEntity, DummyData, String, DummyRepository>(
-                repository, mapper, DummyEntity::toEntity, transactionalOperator) {};
+        operations = new ReactiveAdapterOperations<Application, ApplicationEntity, UUID, ApplicationR2Repository>(
+                repository, mapper, d -> mapper.map(d, Application.class), transactionalOperator) {};
+
+        email = "pedroPerez@yopmail.com";
+        id= UUID.fromString("422b5cfb-83bb-11f0-9973-ca1e79762f6b");
+
+        app = new Application();
+        app.setIdStatus(1);
+        app.setId(id);
+        app.setEmail(email);
+        app.setAmount(new BigInteger("5000000"));
+        app.setIdLoanType(3);
+        app.setTerm(24);
+
+        appRequest = new ApplicationEntity();
+        appRequest.setId(id);
+        appRequest.setEmail(email);
+
+        appSuccess = new ApplicationEntity();
+        appSuccess.setId(id);
+        appSuccess.setEmail(email);
     }
 
     @Test
     void save() {
-        DummyEntity entity = new DummyEntity("1", "test");
-        DummyData data = new DummyData("1", "test");
+        when(mapper.map(appRequest, Application.class)).thenReturn(app);
+        when(mapper.map(app, ApplicationEntity.class)).thenReturn(appSuccess);
+        when(repository.save(appRequest)).thenReturn(Mono.just(appSuccess));
 
-        when(mapper.map(entity, DummyData.class)).thenReturn(data);
-        when(repository.save(data)).thenReturn(Mono.just(data));
+        when(transactionalOperator.transactional(any(Mono.class)))
+                .thenAnswer( invocation -> invocation.getArgument(0) );
 
-        StepVerifier.create(operations.save(entity))
-                .expectNext(entity)
+        StepVerifier.create(operations.save(app))
+                .expectNext(app)
                 .verifyComplete();
     }
 
     @Test
     void saveAllEntities() {
-        DummyEntity entity1 = new DummyEntity("1", "test1");
-        DummyEntity entity2 = new DummyEntity("2", "test2");
-        DummyData data1 = new DummyData("1", "test1");
-        DummyData data2 = new DummyData("2", "test2");
 
-        when(mapper.map(entity1, DummyData.class)).thenReturn(data1);
-        when(mapper.map(entity2, DummyData.class)).thenReturn(data2);
-        when(repository.saveAll(any(Flux.class))).thenReturn(Flux.just(data1, data2));
+        when(transactionalOperator.transactional(any(Flux.class)))
+                .thenAnswer( invocation -> invocation.getArgument(0) );
 
-        StepVerifier.create(operations.saveAllEntities(Flux.just(entity1, entity2)))
-                .expectNext(entity1, entity2)
+        when(mapper.map(appSuccess, Application.class)).thenReturn(app);
+        when(mapper.map(appRequest, Application.class)).thenReturn(app);
+        when(repository.saveAll(any(Flux.class))).thenReturn(Flux.just(app, app));
+
+        StepVerifier.create(operations.saveAllEntities(Flux.just(app, app)))
+                .expectNext(app, app)
                 .verifyComplete();
     }
 
     @Test
     void findById() {
-        DummyData data = new DummyData("1", "test");
-        DummyEntity entity = new DummyEntity("1", "test");
+        when(transactionalOperator.transactional(any(Mono.class)))
+                .thenAnswer( invocation -> invocation.getArgument(0) );
+        when(mapper.map(appSuccess, Application.class)).thenReturn(app);
 
-        when(repository.findById("1")).thenReturn(Mono.just(data));
+        when(repository.findById(id)).thenReturn(Mono.just(appSuccess));
 
-        StepVerifier.create(operations.findById("1"))
-                .expectNext(entity)
+        StepVerifier.create(operations.findById(id))
+                .expectNext(app)
                 .verifyComplete();
     }
 
-    @Test
-    void findByExample() {
-        DummyEntity entity = new DummyEntity("1", "test");
-        DummyData data = new DummyData("1", "test");
-
-        when(mapper.map(entity, DummyData.class)).thenReturn(data);
-        when(repository.findAll(any(Example.class))).thenReturn(Flux.just(data));
-
-        StepVerifier.create(operations.findByExample(entity))
-                .expectNext(entity)
-                .verifyComplete();
-    }
 
     @Test
     void findAll() {
-        DummyData data1 = new DummyData("1", "test1");
-        DummyData data2 = new DummyData("2", "test2");
-        DummyEntity entity1 = new DummyEntity("1", "test1");
-        DummyEntity entity2 = new DummyEntity("2", "test2");
+        when(transactionalOperator.transactional(any(Flux.class)))
+                .thenAnswer( invocation -> invocation.getArgument(0) );
+        when(mapper.map(appSuccess, Application.class)).thenReturn(app);
 
-        when(repository.findAll()).thenReturn(Flux.just(data1, data2));
+        when(repository.findAll()).thenReturn(Flux.just(appSuccess));
 
         StepVerifier.create(operations.findAll())
-                .expectNext(entity1, entity2)
+                .expectNext(app)
                 .verifyComplete();
     }
 
