@@ -7,7 +7,7 @@ import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
 @RequiredArgsConstructor
-public class LoanTypeUseCase implements ILoanTypeQueryUseCase {
+public class LoanTypeUseCase implements ILoanTypeUseCase {
 
     private final LoanTypeRepository repository;
 

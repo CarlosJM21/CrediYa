@@ -1,15 +1,22 @@
 package co.com.mrcompany.r2dbc;
 
+import co.com.mrcompany.model.application.Application;
+import co.com.mrcompany.r2dbc.entities.ApplicationEntity;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 import org.reactivecommons.utils.ObjectMapper;
-import org.springframework.data.domain.Example;
+import org.springframework.test.context.bean.override.mockito.MockitoBean;
+import org.springframework.transaction.reactive.TransactionalOperator;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 import reactor.test.StepVerifier;
+
+import java.math.BigInteger;
+import java.util.UUID;
 
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.when;
@@ -22,18 +29,43 @@ class MyReactiveRepositoryAdapterTest {
     ApplicationRepositoryAdapter repositoryAdapter;
 
     @Mock
-    ApplicationRepository repository;
+    ApplicationR2Repository repository;
+
+    @MockitoBean
+    TransactionalOperator tx;
 
     @Mock
     ObjectMapper mapper;
 
+    private ApplicationEntity appRequest;
+    private ApplicationEntity appSuccess;
+    private Application app;
+
+    private UUID id;
+    private String email;
+
+    @BeforeEach
+    void setUp(){
+
+        email = "pedroPerez@yopmail.com";
+        id= UUID.fromString("422b5cfb-83bb-11f0-9973-ca1e79762f6b");
+
+        app = new Application();
+        app.setIdStatus(1);
+        app.setId(id);
+        app.setEmail(email);
+        app.setAmount(new BigInteger("5000000"));
+        app.setIdLoanType(3);
+        app.setTerm(24);
+    }
+
     @Test
     void mustFindValueById() {
 
-        when(repository.findById("1")).thenReturn(Mono.just("test"));
-        when(mapper.map("test", Object.class)).thenReturn("test");
+        when(repositoryAdapter.findById(any(UUID.class))).thenReturn(Mono.just(app));
+        when(mapper.map(appSuccess, Application.class)).thenReturn(app);
 
-        Mono<Object> result = repositoryAdapter.findById("1");
+        Mono<Application> result = repositoryAdapter.findById(id);
 
         StepVerifier.create(result)
                 .expectNextMatches(value -> value.equals("test"))
@@ -42,37 +74,37 @@ class MyReactiveRepositoryAdapterTest {
 
     @Test
     void mustFindAllValues() {
-        when(repository.findAll()).thenReturn(Flux.just("test"));
-        when(mapper.map("test", Object.class)).thenReturn("test");
+        when(repositoryAdapter.findAll()).thenReturn(Flux.just(app));
+        when(mapper.map(appSuccess, Application.class)).thenReturn(app);
 
-        Flux<Object> result = repositoryAdapter.findAll();
+        Flux<Application> result = repositoryAdapter.findAll();
 
         StepVerifier.create(result)
-                .expectNextMatches(value -> value.equals("test"))
+                .expectNextMatches(value -> value.equals(app))
                 .verifyComplete();
     }
 
     @Test
     void mustFindByExample() {
-        when(repository.findAll(any(Example.class))).thenReturn(Flux.just("test"));
-        when(mapper.map("test", Object.class)).thenReturn("test");
+        when(repositoryAdapter.findAll()).thenReturn(Flux.just(app));
+        when(mapper.map(appSuccess, Application.class)).thenReturn(app);
 
-        Flux<Object> result = repositoryAdapter.findByExample("test");
+        Flux<Application> result = repositoryAdapter.findAll();
 
         StepVerifier.create(result)
-                .expectNextMatches(value -> value.equals("test"))
+                .expectNextMatches(value -> value.equals(app))
                 .verifyComplete();
     }
 
     @Test
     void mustSaveValue() {
-        when(repository.save("test")).thenReturn(Mono.just("test"));
+        when(repositoryAdapter.save(any(Application.class))).thenReturn(Mono.just(app));
         when(mapper.map("test", Object.class)).thenReturn("test");
 
-        Mono<Object> result = repositoryAdapter.save("test");
+        Mono<Application> result = repositoryAdapter.save(app);
 
         StepVerifier.create(result)
-                .expectNextMatches(value -> value.equals("test"))
+                .expectNextMatches(value -> value.equals(app))
                 .verifyComplete();
     }
 }

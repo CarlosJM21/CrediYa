@@ -18,6 +18,7 @@ public class Application {
     private BigInteger amount;
     private Integer    term;
     private String     email;
+    @Builder.Default
     private Integer    idStatus = 1;
     private Integer    idLoanType;
 }

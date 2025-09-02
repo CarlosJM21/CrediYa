@@ -9,25 +9,42 @@ import co.com.mrcompany.model.loantype.LoanType;
 import co.com.mrcompany.model.loantype.gateways.LoanTypeRepository;
 import co.com.mrcompany.model.userauth.gateways.UserAuthRepository;
 import lombok.RequiredArgsConstructor;
+import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
 import java.math.BigInteger;
+import java.util.UUID;
 
 @RequiredArgsConstructor
-public class ApplicationCommandUseCase implements IApplicationCommandUseCase {
+public class ApplicationCommandUseCase implements ILoanApplicationUseCase {
 
     private final ApplicationRepository repository;
     private final LoanTypeRepository typeRepository;
     private final UserAuthRepository userAuthRepository;
 
     @Override
-    public Mono<Application> create(Application loanApplication) {
+    public Mono<Application> save(Application loanApplication) {
         return typeRepository.findById(loanApplication.getIdLoanType())
                 .switchIfEmpty(Mono.error(new typeInvalidException()))
                 .flatMap(t -> ValidAmount(t,loanApplication))
                 .flatMap(x -> checkAutoValidation(x,loanApplication) )
                 .flatMap(a-> validUser(a))
                 .flatMap(repository::save);
+    }
+
+    @Override
+    public Flux<Application> findAll() {
+        return repository.findAll();
+    }
+
+    @Override
+    public Mono<Application> findById(UUID id) {
+        return repository.findById(id);
+    }
+
+    @Override
+    public Flux<Application> findByEmail(String email) {
+        return repository.findByEmail(email);
     }
 
     private Mono<LoanType> ValidAmount(LoanType loanType, Application app) {
@@ -51,6 +68,4 @@ public class ApplicationCommandUseCase implements IApplicationCommandUseCase {
                     .switchIfEmpty(Mono.just(app))
                     .map( p ->{ p.setIdStatus(3); return p;});
     }
-
-
 }

@@ -7,7 +7,7 @@ import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
 @RequiredArgsConstructor
-public class StatusUseCase implements IStatusQueryUseCase {
+public class StatusUseCase implements IStatusUseCase {
 
     private final StatusRepository repository;
 

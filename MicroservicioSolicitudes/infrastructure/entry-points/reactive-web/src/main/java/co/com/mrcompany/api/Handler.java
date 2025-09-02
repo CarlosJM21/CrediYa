@@ -16,7 +16,8 @@ import java.net.URI;
 @Component
 @RequiredArgsConstructor
 public class Handler {
-private  final ILoanApplicationUseCase loanAppUseCase;
+
+private final ILoanApplicationUseCase loanAppUseCase;
 private final ApplicationMapper mapper;
 
     public Mono<ServerResponse> applyToLoan(ServerRequest serverRequest) {
@@ -24,11 +25,11 @@ private final ApplicationMapper mapper;
         return serverRequest.bodyToMono( applicationRequest.class)
                 .log( "create loan" )
                 .map(mapper::toDomain)
-                .flatMap(loanAppUseCase::create)
+                .flatMap(loanAppUseCase::save)
                 .map(mapper::toResponse)
                 .flatMap(ServerResponse.created(location)::bodyValue);
     }
-
+/*
     public Mono<ServerResponse> listenGETOtherUseCase(ServerRequest serverRequest) {
         // useCase2.logic();
         return ServerResponse.ok().bodyValue("");
@@ -37,5 +38,5 @@ private final ApplicationMapper mapper;
     public Mono<ServerResponse> listenPOSTUseCase(ServerRequest serverRequest) {
         // useCase.logic();
         return ServerResponse.ok().bodyValue("");
-    }
+    }*/
 }

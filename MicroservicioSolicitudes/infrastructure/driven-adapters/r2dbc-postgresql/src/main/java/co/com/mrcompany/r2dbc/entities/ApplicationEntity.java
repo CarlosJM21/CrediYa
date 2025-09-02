@@ -37,6 +37,6 @@ public class ApplicationEntity {
     /**
      * id loan type related
      */
-    @Column("id_loanyype")
+    @Column("id_loantype")
     private Integer    idLoanType;
 }

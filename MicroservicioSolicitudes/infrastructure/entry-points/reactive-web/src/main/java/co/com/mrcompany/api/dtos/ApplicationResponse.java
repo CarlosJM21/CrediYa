@@ -10,12 +10,13 @@ import java.util.UUID;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder(toBuilder = true)
-public class applicationResponse {
+public class ApplicationResponse {
     public UUID id;
     public BigInteger amount;
     public Integer    term;
     public String     email;
     public Integer    idStatus;
-    public String     status; //TODO: validar devolucion
+    @Builder.Default
+    public String     status = "Pending"; 
     public Integer    idLoanType;
 }
