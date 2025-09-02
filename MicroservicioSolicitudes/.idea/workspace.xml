@@ -4,7 +4,171 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2d0c8cc8-849a-4c5d-a4c4-b7859d08837d" name="Changes" comment="chore: add git ignore in projects" />
+    <list default="true" id="2d0c8cc8-849a-4c5d-a4c4-b7859d08837d" name="Changes" comment="chore: add git ignore in projects">
+      <change afterPath="$PROJECT_DIR$/../MicroservicioAutenticacion/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MicroservicioAutenticacion/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MicroservicioAutenticacion/applications/app-service/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MicroservicioAutenticacion/applications/app-service/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MicroservicioAutenticacion/applications/app-service/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MicroservicioAutenticacion/applications/app-service/src/main/java/co/com/mrcompany/MainApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MicroservicioAutenticacion/applications/app-service/src/main/java/co/com/mrcompany/config/ObjectMapperConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MicroservicioAutenticacion/applications/app-service/src/main/java/co/com/mrcompany/config/UseCasesConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MicroservicioAutenticacion/applications/app-service/src/main/resources/Scripts/DDL.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MicroservicioAutenticacion/applications/app-service/src/main/resources/Scripts/DDL_HU1.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MicroservicioAutenticacion/applications/app-service/src/main/resources/Scripts/DDL_HU3.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MicroservicioAutenticacion/applications/app-service/src/main/resources/Scripts/DML.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MicroservicioAutenticacion/applications/app-service/src/main/resources/application.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MicroservicioAutenticacion/applications/app-service/src/main/resources/log4j2.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MicroservicioAutenticacion/applications/app-service/src/test/java/co/com/mrcompany/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MicroservicioAutenticacion/applications/app-service/src/test/java/co/com/mrcompany/config/ObjectMapperConfigTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MicroservicioAutenticacion/applications/app-service/src/test/java/co/com/mrcompany/config/UseCasesConfigTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MicroservicioAutenticacion/deployment/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MicroservicioAutenticacion/deployment/docker-compose.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MicroservicioAutenticacion/domain/model/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MicroservicioAutenticacion/domain/model/src/main/java/co/com/mrcompany/model/user/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MicroservicioAutenticacion/domain/model/src/main/java/co/com/mrcompany/model/user/gateways/UserRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MicroservicioAutenticacion/domain/model/src/test/java/co/com/mrcompany/model/user/UserDomainTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MicroservicioAutenticacion/domain/usecase/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MicroservicioAutenticacion/domain/usecase/src/main/java/DomainException/EmailExistsException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MicroservicioAutenticacion/domain/usecase/src/main/java/DomainException/UserNotFoundException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MicroservicioAutenticacion/domain/usecase/src/main/java/DomainException/WrongSalaryRangeException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MicroservicioAutenticacion/domain/usecase/src/main/java/co/com/mrcompany/usecase/user/IUserUseCase.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MicroservicioAutenticacion/domain/usecase/src/main/java/co/com/mrcompany/usecase/user/UserUseCase.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MicroservicioAutenticacion/domain/usecase/src/test/java/co/com/mrcompany/usecase/user/UserUseCaseTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MicroservicioAutenticacion/gradle.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MicroservicioAutenticacion/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MicroservicioAutenticacion/infrastructure/driven-adapters/r2dbc-mysql/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MicroservicioAutenticacion/infrastructure/driven-adapters/r2dbc-mysql/src/main/java/co/com/mrcompany/r2dbc/UserR2Repository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MicroservicioAutenticacion/infrastructure/driven-adapters/r2dbc-mysql/src/main/java/co/com/mrcompany/r2dbc/UserRepositoryAdapter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MicroservicioAutenticacion/infrastructure/driven-adapters/r2dbc-mysql/src/main/java/co/com/mrcompany/r2dbc/config/MySQLConnectionPool.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MicroservicioAutenticacion/infrastructure/driven-adapters/r2dbc-mysql/src/main/java/co/com/mrcompany/r2dbc/config/MySqlConnectionProperties.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MicroservicioAutenticacion/infrastructure/driven-adapters/r2dbc-mysql/src/main/java/co/com/mrcompany/r2dbc/config/ReadConverterUUID.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MicroservicioAutenticacion/infrastructure/driven-adapters/r2dbc-mysql/src/main/java/co/com/mrcompany/r2dbc/config/TransactionConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MicroservicioAutenticacion/infrastructure/driven-adapters/r2dbc-mysql/src/main/java/co/com/mrcompany/r2dbc/config/WriterConverterUUID.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MicroservicioAutenticacion/infrastructure/driven-adapters/r2dbc-mysql/src/main/java/co/com/mrcompany/r2dbc/entities/UserEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MicroservicioAutenticacion/infrastructure/driven-adapters/r2dbc-mysql/src/main/java/co/com/mrcompany/r2dbc/helper/ReactiveAdapterOperations.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MicroservicioAutenticacion/infrastructure/driven-adapters/r2dbc-mysql/src/test/java/co/com/mrcompany/r2dbc/MyReactiveRepositoryAdapterTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MicroservicioAutenticacion/infrastructure/driven-adapters/r2dbc-mysql/src/test/java/co/com/mrcompany/r2dbc/config/MySQLConnectionPoolTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MicroservicioAutenticacion/infrastructure/driven-adapters/r2dbc-mysql/src/test/java/co/com/mrcompany/r2dbc/helper/ReactiveAdapterOperationsTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MicroservicioAutenticacion/infrastructure/entry-points/reactive-web/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MicroservicioAutenticacion/infrastructure/entry-points/reactive-web/src/main/java/co/com/mrcompany/api/Exception/GlobalExceptionHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MicroservicioAutenticacion/infrastructure/entry-points/reactive-web/src/main/java/co/com/mrcompany/api/Exception/Models/ErrorCode.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MicroservicioAutenticacion/infrastructure/entry-points/reactive-web/src/main/java/co/com/mrcompany/api/Exception/Models/ValidationError.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MicroservicioAutenticacion/infrastructure/entry-points/reactive-web/src/main/java/co/com/mrcompany/api/Exception/Models/Validations.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MicroservicioAutenticacion/infrastructure/entry-points/reactive-web/src/main/java/co/com/mrcompany/api/UserHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MicroservicioAutenticacion/infrastructure/entry-points/reactive-web/src/main/java/co/com/mrcompany/api/UserRouterRest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MicroservicioAutenticacion/infrastructure/entry-points/reactive-web/src/main/java/co/com/mrcompany/api/config/CorsConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MicroservicioAutenticacion/infrastructure/entry-points/reactive-web/src/main/java/co/com/mrcompany/api/config/Exception/GlobalErrorAttributes.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MicroservicioAutenticacion/infrastructure/entry-points/reactive-web/src/main/java/co/com/mrcompany/api/config/Exception/webPropertiesConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MicroservicioAutenticacion/infrastructure/entry-points/reactive-web/src/main/java/co/com/mrcompany/api/config/SecurityHeadersConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MicroservicioAutenticacion/infrastructure/entry-points/reactive-web/src/main/java/co/com/mrcompany/api/config/SwaggerConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MicroservicioAutenticacion/infrastructure/entry-points/reactive-web/src/main/java/co/com/mrcompany/api/dto/request/UserRequestDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MicroservicioAutenticacion/infrastructure/entry-points/reactive-web/src/main/java/co/com/mrcompany/api/dto/response/UserResponseDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MicroservicioAutenticacion/infrastructure/entry-points/reactive-web/src/main/java/co/com/mrcompany/api/mappers/UserMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MicroservicioAutenticacion/infrastructure/entry-points/reactive-web/src/test/java/co/com/mrcompany/api/RouterRestTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MicroservicioAutenticacion/infrastructure/entry-points/reactive-web/src/test/java/co/com/mrcompany/api/config/ConfigTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MicroservicioAutenticacion/infrastructure/helpers/exception/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MicroservicioAutenticacion/lombok.config" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MicroservicioAutenticacion/main.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MicroservicioAutenticacion/settings.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/applications/app-service/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/applications/app-service/src/main/java/co/com/mrcompany/MainApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/applications/app-service/src/main/java/co/com/mrcompany/config/ObjectMapperConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/applications/app-service/src/main/java/co/com/mrcompany/config/UseCasesConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/applications/app-service/src/main/resources/Scripts/DDL.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/applications/app-service/src/main/resources/Scripts/DML.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/applications/app-service/src/main/resources/application.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/applications/app-service/src/main/resources/log4j2.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/applications/app-service/src/test/java/co/com/mrcompany/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/applications/app-service/src/test/java/co/com/mrcompany/config/ObjectMapperConfigTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/applications/app-service/src/test/java/co/com/mrcompany/config/UseCasesConfigTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/deployment/Docker-compose.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/deployment/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/deployment/config.env" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/domain/model/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/domain/model/src/main/java/co/com/mrcompany/model/CustomExceptions/amontOutOfRange.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/domain/model/src/main/java/co/com/mrcompany/model/CustomExceptions/typeInvalidException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/domain/model/src/main/java/co/com/mrcompany/model/CustomExceptions/userNotFount.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/domain/model/src/main/java/co/com/mrcompany/model/RateType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/domain/model/src/main/java/co/com/mrcompany/model/application/Application.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/domain/model/src/main/java/co/com/mrcompany/model/application/gateways/ApplicationRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/domain/model/src/main/java/co/com/mrcompany/model/loantype/LoanType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/domain/model/src/main/java/co/com/mrcompany/model/loantype/gateways/LoanTypeRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/domain/model/src/main/java/co/com/mrcompany/model/status/Status.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/domain/model/src/main/java/co/com/mrcompany/model/status/gateways/StatusRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/domain/model/src/main/java/co/com/mrcompany/model/userauth/UserAuth.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/domain/model/src/main/java/co/com/mrcompany/model/userauth/gateways/UserAuthRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/domain/usecase/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/domain/usecase/src/main/java/co/com/mrcompany/usecase/loanapplication/ApplicationCommandUseCase.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/domain/usecase/src/main/java/co/com/mrcompany/usecase/loanapplication/ILoanApplicationUseCase.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/domain/usecase/src/main/java/co/com/mrcompany/usecase/loanapplication/validations/constants.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/domain/usecase/src/main/java/co/com/mrcompany/usecase/loantype/ILoanTypeUseCase.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/domain/usecase/src/main/java/co/com/mrcompany/usecase/loantype/LoanTypeUseCase.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/domain/usecase/src/main/java/co/com/mrcompany/usecase/status/IStatusUseCase.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/domain/usecase/src/main/java/co/com/mrcompany/usecase/status/StatusUseCase.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/domain/usecase/src/test/java/co/com/mrcompany/usecase/loanapplication/ApplicationUseCaseTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/domain/usecase/src/test/java/co/com/mrcompany/usecase/loantype/LoanTypeUseCaseTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/domain/usecase/src/test/java/co/com/mrcompany/usecase/status/StatusUseCaseTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradle.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/infrastructure/driven-adapters/r2dbc-postgresql/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/infrastructure/driven-adapters/r2dbc-postgresql/src/main/java/co/com/mrcompany/r2dbc/ApplicationR2Repository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/infrastructure/driven-adapters/r2dbc-postgresql/src/main/java/co/com/mrcompany/r2dbc/ApplicationRepositoryAdapter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/infrastructure/driven-adapters/r2dbc-postgresql/src/main/java/co/com/mrcompany/r2dbc/LoanTypeR2Repository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/infrastructure/driven-adapters/r2dbc-postgresql/src/main/java/co/com/mrcompany/r2dbc/LoanTypeRepositoryAdapter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/infrastructure/driven-adapters/r2dbc-postgresql/src/main/java/co/com/mrcompany/r2dbc/StatusR2Repository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/infrastructure/driven-adapters/r2dbc-postgresql/src/main/java/co/com/mrcompany/r2dbc/StatusRepositoryAdapter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/infrastructure/driven-adapters/r2dbc-postgresql/src/main/java/co/com/mrcompany/r2dbc/config/MySQLConnectionPool.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/infrastructure/driven-adapters/r2dbc-postgresql/src/main/java/co/com/mrcompany/r2dbc/config/MySqlConnectionProperties.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/infrastructure/driven-adapters/r2dbc-postgresql/src/main/java/co/com/mrcompany/r2dbc/config/converters/ReadConverterUUID.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/infrastructure/driven-adapters/r2dbc-postgresql/src/main/java/co/com/mrcompany/r2dbc/config/converters/WriterConverterUUID.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/infrastructure/driven-adapters/r2dbc-postgresql/src/main/java/co/com/mrcompany/r2dbc/entities/ApplicationEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/infrastructure/driven-adapters/r2dbc-postgresql/src/main/java/co/com/mrcompany/r2dbc/entities/LoanTypeEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/infrastructure/driven-adapters/r2dbc-postgresql/src/main/java/co/com/mrcompany/r2dbc/entities/StatusEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/infrastructure/driven-adapters/r2dbc-postgresql/src/main/java/co/com/mrcompany/r2dbc/helper/ReactiveAdapterOperations.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/infrastructure/driven-adapters/r2dbc-postgresql/src/test/java/co/com/mrcompany/r2dbc/LoanTypeRepositoryAdapterTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/infrastructure/driven-adapters/r2dbc-postgresql/src/test/java/co/com/mrcompany/r2dbc/MyReactiveRepositoryAdapterTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/infrastructure/driven-adapters/r2dbc-postgresql/src/test/java/co/com/mrcompany/r2dbc/StatusRepositoryAdapterTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/infrastructure/driven-adapters/r2dbc-postgresql/src/test/java/co/com/mrcompany/r2dbc/config/MySQLConnectionPoolTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/infrastructure/driven-adapters/r2dbc-postgresql/src/test/java/co/com/mrcompany/r2dbc/helper/ReactiveAdapterOperationsTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/infrastructure/driven-adapters/rest-consumer/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/infrastructure/driven-adapters/rest-consumer/src/main/java/co/com/mrcompany/consumer/RestConsumer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/infrastructure/driven-adapters/rest-consumer/src/main/java/co/com/mrcompany/consumer/UserRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/infrastructure/driven-adapters/rest-consumer/src/main/java/co/com/mrcompany/consumer/UserResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/infrastructure/driven-adapters/rest-consumer/src/main/java/co/com/mrcompany/consumer/config/RestConsumerConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/infrastructure/driven-adapters/rest-consumer/src/test/java/co/com/mrcompany/consumer/RestConsumerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/infrastructure/entry-points/reactive-web/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/infrastructure/entry-points/reactive-web/src/main/java/co/com/mrcompany/api/Handler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/infrastructure/entry-points/reactive-web/src/main/java/co/com/mrcompany/api/RouterRest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/infrastructure/entry-points/reactive-web/src/main/java/co/com/mrcompany/api/config/CorsConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/infrastructure/entry-points/reactive-web/src/main/java/co/com/mrcompany/api/config/Operations/Operation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/infrastructure/entry-points/reactive-web/src/main/java/co/com/mrcompany/api/config/Operations/RouteOperation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/infrastructure/entry-points/reactive-web/src/main/java/co/com/mrcompany/api/config/Operations/RouteSwagger.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/infrastructure/entry-points/reactive-web/src/main/java/co/com/mrcompany/api/config/SecurityHeadersConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/infrastructure/entry-points/reactive-web/src/main/java/co/com/mrcompany/api/config/SwaggerConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/infrastructure/entry-points/reactive-web/src/main/java/co/com/mrcompany/api/dtos/ApplicationResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/infrastructure/entry-points/reactive-web/src/main/java/co/com/mrcompany/api/dtos/applicationRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/infrastructure/entry-points/reactive-web/src/main/java/co/com/mrcompany/api/exception/GlobalExceptionHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/infrastructure/entry-points/reactive-web/src/main/java/co/com/mrcompany/api/exception/config/GlobalErrorAtributes.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/infrastructure/entry-points/reactive-web/src/main/java/co/com/mrcompany/api/exception/config/webPropertiesConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/infrastructure/entry-points/reactive-web/src/main/java/co/com/mrcompany/api/exception/models/ErrorCode.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/infrastructure/entry-points/reactive-web/src/main/java/co/com/mrcompany/api/exception/models/ValidationError.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/infrastructure/entry-points/reactive-web/src/main/java/co/com/mrcompany/api/exception/models/Validations.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/infrastructure/entry-points/reactive-web/src/main/java/co/com/mrcompany/api/mappers/ApplicationMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/infrastructure/entry-points/reactive-web/src/test/java/co/com/mrcompany/api/RouterRestTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/infrastructure/entry-points/reactive-web/src/test/java/co/com/mrcompany/api/config/ConfigTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lombok.config" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MicroservicioAutenticacion/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../MicroservicioAutenticacion/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MicroservicioAutenticacion/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../MicroservicioAutenticacion/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -29,11 +193,11 @@
             <expand>
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="MicroservicioSolicitudes" type="f1a62948:ProjectNode" />
+                <item name="CrediYa.Loan_App" type="f1a62948:ProjectNode" />
               </path>
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="MicroservicioSolicitudes" type="f1a62948:ProjectNode" />
+                <item name="CrediYa.Loan_App" type="f1a62948:ProjectNode" />
                 <item name="Run Configurations" type="7b0102dc:RunConfigurationsNode" />
               </path>
             </expand>
@@ -96,54 +260,54 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Docker.deployment/Docker-compose.yml: Compose Deployment.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.ApplicationUseCaseTest.executor&quot;: &quot;Coverage&quot;,
-    &quot;Gradle.ApplicationUseCaseTest.findAByEmailApp.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.ApplicationUseCaseTest.findAllApp.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.ApplicationUseCaseTest.findByIdApp.executor&quot;: &quot;Coverage&quot;,
-    &quot;Gradle.ApplicationUseCaseTest.saveApp.executor&quot;: &quot;Coverage&quot;,
-    &quot;Gradle.Build MicroservicioSolicitudes.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.ConfigTest.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.Download Sources.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.LoanTypeRepositoryAdapterTest.executor&quot;: &quot;Coverage&quot;,
-    &quot;Gradle.LoanTypeRepositoryAdapterTest.mustFindValueById.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.LoanTypeUseCaseTest.executor&quot;: &quot;Coverage&quot;,
-    &quot;Gradle.MicroservicioSolicitudes [jacocoTestReport].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.MicroservicioSolicitudes.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.MicroservicioSolicitudes:applications:app-service [:app-service:co.com.mrcompany.MainApplication.main()].executor&quot;: &quot;Debug&quot;,
-    &quot;Gradle.MicroservicioSolicitudes:applications:app-service [build].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.MicroservicioSolicitudes:applications:app-service [clean].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.MyReactiveRepositoryAdapterTest.executor&quot;: &quot;Coverage&quot;,
-    &quot;Gradle.MyReactiveRepositoryAdapterTest.mustFindAllValues.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.MyReactiveRepositoryAdapterTest.mustFindByExample.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.MyReactiveRepositoryAdapterTest.mustFindValueById.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.MyReactiveRepositoryAdapterTest.mustSaveValue.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.ReactiveAdapterOperationsTest.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.ReactiveAdapterOperationsTest.findAll.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.ReactiveAdapterOperationsTest.findByExample.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.ReactiveAdapterOperationsTest.save.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.ReactiveAdapterOperationsTest.saveAllEntities.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.RestConsumerTest.executor&quot;: &quot;Coverage&quot;,
-    &quot;Gradle.RouterRestTest.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.StatusRepositoryAdapterTest.executor&quot;: &quot;Coverage&quot;,
-    &quot;Gradle.StatusRepositoryAdapterTest.mustSaveValue.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.StatusUseCaseTest.executor&quot;: &quot;Coverage&quot;,
-    &quot;Gradle.Tests in 'CrediYa.Loan_App.reactive-web.test'.executor&quot;: &quot;Coverage&quot;,
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;SONARLINT_PRECOMMIT_ANALYSIS&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/Projects/Java/CrediYa/MicroservicioSolicitudes/build.gradle&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Docker.deployment/Docker-compose.yml: Compose Deployment.executor": "Run",
+    "Gradle.ApplicationUseCaseTest.executor": "Coverage",
+    "Gradle.ApplicationUseCaseTest.findAByEmailApp.executor": "Run",
+    "Gradle.ApplicationUseCaseTest.findAllApp.executor": "Run",
+    "Gradle.ApplicationUseCaseTest.findByIdApp.executor": "Coverage",
+    "Gradle.ApplicationUseCaseTest.saveApp.executor": "Coverage",
+    "Gradle.Build MicroservicioSolicitudes.executor": "Run",
+    "Gradle.ConfigTest.executor": "Run",
+    "Gradle.Download Sources.executor": "Run",
+    "Gradle.LoanTypeRepositoryAdapterTest.executor": "Coverage",
+    "Gradle.LoanTypeRepositoryAdapterTest.mustFindValueById.executor": "Run",
+    "Gradle.LoanTypeUseCaseTest.executor": "Coverage",
+    "Gradle.MicroservicioSolicitudes [jacocoTestReport].executor": "Run",
+    "Gradle.MicroservicioSolicitudes.executor": "Run",
+    "Gradle.MicroservicioSolicitudes:applications:app-service [:app-service:co.com.mrcompany.MainApplication.main()].executor": "Debug",
+    "Gradle.MicroservicioSolicitudes:applications:app-service [build].executor": "Run",
+    "Gradle.MicroservicioSolicitudes:applications:app-service [clean].executor": "Run",
+    "Gradle.MyReactiveRepositoryAdapterTest.executor": "Coverage",
+    "Gradle.MyReactiveRepositoryAdapterTest.mustFindAllValues.executor": "Run",
+    "Gradle.MyReactiveRepositoryAdapterTest.mustFindByExample.executor": "Run",
+    "Gradle.MyReactiveRepositoryAdapterTest.mustFindValueById.executor": "Run",
+    "Gradle.MyReactiveRepositoryAdapterTest.mustSaveValue.executor": "Run",
+    "Gradle.ReactiveAdapterOperationsTest.executor": "Run",
+    "Gradle.ReactiveAdapterOperationsTest.findAll.executor": "Run",
+    "Gradle.ReactiveAdapterOperationsTest.findByExample.executor": "Run",
+    "Gradle.ReactiveAdapterOperationsTest.save.executor": "Run",
+    "Gradle.ReactiveAdapterOperationsTest.saveAllEntities.executor": "Run",
+    "Gradle.RestConsumerTest.executor": "Coverage",
+    "Gradle.RouterRestTest.executor": "Run",
+    "Gradle.StatusRepositoryAdapterTest.executor": "Coverage",
+    "Gradle.StatusRepositoryAdapterTest.mustSaveValue.executor": "Run",
+    "Gradle.StatusUseCaseTest.executor": "Coverage",
+    "Gradle.Tests in 'CrediYa.Loan_App.reactive-web.test'.executor": "Coverage",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "SONARLINT_PRECOMMIT_ANALYSIS": "true",
+    "git-widget-placeholder": "Merging main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "D:/Projects/Java/CrediYa/MicroservicioSolicitudes/build.gradle",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="co.com.mrcompany.usecase.status" />
