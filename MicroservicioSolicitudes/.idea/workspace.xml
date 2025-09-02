@@ -1,0 +1,459 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="2d0c8cc8-849a-4c5d-a4c4-b7859d08837d" name="Changes" comment="chore: add git ignore in projects" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
+        <task path="$PROJECT_DIR$/applications/app-service">
+          <activation />
+        </task>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="MicroservicioSolicitudes" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="MicroservicioSolicitudes" type="f1a62948:ProjectNode" />
+                <item name="Run Configurations" type="7b0102dc:RunConfigurationsNode" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Enum" />
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <favorite-branches>
+      <branch-storage>
+        <map>
+          <entry type="LOCAL">
+            <value>
+              <list>
+                <branch-info repo="$PROJECT_DIR$/.." source="HU2_Solicitud_Prestamo" />
+              </list>
+            </value>
+          </entry>
+        </map>
+      </branch-storage>
+    </favorite-branches>
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$/.." value="Develop" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;CarlosJM21&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/CarlosJM21/CrediYa.git&quot;,
+    &quot;accountId&quot;: &quot;db8cde73-a052-40a4-85ef-c7c24888aa3b&quot;
+  }
+}</component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 4
+}</component>
+  <component name="ProjectId" id="31y8QBPhHoDoDgjV5k7CTrLmeDP" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Docker.deployment/Docker-compose.yml: Compose Deployment.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.ApplicationUseCaseTest.executor&quot;: &quot;Coverage&quot;,
+    &quot;Gradle.ApplicationUseCaseTest.findAByEmailApp.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.ApplicationUseCaseTest.findAllApp.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.ApplicationUseCaseTest.findByIdApp.executor&quot;: &quot;Coverage&quot;,
+    &quot;Gradle.ApplicationUseCaseTest.saveApp.executor&quot;: &quot;Coverage&quot;,
+    &quot;Gradle.Build MicroservicioSolicitudes.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.ConfigTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.Download Sources.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.LoanTypeRepositoryAdapterTest.executor&quot;: &quot;Coverage&quot;,
+    &quot;Gradle.LoanTypeRepositoryAdapterTest.mustFindValueById.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.LoanTypeUseCaseTest.executor&quot;: &quot;Coverage&quot;,
+    &quot;Gradle.MicroservicioSolicitudes [jacocoTestReport].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.MicroservicioSolicitudes.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.MicroservicioSolicitudes:applications:app-service [:app-service:co.com.mrcompany.MainApplication.main()].executor&quot;: &quot;Debug&quot;,
+    &quot;Gradle.MicroservicioSolicitudes:applications:app-service [build].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.MicroservicioSolicitudes:applications:app-service [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.MyReactiveRepositoryAdapterTest.executor&quot;: &quot;Coverage&quot;,
+    &quot;Gradle.MyReactiveRepositoryAdapterTest.mustFindAllValues.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.MyReactiveRepositoryAdapterTest.mustFindByExample.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.MyReactiveRepositoryAdapterTest.mustFindValueById.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.MyReactiveRepositoryAdapterTest.mustSaveValue.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.ReactiveAdapterOperationsTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.ReactiveAdapterOperationsTest.findAll.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.ReactiveAdapterOperationsTest.findByExample.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.ReactiveAdapterOperationsTest.save.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.ReactiveAdapterOperationsTest.saveAllEntities.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.RestConsumerTest.executor&quot;: &quot;Coverage&quot;,
+    &quot;Gradle.RouterRestTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.StatusRepositoryAdapterTest.executor&quot;: &quot;Coverage&quot;,
+    &quot;Gradle.StatusRepositoryAdapterTest.mustSaveValue.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.StatusUseCaseTest.executor&quot;: &quot;Coverage&quot;,
+    &quot;Gradle.Tests in 'CrediYa.Loan_App.reactive-web.test'.executor&quot;: &quot;Coverage&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;SONARLINT_PRECOMMIT_ANALYSIS&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Projects/Java/CrediYa/MicroservicioSolicitudes/build.gradle&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="co.com.mrcompany.usecase.status" />
+      <recent name="co.com.mrcompany.usecase.loantype" />
+      <recent name="co.com.mrcompany.r2dbc" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Gradle.RestConsumerTest">
+    <configuration name="ConfigTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":reactive-web:test" />
+            <option value="--tests" />
+            <option value="&quot;co.com.mrcompany.api.config.ConfigTest&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="MicroservicioSolicitudes:applications:app-service [clean]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/applications/app-service" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="clean" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="RestConsumerTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":rest-consumer:test" />
+            <option value="--tests" />
+            <option value="&quot;co.com.mrcompany.consumer.RestConsumerTest&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="RouterRestTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":reactive-web:test" />
+            <option value="--tests" />
+            <option value="&quot;co.com.mrcompany.api.RouterRestTest&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="Tests in 'CrediYa.Loan_App.reactive-web.test'" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":reactive-web:test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Gradle.Tests in 'CrediYa.Loan_App.reactive-web.test'" />
+        <item itemvalue="Gradle.RouterRestTest" />
+        <item itemvalue="Gradle.RestConsumerTest" />
+        <item itemvalue="Gradle.MicroservicioSolicitudes:applications:app-service [clean]" />
+        <item itemvalue="Gradle.ConfigTest" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="2d0c8cc8-849a-4c5d-a4c4-b7859d08837d" name="Changes" comment="" />
+      <created>1756484933985</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1756484933985</updated>
+    </task>
+    <task id="LOCAL-00001" summary="Chore: add ignore">
+      <option name="closed" value="true" />
+      <created>1756502317980</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1756502317980</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Chore: add ignore">
+      <option name="closed" value="true" />
+      <created>1756502361730</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1756502361730</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Feat: se avanza en la HU&#10;&#10;1.se crea casos de uso&#10;2. se crean repositorios bas&#10;3. se crean script&#10;4. se crea manejador de excepciones&#10;5. se crea entry point">
+      <option name="closed" value="true" />
+      <created>1756707776995</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1756707776995</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Feat: se  define el metodo de creacion en el caso de uso&#10;&#10;1.se crea el pipeline de seguimiento&#10;2. se crean metodo de validacion para crear pipeline manual&#10;3. se mejoran las validaciones&#10;4. se crean custom exceptions&#10;5. se ajusta el restconsumer.">
+      <option name="closed" value="true" />
+      <created>1756749611851</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1756749611851</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Fix: se reestucturan los casos de uso&#10;&#10;1.se reestucturan los casos de uso&#10;2. se terminand de configurar los repositorios&#10;3. se ajusta la configuracion de la bd&#10;4. se ajustan los cors&#10;5. se ajusta configuracion de swagger">
+      <option name="closed" value="true" />
+      <created>1756771514038</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1756771514038</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Fix:  se ajustan y valida la funcionalidad principal&#10;&#10;1. se ajustan las validaciones del caso de uso configuraciones y demas&#10;2. se ajusta el resconsumer&#10;3. se comienza con las pruebas de entry point y el restconsumer">
+      <option name="closed" value="true" />
+      <created>1756791245044</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1756791245044</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Feat: se agregan los test unitarios.">
+      <option name="closed" value="true" />
+      <created>1756834760805</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1756834760805</updated>
+    </task>
+    <task id="LOCAL-00008" summary="chore: add git ignore in projects">
+      <option name="closed" value="true" />
+      <created>1756846469253</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1756846469253</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Chore: add ignore" />
+    <MESSAGE value="Feat: se avanza en la HU&#10;&#10;1.se crea casos de uso&#10;2. se crean repositorios bas&#10;3. se crean script&#10;4. se crea manejador de excepciones&#10;5. se crea entry point" />
+    <MESSAGE value="Feat: se  define el metodo de creacion en el caso de uso&#10;&#10;1.se crea el pipeline de seguimiento&#10;2. se crean metodo de validacion para crear pipeline manual&#10;3. se mejoran las validaciones&#10;4. se crean custom exceptions&#10;5. se ajusta el restconsumer." />
+    <MESSAGE value="Fix: se reestucturan los casos de uso&#10;&#10;1.se reestucturan los casos de uso&#10;2. se terminand de configurar los repositorios&#10;3. se ajusta la configuracion de la bd&#10;4. se ajustan los cors&#10;5. se ajusta configuracion de swagger" />
+    <MESSAGE value="Fix:  se ajustan y valida la funcionalidad principal&#10;&#10;1. se ajustan las validaciones del caso de uso configuraciones y demas&#10;2. se ajusta el resconsumer&#10;3. se comienza con las pruebas de entry point y el restconsumer" />
+    <MESSAGE value="Feat: se agregan los test unitarios." />
+    <MESSAGE value="chore: add git ignore in projects" />
+    <option name="LAST_COMMIT_MESSAGE" value="chore: add git ignore in projects" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-field">
+          <url>file://$PROJECT_DIR$/infrastructure/driven-adapters/r2dbc-postgresql/src/main/java/co/com/mrcompany/r2dbc/entities/LoanTypeEntity.java</url>
+          <line>14</line>
+          <properties field="id" class="co.com.mrcompany.r2dbc.entities.LoanTypeEntity" />
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-field">
+          <url>file://$PROJECT_DIR$/domain/usecase/src/main/java/co/com/mrcompany/usecase/loanapplication/validations/constants.java</url>
+          <line>12</line>
+          <properties field="AMOUNT_ERRORMESSAGE" class="co.com.mrcompany.usecase.loanapplication.validations.constants" />
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/infrastructure/entry-points/reactive-web/src/main/java/co/com/mrcompany/api/config/Operations/RouteSwagger.java</url>
+          <line>15</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/infrastructure/driven-adapters/rest-consumer/src/main/java/co/com/mrcompany/consumer/RestConsumer.java</url>
+          <line>19</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/domain/usecase/src/main/java/co/com/mrcompany/usecase/loanapplication/ApplicationCommandUseCase.java</url>
+          <line>58</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/domain/usecase/src/main/java/co/com/mrcompany/usecase/loanapplication/ApplicationCommandUseCase.java</url>
+          <line>65</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/domain/usecase/src/main/java/co/com/mrcompany/usecase/loanapplication/ApplicationCommandUseCase.java</url>
+          <line>51</line>
+          <properties>
+            <option name="lambda-ordinal" value="-1" />
+          </properties>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/infrastructure/driven-adapters/rest-consumer/src/main/java/co/com/mrcompany/consumer/RestConsumer.java</url>
+          <line>28</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/infrastructure/entry-points/reactive-web/src/main/java/co/com/mrcompany/api/Handler.java</url>
+          <line>24</line>
+          <option name="timeStamp" value="12" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/domain/usecase/src/main/java/co/com/mrcompany/usecase/loanapplication/ApplicationCommandUseCase.java</url>
+          <line>26</line>
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/infrastructure/entry-points/reactive-web/build/generated/sources/annotationProcessor/java/main/co/com/mrcompany/api/mappers/ApplicationMapperImpl.java</url>
+          <line>17</line>
+          <properties class="co.com.mrcompany.api.mappers.ApplicationMapperImpl">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/CrediYa_Loan_App$LoanTypeUseCaseTest.ic" NAME="LoanTypeUseCaseTest Coverage Results" MODIFIED="1756834517730" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
+    <SUITE FILE_PATH="coverage/CrediYa_Loan_App$StatusUseCaseTest.ic" NAME="StatusUseCaseTest Coverage Results" MODIFIED="1756834669406" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
+    <SUITE FILE_PATH="coverage/CrediYa_Loan_App$Tests_in__CrediYa_Loan_App_reactive_web_test_.ic" NAME="Tests in 'CrediYa.Loan_App.reactive-web.test' Coverage Results" MODIFIED="1756789763212" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
+    <SUITE FILE_PATH="coverage/CrediYa_Loan_App$MyReactiveRepositoryAdapterTest.ic" NAME="MyReactiveRepositoryAdapterTest Coverage Results" MODIFIED="1756830558937" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
+    <SUITE FILE_PATH="coverage/CrediYa_Loan_App$ApplicationUseCaseTest.ic" NAME="ApplicationUseCaseTest Coverage Results" MODIFIED="1756835660138" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
+    <SUITE FILE_PATH="coverage/CrediYa_Loan_App$RestConsumerTest.ic" NAME="RestConsumerTest Coverage Results" MODIFIED="1756790036701" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
+    <SUITE FILE_PATH="coverage/CrediYa_Loan_App$ApplicationUseCaseTest_saveApp.ic" NAME="ApplicationUseCaseTest.saveApp Coverage Results" MODIFIED="1756835582343" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
+    <SUITE FILE_PATH="coverage/CrediYa_Loan_App$LoanTypeRepositoryAdapterTest.ic" NAME="LoanTypeRepositoryAdapterTest Coverage Results" MODIFIED="1756831110232" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
+    <SUITE FILE_PATH="coverage/CrediYa_Loan_App$StatusRepositoryAdapterTest.ic" NAME="StatusRepositoryAdapterTest Coverage Results" MODIFIED="1756831705027" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
+    <SUITE FILE_PATH="coverage/CrediYa_Loan_App$ApplicationUseCaseTest_findByIdApp.ic" NAME="ApplicationUseCaseTest.findByIdApp Coverage Results" MODIFIED="1756835419487" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
+  </component>
+</project>

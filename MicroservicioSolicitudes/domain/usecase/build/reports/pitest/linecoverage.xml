@@ -1,0 +1,1196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage>
+<block classname='co.com.mrcompany.model.application.Application' method='setTerm(Ljava/lang/Integer;)V' number='0'><tests>
+<test name='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest]/[method:findAByEmailApp()]'/>
+<test name='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest]/[method:findAllApp()]'/>
+<test name='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest]/[method:findByIdApp()]'/>
+<test name='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest]/[method:saveApp()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.model.application.Application' method='setIdLoanType(Ljava/lang/Integer;)V' number='0'><tests>
+<test name='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest]/[method:findAByEmailApp()]'/>
+<test name='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest]/[method:findAllApp()]'/>
+<test name='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest]/[method:findByIdApp()]'/>
+<test name='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest]/[method:saveApp()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest' method='setUp()V' number='12'><tests>
+<test name='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest]/[method:findAByEmailApp()]'/>
+<test name='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest]/[method:findAllApp()]'/>
+<test name='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest]/[method:findByIdApp()]'/>
+<test name='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest]/[method:saveApp()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest' method='setUp()V' number='11'><tests>
+<test name='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest]/[method:findAByEmailApp()]'/>
+<test name='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest]/[method:findAllApp()]'/>
+<test name='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest]/[method:findByIdApp()]'/>
+<test name='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest]/[method:saveApp()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest' method='setUp()V' number='10'><tests>
+<test name='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest]/[method:findAByEmailApp()]'/>
+<test name='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest]/[method:findAllApp()]'/>
+<test name='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest]/[method:findByIdApp()]'/>
+<test name='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest]/[method:saveApp()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest' method='setUp()V' number='9'><tests>
+<test name='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest]/[method:findAByEmailApp()]'/>
+<test name='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest]/[method:findAllApp()]'/>
+<test name='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest]/[method:findByIdApp()]'/>
+<test name='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest]/[method:saveApp()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest' method='setUp()V' number='8'><tests>
+<test name='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest]/[method:findAByEmailApp()]'/>
+<test name='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest]/[method:findAllApp()]'/>
+<test name='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest]/[method:findByIdApp()]'/>
+<test name='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest]/[method:saveApp()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest' method='setUp()V' number='7'><tests>
+<test name='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest]/[method:findAByEmailApp()]'/>
+<test name='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest]/[method:findAllApp()]'/>
+<test name='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest]/[method:findByIdApp()]'/>
+<test name='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest]/[method:saveApp()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest' method='setUp()V' number='6'><tests>
+<test name='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest]/[method:findAByEmailApp()]'/>
+<test name='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest]/[method:findAllApp()]'/>
+<test name='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest]/[method:findByIdApp()]'/>
+<test name='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest]/[method:saveApp()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.model.loantype.gateways.LoanTypeRepository$MockitoMock$OO92xTic' method='setMockitoInterceptor(Lorg/mockito/internal/creation/bytebuddy/access/MockMethodInterceptor;)V' number='0'><tests>
+<test name='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest]/[method:findAByEmailApp()]'/>
+<test name='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest]/[method:findAllApp()]'/>
+<test name='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest]/[method:findByIdApp()]'/>
+<test name='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest]/[method:saveApp()]'/>
+<test name='co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest]/[method:findAByEmailApp()]'/>
+<test name='co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest]/[method:findAllApp()]'/>
+<test name='co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest]/[method:findByIdApp()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest' method='setUp()V' number='5'><tests>
+<test name='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest]/[method:findAByEmailApp()]'/>
+<test name='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest]/[method:findAllApp()]'/>
+<test name='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest]/[method:findByIdApp()]'/>
+<test name='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest]/[method:saveApp()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest' method='setUp()V' number='4'><tests>
+<test name='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest]/[method:findAByEmailApp()]'/>
+<test name='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest]/[method:findAllApp()]'/>
+<test name='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest]/[method:findByIdApp()]'/>
+<test name='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest]/[method:saveApp()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest' method='setUp()V' number='3'><tests>
+<test name='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest]/[method:findAByEmailApp()]'/>
+<test name='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest]/[method:findAllApp()]'/>
+<test name='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest]/[method:findByIdApp()]'/>
+<test name='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest]/[method:saveApp()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest' method='setUp()V' number='2'><tests>
+<test name='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest]/[method:findAByEmailApp()]'/>
+<test name='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest]/[method:findAllApp()]'/>
+<test name='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest]/[method:findByIdApp()]'/>
+<test name='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest]/[method:saveApp()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest' method='setUp()V' number='1'><tests>
+<test name='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest]/[method:findAByEmailApp()]'/>
+<test name='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest]/[method:findAllApp()]'/>
+<test name='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest]/[method:findByIdApp()]'/>
+<test name='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest]/[method:saveApp()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.model.application.gateways.ApplicationRepository$MockitoMock$SC9wQxUy' method='setMockitoInterceptor(Lorg/mockito/internal/creation/bytebuddy/access/MockMethodInterceptor;)V' number='0'><tests>
+<test name='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest]/[method:findAByEmailApp()]'/>
+<test name='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest]/[method:findAllApp()]'/>
+<test name='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest]/[method:findByIdApp()]'/>
+<test name='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest]/[method:saveApp()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest' method='setUp()V' number='0'><tests>
+<test name='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest]/[method:findAByEmailApp()]'/>
+<test name='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest]/[method:findAllApp()]'/>
+<test name='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest]/[method:findByIdApp()]'/>
+<test name='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest]/[method:saveApp()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest' method='lambda$findAllApp$2(Lco/com/mrcompany/model/application/Application;)Z' number='0'><tests>
+<test name='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest]/[method:findAllApp()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest' method='lambda$findAllApp$2(Lco/com/mrcompany/model/application/Application;)Z' number='2'><tests>
+<test name='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest]/[method:findAllApp()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.model.application.Application' method='$default$idStatus()Ljava/lang/Integer;' number='1'><tests>
+<test name='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest]/[method:findAByEmailApp()]'/>
+<test name='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest]/[method:findAllApp()]'/>
+<test name='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest]/[method:findByIdApp()]'/>
+<test name='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest]/[method:saveApp()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest' method='lambda$findAllApp$2(Lco/com/mrcompany/model/application/Application;)Z' number='1'><tests>
+<test name='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest]/[method:findAllApp()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest' method='lambda$findAllApp$2(Lco/com/mrcompany/model/application/Application;)Z' number='3'><tests>
+<test name='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest]/[method:findAllApp()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.model.application.Application' method='setEmail(Ljava/lang/String;)V' number='0'><tests>
+<test name='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest]/[method:findAByEmailApp()]'/>
+<test name='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest]/[method:findAllApp()]'/>
+<test name='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest]/[method:findByIdApp()]'/>
+<test name='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest]/[method:saveApp()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.model.application.Application' method='$default$idStatus()Ljava/lang/Integer;' number='0'><tests>
+<test name='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest]/[method:findAByEmailApp()]'/>
+<test name='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest]/[method:findAllApp()]'/>
+<test name='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest]/[method:findByIdApp()]'/>
+<test name='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest]/[method:saveApp()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.model.application.gateways.ApplicationRepository$MockitoMock$SC9wQxUy' method='&lt;clinit&gt;()V' number='3'><tests>
+<test name='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest]/[method:findAllApp()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.model.application.gateways.ApplicationRepository$MockitoMock$SC9wQxUy' method='&lt;clinit&gt;()V' number='2'><tests>
+<test name='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest]/[method:findAllApp()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.model.application.gateways.ApplicationRepository$MockitoMock$SC9wQxUy' method='&lt;clinit&gt;()V' number='1'><tests>
+<test name='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest]/[method:findAllApp()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.model.application.gateways.ApplicationRepository$MockitoMock$SC9wQxUy' method='&lt;clinit&gt;()V' number='0'><tests>
+<test name='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest]/[method:findAllApp()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.model.application.gateways.ApplicationRepository$MockitoMock$SC9wQxUy' method='&lt;clinit&gt;()V' number='6'><tests>
+<test name='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest]/[method:findAllApp()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.model.application.gateways.ApplicationRepository$MockitoMock$SC9wQxUy' method='&lt;clinit&gt;()V' number='5'><tests>
+<test name='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest]/[method:findAllApp()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.model.application.gateways.ApplicationRepository$MockitoMock$SC9wQxUy' method='&lt;clinit&gt;()V' number='4'><tests>
+<test name='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest]/[method:findAllApp()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.model.userauth.gateways.UserAuthRepository$MockitoMock$OSndfb3C' method='setMockitoInterceptor(Lorg/mockito/internal/creation/bytebuddy/access/MockMethodInterceptor;)V' number='0'><tests>
+<test name='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest]/[method:findAByEmailApp()]'/>
+<test name='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest]/[method:findAllApp()]'/>
+<test name='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest]/[method:findByIdApp()]'/>
+<test name='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest]/[method:saveApp()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.model.application.Application' method='setAmount(Ljava/math/BigInteger;)V' number='0'><tests>
+<test name='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest]/[method:findAByEmailApp()]'/>
+<test name='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest]/[method:findAllApp()]'/>
+<test name='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest]/[method:findByIdApp()]'/>
+<test name='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest]/[method:saveApp()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.model.application.gateways.ApplicationRepository$MockitoMock$SC9wQxUy' method='&lt;init&gt;()V' number='0'><tests>
+<test name='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest]/[method:findAByEmailApp()]'/>
+<test name='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest]/[method:findAllApp()]'/>
+<test name='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest]/[method:findByIdApp()]'/>
+<test name='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest]/[method:saveApp()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.model.application.gateways.ApplicationRepository$MockitoMock$SC9wQxUy' method='&lt;init&gt;()V' number='1'><tests>
+<test name='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest]/[method:findAByEmailApp()]'/>
+<test name='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest]/[method:findAllApp()]'/>
+<test name='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest]/[method:findByIdApp()]'/>
+<test name='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest]/[method:saveApp()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.model.application.Application' method='setId(Ljava/util/UUID;)V' number='0'><tests>
+<test name='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest]/[method:findAByEmailApp()]'/>
+<test name='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest]/[method:findAllApp()]'/>
+<test name='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest]/[method:findByIdApp()]'/>
+<test name='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest]/[method:saveApp()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.model.application.Application' method='setIdStatus(Ljava/lang/Integer;)V' number='0'><tests>
+<test name='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest]/[method:findAByEmailApp()]'/>
+<test name='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest]/[method:findAllApp()]'/>
+<test name='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest]/[method:findByIdApp()]'/>
+<test name='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest]/[method:saveApp()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.model.loantype.gateways.LoanTypeRepository$MockitoMock$OO92xTic' method='&lt;init&gt;()V' number='1'><tests>
+<test name='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest]/[method:findAByEmailApp()]'/>
+<test name='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest]/[method:findAllApp()]'/>
+<test name='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest]/[method:findByIdApp()]'/>
+<test name='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest]/[method:saveApp()]'/>
+<test name='co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest]/[method:findAByEmailApp()]'/>
+<test name='co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest]/[method:findAllApp()]'/>
+<test name='co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest]/[method:findByIdApp()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.model.userauth.gateways.UserAuthRepository$MockitoMock$OSndfb3C' method='&lt;clinit&gt;()V' number='0'><tests>
+<test name='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest]/[method:findAllApp()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.model.loantype.gateways.LoanTypeRepository$MockitoMock$OO92xTic' method='&lt;init&gt;()V' number='0'><tests>
+<test name='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest]/[method:findAByEmailApp()]'/>
+<test name='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest]/[method:findAllApp()]'/>
+<test name='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest]/[method:findByIdApp()]'/>
+<test name='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest]/[method:saveApp()]'/>
+<test name='co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest]/[method:findAByEmailApp()]'/>
+<test name='co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest]/[method:findAllApp()]'/>
+<test name='co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest]/[method:findByIdApp()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.model.userauth.gateways.UserAuthRepository$MockitoMock$OSndfb3C' method='&lt;clinit&gt;()V' number='3'><tests>
+<test name='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest]/[method:findAllApp()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.model.userauth.gateways.UserAuthRepository$MockitoMock$OSndfb3C' method='&lt;clinit&gt;()V' number='2'><tests>
+<test name='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest]/[method:findAllApp()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.model.userauth.gateways.UserAuthRepository$MockitoMock$OSndfb3C' method='&lt;clinit&gt;()V' number='1'><tests>
+<test name='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest]/[method:findAllApp()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest' method='findAllApp()V' number='1'><tests>
+<test name='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest]/[method:findAllApp()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.model.application.Application' method='&lt;init&gt;()V' number='1'><tests>
+<test name='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest]/[method:findAByEmailApp()]'/>
+<test name='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest]/[method:findAllApp()]'/>
+<test name='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest]/[method:findByIdApp()]'/>
+<test name='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest]/[method:saveApp()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest' method='findAllApp()V' number='0'><tests>
+<test name='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest]/[method:findAllApp()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.model.application.Application' method='&lt;init&gt;()V' number='0'><tests>
+<test name='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest]/[method:findAByEmailApp()]'/>
+<test name='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest]/[method:findAllApp()]'/>
+<test name='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest]/[method:findByIdApp()]'/>
+<test name='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest]/[method:saveApp()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.model.application.Application' method='&lt;init&gt;()V' number='2'><tests>
+<test name='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest]/[method:findAByEmailApp()]'/>
+<test name='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest]/[method:findAllApp()]'/>
+<test name='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest]/[method:findByIdApp()]'/>
+<test name='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest]/[method:saveApp()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.model.application.Application' method='getId()Ljava/util/UUID;' number='0'><tests>
+<test name='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest]/[method:findAByEmailApp()]'/>
+<test name='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest]/[method:findAllApp()]'/>
+<test name='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest]/[method:findByIdApp()]'/>
+<test name='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest]/[method:saveApp()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.model.loantype.gateways.LoanTypeRepository$MockitoMock$OO92xTic' method='&lt;clinit&gt;()V' number='0'><tests>
+<test name='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest]/[method:findAllApp()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.model.userauth.gateways.UserAuthRepository$MockitoMock$OSndfb3C' method='&lt;init&gt;()V' number='1'><tests>
+<test name='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest]/[method:findAByEmailApp()]'/>
+<test name='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest]/[method:findAllApp()]'/>
+<test name='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest]/[method:findByIdApp()]'/>
+<test name='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest]/[method:saveApp()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.model.loantype.gateways.LoanTypeRepository$MockitoMock$OO92xTic' method='&lt;clinit&gt;()V' number='1'><tests>
+<test name='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest]/[method:findAllApp()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.model.userauth.gateways.UserAuthRepository$MockitoMock$OSndfb3C' method='&lt;init&gt;()V' number='0'><tests>
+<test name='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest]/[method:findAByEmailApp()]'/>
+<test name='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest]/[method:findAllApp()]'/>
+<test name='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest]/[method:findByIdApp()]'/>
+<test name='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest]/[method:saveApp()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.model.loantype.gateways.LoanTypeRepository$MockitoMock$OO92xTic' method='&lt;clinit&gt;()V' number='2'><tests>
+<test name='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest]/[method:findAllApp()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.model.loantype.gateways.LoanTypeRepository$MockitoMock$OO92xTic' method='&lt;clinit&gt;()V' number='3'><tests>
+<test name='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest]/[method:findAllApp()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.model.loantype.gateways.LoanTypeRepository$MockitoMock$OO92xTic' method='&lt;clinit&gt;()V' number='4'><tests>
+<test name='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest]/[method:findAllApp()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.model.loantype.gateways.LoanTypeRepository$MockitoMock$OO92xTic' method='&lt;clinit&gt;()V' number='5'><tests>
+<test name='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest]/[method:findAllApp()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest' method='&lt;init&gt;()V' number='0'><tests>
+<test name='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest]/[method:findAByEmailApp()]'/>
+<test name='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest]/[method:findAllApp()]'/>
+<test name='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest]/[method:findByIdApp()]'/>
+<test name='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest]/[method:saveApp()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest' method='findAllApp()V' number='11'><tests>
+<test name='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest]/[method:findAllApp()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest' method='findAllApp()V' number='10'><tests>
+<test name='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest]/[method:findAllApp()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest' method='findAllApp()V' number='9'><tests>
+<test name='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest]/[method:findAllApp()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest' method='findAllApp()V' number='8'><tests>
+<test name='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest]/[method:findAllApp()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest' method='findAllApp()V' number='7'><tests>
+<test name='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest]/[method:findAllApp()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest' method='findAllApp()V' number='6'><tests>
+<test name='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest]/[method:findAllApp()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest' method='findAllApp()V' number='5'><tests>
+<test name='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest]/[method:findAllApp()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest' method='findAllApp()V' number='4'><tests>
+<test name='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest]/[method:findAllApp()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest' method='&lt;init&gt;()V' number='1'><tests>
+<test name='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest]/[method:findAByEmailApp()]'/>
+<test name='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest]/[method:findAllApp()]'/>
+<test name='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest]/[method:findByIdApp()]'/>
+<test name='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest]/[method:saveApp()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest' method='findAllApp()V' number='3'><tests>
+<test name='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest]/[method:findAllApp()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest' method='findAllApp()V' number='2'><tests>
+<test name='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest]/[method:findAllApp()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest' method='lambda$findAByEmailApp$3(Lco/com/mrcompany/model/application/Application;)Z' number='3'><tests>
+<test name='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest]/[method:findAByEmailApp()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest' method='lambda$findAByEmailApp$3(Lco/com/mrcompany/model/application/Application;)Z' number='1'><tests>
+<test name='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest]/[method:findAByEmailApp()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest' method='lambda$findAByEmailApp$3(Lco/com/mrcompany/model/application/Application;)Z' number='2'><tests>
+<test name='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest]/[method:findAByEmailApp()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest' method='lambda$findAByEmailApp$3(Lco/com/mrcompany/model/application/Application;)Z' number='0'><tests>
+<test name='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest]/[method:findAByEmailApp()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest' method='findAByEmailApp()V' number='7'><tests>
+<test name='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest]/[method:findAByEmailApp()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest' method='findAByEmailApp()V' number='8'><tests>
+<test name='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest]/[method:findAByEmailApp()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest' method='findAByEmailApp()V' number='9'><tests>
+<test name='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest]/[method:findAByEmailApp()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest' method='findAByEmailApp()V' number='10'><tests>
+<test name='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest]/[method:findAByEmailApp()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest' method='findAByEmailApp()V' number='11'><tests>
+<test name='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest]/[method:findAByEmailApp()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest' method='findAByEmailApp()V' number='12'><tests>
+<test name='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest]/[method:findAByEmailApp()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest' method='findAByEmailApp()V' number='0'><tests>
+<test name='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest]/[method:findAByEmailApp()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest' method='findAByEmailApp()V' number='1'><tests>
+<test name='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest]/[method:findAByEmailApp()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest' method='findAByEmailApp()V' number='2'><tests>
+<test name='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest]/[method:findAByEmailApp()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest' method='findAByEmailApp()V' number='3'><tests>
+<test name='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest]/[method:findAByEmailApp()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest' method='findAByEmailApp()V' number='4'><tests>
+<test name='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest]/[method:findAByEmailApp()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest' method='findAByEmailApp()V' number='5'><tests>
+<test name='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest]/[method:findAByEmailApp()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest' method='findAByEmailApp()V' number='6'><tests>
+<test name='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest]/[method:findAByEmailApp()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest' method='findByIdApp()V' number='1'><tests>
+<test name='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest]/[method:findByIdApp()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest' method='findByIdApp()V' number='2'><tests>
+<test name='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest]/[method:findByIdApp()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest' method='findByIdApp()V' number='3'><tests>
+<test name='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest]/[method:findByIdApp()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest' method='findByIdApp()V' number='4'><tests>
+<test name='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest]/[method:findByIdApp()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest' method='findByIdApp()V' number='0'><tests>
+<test name='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest]/[method:findByIdApp()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest' method='lambda$findByIdApp$0(Lco/com/mrcompany/model/application/Application;)Z' number='3'><tests>
+<test name='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest]/[method:findByIdApp()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest' method='lambda$findByIdApp$0(Lco/com/mrcompany/model/application/Application;)Z' number='2'><tests>
+<test name='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest]/[method:findByIdApp()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest' method='lambda$findByIdApp$0(Lco/com/mrcompany/model/application/Application;)Z' number='1'><tests>
+<test name='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest]/[method:findByIdApp()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest' method='lambda$findByIdApp$0(Lco/com/mrcompany/model/application/Application;)Z' number='0'><tests>
+<test name='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest]/[method:findByIdApp()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest' method='findByIdApp()V' number='9'><tests>
+<test name='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest]/[method:findByIdApp()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest' method='findByIdApp()V' number='10'><tests>
+<test name='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest]/[method:findByIdApp()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest' method='findByIdApp()V' number='11'><tests>
+<test name='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest]/[method:findByIdApp()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest' method='findByIdApp()V' number='12'><tests>
+<test name='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest]/[method:findByIdApp()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest' method='findByIdApp()V' number='5'><tests>
+<test name='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest]/[method:findByIdApp()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest' method='findByIdApp()V' number='6'><tests>
+<test name='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest]/[method:findByIdApp()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest' method='findByIdApp()V' number='7'><tests>
+<test name='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest]/[method:findByIdApp()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest' method='findByIdApp()V' number='8'><tests>
+<test name='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest]/[method:findByIdApp()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest' method='saveApp()V' number='7'><tests>
+<test name='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest]/[method:saveApp()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest' method='saveApp()V' number='8'><tests>
+<test name='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest]/[method:saveApp()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest' method='saveApp()V' number='9'><tests>
+<test name='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest]/[method:saveApp()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest' method='saveApp()V' number='10'><tests>
+<test name='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest]/[method:saveApp()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest' method='saveApp()V' number='11'><tests>
+<test name='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest]/[method:saveApp()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest' method='saveApp()V' number='12'><tests>
+<test name='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest]/[method:saveApp()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest' method='saveApp()V' number='0'><tests>
+<test name='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest]/[method:saveApp()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest' method='saveApp()V' number='1'><tests>
+<test name='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest]/[method:saveApp()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest' method='saveApp()V' number='2'><tests>
+<test name='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest]/[method:saveApp()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest' method='saveApp()V' number='3'><tests>
+<test name='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest]/[method:saveApp()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest' method='saveApp()V' number='4'><tests>
+<test name='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest]/[method:saveApp()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest' method='saveApp()V' number='5'><tests>
+<test name='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest]/[method:saveApp()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest' method='saveApp()V' number='6'><tests>
+<test name='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest]/[method:saveApp()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest' method='lambda$saveApp$1(Lco/com/mrcompany/model/application/Application;)Z' number='3'><tests>
+<test name='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest]/[method:saveApp()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest' method='lambda$saveApp$1(Lco/com/mrcompany/model/application/Application;)Z' number='1'><tests>
+<test name='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest]/[method:saveApp()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest' method='lambda$saveApp$1(Lco/com/mrcompany/model/application/Application;)Z' number='2'><tests>
+<test name='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest]/[method:saveApp()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest' method='lambda$saveApp$1(Lco/com/mrcompany/model/application/Application;)Z' number='0'><tests>
+<test name='co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loanapplication.ApplicationUseCaseTest]/[method:saveApp()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.model.loantype.LoanType' method='setRateType(Ljava/lang/String;)V' number='0'><tests>
+<test name='co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest]/[method:findAByEmailApp()]'/>
+<test name='co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest]/[method:findAllApp()]'/>
+<test name='co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest]/[method:findByIdApp()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.model.loantype.LoanType' method='&lt;init&gt;()V' number='1'><tests>
+<test name='co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest]/[method:findAByEmailApp()]'/>
+<test name='co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest]/[method:findAllApp()]'/>
+<test name='co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest]/[method:findByIdApp()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.model.loantype.LoanType' method='&lt;init&gt;()V' number='0'><tests>
+<test name='co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest]/[method:findAByEmailApp()]'/>
+<test name='co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest]/[method:findAllApp()]'/>
+<test name='co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest]/[method:findByIdApp()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.model.loantype.LoanType' method='setMaxAmount(Ljava/math/BigInteger;)V' number='0'><tests>
+<test name='co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest]/[method:findAByEmailApp()]'/>
+<test name='co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest]/[method:findAllApp()]'/>
+<test name='co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest]/[method:findByIdApp()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.model.loantype.LoanType' method='setMinAmount(Ljava/math/BigInteger;)V' number='0'><tests>
+<test name='co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest]/[method:findAByEmailApp()]'/>
+<test name='co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest]/[method:findAllApp()]'/>
+<test name='co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest]/[method:findByIdApp()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest' method='findAllApp()V' number='2'><tests>
+<test name='co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest]/[method:findAllApp()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest' method='findAllApp()V' number='3'><tests>
+<test name='co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest]/[method:findAllApp()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest' method='findAllApp()V' number='0'><tests>
+<test name='co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest]/[method:findAllApp()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest' method='findAllApp()V' number='1'><tests>
+<test name='co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest]/[method:findAllApp()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest' method='setUp()V' number='8'><tests>
+<test name='co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest]/[method:findAByEmailApp()]'/>
+<test name='co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest]/[method:findAllApp()]'/>
+<test name='co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest]/[method:findByIdApp()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest' method='setUp()V' number='6'><tests>
+<test name='co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest]/[method:findAByEmailApp()]'/>
+<test name='co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest]/[method:findAllApp()]'/>
+<test name='co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest]/[method:findByIdApp()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest' method='setUp()V' number='7'><tests>
+<test name='co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest]/[method:findAByEmailApp()]'/>
+<test name='co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest]/[method:findAllApp()]'/>
+<test name='co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest]/[method:findByIdApp()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest' method='setUp()V' number='4'><tests>
+<test name='co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest]/[method:findAByEmailApp()]'/>
+<test name='co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest]/[method:findAllApp()]'/>
+<test name='co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest]/[method:findByIdApp()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest' method='setUp()V' number='5'><tests>
+<test name='co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest]/[method:findAByEmailApp()]'/>
+<test name='co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest]/[method:findAllApp()]'/>
+<test name='co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest]/[method:findByIdApp()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest' method='setUp()V' number='2'><tests>
+<test name='co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest]/[method:findAByEmailApp()]'/>
+<test name='co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest]/[method:findAllApp()]'/>
+<test name='co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest]/[method:findByIdApp()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest' method='lambda$findAllApp$1(Lco/com/mrcompany/model/loantype/LoanType;)Z' number='0'><tests>
+<test name='co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest]/[method:findAllApp()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest' method='setUp()V' number='3'><tests>
+<test name='co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest]/[method:findAByEmailApp()]'/>
+<test name='co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest]/[method:findAllApp()]'/>
+<test name='co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest]/[method:findByIdApp()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest' method='lambda$findAllApp$1(Lco/com/mrcompany/model/loantype/LoanType;)Z' number='1'><tests>
+<test name='co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest]/[method:findAllApp()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest' method='setUp()V' number='0'><tests>
+<test name='co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest]/[method:findAByEmailApp()]'/>
+<test name='co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest]/[method:findAllApp()]'/>
+<test name='co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest]/[method:findByIdApp()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest' method='lambda$findAllApp$1(Lco/com/mrcompany/model/loantype/LoanType;)Z' number='2'><tests>
+<test name='co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest]/[method:findAllApp()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest' method='setUp()V' number='1'><tests>
+<test name='co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest]/[method:findAByEmailApp()]'/>
+<test name='co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest]/[method:findAllApp()]'/>
+<test name='co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest]/[method:findByIdApp()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest' method='lambda$findAllApp$1(Lco/com/mrcompany/model/loantype/LoanType;)Z' number='3'><tests>
+<test name='co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest]/[method:findAllApp()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest' method='&lt;init&gt;()V' number='0'><tests>
+<test name='co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest]/[method:findAByEmailApp()]'/>
+<test name='co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest]/[method:findAllApp()]'/>
+<test name='co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest]/[method:findByIdApp()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest' method='&lt;init&gt;()V' number='1'><tests>
+<test name='co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest]/[method:findAByEmailApp()]'/>
+<test name='co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest]/[method:findAllApp()]'/>
+<test name='co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest]/[method:findByIdApp()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.model.loantype.LoanType' method='setId(Ljava/lang/Integer;)V' number='0'><tests>
+<test name='co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest]/[method:findAByEmailApp()]'/>
+<test name='co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest]/[method:findAllApp()]'/>
+<test name='co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest]/[method:findByIdApp()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.model.loantype.LoanType' method='getId()Ljava/lang/Integer;' number='0'><tests>
+<test name='co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest]/[method:findAllApp()]'/>
+<test name='co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest]/[method:findByIdApp()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest' method='findAllApp()V' number='8'><tests>
+<test name='co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest]/[method:findAllApp()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest' method='findAllApp()V' number='6'><tests>
+<test name='co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest]/[method:findAllApp()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest' method='findAllApp()V' number='7'><tests>
+<test name='co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest]/[method:findAllApp()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.model.loantype.gateways.LoanTypeRepository$MockitoMock$OO92xTic' method='findAll()Lreactor/core/publisher/Flux;' number='1'><tests>
+<test name='co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest]/[method:findAllApp()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest' method='findAllApp()V' number='4'><tests>
+<test name='co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest]/[method:findAllApp()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.model.loantype.gateways.LoanTypeRepository$MockitoMock$OO92xTic' method='findAll()Lreactor/core/publisher/Flux;' number='0'><tests>
+<test name='co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest]/[method:findAllApp()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest' method='findAllApp()V' number='5'><tests>
+<test name='co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest]/[method:findAllApp()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest' method='findAByEmailApp()V' number='0'><tests>
+<test name='co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest]/[method:findAByEmailApp()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.model.loantype.gateways.LoanTypeRepository$MockitoMock$OO92xTic' method='existsById(Ljava/lang/Integer;)Lreactor/core/publisher/Mono;' number='1'><tests>
+<test name='co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest]/[method:findAByEmailApp()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.model.loantype.gateways.LoanTypeRepository$MockitoMock$OO92xTic' method='existsById(Ljava/lang/Integer;)Lreactor/core/publisher/Mono;' number='0'><tests>
+<test name='co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest]/[method:findAByEmailApp()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest' method='findAByEmailApp()V' number='8'><tests>
+<test name='co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest]/[method:findAByEmailApp()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest' method='findAByEmailApp()V' number='7'><tests>
+<test name='co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest]/[method:findAByEmailApp()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest' method='findAByEmailApp()V' number='6'><tests>
+<test name='co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest]/[method:findAByEmailApp()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest' method='findAByEmailApp()V' number='5'><tests>
+<test name='co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest]/[method:findAByEmailApp()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest' method='findAByEmailApp()V' number='4'><tests>
+<test name='co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest]/[method:findAByEmailApp()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest' method='findAByEmailApp()V' number='3'><tests>
+<test name='co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest]/[method:findAByEmailApp()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest' method='findAByEmailApp()V' number='2'><tests>
+<test name='co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest]/[method:findAByEmailApp()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest' method='findAByEmailApp()V' number='1'><tests>
+<test name='co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest]/[method:findAByEmailApp()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest' method='findAByEmailApp()V' number='10'><tests>
+<test name='co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest]/[method:findAByEmailApp()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest' method='findAByEmailApp()V' number='9'><tests>
+<test name='co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest]/[method:findAByEmailApp()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest' method='lambda$findAByEmailApp$2(Ljava/lang/Boolean;)Z' number='0'><tests>
+<test name='co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest]/[method:findAByEmailApp()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest' method='lambda$findAByEmailApp$2(Ljava/lang/Boolean;)Z' number='2'><tests>
+<test name='co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest]/[method:findAByEmailApp()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest' method='lambda$findAByEmailApp$2(Ljava/lang/Boolean;)Z' number='1'><tests>
+<test name='co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest]/[method:findAByEmailApp()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.model.loantype.gateways.LoanTypeRepository$MockitoMock$OO92xTic' method='findById(Ljava/lang/Integer;)Lreactor/core/publisher/Mono;' number='0'><tests>
+<test name='co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest]/[method:findByIdApp()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.model.loantype.gateways.LoanTypeRepository$MockitoMock$OO92xTic' method='findById(Ljava/lang/Integer;)Lreactor/core/publisher/Mono;' number='1'><tests>
+<test name='co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest]/[method:findByIdApp()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest' method='findByIdApp()V' number='9'><tests>
+<test name='co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest]/[method:findByIdApp()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest' method='findByIdApp()V' number='8'><tests>
+<test name='co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest]/[method:findByIdApp()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest' method='findByIdApp()V' number='7'><tests>
+<test name='co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest]/[method:findByIdApp()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest' method='findByIdApp()V' number='2'><tests>
+<test name='co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest]/[method:findByIdApp()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest' method='findByIdApp()V' number='1'><tests>
+<test name='co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest]/[method:findByIdApp()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest' method='findByIdApp()V' number='0'><tests>
+<test name='co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest]/[method:findByIdApp()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest' method='findByIdApp()V' number='6'><tests>
+<test name='co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest]/[method:findByIdApp()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest' method='findByIdApp()V' number='5'><tests>
+<test name='co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest]/[method:findByIdApp()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest' method='findByIdApp()V' number='4'><tests>
+<test name='co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest]/[method:findByIdApp()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest' method='lambda$findByIdApp$0(Lco/com/mrcompany/model/loantype/LoanType;)Z' number='2'><tests>
+<test name='co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest]/[method:findByIdApp()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest' method='findByIdApp()V' number='3'><tests>
+<test name='co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest]/[method:findByIdApp()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest' method='lambda$findByIdApp$0(Lco/com/mrcompany/model/loantype/LoanType;)Z' number='3'><tests>
+<test name='co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest]/[method:findByIdApp()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest' method='lambda$findByIdApp$0(Lco/com/mrcompany/model/loantype/LoanType;)Z' number='0'><tests>
+<test name='co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest]/[method:findByIdApp()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest' method='lambda$findByIdApp$0(Lco/com/mrcompany/model/loantype/LoanType;)Z' number='1'><tests>
+<test name='co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.loantype.LoanTypeUseCaseTest]/[method:findByIdApp()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.model.status.Status' method='&lt;init&gt;()V' number='1'><tests>
+<test name='co.com.mrcompany.usecase.status.StatusUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.status.StatusUseCaseTest]/[method:findAByEmailApp()]'/>
+<test name='co.com.mrcompany.usecase.status.StatusUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.status.StatusUseCaseTest]/[method:findAllApp()]'/>
+<test name='co.com.mrcompany.usecase.status.StatusUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.status.StatusUseCaseTest]/[method:findByIdApp()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.model.status.Status' method='&lt;init&gt;()V' number='0'><tests>
+<test name='co.com.mrcompany.usecase.status.StatusUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.status.StatusUseCaseTest]/[method:findAByEmailApp()]'/>
+<test name='co.com.mrcompany.usecase.status.StatusUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.status.StatusUseCaseTest]/[method:findAllApp()]'/>
+<test name='co.com.mrcompany.usecase.status.StatusUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.status.StatusUseCaseTest]/[method:findByIdApp()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.model.status.gateways.StatusRepository$MockitoMock$YT3PNMRb' method='setMockitoInterceptor(Lorg/mockito/internal/creation/bytebuddy/access/MockMethodInterceptor;)V' number='0'><tests>
+<test name='co.com.mrcompany.usecase.status.StatusUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.status.StatusUseCaseTest]/[method:findAByEmailApp()]'/>
+<test name='co.com.mrcompany.usecase.status.StatusUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.status.StatusUseCaseTest]/[method:findAllApp()]'/>
+<test name='co.com.mrcompany.usecase.status.StatusUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.status.StatusUseCaseTest]/[method:findByIdApp()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.usecase.status.StatusUseCaseTest' method='setUp()V' number='2'><tests>
+<test name='co.com.mrcompany.usecase.status.StatusUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.status.StatusUseCaseTest]/[method:findAByEmailApp()]'/>
+<test name='co.com.mrcompany.usecase.status.StatusUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.status.StatusUseCaseTest]/[method:findAllApp()]'/>
+<test name='co.com.mrcompany.usecase.status.StatusUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.status.StatusUseCaseTest]/[method:findByIdApp()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.usecase.status.StatusUseCaseTest' method='setUp()V' number='3'><tests>
+<test name='co.com.mrcompany.usecase.status.StatusUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.status.StatusUseCaseTest]/[method:findAByEmailApp()]'/>
+<test name='co.com.mrcompany.usecase.status.StatusUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.status.StatusUseCaseTest]/[method:findAllApp()]'/>
+<test name='co.com.mrcompany.usecase.status.StatusUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.status.StatusUseCaseTest]/[method:findByIdApp()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.usecase.status.StatusUseCaseTest' method='setUp()V' number='0'><tests>
+<test name='co.com.mrcompany.usecase.status.StatusUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.status.StatusUseCaseTest]/[method:findAByEmailApp()]'/>
+<test name='co.com.mrcompany.usecase.status.StatusUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.status.StatusUseCaseTest]/[method:findAllApp()]'/>
+<test name='co.com.mrcompany.usecase.status.StatusUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.status.StatusUseCaseTest]/[method:findByIdApp()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.usecase.status.StatusUseCaseTest' method='setUp()V' number='1'><tests>
+<test name='co.com.mrcompany.usecase.status.StatusUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.status.StatusUseCaseTest]/[method:findAByEmailApp()]'/>
+<test name='co.com.mrcompany.usecase.status.StatusUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.status.StatusUseCaseTest]/[method:findAllApp()]'/>
+<test name='co.com.mrcompany.usecase.status.StatusUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.status.StatusUseCaseTest]/[method:findByIdApp()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.usecase.status.StatusUseCaseTest' method='lambda$findAllApp$1(Lco/com/mrcompany/model/status/Status;)Z' number='1'><tests>
+<test name='co.com.mrcompany.usecase.status.StatusUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.status.StatusUseCaseTest]/[method:findAllApp()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.usecase.status.StatusUseCaseTest' method='lambda$findAllApp$1(Lco/com/mrcompany/model/status/Status;)Z' number='0'><tests>
+<test name='co.com.mrcompany.usecase.status.StatusUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.status.StatusUseCaseTest]/[method:findAllApp()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.usecase.status.StatusUseCaseTest' method='setUp()V' number='4'><tests>
+<test name='co.com.mrcompany.usecase.status.StatusUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.status.StatusUseCaseTest]/[method:findAByEmailApp()]'/>
+<test name='co.com.mrcompany.usecase.status.StatusUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.status.StatusUseCaseTest]/[method:findAllApp()]'/>
+<test name='co.com.mrcompany.usecase.status.StatusUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.status.StatusUseCaseTest]/[method:findByIdApp()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.usecase.status.StatusUseCaseTest' method='lambda$findAllApp$1(Lco/com/mrcompany/model/status/Status;)Z' number='3'><tests>
+<test name='co.com.mrcompany.usecase.status.StatusUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.status.StatusUseCaseTest]/[method:findAllApp()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.usecase.status.StatusUseCaseTest' method='lambda$findAllApp$1(Lco/com/mrcompany/model/status/Status;)Z' number='2'><tests>
+<test name='co.com.mrcompany.usecase.status.StatusUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.status.StatusUseCaseTest]/[method:findAllApp()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.usecase.status.StatusUseCaseTest' method='findAllApp()V' number='6'><tests>
+<test name='co.com.mrcompany.usecase.status.StatusUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.status.StatusUseCaseTest]/[method:findAllApp()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.usecase.status.StatusUseCaseTest' method='findAllApp()V' number='7'><tests>
+<test name='co.com.mrcompany.usecase.status.StatusUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.status.StatusUseCaseTest]/[method:findAllApp()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.usecase.status.StatusUseCaseTest' method='findAllApp()V' number='4'><tests>
+<test name='co.com.mrcompany.usecase.status.StatusUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.status.StatusUseCaseTest]/[method:findAllApp()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.usecase.status.StatusUseCaseTest' method='findAllApp()V' number='5'><tests>
+<test name='co.com.mrcompany.usecase.status.StatusUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.status.StatusUseCaseTest]/[method:findAllApp()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.usecase.status.StatusUseCaseTest' method='findAllApp()V' number='8'><tests>
+<test name='co.com.mrcompany.usecase.status.StatusUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.status.StatusUseCaseTest]/[method:findAllApp()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.model.status.gateways.StatusRepository$MockitoMock$YT3PNMRb' method='findAll()Lreactor/core/publisher/Flux;' number='0'><tests>
+<test name='co.com.mrcompany.usecase.status.StatusUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.status.StatusUseCaseTest]/[method:findAllApp()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.model.status.gateways.StatusRepository$MockitoMock$YT3PNMRb' method='&lt;clinit&gt;()V' number='2'><tests>
+<test name='co.com.mrcompany.usecase.status.StatusUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.status.StatusUseCaseTest]/[method:findAllApp()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.model.status.Status' method='setId(Ljava/lang/Integer;)V' number='0'><tests>
+<test name='co.com.mrcompany.usecase.status.StatusUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.status.StatusUseCaseTest]/[method:findAByEmailApp()]'/>
+<test name='co.com.mrcompany.usecase.status.StatusUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.status.StatusUseCaseTest]/[method:findAllApp()]'/>
+<test name='co.com.mrcompany.usecase.status.StatusUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.status.StatusUseCaseTest]/[method:findByIdApp()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.model.status.gateways.StatusRepository$MockitoMock$YT3PNMRb' method='&lt;clinit&gt;()V' number='3'><tests>
+<test name='co.com.mrcompany.usecase.status.StatusUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.status.StatusUseCaseTest]/[method:findAllApp()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.model.status.gateways.StatusRepository$MockitoMock$YT3PNMRb' method='&lt;clinit&gt;()V' number='0'><tests>
+<test name='co.com.mrcompany.usecase.status.StatusUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.status.StatusUseCaseTest]/[method:findAllApp()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.model.status.gateways.StatusRepository$MockitoMock$YT3PNMRb' method='findAll()Lreactor/core/publisher/Flux;' number='1'><tests>
+<test name='co.com.mrcompany.usecase.status.StatusUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.status.StatusUseCaseTest]/[method:findAllApp()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.model.status.gateways.StatusRepository$MockitoMock$YT3PNMRb' method='&lt;clinit&gt;()V' number='1'><tests>
+<test name='co.com.mrcompany.usecase.status.StatusUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.status.StatusUseCaseTest]/[method:findAllApp()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.model.status.Status' method='getId()Ljava/lang/Integer;' number='0'><tests>
+<test name='co.com.mrcompany.usecase.status.StatusUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.status.StatusUseCaseTest]/[method:findAllApp()]'/>
+<test name='co.com.mrcompany.usecase.status.StatusUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.status.StatusUseCaseTest]/[method:findByIdApp()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.model.status.gateways.StatusRepository$MockitoMock$YT3PNMRb' method='&lt;init&gt;()V' number='0'><tests>
+<test name='co.com.mrcompany.usecase.status.StatusUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.status.StatusUseCaseTest]/[method:findAByEmailApp()]'/>
+<test name='co.com.mrcompany.usecase.status.StatusUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.status.StatusUseCaseTest]/[method:findAllApp()]'/>
+<test name='co.com.mrcompany.usecase.status.StatusUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.status.StatusUseCaseTest]/[method:findByIdApp()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.model.status.gateways.StatusRepository$MockitoMock$YT3PNMRb' method='&lt;init&gt;()V' number='1'><tests>
+<test name='co.com.mrcompany.usecase.status.StatusUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.status.StatusUseCaseTest]/[method:findAByEmailApp()]'/>
+<test name='co.com.mrcompany.usecase.status.StatusUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.status.StatusUseCaseTest]/[method:findAllApp()]'/>
+<test name='co.com.mrcompany.usecase.status.StatusUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.status.StatusUseCaseTest]/[method:findByIdApp()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.model.status.gateways.StatusRepository$MockitoMock$YT3PNMRb' method='&lt;clinit&gt;()V' number='4'><tests>
+<test name='co.com.mrcompany.usecase.status.StatusUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.status.StatusUseCaseTest]/[method:findAllApp()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.model.status.gateways.StatusRepository$MockitoMock$YT3PNMRb' method='&lt;clinit&gt;()V' number='5'><tests>
+<test name='co.com.mrcompany.usecase.status.StatusUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.status.StatusUseCaseTest]/[method:findAllApp()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.usecase.status.StatusUseCaseTest' method='findAllApp()V' number='2'><tests>
+<test name='co.com.mrcompany.usecase.status.StatusUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.status.StatusUseCaseTest]/[method:findAllApp()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.usecase.status.StatusUseCaseTest' method='&lt;init&gt;()V' number='0'><tests>
+<test name='co.com.mrcompany.usecase.status.StatusUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.status.StatusUseCaseTest]/[method:findAByEmailApp()]'/>
+<test name='co.com.mrcompany.usecase.status.StatusUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.status.StatusUseCaseTest]/[method:findAllApp()]'/>
+<test name='co.com.mrcompany.usecase.status.StatusUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.status.StatusUseCaseTest]/[method:findByIdApp()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.usecase.status.StatusUseCaseTest' method='findAllApp()V' number='3'><tests>
+<test name='co.com.mrcompany.usecase.status.StatusUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.status.StatusUseCaseTest]/[method:findAllApp()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.model.status.Status' method='setName(Ljava/lang/String;)V' number='0'><tests>
+<test name='co.com.mrcompany.usecase.status.StatusUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.status.StatusUseCaseTest]/[method:findAByEmailApp()]'/>
+<test name='co.com.mrcompany.usecase.status.StatusUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.status.StatusUseCaseTest]/[method:findAllApp()]'/>
+<test name='co.com.mrcompany.usecase.status.StatusUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.status.StatusUseCaseTest]/[method:findByIdApp()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.usecase.status.StatusUseCaseTest' method='&lt;init&gt;()V' number='1'><tests>
+<test name='co.com.mrcompany.usecase.status.StatusUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.status.StatusUseCaseTest]/[method:findAByEmailApp()]'/>
+<test name='co.com.mrcompany.usecase.status.StatusUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.status.StatusUseCaseTest]/[method:findAllApp()]'/>
+<test name='co.com.mrcompany.usecase.status.StatusUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.status.StatusUseCaseTest]/[method:findByIdApp()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.usecase.status.StatusUseCaseTest' method='findAllApp()V' number='0'><tests>
+<test name='co.com.mrcompany.usecase.status.StatusUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.status.StatusUseCaseTest]/[method:findAllApp()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.usecase.status.StatusUseCaseTest' method='findAllApp()V' number='1'><tests>
+<test name='co.com.mrcompany.usecase.status.StatusUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.status.StatusUseCaseTest]/[method:findAllApp()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.usecase.status.StatusUseCaseTest' method='findAByEmailApp()V' number='4'><tests>
+<test name='co.com.mrcompany.usecase.status.StatusUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.status.StatusUseCaseTest]/[method:findAByEmailApp()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.usecase.status.StatusUseCaseTest' method='findAByEmailApp()V' number='3'><tests>
+<test name='co.com.mrcompany.usecase.status.StatusUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.status.StatusUseCaseTest]/[method:findAByEmailApp()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.usecase.status.StatusUseCaseTest' method='findAByEmailApp()V' number='2'><tests>
+<test name='co.com.mrcompany.usecase.status.StatusUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.status.StatusUseCaseTest]/[method:findAByEmailApp()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.usecase.status.StatusUseCaseTest' method='findAByEmailApp()V' number='1'><tests>
+<test name='co.com.mrcompany.usecase.status.StatusUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.status.StatusUseCaseTest]/[method:findAByEmailApp()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.usecase.status.StatusUseCaseTest' method='findAByEmailApp()V' number='8'><tests>
+<test name='co.com.mrcompany.usecase.status.StatusUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.status.StatusUseCaseTest]/[method:findAByEmailApp()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.usecase.status.StatusUseCaseTest' method='findAByEmailApp()V' number='7'><tests>
+<test name='co.com.mrcompany.usecase.status.StatusUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.status.StatusUseCaseTest]/[method:findAByEmailApp()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.usecase.status.StatusUseCaseTest' method='findAByEmailApp()V' number='6'><tests>
+<test name='co.com.mrcompany.usecase.status.StatusUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.status.StatusUseCaseTest]/[method:findAByEmailApp()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.usecase.status.StatusUseCaseTest' method='findAByEmailApp()V' number='5'><tests>
+<test name='co.com.mrcompany.usecase.status.StatusUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.status.StatusUseCaseTest]/[method:findAByEmailApp()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.usecase.status.StatusUseCaseTest' method='findAByEmailApp()V' number='0'><tests>
+<test name='co.com.mrcompany.usecase.status.StatusUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.status.StatusUseCaseTest]/[method:findAByEmailApp()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.usecase.status.StatusUseCaseTest' method='findAByEmailApp()V' number='10'><tests>
+<test name='co.com.mrcompany.usecase.status.StatusUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.status.StatusUseCaseTest]/[method:findAByEmailApp()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.usecase.status.StatusUseCaseTest' method='findAByEmailApp()V' number='9'><tests>
+<test name='co.com.mrcompany.usecase.status.StatusUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.status.StatusUseCaseTest]/[method:findAByEmailApp()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.model.status.gateways.StatusRepository$MockitoMock$YT3PNMRb' method='existsById(Ljava/lang/Integer;)Lreactor/core/publisher/Mono;' number='0'><tests>
+<test name='co.com.mrcompany.usecase.status.StatusUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.status.StatusUseCaseTest]/[method:findAByEmailApp()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.model.status.gateways.StatusRepository$MockitoMock$YT3PNMRb' method='existsById(Ljava/lang/Integer;)Lreactor/core/publisher/Mono;' number='1'><tests>
+<test name='co.com.mrcompany.usecase.status.StatusUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.status.StatusUseCaseTest]/[method:findAByEmailApp()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.usecase.status.StatusUseCaseTest' method='lambda$findAByEmailApp$2(Ljava/lang/Boolean;)Z' number='0'><tests>
+<test name='co.com.mrcompany.usecase.status.StatusUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.status.StatusUseCaseTest]/[method:findAByEmailApp()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.usecase.status.StatusUseCaseTest' method='lambda$findAByEmailApp$2(Ljava/lang/Boolean;)Z' number='1'><tests>
+<test name='co.com.mrcompany.usecase.status.StatusUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.status.StatusUseCaseTest]/[method:findAByEmailApp()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.usecase.status.StatusUseCaseTest' method='lambda$findAByEmailApp$2(Ljava/lang/Boolean;)Z' number='2'><tests>
+<test name='co.com.mrcompany.usecase.status.StatusUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.status.StatusUseCaseTest]/[method:findAByEmailApp()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.usecase.status.StatusUseCaseTest' method='lambda$findByIdApp$0(Lco/com/mrcompany/model/status/Status;)Z' number='1'><tests>
+<test name='co.com.mrcompany.usecase.status.StatusUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.status.StatusUseCaseTest]/[method:findByIdApp()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.usecase.status.StatusUseCaseTest' method='lambda$findByIdApp$0(Lco/com/mrcompany/model/status/Status;)Z' number='0'><tests>
+<test name='co.com.mrcompany.usecase.status.StatusUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.status.StatusUseCaseTest]/[method:findByIdApp()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.model.status.gateways.StatusRepository$MockitoMock$YT3PNMRb' method='findById(Ljava/lang/Integer;)Lreactor/core/publisher/Mono;' number='1'><tests>
+<test name='co.com.mrcompany.usecase.status.StatusUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.status.StatusUseCaseTest]/[method:findByIdApp()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.model.status.gateways.StatusRepository$MockitoMock$YT3PNMRb' method='findById(Ljava/lang/Integer;)Lreactor/core/publisher/Mono;' number='0'><tests>
+<test name='co.com.mrcompany.usecase.status.StatusUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.status.StatusUseCaseTest]/[method:findByIdApp()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.usecase.status.StatusUseCaseTest' method='findByIdApp()V' number='9'><tests>
+<test name='co.com.mrcompany.usecase.status.StatusUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.status.StatusUseCaseTest]/[method:findByIdApp()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.usecase.status.StatusUseCaseTest' method='findByIdApp()V' number='7'><tests>
+<test name='co.com.mrcompany.usecase.status.StatusUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.status.StatusUseCaseTest]/[method:findByIdApp()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.usecase.status.StatusUseCaseTest' method='lambda$findByIdApp$0(Lco/com/mrcompany/model/status/Status;)Z' number='3'><tests>
+<test name='co.com.mrcompany.usecase.status.StatusUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.status.StatusUseCaseTest]/[method:findByIdApp()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.usecase.status.StatusUseCaseTest' method='findByIdApp()V' number='8'><tests>
+<test name='co.com.mrcompany.usecase.status.StatusUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.status.StatusUseCaseTest]/[method:findByIdApp()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.usecase.status.StatusUseCaseTest' method='lambda$findByIdApp$0(Lco/com/mrcompany/model/status/Status;)Z' number='2'><tests>
+<test name='co.com.mrcompany.usecase.status.StatusUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.status.StatusUseCaseTest]/[method:findByIdApp()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.usecase.status.StatusUseCaseTest' method='findByIdApp()V' number='5'><tests>
+<test name='co.com.mrcompany.usecase.status.StatusUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.status.StatusUseCaseTest]/[method:findByIdApp()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.usecase.status.StatusUseCaseTest' method='findByIdApp()V' number='6'><tests>
+<test name='co.com.mrcompany.usecase.status.StatusUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.status.StatusUseCaseTest]/[method:findByIdApp()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.usecase.status.StatusUseCaseTest' method='findByIdApp()V' number='3'><tests>
+<test name='co.com.mrcompany.usecase.status.StatusUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.status.StatusUseCaseTest]/[method:findByIdApp()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.usecase.status.StatusUseCaseTest' method='findByIdApp()V' number='4'><tests>
+<test name='co.com.mrcompany.usecase.status.StatusUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.status.StatusUseCaseTest]/[method:findByIdApp()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.usecase.status.StatusUseCaseTest' method='findByIdApp()V' number='1'><tests>
+<test name='co.com.mrcompany.usecase.status.StatusUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.status.StatusUseCaseTest]/[method:findByIdApp()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.usecase.status.StatusUseCaseTest' method='findByIdApp()V' number='2'><tests>
+<test name='co.com.mrcompany.usecase.status.StatusUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.status.StatusUseCaseTest]/[method:findByIdApp()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.usecase.status.StatusUseCaseTest' method='findByIdApp()V' number='0'><tests>
+<test name='co.com.mrcompany.usecase.status.StatusUseCaseTest.[engine:junit-jupiter]/[class:co.com.mrcompany.usecase.status.StatusUseCaseTest]/[method:findByIdApp()]'/>
+</tests>
+</block>
+</coverage>

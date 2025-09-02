@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage>
+<block classname='co.com.mrcompany.consumer.RestConsumer' method='ValidateUser(Ljava/lang/String;)Lreactor/core/publisher/Mono;' number='3'><tests>
+<test name='co.com.mrcompany.consumer.RestConsumerTest.[engine:junit-jupiter]/[class:co.com.mrcompany.consumer.RestConsumerTest]/[method:validateTestGet()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.consumer.RestConsumerTest' method='validateTestGet()V' number='5'><tests>
+<test name='co.com.mrcompany.consumer.RestConsumerTest.[engine:junit-jupiter]/[class:co.com.mrcompany.consumer.RestConsumerTest]/[method:validateTestGet()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.consumer.RestConsumer' method='ValidateUser(Ljava/lang/String;)Lreactor/core/publisher/Mono;' number='4'><tests>
+<test name='co.com.mrcompany.consumer.RestConsumerTest.[engine:junit-jupiter]/[class:co.com.mrcompany.consumer.RestConsumerTest]/[method:validateTestGet()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.consumer.RestConsumerTest' method='validateTestGet()V' number='4'><tests>
+<test name='co.com.mrcompany.consumer.RestConsumerTest.[engine:junit-jupiter]/[class:co.com.mrcompany.consumer.RestConsumerTest]/[method:validateTestGet()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.consumer.RestConsumer' method='ValidateUser(Ljava/lang/String;)Lreactor/core/publisher/Mono;' number='5'><tests>
+<test name='co.com.mrcompany.consumer.RestConsumerTest.[engine:junit-jupiter]/[class:co.com.mrcompany.consumer.RestConsumerTest]/[method:validateTestGet()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.consumer.RestConsumerTest' method='validateTestGet()V' number='3'><tests>
+<test name='co.com.mrcompany.consumer.RestConsumerTest.[engine:junit-jupiter]/[class:co.com.mrcompany.consumer.RestConsumerTest]/[method:validateTestGet()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.consumer.RestConsumerTest' method='validateTestGet()V' number='2'><tests>
+<test name='co.com.mrcompany.consumer.RestConsumerTest.[engine:junit-jupiter]/[class:co.com.mrcompany.consumer.RestConsumerTest]/[method:validateTestGet()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.consumer.RestConsumerTest' method='validateTestGet()V' number='9'><tests>
+<test name='co.com.mrcompany.consumer.RestConsumerTest.[engine:junit-jupiter]/[class:co.com.mrcompany.consumer.RestConsumerTest]/[method:validateTestGet()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.consumer.RestConsumer' method='ValidateUser(Ljava/lang/String;)Lreactor/core/publisher/Mono;' number='0'><tests>
+<test name='co.com.mrcompany.consumer.RestConsumerTest.[engine:junit-jupiter]/[class:co.com.mrcompany.consumer.RestConsumerTest]/[method:validateTestGet()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.consumer.RestConsumerTest' method='validateTestGet()V' number='8'><tests>
+<test name='co.com.mrcompany.consumer.RestConsumerTest.[engine:junit-jupiter]/[class:co.com.mrcompany.consumer.RestConsumerTest]/[method:validateTestGet()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.consumer.RestConsumer' method='ValidateUser(Ljava/lang/String;)Lreactor/core/publisher/Mono;' number='1'><tests>
+<test name='co.com.mrcompany.consumer.RestConsumerTest.[engine:junit-jupiter]/[class:co.com.mrcompany.consumer.RestConsumerTest]/[method:validateTestGet()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.consumer.RestConsumerTest' method='validateTestGet()V' number='7'><tests>
+<test name='co.com.mrcompany.consumer.RestConsumerTest.[engine:junit-jupiter]/[class:co.com.mrcompany.consumer.RestConsumerTest]/[method:validateTestGet()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.consumer.RestConsumer' method='ValidateUser(Ljava/lang/String;)Lreactor/core/publisher/Mono;' number='2'><tests>
+<test name='co.com.mrcompany.consumer.RestConsumerTest.[engine:junit-jupiter]/[class:co.com.mrcompany.consumer.RestConsumerTest]/[method:validateTestGet()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.consumer.RestConsumerTest' method='validateTestGet()V' number='6'><tests>
+<test name='co.com.mrcompany.consumer.RestConsumerTest.[engine:junit-jupiter]/[class:co.com.mrcompany.consumer.RestConsumerTest]/[method:validateTestGet()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.consumer.RestConsumerTest' method='validateTestGet()V' number='10'><tests>
+<test name='co.com.mrcompany.consumer.RestConsumerTest.[engine:junit-jupiter]/[class:co.com.mrcompany.consumer.RestConsumerTest]/[method:validateTestGet()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.consumer.RestConsumerTest' method='setUp()V' number='2'><tests>
+<test name='co.com.mrcompany.consumer.RestConsumerTest.[engine:junit-jupiter]/[class:co.com.mrcompany.consumer.RestConsumerTest]/[method:validateTestGet()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.consumer.RestConsumerTest' method='setUp()V' number='1'><tests>
+<test name='co.com.mrcompany.consumer.RestConsumerTest.[engine:junit-jupiter]/[class:co.com.mrcompany.consumer.RestConsumerTest]/[method:validateTestGet()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.consumer.RestConsumerTest' method='setUp()V' number='0'><tests>
+<test name='co.com.mrcompany.consumer.RestConsumerTest.[engine:junit-jupiter]/[class:co.com.mrcompany.consumer.RestConsumerTest]/[method:validateTestGet()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.consumer.RestConsumerTest' method='&lt;init&gt;()V' number='1'><tests>
+<test name='co.com.mrcompany.consumer.RestConsumerTest.[engine:junit-jupiter]/[class:co.com.mrcompany.consumer.RestConsumerTest]/[method:validateTestGet()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.consumer.RestConsumerTest' method='&lt;init&gt;()V' number='0'><tests>
+<test name='co.com.mrcompany.consumer.RestConsumerTest.[engine:junit-jupiter]/[class:co.com.mrcompany.consumer.RestConsumerTest]/[method:validateTestGet()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.consumer.RestConsumer' method='&lt;clinit&gt;()V' number='1'><tests>
+<test name='co.com.mrcompany.consumer.RestConsumerTest.[engine:junit-jupiter]/[class:co.com.mrcompany.consumer.RestConsumerTest]/[method:validateTestGet()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.consumer.RestConsumerTest' method='validateTestGet()V' number='1'><tests>
+<test name='co.com.mrcompany.consumer.RestConsumerTest.[engine:junit-jupiter]/[class:co.com.mrcompany.consumer.RestConsumerTest]/[method:validateTestGet()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.consumer.RestConsumerTest' method='validateTestGet()V' number='0'><tests>
+<test name='co.com.mrcompany.consumer.RestConsumerTest.[engine:junit-jupiter]/[class:co.com.mrcompany.consumer.RestConsumerTest]/[method:validateTestGet()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.consumer.RestConsumer' method='&lt;clinit&gt;()V' number='0'><tests>
+<test name='co.com.mrcompany.consumer.RestConsumerTest.[engine:junit-jupiter]/[class:co.com.mrcompany.consumer.RestConsumerTest]/[method:validateTestGet()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.consumer.RestConsumerTest' method='lambda$validateTestGet$0(Ljava/lang/Boolean;)Z' number='2'><tests>
+<test name='co.com.mrcompany.consumer.RestConsumerTest.[engine:junit-jupiter]/[class:co.com.mrcompany.consumer.RestConsumerTest]/[method:validateTestGet()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.consumer.RestConsumerTest' method='setUp()V' number='8'><tests>
+<test name='co.com.mrcompany.consumer.RestConsumerTest.[engine:junit-jupiter]/[class:co.com.mrcompany.consumer.RestConsumerTest]/[method:validateTestGet()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.consumer.RestConsumerTest' method='lambda$validateTestGet$0(Ljava/lang/Boolean;)Z' number='1'><tests>
+<test name='co.com.mrcompany.consumer.RestConsumerTest.[engine:junit-jupiter]/[class:co.com.mrcompany.consumer.RestConsumerTest]/[method:validateTestGet()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.consumer.RestConsumerTest' method='setUp()V' number='7'><tests>
+<test name='co.com.mrcompany.consumer.RestConsumerTest.[engine:junit-jupiter]/[class:co.com.mrcompany.consumer.RestConsumerTest]/[method:validateTestGet()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.consumer.RestConsumerTest' method='lambda$validateTestGet$0(Ljava/lang/Boolean;)Z' number='0'><tests>
+<test name='co.com.mrcompany.consumer.RestConsumerTest.[engine:junit-jupiter]/[class:co.com.mrcompany.consumer.RestConsumerTest]/[method:validateTestGet()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.consumer.RestConsumerTest' method='setUp()V' number='6'><tests>
+<test name='co.com.mrcompany.consumer.RestConsumerTest.[engine:junit-jupiter]/[class:co.com.mrcompany.consumer.RestConsumerTest]/[method:validateTestGet()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.consumer.RestConsumerTest' method='setUp()V' number='5'><tests>
+<test name='co.com.mrcompany.consumer.RestConsumerTest.[engine:junit-jupiter]/[class:co.com.mrcompany.consumer.RestConsumerTest]/[method:validateTestGet()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.consumer.RestConsumerTest' method='setUp()V' number='4'><tests>
+<test name='co.com.mrcompany.consumer.RestConsumerTest.[engine:junit-jupiter]/[class:co.com.mrcompany.consumer.RestConsumerTest]/[method:validateTestGet()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.consumer.UserResponse' method='&lt;init&gt;()V' number='1'><tests>
+<test name='co.com.mrcompany.consumer.RestConsumerTest.[engine:junit-jupiter]/[class:co.com.mrcompany.consumer.RestConsumerTest]/[method:validateTestGet()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.consumer.RestConsumerTest' method='setUp()V' number='3'><tests>
+<test name='co.com.mrcompany.consumer.RestConsumerTest.[engine:junit-jupiter]/[class:co.com.mrcompany.consumer.RestConsumerTest]/[method:validateTestGet()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.consumer.UserResponse' method='&lt;init&gt;()V' number='0'><tests>
+<test name='co.com.mrcompany.consumer.RestConsumerTest.[engine:junit-jupiter]/[class:co.com.mrcompany.consumer.RestConsumerTest]/[method:validateTestGet()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.consumer.RestConsumer' method='&lt;init&gt;(Lorg/springframework/web/reactive/function/client/WebClient;)V' number='0'><tests>
+<test name='co.com.mrcompany.consumer.RestConsumerTest.[engine:junit-jupiter]/[class:co.com.mrcompany.consumer.RestConsumerTest]/[method:validateTestGet()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.consumer.RestConsumer' method='&lt;init&gt;(Lorg/springframework/web/reactive/function/client/WebClient;)V' number='1'><tests>
+<test name='co.com.mrcompany.consumer.RestConsumerTest.[engine:junit-jupiter]/[class:co.com.mrcompany.consumer.RestConsumerTest]/[method:validateTestGet()]'/>
+</tests>
+</block>
+</coverage>

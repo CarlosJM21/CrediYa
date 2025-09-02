@@ -1,0 +1,1191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage>
+<block classname='co.com.mrcompany.api.RouterRestTest' method='setup()V' number='22'><tests>
+<test name='co.com.mrcompany.api.RouterRestTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.RouterRestTest]/[method:testListenPOSTUseCase()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.RouterRestTest' method='testListenPOSTUseCase()V' number='6'><tests>
+<test name='co.com.mrcompany.api.RouterRestTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.RouterRestTest]/[method:testListenPOSTUseCase()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.RouterRestTest' method='testListenPOSTUseCase()V' number='5'><tests>
+<test name='co.com.mrcompany.api.RouterRestTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.RouterRestTest]/[method:testListenPOSTUseCase()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.RouterRest$$SpringCGLIB$$FastClass$$1' method='getIndex(Lorg/springframework/cglib/core/Signature;)I' number='2'><tests>
+<test name='co.com.mrcompany.api.RouterRestTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.RouterRestTest]/[method:testListenPOSTUseCase()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.RouterRestTest' method='testListenPOSTUseCase()V' number='8'><tests>
+<test name='co.com.mrcompany.api.RouterRestTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.RouterRestTest]/[method:testListenPOSTUseCase()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.RouterRestTest' method='lambda$testListenPOSTUseCase$0(Lco/com/mrcompany/api/dtos/ApplicationResponse;)V' number='0'><tests>
+<test name='co.com.mrcompany.api.RouterRestTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.RouterRestTest]/[method:testListenPOSTUseCase()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.RouterRest$$SpringCGLIB$$FastClass$$1' method='getIndex(Lorg/springframework/cglib/core/Signature;)I' number='1'><tests>
+<test name='co.com.mrcompany.api.RouterRestTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.RouterRestTest]/[method:testListenPOSTUseCase()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.RouterRestTest' method='testListenPOSTUseCase()V' number='7'><tests>
+<test name='co.com.mrcompany.api.RouterRestTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.RouterRestTest]/[method:testListenPOSTUseCase()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.RouterRestTest' method='lambda$testListenPOSTUseCase$0(Lco/com/mrcompany/api/dtos/ApplicationResponse;)V' number='1'><tests>
+<test name='co.com.mrcompany.api.RouterRestTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.RouterRestTest]/[method:testListenPOSTUseCase()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.RouterRestTest' method='setup()V' number='18'><tests>
+<test name='co.com.mrcompany.api.RouterRestTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.RouterRestTest]/[method:testListenPOSTUseCase()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.RouterRestTest' method='testListenPOSTUseCase()V' number='2'><tests>
+<test name='co.com.mrcompany.api.RouterRestTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.RouterRestTest]/[method:testListenPOSTUseCase()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.RouterRestTest' method='lambda$testListenPOSTUseCase$0(Lco/com/mrcompany/api/dtos/ApplicationResponse;)V' number='2'><tests>
+<test name='co.com.mrcompany.api.RouterRestTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.RouterRestTest]/[method:testListenPOSTUseCase()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.RouterRestTest' method='setup()V' number='19'><tests>
+<test name='co.com.mrcompany.api.RouterRestTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.RouterRestTest]/[method:testListenPOSTUseCase()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.RouterRestTest' method='testListenPOSTUseCase()V' number='1'><tests>
+<test name='co.com.mrcompany.api.RouterRestTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.RouterRestTest]/[method:testListenPOSTUseCase()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.RouterRestTest' method='lambda$testListenPOSTUseCase$0(Lco/com/mrcompany/api/dtos/ApplicationResponse;)V' number='3'><tests>
+<test name='co.com.mrcompany.api.RouterRestTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.RouterRestTest]/[method:testListenPOSTUseCase()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.RouterRestTest' method='setup()V' number='20'><tests>
+<test name='co.com.mrcompany.api.RouterRestTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.RouterRestTest]/[method:testListenPOSTUseCase()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.RouterRestTest' method='testListenPOSTUseCase()V' number='4'><tests>
+<test name='co.com.mrcompany.api.RouterRestTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.RouterRestTest]/[method:testListenPOSTUseCase()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.RouterRestTest' method='lambda$testListenPOSTUseCase$0(Lco/com/mrcompany/api/dtos/ApplicationResponse;)V' number='4'><tests>
+<test name='co.com.mrcompany.api.RouterRestTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.RouterRestTest]/[method:testListenPOSTUseCase()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.RouterRestTest' method='setup()V' number='21'><tests>
+<test name='co.com.mrcompany.api.RouterRestTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.RouterRestTest]/[method:testListenPOSTUseCase()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.RouterRestTest' method='testListenPOSTUseCase()V' number='3'><tests>
+<test name='co.com.mrcompany.api.RouterRestTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.RouterRestTest]/[method:testListenPOSTUseCase()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.RouterRest$$SpringCGLIB$$0' method='CGLIB$STATICHOOK2()V' number='0'><tests>
+<test name='co.com.mrcompany.api.RouterRestTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.RouterRestTest]/[method:testListenPOSTUseCase()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.RouterRest$$SpringCGLIB$$FastClass$$1' method='getIndex(Lorg/springframework/cglib/core/Signature;)I' number='0'><tests>
+<test name='co.com.mrcompany.api.RouterRestTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.RouterRestTest]/[method:testListenPOSTUseCase()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.RouterRestTest' method='testListenPOSTUseCase()V' number='9'><tests>
+<test name='co.com.mrcompany.api.RouterRestTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.RouterRestTest]/[method:testListenPOSTUseCase()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.usecase.loanapplication.ILoanApplicationUseCase$MockitoMock$g4lDybaZ' method='&lt;clinit&gt;()V' number='6'><tests>
+<test name='co.com.mrcompany.api.RouterRestTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.RouterRestTest]/[method:testListenPOSTUseCase()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.dtos.ApplicationResponse' method='getTerm()Ljava/lang/Integer;' number='0'><tests>
+<test name='co.com.mrcompany.api.RouterRestTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.RouterRestTest]/[method:testListenPOSTUseCase()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.RouterRest$$SpringCGLIB$$FastClass$$0' method='&lt;init&gt;(Ljava/lang/Class;)V' number='1'><tests>
+<test name='co.com.mrcompany.api.RouterRestTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.RouterRestTest]/[method:testListenPOSTUseCase()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.usecase.loanapplication.ILoanApplicationUseCase$MockitoMock$g4lDybaZ' method='&lt;clinit&gt;()V' number='5'><tests>
+<test name='co.com.mrcompany.api.RouterRestTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.RouterRestTest]/[method:testListenPOSTUseCase()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.RouterRest$$SpringCGLIB$$FastClass$$0' method='&lt;init&gt;(Ljava/lang/Class;)V' number='0'><tests>
+<test name='co.com.mrcompany.api.RouterRestTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.RouterRestTest]/[method:testListenPOSTUseCase()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.usecase.loanapplication.ILoanApplicationUseCase$MockitoMock$g4lDybaZ' method='&lt;clinit&gt;()V' number='4'><tests>
+<test name='co.com.mrcompany.api.RouterRestTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.RouterRestTest]/[method:testListenPOSTUseCase()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.RouterRestTest' method='setup()V' number='6'><tests>
+<test name='co.com.mrcompany.api.RouterRestTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.RouterRestTest]/[method:testListenPOSTUseCase()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.RouterRestTest' method='setup()V' number='7'><tests>
+<test name='co.com.mrcompany.api.RouterRestTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.RouterRestTest]/[method:testListenPOSTUseCase()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.RouterRestTest' method='setup()V' number='8'><tests>
+<test name='co.com.mrcompany.api.RouterRestTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.RouterRestTest]/[method:testListenPOSTUseCase()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.model.application.Application' method='$default$idStatus()Ljava/lang/Integer;' number='1'><tests>
+<test name='co.com.mrcompany.api.RouterRestTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.RouterRestTest]/[method:testListenPOSTUseCase()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.RouterRestTest' method='setup()V' number='9'><tests>
+<test name='co.com.mrcompany.api.RouterRestTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.RouterRestTest]/[method:testListenPOSTUseCase()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.RouterRestTest' method='setup()V' number='2'><tests>
+<test name='co.com.mrcompany.api.RouterRestTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.RouterRestTest]/[method:testListenPOSTUseCase()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.RouterRestTest' method='setup()V' number='3'><tests>
+<test name='co.com.mrcompany.api.RouterRestTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.RouterRestTest]/[method:testListenPOSTUseCase()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.RouterRestTest' method='setup()V' number='4'><tests>
+<test name='co.com.mrcompany.api.RouterRestTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.RouterRestTest]/[method:testListenPOSTUseCase()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.RouterRestTest' method='setup()V' number='5'><tests>
+<test name='co.com.mrcompany.api.RouterRestTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.RouterRestTest]/[method:testListenPOSTUseCase()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.RouterRestTest' method='setup()V' number='14'><tests>
+<test name='co.com.mrcompany.api.RouterRestTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.RouterRestTest]/[method:testListenPOSTUseCase()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.model.application.Application' method='setEmail(Ljava/lang/String;)V' number='0'><tests>
+<test name='co.com.mrcompany.api.RouterRestTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.RouterRestTest]/[method:testListenPOSTUseCase()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.RouterRestTest' method='setup()V' number='15'><tests>
+<test name='co.com.mrcompany.api.RouterRestTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.RouterRestTest]/[method:testListenPOSTUseCase()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.RouterRestTest' method='setup()V' number='16'><tests>
+<test name='co.com.mrcompany.api.RouterRestTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.RouterRestTest]/[method:testListenPOSTUseCase()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.RouterRestTest' method='setup()V' number='17'><tests>
+<test name='co.com.mrcompany.api.RouterRestTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.RouterRestTest]/[method:testListenPOSTUseCase()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.RouterRestTest' method='setup()V' number='10'><tests>
+<test name='co.com.mrcompany.api.RouterRestTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.RouterRestTest]/[method:testListenPOSTUseCase()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.RouterRestTest' method='setup()V' number='11'><tests>
+<test name='co.com.mrcompany.api.RouterRestTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.RouterRestTest]/[method:testListenPOSTUseCase()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.model.application.Application' method='$default$idStatus()Ljava/lang/Integer;' number='0'><tests>
+<test name='co.com.mrcompany.api.RouterRestTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.RouterRestTest]/[method:testListenPOSTUseCase()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.RouterRestTest' method='setup()V' number='12'><tests>
+<test name='co.com.mrcompany.api.RouterRestTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.RouterRestTest]/[method:testListenPOSTUseCase()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.dtos.ApplicationResponse' method='getEmail()Ljava/lang/String;' number='0'><tests>
+<test name='co.com.mrcompany.api.RouterRestTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.RouterRestTest]/[method:testListenPOSTUseCase()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.RouterRestTest' method='setup()V' number='13'><tests>
+<test name='co.com.mrcompany.api.RouterRestTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.RouterRestTest]/[method:testListenPOSTUseCase()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.RouterRestTest' method='&lt;init&gt;()V' number='0'><tests>
+<test name='co.com.mrcompany.api.RouterRestTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.RouterRestTest]/[method:testListenPOSTUseCase()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.dtos.applicationRequest' method='getTypeId()Ljava/lang/Integer;' number='0'><tests>
+<test name='co.com.mrcompany.api.RouterRestTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.RouterRestTest]/[method:testListenPOSTUseCase()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.RouterRestTest' method='&lt;init&gt;()V' number='1'><tests>
+<test name='co.com.mrcompany.api.RouterRestTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.RouterRestTest]/[method:testListenPOSTUseCase()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.dtos.ApplicationResponse' method='getIdLoanType()Ljava/lang/Integer;' number='0'><tests>
+<test name='co.com.mrcompany.api.RouterRestTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.RouterRestTest]/[method:testListenPOSTUseCase()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.dtos.applicationRequest' method='setAmount(Ljava/math/BigInteger;)V' number='0'><tests>
+<test name='co.com.mrcompany.api.RouterRestTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.RouterRestTest]/[method:testListenPOSTUseCase()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.model.application.Application' method='setId(Ljava/util/UUID;)V' number='0'><tests>
+<test name='co.com.mrcompany.api.RouterRestTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.RouterRestTest]/[method:testListenPOSTUseCase()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.RouterRest$$SpringCGLIB$$FastClass$$1' method='getIndex(Lorg/springframework/cglib/core/Signature;)I' number='11'><tests>
+<test name='co.com.mrcompany.api.RouterRestTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.RouterRestTest]/[method:testListenPOSTUseCase()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.RouterRest$$SpringCGLIB$$FastClass$$1' method='getIndex(Lorg/springframework/cglib/core/Signature;)I' number='10'><tests>
+<test name='co.com.mrcompany.api.RouterRestTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.RouterRestTest]/[method:testListenPOSTUseCase()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.RouterRest$$SpringCGLIB$$0' method='setBeanFactory(Lorg/springframework/beans/factory/BeanFactory;)V' number='5'><tests>
+<test name='co.com.mrcompany.api.RouterRestTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.RouterRestTest]/[method:testListenPOSTUseCase()]'/>
+<test name='co.com.mrcompany.api.config.ConfigTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.config.ConfigTest]/[method:corsConfigurationShouldAllowOrigins()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.RouterRest$$SpringCGLIB$$FastClass$$1' method='getIndex(Lorg/springframework/cglib/core/Signature;)I' number='9'><tests>
+<test name='co.com.mrcompany.api.RouterRestTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.RouterRestTest]/[method:testListenPOSTUseCase()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.RouterRest$$SpringCGLIB$$0' method='setBeanFactory(Lorg/springframework/beans/factory/BeanFactory;)V' number='4'><tests>
+<test name='co.com.mrcompany.api.RouterRestTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.RouterRestTest]/[method:testListenPOSTUseCase()]'/>
+<test name='co.com.mrcompany.api.config.ConfigTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.config.ConfigTest]/[method:corsConfigurationShouldAllowOrigins()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.dtos.applicationRequest' method='setTypeId(Ljava/lang/Integer;)V' number='0'><tests>
+<test name='co.com.mrcompany.api.RouterRestTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.RouterRestTest]/[method:testListenPOSTUseCase()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.RouterRest$$SpringCGLIB$$0' method='setBeanFactory(Lorg/springframework/beans/factory/BeanFactory;)V' number='3'><tests>
+<test name='co.com.mrcompany.api.RouterRestTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.RouterRestTest]/[method:testListenPOSTUseCase()]'/>
+<test name='co.com.mrcompany.api.config.ConfigTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.config.ConfigTest]/[method:corsConfigurationShouldAllowOrigins()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.RouterRest$$SpringCGLIB$$0' method='setBeanFactory(Lorg/springframework/beans/factory/BeanFactory;)V' number='0'><tests>
+<test name='co.com.mrcompany.api.RouterRestTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.RouterRestTest]/[method:testListenPOSTUseCase()]'/>
+<test name='co.com.mrcompany.api.config.ConfigTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.config.ConfigTest]/[method:corsConfigurationShouldAllowOrigins()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.model.application.Application' method='&lt;init&gt;()V' number='1'><tests>
+<test name='co.com.mrcompany.api.RouterRestTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.RouterRestTest]/[method:testListenPOSTUseCase()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.model.application.Application' method='&lt;init&gt;()V' number='0'><tests>
+<test name='co.com.mrcompany.api.RouterRestTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.RouterRestTest]/[method:testListenPOSTUseCase()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.RouterRest$$SpringCGLIB$$0' method='CGLIB$BIND_CALLBACKS(Ljava/lang/Object;)V' number='6'><tests>
+<test name='co.com.mrcompany.api.RouterRestTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.RouterRestTest]/[method:testListenPOSTUseCase()]'/>
+<test name='co.com.mrcompany.api.config.ConfigTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.config.ConfigTest]/[method:corsConfigurationShouldAllowOrigins()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.model.application.Application' method='&lt;init&gt;()V' number='2'><tests>
+<test name='co.com.mrcompany.api.RouterRestTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.RouterRestTest]/[method:testListenPOSTUseCase()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.Handler' method='applyToLoan(Lorg/springframework/web/reactive/function/server/ServerRequest;)Lreactor/core/publisher/Mono;' number='12'><tests>
+<test name='co.com.mrcompany.api.RouterRestTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.RouterRestTest]/[method:testListenPOSTUseCase()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.usecase.loanapplication.ILoanApplicationUseCase$MockitoMock$g4lDybaZ' method='setMockitoInterceptor(Lorg/mockito/internal/creation/bytebuddy/access/MockMethodInterceptor;)V' number='0'><tests>
+<test name='co.com.mrcompany.api.RouterRestTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.RouterRestTest]/[method:testListenPOSTUseCase()]'/>
+<test name='co.com.mrcompany.api.config.ConfigTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.config.ConfigTest]/[method:corsConfigurationShouldAllowOrigins()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.Handler' method='applyToLoan(Lorg/springframework/web/reactive/function/server/ServerRequest;)Lreactor/core/publisher/Mono;' number='11'><tests>
+<test name='co.com.mrcompany.api.RouterRestTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.RouterRestTest]/[method:testListenPOSTUseCase()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.Handler' method='applyToLoan(Lorg/springframework/web/reactive/function/server/ServerRequest;)Lreactor/core/publisher/Mono;' number='10'><tests>
+<test name='co.com.mrcompany.api.RouterRestTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.RouterRestTest]/[method:testListenPOSTUseCase()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.RouterRest$$SpringCGLIB$$0' method='routerFunction(Lco/com/mrcompany/api/Handler;)Lorg/springframework/web/reactive/function/server/RouterFunction;' number='0'><tests>
+<test name='co.com.mrcompany.api.RouterRestTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.RouterRestTest]/[method:testListenPOSTUseCase()]'/>
+<test name='co.com.mrcompany.api.config.ConfigTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.config.ConfigTest]/[method:corsConfigurationShouldAllowOrigins()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.Handler' method='applyToLoan(Lorg/springframework/web/reactive/function/server/ServerRequest;)Lreactor/core/publisher/Mono;' number='9'><tests>
+<test name='co.com.mrcompany.api.RouterRestTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.RouterRestTest]/[method:testListenPOSTUseCase()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.RouterRest' method='&lt;init&gt;()V' number='0'><tests>
+<test name='co.com.mrcompany.api.RouterRestTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.RouterRestTest]/[method:testListenPOSTUseCase()]'/>
+<test name='co.com.mrcompany.api.config.ConfigTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.config.ConfigTest]/[method:corsConfigurationShouldAllowOrigins()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.RouterRest' method='&lt;init&gt;()V' number='1'><tests>
+<test name='co.com.mrcompany.api.RouterRestTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.RouterRestTest]/[method:testListenPOSTUseCase()]'/>
+<test name='co.com.mrcompany.api.config.ConfigTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.config.ConfigTest]/[method:corsConfigurationShouldAllowOrigins()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.dtos.ApplicationResponse' method='getStatus()Ljava/lang/String;' number='0'><tests>
+<test name='co.com.mrcompany.api.RouterRestTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.RouterRestTest]/[method:testListenPOSTUseCase()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.mappers.ApplicationMapper$MockitoMock$7W5yJXmk' method='setMockitoInterceptor(Lorg/mockito/internal/creation/bytebuddy/access/MockMethodInterceptor;)V' number='0'><tests>
+<test name='co.com.mrcompany.api.RouterRestTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.RouterRestTest]/[method:testListenPOSTUseCase()]'/>
+<test name='co.com.mrcompany.api.config.ConfigTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.config.ConfigTest]/[method:corsConfigurationShouldAllowOrigins()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.RouterRest$$SpringCGLIB$$0' method='routerFunction(Lco/com/mrcompany/api/Handler;)Lorg/springframework/web/reactive/function/server/RouterFunction;' number='5'><tests>
+<test name='co.com.mrcompany.api.RouterRestTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.RouterRestTest]/[method:testListenPOSTUseCase()]'/>
+<test name='co.com.mrcompany.api.config.ConfigTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.config.ConfigTest]/[method:corsConfigurationShouldAllowOrigins()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.RouterRest$$SpringCGLIB$$0' method='routerFunction(Lco/com/mrcompany/api/Handler;)Lorg/springframework/web/reactive/function/server/RouterFunction;' number='4'><tests>
+<test name='co.com.mrcompany.api.RouterRestTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.RouterRestTest]/[method:testListenPOSTUseCase()]'/>
+<test name='co.com.mrcompany.api.config.ConfigTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.config.ConfigTest]/[method:corsConfigurationShouldAllowOrigins()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.RouterRest$$SpringCGLIB$$0' method='CGLIB$BIND_CALLBACKS(Ljava/lang/Object;)V' number='1'><tests>
+<test name='co.com.mrcompany.api.RouterRestTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.RouterRestTest]/[method:testListenPOSTUseCase()]'/>
+<test name='co.com.mrcompany.api.config.ConfigTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.config.ConfigTest]/[method:corsConfigurationShouldAllowOrigins()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.RouterRest$$SpringCGLIB$$0' method='routerFunction(Lco/com/mrcompany/api/Handler;)Lorg/springframework/web/reactive/function/server/RouterFunction;' number='3'><tests>
+<test name='co.com.mrcompany.api.RouterRestTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.RouterRestTest]/[method:testListenPOSTUseCase()]'/>
+<test name='co.com.mrcompany.api.config.ConfigTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.config.ConfigTest]/[method:corsConfigurationShouldAllowOrigins()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.RouterRest$$SpringCGLIB$$0' method='CGLIB$BIND_CALLBACKS(Ljava/lang/Object;)V' number='0'><tests>
+<test name='co.com.mrcompany.api.RouterRestTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.RouterRestTest]/[method:testListenPOSTUseCase()]'/>
+<test name='co.com.mrcompany.api.config.ConfigTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.config.ConfigTest]/[method:corsConfigurationShouldAllowOrigins()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.usecase.loanapplication.ILoanApplicationUseCase$MockitoMock$g4lDybaZ' method='save(Lco/com/mrcompany/model/application/Application;)Lreactor/core/publisher/Mono;' number='1'><tests>
+<test name='co.com.mrcompany.api.RouterRestTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.RouterRestTest]/[method:testListenPOSTUseCase()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.RouterRest$$SpringCGLIB$$0' method='CGLIB$BIND_CALLBACKS(Ljava/lang/Object;)V' number='3'><tests>
+<test name='co.com.mrcompany.api.RouterRestTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.RouterRestTest]/[method:testListenPOSTUseCase()]'/>
+<test name='co.com.mrcompany.api.config.ConfigTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.config.ConfigTest]/[method:corsConfigurationShouldAllowOrigins()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.usecase.loanapplication.ILoanApplicationUseCase$MockitoMock$g4lDybaZ' method='save(Lco/com/mrcompany/model/application/Application;)Lreactor/core/publisher/Mono;' number='0'><tests>
+<test name='co.com.mrcompany.api.RouterRestTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.RouterRestTest]/[method:testListenPOSTUseCase()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.RouterRest$$SpringCGLIB$$0' method='CGLIB$BIND_CALLBACKS(Ljava/lang/Object;)V' number='2'><tests>
+<test name='co.com.mrcompany.api.RouterRestTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.RouterRestTest]/[method:testListenPOSTUseCase()]'/>
+<test name='co.com.mrcompany.api.config.ConfigTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.config.ConfigTest]/[method:corsConfigurationShouldAllowOrigins()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.dtos.applicationRequest' method='&lt;init&gt;()V' number='1'><tests>
+<test name='co.com.mrcompany.api.RouterRestTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.RouterRestTest]/[method:testListenPOSTUseCase()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.RouterRest$$SpringCGLIB$$0' method='CGLIB$BIND_CALLBACKS(Ljava/lang/Object;)V' number='5'><tests>
+<test name='co.com.mrcompany.api.RouterRestTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.RouterRestTest]/[method:testListenPOSTUseCase()]'/>
+<test name='co.com.mrcompany.api.config.ConfigTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.config.ConfigTest]/[method:corsConfigurationShouldAllowOrigins()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.dtos.ApplicationResponse' method='setEmail(Ljava/lang/String;)V' number='0'><tests>
+<test name='co.com.mrcompany.api.RouterRestTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.RouterRestTest]/[method:testListenPOSTUseCase()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.dtos.applicationRequest' method='&lt;init&gt;()V' number='0'><tests>
+<test name='co.com.mrcompany.api.RouterRestTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.RouterRestTest]/[method:testListenPOSTUseCase()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.mappers.ApplicationMapper$MockitoMock$7W5yJXmk' method='&lt;clinit&gt;()V' number='4'><tests>
+<test name='co.com.mrcompany.api.RouterRestTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.RouterRestTest]/[method:testListenPOSTUseCase()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.mappers.ApplicationMapper$MockitoMock$7W5yJXmk' method='&lt;clinit&gt;()V' number='3'><tests>
+<test name='co.com.mrcompany.api.RouterRestTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.RouterRestTest]/[method:testListenPOSTUseCase()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.mappers.ApplicationMapper$MockitoMock$7W5yJXmk' method='&lt;clinit&gt;()V' number='2'><tests>
+<test name='co.com.mrcompany.api.RouterRestTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.RouterRestTest]/[method:testListenPOSTUseCase()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.dtos.ApplicationResponse' method='getAmount()Ljava/math/BigInteger;' number='0'><tests>
+<test name='co.com.mrcompany.api.RouterRestTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.RouterRestTest]/[method:testListenPOSTUseCase()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.mappers.ApplicationMapper$MockitoMock$7W5yJXmk' method='&lt;clinit&gt;()V' number='1'><tests>
+<test name='co.com.mrcompany.api.RouterRestTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.RouterRestTest]/[method:testListenPOSTUseCase()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.dtos.ApplicationResponse' method='setTerm(Ljava/lang/Integer;)V' number='0'><tests>
+<test name='co.com.mrcompany.api.RouterRestTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.RouterRestTest]/[method:testListenPOSTUseCase()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.mappers.ApplicationMapper$MockitoMock$7W5yJXmk' method='&lt;clinit&gt;()V' number='0'><tests>
+<test name='co.com.mrcompany.api.RouterRestTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.RouterRestTest]/[method:testListenPOSTUseCase()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.RouterRestTest' method='setup()V' number='0'><tests>
+<test name='co.com.mrcompany.api.RouterRestTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.RouterRestTest]/[method:testListenPOSTUseCase()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.RouterRestTest' method='setup()V' number='1'><tests>
+<test name='co.com.mrcompany.api.RouterRestTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.RouterRestTest]/[method:testListenPOSTUseCase()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.Handler' method='applyToLoan(Lorg/springframework/web/reactive/function/server/ServerRequest;)Lreactor/core/publisher/Mono;' number='0'><tests>
+<test name='co.com.mrcompany.api.RouterRestTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.RouterRestTest]/[method:testListenPOSTUseCase()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.RouterRest$$SpringCGLIB$$FastClass$$1' method='invoke(ILjava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;' number='7'><tests>
+<test name='co.com.mrcompany.api.RouterRestTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.RouterRestTest]/[method:testListenPOSTUseCase()]'/>
+<test name='co.com.mrcompany.api.config.ConfigTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.config.ConfigTest]/[method:corsConfigurationShouldAllowOrigins()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.usecase.loanapplication.ILoanApplicationUseCase$MockitoMock$g4lDybaZ' method='&lt;clinit&gt;()V' number='3'><tests>
+<test name='co.com.mrcompany.api.RouterRestTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.RouterRestTest]/[method:testListenPOSTUseCase()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.usecase.loanapplication.ILoanApplicationUseCase$MockitoMock$g4lDybaZ' method='&lt;clinit&gt;()V' number='2'><tests>
+<test name='co.com.mrcompany.api.RouterRestTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.RouterRestTest]/[method:testListenPOSTUseCase()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.usecase.loanapplication.ILoanApplicationUseCase$MockitoMock$g4lDybaZ' method='&lt;clinit&gt;()V' number='1'><tests>
+<test name='co.com.mrcompany.api.RouterRestTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.RouterRestTest]/[method:testListenPOSTUseCase()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.usecase.loanapplication.ILoanApplicationUseCase$MockitoMock$g4lDybaZ' method='&lt;clinit&gt;()V' number='0'><tests>
+<test name='co.com.mrcompany.api.RouterRestTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.RouterRestTest]/[method:testListenPOSTUseCase()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.dtos.ApplicationResponse' method='setIdStatus(Ljava/lang/Integer;)V' number='0'><tests>
+<test name='co.com.mrcompany.api.RouterRestTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.RouterRestTest]/[method:testListenPOSTUseCase()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.dtos.ApplicationResponse' method='setId(Ljava/util/UUID;)V' number='0'><tests>
+<test name='co.com.mrcompany.api.RouterRestTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.RouterRestTest]/[method:testListenPOSTUseCase()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.dtos.applicationRequest' method='getAmount()Ljava/math/BigInteger;' number='0'><tests>
+<test name='co.com.mrcompany.api.RouterRestTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.RouterRestTest]/[method:testListenPOSTUseCase()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.RouterRest$$SpringCGLIB$$0' method='CGLIB$SET_STATIC_CALLBACKS([Lorg/springframework/cglib/proxy/Callback;)V' number='0'><tests>
+<test name='co.com.mrcompany.api.RouterRestTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.RouterRestTest]/[method:testListenPOSTUseCase()]'/>
+<test name='co.com.mrcompany.api.config.ConfigTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.config.ConfigTest]/[method:corsConfigurationShouldAllowOrigins()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.RouterRest$$SpringCGLIB$$FastClass$$1' method='invoke(ILjava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;' number='0'><tests>
+<test name='co.com.mrcompany.api.RouterRestTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.RouterRestTest]/[method:testListenPOSTUseCase()]'/>
+<test name='co.com.mrcompany.api.config.ConfigTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.config.ConfigTest]/[method:corsConfigurationShouldAllowOrigins()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.Handler' method='applyToLoan(Lorg/springframework/web/reactive/function/server/ServerRequest;)Lreactor/core/publisher/Mono;' number='8'><tests>
+<test name='co.com.mrcompany.api.RouterRestTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.RouterRestTest]/[method:testListenPOSTUseCase()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.RouterRest' method='routerFunction(Lco/com/mrcompany/api/Handler;)Lorg/springframework/web/reactive/function/server/RouterFunction;' number='4'><tests>
+<test name='co.com.mrcompany.api.RouterRestTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.RouterRestTest]/[method:testListenPOSTUseCase()]'/>
+<test name='co.com.mrcompany.api.config.ConfigTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.config.ConfigTest]/[method:corsConfigurationShouldAllowOrigins()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.Handler' method='applyToLoan(Lorg/springframework/web/reactive/function/server/ServerRequest;)Lreactor/core/publisher/Mono;' number='7'><tests>
+<test name='co.com.mrcompany.api.RouterRestTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.RouterRestTest]/[method:testListenPOSTUseCase()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.RouterRest' method='routerFunction(Lco/com/mrcompany/api/Handler;)Lorg/springframework/web/reactive/function/server/RouterFunction;' number='3'><tests>
+<test name='co.com.mrcompany.api.RouterRestTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.RouterRestTest]/[method:testListenPOSTUseCase()]'/>
+<test name='co.com.mrcompany.api.config.ConfigTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.config.ConfigTest]/[method:corsConfigurationShouldAllowOrigins()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.Handler' method='applyToLoan(Lorg/springframework/web/reactive/function/server/ServerRequest;)Lreactor/core/publisher/Mono;' number='6'><tests>
+<test name='co.com.mrcompany.api.RouterRestTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.RouterRestTest]/[method:testListenPOSTUseCase()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.RouterRest' method='routerFunction(Lco/com/mrcompany/api/Handler;)Lorg/springframework/web/reactive/function/server/RouterFunction;' number='6'><tests>
+<test name='co.com.mrcompany.api.RouterRestTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.RouterRestTest]/[method:testListenPOSTUseCase()]'/>
+<test name='co.com.mrcompany.api.config.ConfigTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.config.ConfigTest]/[method:corsConfigurationShouldAllowOrigins()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.Handler' method='applyToLoan(Lorg/springframework/web/reactive/function/server/ServerRequest;)Lreactor/core/publisher/Mono;' number='5'><tests>
+<test name='co.com.mrcompany.api.RouterRestTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.RouterRestTest]/[method:testListenPOSTUseCase()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.RouterRest' method='routerFunction(Lco/com/mrcompany/api/Handler;)Lorg/springframework/web/reactive/function/server/RouterFunction;' number='5'><tests>
+<test name='co.com.mrcompany.api.RouterRestTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.RouterRestTest]/[method:testListenPOSTUseCase()]'/>
+<test name='co.com.mrcompany.api.config.ConfigTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.config.ConfigTest]/[method:corsConfigurationShouldAllowOrigins()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.Handler' method='applyToLoan(Lorg/springframework/web/reactive/function/server/ServerRequest;)Lreactor/core/publisher/Mono;' number='4'><tests>
+<test name='co.com.mrcompany.api.RouterRestTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.RouterRestTest]/[method:testListenPOSTUseCase()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.RouterRest' method='routerFunction(Lco/com/mrcompany/api/Handler;)Lorg/springframework/web/reactive/function/server/RouterFunction;' number='0'><tests>
+<test name='co.com.mrcompany.api.RouterRestTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.RouterRestTest]/[method:testListenPOSTUseCase()]'/>
+<test name='co.com.mrcompany.api.config.ConfigTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.config.ConfigTest]/[method:corsConfigurationShouldAllowOrigins()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.dtos.ApplicationResponse' method='&lt;init&gt;()V' number='0'><tests>
+<test name='co.com.mrcompany.api.RouterRestTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.RouterRestTest]/[method:testListenPOSTUseCase()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.Handler' method='applyToLoan(Lorg/springframework/web/reactive/function/server/ServerRequest;)Lreactor/core/publisher/Mono;' number='3'><tests>
+<test name='co.com.mrcompany.api.RouterRestTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.RouterRestTest]/[method:testListenPOSTUseCase()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.dtos.ApplicationResponse' method='&lt;init&gt;()V' number='1'><tests>
+<test name='co.com.mrcompany.api.RouterRestTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.RouterRestTest]/[method:testListenPOSTUseCase()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.Handler' method='applyToLoan(Lorg/springframework/web/reactive/function/server/ServerRequest;)Lreactor/core/publisher/Mono;' number='2'><tests>
+<test name='co.com.mrcompany.api.RouterRestTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.RouterRestTest]/[method:testListenPOSTUseCase()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.RouterRest' method='routerFunction(Lco/com/mrcompany/api/Handler;)Lorg/springframework/web/reactive/function/server/RouterFunction;' number='2'><tests>
+<test name='co.com.mrcompany.api.RouterRestTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.RouterRestTest]/[method:testListenPOSTUseCase()]'/>
+<test name='co.com.mrcompany.api.config.ConfigTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.config.ConfigTest]/[method:corsConfigurationShouldAllowOrigins()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.dtos.ApplicationResponse' method='&lt;init&gt;()V' number='2'><tests>
+<test name='co.com.mrcompany.api.RouterRestTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.RouterRestTest]/[method:testListenPOSTUseCase()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.Handler' method='applyToLoan(Lorg/springframework/web/reactive/function/server/ServerRequest;)Lreactor/core/publisher/Mono;' number='1'><tests>
+<test name='co.com.mrcompany.api.RouterRestTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.RouterRestTest]/[method:testListenPOSTUseCase()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.RouterRest' method='routerFunction(Lco/com/mrcompany/api/Handler;)Lorg/springframework/web/reactive/function/server/RouterFunction;' number='1'><tests>
+<test name='co.com.mrcompany.api.RouterRestTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.RouterRestTest]/[method:testListenPOSTUseCase()]'/>
+<test name='co.com.mrcompany.api.config.ConfigTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.config.ConfigTest]/[method:corsConfigurationShouldAllowOrigins()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.RouterRest$$SpringCGLIB$$FastClass$$1' method='invoke(ILjava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;' number='8'><tests>
+<test name='co.com.mrcompany.api.RouterRestTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.RouterRestTest]/[method:testListenPOSTUseCase()]'/>
+<test name='co.com.mrcompany.api.config.ConfigTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.config.ConfigTest]/[method:corsConfigurationShouldAllowOrigins()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.dtos.applicationRequest' method='setEmail(Ljava/lang/String;)V' number='0'><tests>
+<test name='co.com.mrcompany.api.RouterRestTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.RouterRestTest]/[method:testListenPOSTUseCase()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.dtos.ApplicationResponse' method='getIdStatus()Ljava/lang/Integer;' number='0'><tests>
+<test name='co.com.mrcompany.api.RouterRestTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.RouterRestTest]/[method:testListenPOSTUseCase()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.RouterRest$$SpringCGLIB$$0' method='CGLIB$routerFunction$0(Lco/com/mrcompany/api/Handler;)Lorg/springframework/web/reactive/function/server/RouterFunction;' number='0'><tests>
+<test name='co.com.mrcompany.api.RouterRestTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.RouterRestTest]/[method:testListenPOSTUseCase()]'/>
+<test name='co.com.mrcompany.api.config.ConfigTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.config.ConfigTest]/[method:corsConfigurationShouldAllowOrigins()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.RouterRest$$SpringCGLIB$$0' method='CGLIB$routerFunction$0(Lco/com/mrcompany/api/Handler;)Lorg/springframework/web/reactive/function/server/RouterFunction;' number='1'><tests>
+<test name='co.com.mrcompany.api.RouterRestTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.RouterRestTest]/[method:testListenPOSTUseCase()]'/>
+<test name='co.com.mrcompany.api.config.ConfigTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.config.ConfigTest]/[method:corsConfigurationShouldAllowOrigins()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.RouterRest$$SpringCGLIB$$FastClass$$0' method='getIndex(Lorg/springframework/cglib/core/Signature;)I' number='3'><tests>
+<test name='co.com.mrcompany.api.RouterRestTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.RouterRestTest]/[method:testListenPOSTUseCase()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.RouterRest$$SpringCGLIB$$FastClass$$0' method='getIndex(Lorg/springframework/cglib/core/Signature;)I' number='2'><tests>
+<test name='co.com.mrcompany.api.RouterRestTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.RouterRestTest]/[method:testListenPOSTUseCase()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.RouterRest$$SpringCGLIB$$FastClass$$0' method='getIndex(Lorg/springframework/cglib/core/Signature;)I' number='1'><tests>
+<test name='co.com.mrcompany.api.RouterRestTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.RouterRestTest]/[method:testListenPOSTUseCase()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.RouterRest$$SpringCGLIB$$FastClass$$0' method='getIndex(Lorg/springframework/cglib/core/Signature;)I' number='0'><tests>
+<test name='co.com.mrcompany.api.RouterRestTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.RouterRestTest]/[method:testListenPOSTUseCase()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.dtos.ApplicationResponse' method='setIdLoanType(Ljava/lang/Integer;)V' number='0'><tests>
+<test name='co.com.mrcompany.api.RouterRestTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.RouterRestTest]/[method:testListenPOSTUseCase()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.RouterRest$$SpringCGLIB$$FastClass$$0' method='getIndex(Lorg/springframework/cglib/core/Signature;)I' number='5'><tests>
+<test name='co.com.mrcompany.api.RouterRestTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.RouterRestTest]/[method:testListenPOSTUseCase()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.RouterRest$$SpringCGLIB$$FastClass$$0' method='getIndex(Lorg/springframework/cglib/core/Signature;)I' number='4'><tests>
+<test name='co.com.mrcompany.api.RouterRestTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.RouterRestTest]/[method:testListenPOSTUseCase()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.RouterRest$$SpringCGLIB$$0' method='&lt;init&gt;()V' number='2'><tests>
+<test name='co.com.mrcompany.api.RouterRestTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.RouterRestTest]/[method:testListenPOSTUseCase()]'/>
+<test name='co.com.mrcompany.api.config.ConfigTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.config.ConfigTest]/[method:corsConfigurationShouldAllowOrigins()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.RouterRest$$SpringCGLIB$$0' method='&lt;init&gt;()V' number='1'><tests>
+<test name='co.com.mrcompany.api.RouterRestTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.RouterRestTest]/[method:testListenPOSTUseCase()]'/>
+<test name='co.com.mrcompany.api.config.ConfigTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.config.ConfigTest]/[method:corsConfigurationShouldAllowOrigins()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.RouterRest$$SpringCGLIB$$0' method='&lt;init&gt;()V' number='0'><tests>
+<test name='co.com.mrcompany.api.RouterRestTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.RouterRestTest]/[method:testListenPOSTUseCase()]'/>
+<test name='co.com.mrcompany.api.config.ConfigTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.config.ConfigTest]/[method:corsConfigurationShouldAllowOrigins()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.RouterRest$$SpringCGLIB$$FastClass$$1' method='&lt;init&gt;(Ljava/lang/Class;)V' number='0'><tests>
+<test name='co.com.mrcompany.api.RouterRestTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.RouterRestTest]/[method:testListenPOSTUseCase()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.usecase.loanapplication.ILoanApplicationUseCase$MockitoMock$g4lDybaZ' method='&lt;init&gt;()V' number='1'><tests>
+<test name='co.com.mrcompany.api.RouterRestTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.RouterRestTest]/[method:testListenPOSTUseCase()]'/>
+<test name='co.com.mrcompany.api.config.ConfigTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.config.ConfigTest]/[method:corsConfigurationShouldAllowOrigins()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.RouterRest$$SpringCGLIB$$FastClass$$1' method='&lt;init&gt;(Ljava/lang/Class;)V' number='1'><tests>
+<test name='co.com.mrcompany.api.RouterRestTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.RouterRestTest]/[method:testListenPOSTUseCase()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.usecase.loanapplication.ILoanApplicationUseCase$MockitoMock$g4lDybaZ' method='&lt;init&gt;()V' number='0'><tests>
+<test name='co.com.mrcompany.api.RouterRestTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.RouterRestTest]/[method:testListenPOSTUseCase()]'/>
+<test name='co.com.mrcompany.api.config.ConfigTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.config.ConfigTest]/[method:corsConfigurationShouldAllowOrigins()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.mappers.ApplicationMapper$MockitoMock$7W5yJXmk' method='toDomain(Lco/com/mrcompany/api/dtos/applicationRequest;)Lco/com/mrcompany/model/application/Application;' number='0'><tests>
+<test name='co.com.mrcompany.api.RouterRestTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.RouterRestTest]/[method:testListenPOSTUseCase()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.Handler' method='&lt;init&gt;(Lco/com/mrcompany/usecase/loanapplication/ILoanApplicationUseCase;Lco/com/mrcompany/api/mappers/ApplicationMapper;)V' number='1'><tests>
+<test name='co.com.mrcompany.api.RouterRestTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.RouterRestTest]/[method:testListenPOSTUseCase()]'/>
+<test name='co.com.mrcompany.api.config.ConfigTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.config.ConfigTest]/[method:corsConfigurationShouldAllowOrigins()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.mappers.ApplicationMapper$MockitoMock$7W5yJXmk' method='toDomain(Lco/com/mrcompany/api/dtos/applicationRequest;)Lco/com/mrcompany/model/application/Application;' number='1'><tests>
+<test name='co.com.mrcompany.api.RouterRestTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.RouterRestTest]/[method:testListenPOSTUseCase()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.Handler' method='&lt;init&gt;(Lco/com/mrcompany/usecase/loanapplication/ILoanApplicationUseCase;Lco/com/mrcompany/api/mappers/ApplicationMapper;)V' number='0'><tests>
+<test name='co.com.mrcompany.api.RouterRestTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.RouterRestTest]/[method:testListenPOSTUseCase()]'/>
+<test name='co.com.mrcompany.api.config.ConfigTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.config.ConfigTest]/[method:corsConfigurationShouldAllowOrigins()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.dtos.ApplicationResponse' method='$default$status()Ljava/lang/String;' number='0'><tests>
+<test name='co.com.mrcompany.api.RouterRestTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.RouterRestTest]/[method:testListenPOSTUseCase()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.mappers.ApplicationMapper$MockitoMock$7W5yJXmk' method='&lt;init&gt;()V' number='1'><tests>
+<test name='co.com.mrcompany.api.RouterRestTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.RouterRestTest]/[method:testListenPOSTUseCase()]'/>
+<test name='co.com.mrcompany.api.config.ConfigTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.config.ConfigTest]/[method:corsConfigurationShouldAllowOrigins()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.mappers.ApplicationMapper$MockitoMock$7W5yJXmk' method='&lt;init&gt;()V' number='0'><tests>
+<test name='co.com.mrcompany.api.RouterRestTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.RouterRestTest]/[method:testListenPOSTUseCase()]'/>
+<test name='co.com.mrcompany.api.config.ConfigTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.config.ConfigTest]/[method:corsConfigurationShouldAllowOrigins()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.dtos.applicationRequest' method='setTerm(Ljava/lang/Integer;)V' number='0'><tests>
+<test name='co.com.mrcompany.api.RouterRestTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.RouterRestTest]/[method:testListenPOSTUseCase()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.dtos.ApplicationResponse' method='setStatus(Ljava/lang/String;)V' number='0'><tests>
+<test name='co.com.mrcompany.api.RouterRestTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.RouterRestTest]/[method:testListenPOSTUseCase()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.RouterRest$$SpringCGLIB$$0' method='CGLIB$STATICHOOK1()V' number='10'><tests>
+<test name='co.com.mrcompany.api.RouterRestTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.RouterRestTest]/[method:testListenPOSTUseCase()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.dtos.applicationRequest' method='getEmail()Ljava/lang/String;' number='0'><tests>
+<test name='co.com.mrcompany.api.RouterRestTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.RouterRestTest]/[method:testListenPOSTUseCase()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.RouterRest$$SpringCGLIB$$0' method='CGLIB$STATICHOOK1()V' number='9'><tests>
+<test name='co.com.mrcompany.api.RouterRestTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.RouterRestTest]/[method:testListenPOSTUseCase()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.RouterRest$$SpringCGLIB$$0' method='CGLIB$STATICHOOK1()V' number='8'><tests>
+<test name='co.com.mrcompany.api.RouterRestTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.RouterRestTest]/[method:testListenPOSTUseCase()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.RouterRest$$SpringCGLIB$$0' method='CGLIB$STATICHOOK1()V' number='7'><tests>
+<test name='co.com.mrcompany.api.RouterRestTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.RouterRestTest]/[method:testListenPOSTUseCase()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.RouterRest$$SpringCGLIB$$0' method='CGLIB$STATICHOOK1()V' number='6'><tests>
+<test name='co.com.mrcompany.api.RouterRestTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.RouterRestTest]/[method:testListenPOSTUseCase()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.RouterRest$$SpringCGLIB$$0' method='CGLIB$STATICHOOK1()V' number='5'><tests>
+<test name='co.com.mrcompany.api.RouterRestTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.RouterRestTest]/[method:testListenPOSTUseCase()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.RouterRest$$SpringCGLIB$$0' method='CGLIB$STATICHOOK1()V' number='4'><tests>
+<test name='co.com.mrcompany.api.RouterRestTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.RouterRestTest]/[method:testListenPOSTUseCase()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.RouterRest$$SpringCGLIB$$0' method='CGLIB$STATICHOOK1()V' number='3'><tests>
+<test name='co.com.mrcompany.api.RouterRestTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.RouterRestTest]/[method:testListenPOSTUseCase()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.RouterRest$$SpringCGLIB$$0' method='&lt;clinit&gt;()V' number='1'><tests>
+<test name='co.com.mrcompany.api.RouterRestTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.RouterRestTest]/[method:testListenPOSTUseCase()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.RouterRest$$SpringCGLIB$$0' method='CGLIB$STATICHOOK1()V' number='2'><tests>
+<test name='co.com.mrcompany.api.RouterRestTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.RouterRestTest]/[method:testListenPOSTUseCase()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.RouterRest$$SpringCGLIB$$0' method='&lt;clinit&gt;()V' number='0'><tests>
+<test name='co.com.mrcompany.api.RouterRestTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.RouterRestTest]/[method:testListenPOSTUseCase()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.RouterRest$$SpringCGLIB$$0' method='CGLIB$STATICHOOK1()V' number='1'><tests>
+<test name='co.com.mrcompany.api.RouterRestTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.RouterRestTest]/[method:testListenPOSTUseCase()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.RouterRest$$SpringCGLIB$$0' method='CGLIB$STATICHOOK1()V' number='0'><tests>
+<test name='co.com.mrcompany.api.RouterRestTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.RouterRestTest]/[method:testListenPOSTUseCase()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.RouterRest$$SpringCGLIB$$0' method='&lt;clinit&gt;()V' number='2'><tests>
+<test name='co.com.mrcompany.api.RouterRestTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.RouterRestTest]/[method:testListenPOSTUseCase()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.dtos.applicationRequest' method='getTerm()Ljava/lang/Integer;' number='0'><tests>
+<test name='co.com.mrcompany.api.RouterRestTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.RouterRestTest]/[method:testListenPOSTUseCase()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.Handler' method='&lt;clinit&gt;()V' number='0'><tests>
+<test name='co.com.mrcompany.api.RouterRestTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.RouterRestTest]/[method:testListenPOSTUseCase()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.dtos.ApplicationResponse' method='getId()Ljava/util/UUID;' number='0'><tests>
+<test name='co.com.mrcompany.api.RouterRestTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.RouterRestTest]/[method:testListenPOSTUseCase()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.Handler' method='&lt;clinit&gt;()V' number='1'><tests>
+<test name='co.com.mrcompany.api.RouterRestTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.RouterRestTest]/[method:testListenPOSTUseCase()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.dtos.ApplicationResponse' method='setAmount(Ljava/math/BigInteger;)V' number='0'><tests>
+<test name='co.com.mrcompany.api.RouterRestTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.RouterRestTest]/[method:testListenPOSTUseCase()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.mappers.ApplicationMapper$MockitoMock$7W5yJXmk' method='toResponse(Lco/com/mrcompany/model/application/Application;)Lco/com/mrcompany/api/dtos/ApplicationResponse;' number='0'><tests>
+<test name='co.com.mrcompany.api.RouterRestTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.RouterRestTest]/[method:testListenPOSTUseCase()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.mappers.ApplicationMapper$MockitoMock$7W5yJXmk' method='toResponse(Lco/com/mrcompany/model/application/Application;)Lco/com/mrcompany/api/dtos/ApplicationResponse;' number='1'><tests>
+<test name='co.com.mrcompany.api.RouterRestTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.RouterRestTest]/[method:testListenPOSTUseCase()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.RouterRestTest' method='testListenPOSTUseCase()V' number='0'><tests>
+<test name='co.com.mrcompany.api.RouterRestTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.RouterRestTest]/[method:testListenPOSTUseCase()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.config.CorsConfig$$SpringCGLIB$$0' method='corsWebFilter(Ljava/lang/String;)Lorg/springframework/web/cors/reactive/CorsWebFilter;' number='0'><tests>
+<test name='co.com.mrcompany.api.config.ConfigTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.config.ConfigTest]/[method:corsConfigurationShouldAllowOrigins()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.config.SecurityHeadersConfig' method='filter(Lorg/springframework/web/server/ServerWebExchange;Lorg/springframework/web/server/WebFilterChain;)Lreactor/core/publisher/Mono;' number='10'><tests>
+<test name='co.com.mrcompany.api.config.ConfigTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.config.ConfigTest]/[method:corsConfigurationShouldAllowOrigins()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.config.SecurityHeadersConfig' method='filter(Lorg/springframework/web/server/ServerWebExchange;Lorg/springframework/web/server/WebFilterChain;)Lreactor/core/publisher/Mono;' number='4'><tests>
+<test name='co.com.mrcompany.api.config.ConfigTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.config.ConfigTest]/[method:corsConfigurationShouldAllowOrigins()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.config.SecurityHeadersConfig' method='filter(Lorg/springframework/web/server/ServerWebExchange;Lorg/springframework/web/server/WebFilterChain;)Lreactor/core/publisher/Mono;' number='5'><tests>
+<test name='co.com.mrcompany.api.config.ConfigTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.config.ConfigTest]/[method:corsConfigurationShouldAllowOrigins()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.config.SecurityHeadersConfig' method='filter(Lorg/springframework/web/server/ServerWebExchange;Lorg/springframework/web/server/WebFilterChain;)Lreactor/core/publisher/Mono;' number='2'><tests>
+<test name='co.com.mrcompany.api.config.ConfigTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.config.ConfigTest]/[method:corsConfigurationShouldAllowOrigins()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.config.SecurityHeadersConfig' method='filter(Lorg/springframework/web/server/ServerWebExchange;Lorg/springframework/web/server/WebFilterChain;)Lreactor/core/publisher/Mono;' number='3'><tests>
+<test name='co.com.mrcompany.api.config.ConfigTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.config.ConfigTest]/[method:corsConfigurationShouldAllowOrigins()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.config.SecurityHeadersConfig' method='filter(Lorg/springframework/web/server/ServerWebExchange;Lorg/springframework/web/server/WebFilterChain;)Lreactor/core/publisher/Mono;' number='8'><tests>
+<test name='co.com.mrcompany.api.config.ConfigTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.config.ConfigTest]/[method:corsConfigurationShouldAllowOrigins()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.config.SecurityHeadersConfig' method='filter(Lorg/springframework/web/server/ServerWebExchange;Lorg/springframework/web/server/WebFilterChain;)Lreactor/core/publisher/Mono;' number='9'><tests>
+<test name='co.com.mrcompany.api.config.ConfigTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.config.ConfigTest]/[method:corsConfigurationShouldAllowOrigins()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.config.SecurityHeadersConfig' method='filter(Lorg/springframework/web/server/ServerWebExchange;Lorg/springframework/web/server/WebFilterChain;)Lreactor/core/publisher/Mono;' number='6'><tests>
+<test name='co.com.mrcompany.api.config.ConfigTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.config.ConfigTest]/[method:corsConfigurationShouldAllowOrigins()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.config.SecurityHeadersConfig' method='filter(Lorg/springframework/web/server/ServerWebExchange;Lorg/springframework/web/server/WebFilterChain;)Lreactor/core/publisher/Mono;' number='7'><tests>
+<test name='co.com.mrcompany.api.config.ConfigTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.config.ConfigTest]/[method:corsConfigurationShouldAllowOrigins()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.config.SecurityHeadersConfig' method='filter(Lorg/springframework/web/server/ServerWebExchange;Lorg/springframework/web/server/WebFilterChain;)Lreactor/core/publisher/Mono;' number='0'><tests>
+<test name='co.com.mrcompany.api.config.ConfigTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.config.ConfigTest]/[method:corsConfigurationShouldAllowOrigins()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.config.SecurityHeadersConfig' method='filter(Lorg/springframework/web/server/ServerWebExchange;Lorg/springframework/web/server/WebFilterChain;)Lreactor/core/publisher/Mono;' number='1'><tests>
+<test name='co.com.mrcompany.api.config.ConfigTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.config.ConfigTest]/[method:corsConfigurationShouldAllowOrigins()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.config.CorsConfig$$SpringCGLIB$$0' method='corsWebFilter(Ljava/lang/String;)Lorg/springframework/web/cors/reactive/CorsWebFilter;' number='4'><tests>
+<test name='co.com.mrcompany.api.config.ConfigTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.config.ConfigTest]/[method:corsConfigurationShouldAllowOrigins()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.config.CorsConfig$$SpringCGLIB$$0' method='corsWebFilter(Ljava/lang/String;)Lorg/springframework/web/cors/reactive/CorsWebFilter;' number='3'><tests>
+<test name='co.com.mrcompany.api.config.ConfigTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.config.ConfigTest]/[method:corsConfigurationShouldAllowOrigins()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.config.CorsConfig$$SpringCGLIB$$0' method='corsWebFilter(Ljava/lang/String;)Lorg/springframework/web/cors/reactive/CorsWebFilter;' number='5'><tests>
+<test name='co.com.mrcompany.api.config.ConfigTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.config.ConfigTest]/[method:corsConfigurationShouldAllowOrigins()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.config.CorsConfig$$SpringCGLIB$$FastClass$$1' method='getIndex(Lorg/springframework/cglib/core/Signature;)I' number='2'><tests>
+<test name='co.com.mrcompany.api.config.ConfigTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.config.ConfigTest]/[method:corsConfigurationShouldAllowOrigins()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.config.CorsConfig$$SpringCGLIB$$0' method='setBeanFactory(Lorg/springframework/beans/factory/BeanFactory;)V' number='5'><tests>
+<test name='co.com.mrcompany.api.config.ConfigTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.config.ConfigTest]/[method:corsConfigurationShouldAllowOrigins()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.config.CorsConfig$$SpringCGLIB$$FastClass$$1' method='getIndex(Lorg/springframework/cglib/core/Signature;)I' number='0'><tests>
+<test name='co.com.mrcompany.api.config.ConfigTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.config.ConfigTest]/[method:corsConfigurationShouldAllowOrigins()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.config.CorsConfig$$SpringCGLIB$$FastClass$$1' method='getIndex(Lorg/springframework/cglib/core/Signature;)I' number='1'><tests>
+<test name='co.com.mrcompany.api.config.ConfigTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.config.ConfigTest]/[method:corsConfigurationShouldAllowOrigins()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.config.CorsConfig$$SpringCGLIB$$0' method='setBeanFactory(Lorg/springframework/beans/factory/BeanFactory;)V' number='0'><tests>
+<test name='co.com.mrcompany.api.config.ConfigTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.config.ConfigTest]/[method:corsConfigurationShouldAllowOrigins()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.config.CorsConfig$$SpringCGLIB$$0' method='setBeanFactory(Lorg/springframework/beans/factory/BeanFactory;)V' number='4'><tests>
+<test name='co.com.mrcompany.api.config.ConfigTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.config.ConfigTest]/[method:corsConfigurationShouldAllowOrigins()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.config.CorsConfig$$SpringCGLIB$$0' method='setBeanFactory(Lorg/springframework/beans/factory/BeanFactory;)V' number='3'><tests>
+<test name='co.com.mrcompany.api.config.ConfigTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.config.ConfigTest]/[method:corsConfigurationShouldAllowOrigins()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.config.CorsConfig$$SpringCGLIB$$0' method='CGLIB$corsWebFilter$0(Ljava/lang/String;)Lorg/springframework/web/cors/reactive/CorsWebFilter;' number='1'><tests>
+<test name='co.com.mrcompany.api.config.ConfigTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.config.ConfigTest]/[method:corsConfigurationShouldAllowOrigins()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.config.CorsConfig$$SpringCGLIB$$0' method='CGLIB$corsWebFilter$0(Ljava/lang/String;)Lorg/springframework/web/cors/reactive/CorsWebFilter;' number='0'><tests>
+<test name='co.com.mrcompany.api.config.ConfigTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.config.ConfigTest]/[method:corsConfigurationShouldAllowOrigins()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.Handler' method='testOk(Lorg/springframework/web/reactive/function/server/ServerRequest;)Lreactor/core/publisher/Mono;' number='2'><tests>
+<test name='co.com.mrcompany.api.config.ConfigTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.config.ConfigTest]/[method:corsConfigurationShouldAllowOrigins()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.Handler' method='testOk(Lorg/springframework/web/reactive/function/server/ServerRequest;)Lreactor/core/publisher/Mono;' number='0'><tests>
+<test name='co.com.mrcompany.api.config.ConfigTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.config.ConfigTest]/[method:corsConfigurationShouldAllowOrigins()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.Handler' method='testOk(Lorg/springframework/web/reactive/function/server/ServerRequest;)Lreactor/core/publisher/Mono;' number='1'><tests>
+<test name='co.com.mrcompany.api.config.ConfigTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.config.ConfigTest]/[method:corsConfigurationShouldAllowOrigins()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.config.CorsConfig$$SpringCGLIB$$FastClass$$1' method='getIndex(Lorg/springframework/cglib/core/Signature;)I' number='26'><tests>
+<test name='co.com.mrcompany.api.config.ConfigTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.config.ConfigTest]/[method:corsConfigurationShouldAllowOrigins()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.config.CorsConfig$$SpringCGLIB$$FastClass$$1' method='getIndex(Lorg/springframework/cglib/core/Signature;)I' number='24'><tests>
+<test name='co.com.mrcompany.api.config.ConfigTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.config.ConfigTest]/[method:corsConfigurationShouldAllowOrigins()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.config.CorsConfig$$SpringCGLIB$$FastClass$$1' method='getIndex(Lorg/springframework/cglib/core/Signature;)I' number='25'><tests>
+<test name='co.com.mrcompany.api.config.ConfigTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.config.ConfigTest]/[method:corsConfigurationShouldAllowOrigins()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.config.CorsConfig$$SpringCGLIB$$FastClass$$1' method='&lt;init&gt;(Ljava/lang/Class;)V' number='0'><tests>
+<test name='co.com.mrcompany.api.config.ConfigTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.config.ConfigTest]/[method:corsConfigurationShouldAllowOrigins()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.config.CorsConfig$$SpringCGLIB$$FastClass$$1' method='&lt;init&gt;(Ljava/lang/Class;)V' number='1'><tests>
+<test name='co.com.mrcompany.api.config.ConfigTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.config.ConfigTest]/[method:corsConfigurationShouldAllowOrigins()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.config.CorsConfig$$SpringCGLIB$$0' method='&lt;clinit&gt;()V' number='0'><tests>
+<test name='co.com.mrcompany.api.config.ConfigTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.config.ConfigTest]/[method:corsConfigurationShouldAllowOrigins()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.config.ConfigTest' method='&lt;init&gt;()V' number='0'><tests>
+<test name='co.com.mrcompany.api.config.ConfigTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.config.ConfigTest]/[method:corsConfigurationShouldAllowOrigins()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.config.ConfigTest' method='&lt;init&gt;()V' number='1'><tests>
+<test name='co.com.mrcompany.api.config.ConfigTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.config.ConfigTest]/[method:corsConfigurationShouldAllowOrigins()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.config.CorsConfig$$SpringCGLIB$$0' method='&lt;clinit&gt;()V' number='2'><tests>
+<test name='co.com.mrcompany.api.config.ConfigTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.config.ConfigTest]/[method:corsConfigurationShouldAllowOrigins()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.config.CorsConfig$$SpringCGLIB$$0' method='&lt;clinit&gt;()V' number='1'><tests>
+<test name='co.com.mrcompany.api.config.ConfigTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.config.ConfigTest]/[method:corsConfigurationShouldAllowOrigins()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.config.SecurityHeadersConfig' method='&lt;init&gt;()V' number='1'><tests>
+<test name='co.com.mrcompany.api.config.ConfigTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.config.ConfigTest]/[method:corsConfigurationShouldAllowOrigins()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.config.SecurityHeadersConfig' method='&lt;init&gt;()V' number='0'><tests>
+<test name='co.com.mrcompany.api.config.ConfigTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.config.ConfigTest]/[method:corsConfigurationShouldAllowOrigins()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.config.CorsConfig$$SpringCGLIB$$0' method='&lt;init&gt;()V' number='1'><tests>
+<test name='co.com.mrcompany.api.config.ConfigTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.config.ConfigTest]/[method:corsConfigurationShouldAllowOrigins()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.config.CorsConfig$$SpringCGLIB$$0' method='&lt;init&gt;()V' number='0'><tests>
+<test name='co.com.mrcompany.api.config.ConfigTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.config.ConfigTest]/[method:corsConfigurationShouldAllowOrigins()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.config.CorsConfig$$SpringCGLIB$$0' method='&lt;init&gt;()V' number='2'><tests>
+<test name='co.com.mrcompany.api.config.ConfigTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.config.ConfigTest]/[method:corsConfigurationShouldAllowOrigins()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.config.CorsConfig$$SpringCGLIB$$0' method='CGLIB$STATICHOOK4()V' number='0'><tests>
+<test name='co.com.mrcompany.api.config.ConfigTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.config.ConfigTest]/[method:corsConfigurationShouldAllowOrigins()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.config.CorsConfig' method='corsWebFilter(Ljava/lang/String;)Lorg/springframework/web/cors/reactive/CorsWebFilter;' number='11'><tests>
+<test name='co.com.mrcompany.api.config.ConfigTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.config.ConfigTest]/[method:corsConfigurationShouldAllowOrigins()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.config.CorsConfig$$SpringCGLIB$$FastClass$$0' method='&lt;init&gt;(Ljava/lang/Class;)V' number='0'><tests>
+<test name='co.com.mrcompany.api.config.ConfigTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.config.ConfigTest]/[method:corsConfigurationShouldAllowOrigins()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.config.CorsConfig' method='corsWebFilter(Ljava/lang/String;)Lorg/springframework/web/cors/reactive/CorsWebFilter;' number='12'><tests>
+<test name='co.com.mrcompany.api.config.ConfigTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.config.ConfigTest]/[method:corsConfigurationShouldAllowOrigins()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.config.CorsConfig' method='corsWebFilter(Ljava/lang/String;)Lorg/springframework/web/cors/reactive/CorsWebFilter;' number='13'><tests>
+<test name='co.com.mrcompany.api.config.ConfigTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.config.ConfigTest]/[method:corsConfigurationShouldAllowOrigins()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.config.CorsConfig' method='corsWebFilter(Ljava/lang/String;)Lorg/springframework/web/cors/reactive/CorsWebFilter;' number='7'><tests>
+<test name='co.com.mrcompany.api.config.ConfigTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.config.ConfigTest]/[method:corsConfigurationShouldAllowOrigins()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.config.CorsConfig' method='corsWebFilter(Ljava/lang/String;)Lorg/springframework/web/cors/reactive/CorsWebFilter;' number='8'><tests>
+<test name='co.com.mrcompany.api.config.ConfigTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.config.ConfigTest]/[method:corsConfigurationShouldAllowOrigins()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.config.CorsConfig' method='corsWebFilter(Ljava/lang/String;)Lorg/springframework/web/cors/reactive/CorsWebFilter;' number='9'><tests>
+<test name='co.com.mrcompany.api.config.ConfigTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.config.ConfigTest]/[method:corsConfigurationShouldAllowOrigins()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.config.CorsConfig' method='corsWebFilter(Ljava/lang/String;)Lorg/springframework/web/cors/reactive/CorsWebFilter;' number='10'><tests>
+<test name='co.com.mrcompany.api.config.ConfigTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.config.ConfigTest]/[method:corsConfigurationShouldAllowOrigins()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.config.CorsConfig$$SpringCGLIB$$FastClass$$0' method='&lt;init&gt;(Ljava/lang/Class;)V' number='1'><tests>
+<test name='co.com.mrcompany.api.config.ConfigTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.config.ConfigTest]/[method:corsConfigurationShouldAllowOrigins()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.config.CorsConfig$$SpringCGLIB$$FastClass$$1' method='invoke(ILjava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;' number='0'><tests>
+<test name='co.com.mrcompany.api.config.ConfigTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.config.ConfigTest]/[method:corsConfigurationShouldAllowOrigins()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.config.CorsConfig$$SpringCGLIB$$FastClass$$0' method='getIndex(Lorg/springframework/cglib/core/Signature;)I' number='1'><tests>
+<test name='co.com.mrcompany.api.config.ConfigTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.config.ConfigTest]/[method:corsConfigurationShouldAllowOrigins()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.config.CorsConfig$$SpringCGLIB$$FastClass$$0' method='getIndex(Lorg/springframework/cglib/core/Signature;)I' number='2'><tests>
+<test name='co.com.mrcompany.api.config.ConfigTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.config.ConfigTest]/[method:corsConfigurationShouldAllowOrigins()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.config.CorsConfig$$SpringCGLIB$$FastClass$$0' method='getIndex(Lorg/springframework/cglib/core/Signature;)I' number='0'><tests>
+<test name='co.com.mrcompany.api.config.ConfigTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.config.ConfigTest]/[method:corsConfigurationShouldAllowOrigins()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.config.CorsConfig$$SpringCGLIB$$0' method='CGLIB$BIND_CALLBACKS(Ljava/lang/Object;)V' number='2'><tests>
+<test name='co.com.mrcompany.api.config.ConfigTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.config.ConfigTest]/[method:corsConfigurationShouldAllowOrigins()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.config.CorsConfig$$SpringCGLIB$$0' method='CGLIB$BIND_CALLBACKS(Ljava/lang/Object;)V' number='1'><tests>
+<test name='co.com.mrcompany.api.config.ConfigTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.config.ConfigTest]/[method:corsConfigurationShouldAllowOrigins()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.config.CorsConfig$$SpringCGLIB$$0' method='CGLIB$BIND_CALLBACKS(Ljava/lang/Object;)V' number='0'><tests>
+<test name='co.com.mrcompany.api.config.ConfigTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.config.ConfigTest]/[method:corsConfigurationShouldAllowOrigins()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.config.CorsConfig$$SpringCGLIB$$0' method='CGLIB$BIND_CALLBACKS(Ljava/lang/Object;)V' number='6'><tests>
+<test name='co.com.mrcompany.api.config.ConfigTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.config.ConfigTest]/[method:corsConfigurationShouldAllowOrigins()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.config.CorsConfig$$SpringCGLIB$$0' method='CGLIB$BIND_CALLBACKS(Ljava/lang/Object;)V' number='5'><tests>
+<test name='co.com.mrcompany.api.config.ConfigTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.config.ConfigTest]/[method:corsConfigurationShouldAllowOrigins()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.config.CorsConfig$$SpringCGLIB$$FastClass$$1' method='invoke(ILjava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;' number='11'><tests>
+<test name='co.com.mrcompany.api.config.ConfigTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.config.ConfigTest]/[method:corsConfigurationShouldAllowOrigins()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.config.CorsConfig$$SpringCGLIB$$0' method='CGLIB$BIND_CALLBACKS(Ljava/lang/Object;)V' number='3'><tests>
+<test name='co.com.mrcompany.api.config.ConfigTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.config.ConfigTest]/[method:corsConfigurationShouldAllowOrigins()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.config.CorsConfig$$SpringCGLIB$$FastClass$$1' method='invoke(ILjava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;' number='12'><tests>
+<test name='co.com.mrcompany.api.config.ConfigTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.config.ConfigTest]/[method:corsConfigurationShouldAllowOrigins()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.config.ConfigTest' method='corsConfigurationShouldAllowOrigins()V' number='3'><tests>
+<test name='co.com.mrcompany.api.config.ConfigTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.config.ConfigTest]/[method:corsConfigurationShouldAllowOrigins()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.config.ConfigTest' method='corsConfigurationShouldAllowOrigins()V' number='4'><tests>
+<test name='co.com.mrcompany.api.config.ConfigTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.config.ConfigTest]/[method:corsConfigurationShouldAllowOrigins()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.config.ConfigTest' method='corsConfigurationShouldAllowOrigins()V' number='5'><tests>
+<test name='co.com.mrcompany.api.config.ConfigTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.config.ConfigTest]/[method:corsConfigurationShouldAllowOrigins()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.config.ConfigTest' method='corsConfigurationShouldAllowOrigins()V' number='6'><tests>
+<test name='co.com.mrcompany.api.config.ConfigTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.config.ConfigTest]/[method:corsConfigurationShouldAllowOrigins()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.config.ConfigTest' method='corsConfigurationShouldAllowOrigins()V' number='0'><tests>
+<test name='co.com.mrcompany.api.config.ConfigTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.config.ConfigTest]/[method:corsConfigurationShouldAllowOrigins()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.config.ConfigTest' method='corsConfigurationShouldAllowOrigins()V' number='1'><tests>
+<test name='co.com.mrcompany.api.config.ConfigTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.config.ConfigTest]/[method:corsConfigurationShouldAllowOrigins()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.config.ConfigTest' method='corsConfigurationShouldAllowOrigins()V' number='2'><tests>
+<test name='co.com.mrcompany.api.config.ConfigTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.config.ConfigTest]/[method:corsConfigurationShouldAllowOrigins()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.config.CorsConfig$$SpringCGLIB$$FastClass$$0' method='getIndex(Lorg/springframework/cglib/core/Signature;)I' number='5'><tests>
+<test name='co.com.mrcompany.api.config.ConfigTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.config.ConfigTest]/[method:corsConfigurationShouldAllowOrigins()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.config.CorsConfig$$SpringCGLIB$$FastClass$$0' method='getIndex(Lorg/springframework/cglib/core/Signature;)I' number='3'><tests>
+<test name='co.com.mrcompany.api.config.ConfigTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.config.ConfigTest]/[method:corsConfigurationShouldAllowOrigins()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.config.CorsConfig$$SpringCGLIB$$FastClass$$0' method='getIndex(Lorg/springframework/cglib/core/Signature;)I' number='4'><tests>
+<test name='co.com.mrcompany.api.config.ConfigTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.config.ConfigTest]/[method:corsConfigurationShouldAllowOrigins()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.config.ConfigTest' method='corsConfigurationShouldAllowOrigins()V' number='19'><tests>
+<test name='co.com.mrcompany.api.config.ConfigTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.config.ConfigTest]/[method:corsConfigurationShouldAllowOrigins()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.config.CorsConfig$$SpringCGLIB$$0' method='CGLIB$STATICHOOK3()V' number='0'><tests>
+<test name='co.com.mrcompany.api.config.ConfigTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.config.ConfigTest]/[method:corsConfigurationShouldAllowOrigins()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.config.CorsConfig$$SpringCGLIB$$0' method='CGLIB$STATICHOOK3()V' number='2'><tests>
+<test name='co.com.mrcompany.api.config.ConfigTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.config.ConfigTest]/[method:corsConfigurationShouldAllowOrigins()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.config.CorsConfig$$SpringCGLIB$$0' method='CGLIB$STATICHOOK3()V' number='1'><tests>
+<test name='co.com.mrcompany.api.config.ConfigTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.config.ConfigTest]/[method:corsConfigurationShouldAllowOrigins()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.config.ConfigTest' method='corsConfigurationShouldAllowOrigins()V' number='15'><tests>
+<test name='co.com.mrcompany.api.config.ConfigTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.config.ConfigTest]/[method:corsConfigurationShouldAllowOrigins()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.config.CorsConfig$$SpringCGLIB$$0' method='CGLIB$STATICHOOK3()V' number='4'><tests>
+<test name='co.com.mrcompany.api.config.ConfigTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.config.ConfigTest]/[method:corsConfigurationShouldAllowOrigins()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.config.ConfigTest' method='corsConfigurationShouldAllowOrigins()V' number='16'><tests>
+<test name='co.com.mrcompany.api.config.ConfigTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.config.ConfigTest]/[method:corsConfigurationShouldAllowOrigins()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.config.CorsConfig$$SpringCGLIB$$0' method='CGLIB$STATICHOOK3()V' number='3'><tests>
+<test name='co.com.mrcompany.api.config.ConfigTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.config.ConfigTest]/[method:corsConfigurationShouldAllowOrigins()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.config.ConfigTest' method='corsConfigurationShouldAllowOrigins()V' number='17'><tests>
+<test name='co.com.mrcompany.api.config.ConfigTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.config.ConfigTest]/[method:corsConfigurationShouldAllowOrigins()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.config.CorsConfig$$SpringCGLIB$$0' method='CGLIB$STATICHOOK3()V' number='6'><tests>
+<test name='co.com.mrcompany.api.config.ConfigTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.config.ConfigTest]/[method:corsConfigurationShouldAllowOrigins()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.config.ConfigTest' method='corsConfigurationShouldAllowOrigins()V' number='18'><tests>
+<test name='co.com.mrcompany.api.config.ConfigTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.config.ConfigTest]/[method:corsConfigurationShouldAllowOrigins()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.config.CorsConfig$$SpringCGLIB$$0' method='CGLIB$STATICHOOK3()V' number='5'><tests>
+<test name='co.com.mrcompany.api.config.ConfigTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.config.ConfigTest]/[method:corsConfigurationShouldAllowOrigins()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.config.CorsConfig$$SpringCGLIB$$0' method='CGLIB$SET_STATIC_CALLBACKS([Lorg/springframework/cglib/proxy/Callback;)V' number='0'><tests>
+<test name='co.com.mrcompany.api.config.ConfigTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.config.ConfigTest]/[method:corsConfigurationShouldAllowOrigins()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.config.ConfigTest' method='corsConfigurationShouldAllowOrigins()V' number='11'><tests>
+<test name='co.com.mrcompany.api.config.ConfigTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.config.ConfigTest]/[method:corsConfigurationShouldAllowOrigins()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.config.CorsConfig' method='corsWebFilter(Ljava/lang/String;)Lorg/springframework/web/cors/reactive/CorsWebFilter;' number='3'><tests>
+<test name='co.com.mrcompany.api.config.ConfigTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.config.ConfigTest]/[method:corsConfigurationShouldAllowOrigins()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.config.CorsConfig$$SpringCGLIB$$0' method='CGLIB$STATICHOOK3()V' number='8'><tests>
+<test name='co.com.mrcompany.api.config.ConfigTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.config.ConfigTest]/[method:corsConfigurationShouldAllowOrigins()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.config.ConfigTest' method='corsConfigurationShouldAllowOrigins()V' number='12'><tests>
+<test name='co.com.mrcompany.api.config.ConfigTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.config.ConfigTest]/[method:corsConfigurationShouldAllowOrigins()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.config.CorsConfig' method='corsWebFilter(Ljava/lang/String;)Lorg/springframework/web/cors/reactive/CorsWebFilter;' number='4'><tests>
+<test name='co.com.mrcompany.api.config.ConfigTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.config.ConfigTest]/[method:corsConfigurationShouldAllowOrigins()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.config.CorsConfig$$SpringCGLIB$$0' method='CGLIB$STATICHOOK3()V' number='7'><tests>
+<test name='co.com.mrcompany.api.config.ConfigTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.config.ConfigTest]/[method:corsConfigurationShouldAllowOrigins()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.config.ConfigTest' method='corsConfigurationShouldAllowOrigins()V' number='13'><tests>
+<test name='co.com.mrcompany.api.config.ConfigTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.config.ConfigTest]/[method:corsConfigurationShouldAllowOrigins()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.config.CorsConfig' method='corsWebFilter(Ljava/lang/String;)Lorg/springframework/web/cors/reactive/CorsWebFilter;' number='5'><tests>
+<test name='co.com.mrcompany.api.config.ConfigTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.config.ConfigTest]/[method:corsConfigurationShouldAllowOrigins()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.config.CorsConfig$$SpringCGLIB$$0' method='CGLIB$STATICHOOK3()V' number='10'><tests>
+<test name='co.com.mrcompany.api.config.ConfigTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.config.ConfigTest]/[method:corsConfigurationShouldAllowOrigins()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.config.ConfigTest' method='corsConfigurationShouldAllowOrigins()V' number='14'><tests>
+<test name='co.com.mrcompany.api.config.ConfigTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.config.ConfigTest]/[method:corsConfigurationShouldAllowOrigins()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.config.CorsConfig' method='corsWebFilter(Ljava/lang/String;)Lorg/springframework/web/cors/reactive/CorsWebFilter;' number='6'><tests>
+<test name='co.com.mrcompany.api.config.ConfigTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.config.ConfigTest]/[method:corsConfigurationShouldAllowOrigins()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.config.CorsConfig$$SpringCGLIB$$0' method='CGLIB$STATICHOOK3()V' number='9'><tests>
+<test name='co.com.mrcompany.api.config.ConfigTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.config.ConfigTest]/[method:corsConfigurationShouldAllowOrigins()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.config.ConfigTest' method='corsConfigurationShouldAllowOrigins()V' number='7'><tests>
+<test name='co.com.mrcompany.api.config.ConfigTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.config.ConfigTest]/[method:corsConfigurationShouldAllowOrigins()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.config.CorsConfig' method='&lt;init&gt;()V' number='0'><tests>
+<test name='co.com.mrcompany.api.config.ConfigTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.config.ConfigTest]/[method:corsConfigurationShouldAllowOrigins()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.config.ConfigTest' method='corsConfigurationShouldAllowOrigins()V' number='8'><tests>
+<test name='co.com.mrcompany.api.config.ConfigTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.config.ConfigTest]/[method:corsConfigurationShouldAllowOrigins()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.config.CorsConfig' method='&lt;init&gt;()V' number='1'><tests>
+<test name='co.com.mrcompany.api.config.ConfigTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.config.ConfigTest]/[method:corsConfigurationShouldAllowOrigins()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.config.CorsConfig' method='corsWebFilter(Ljava/lang/String;)Lorg/springframework/web/cors/reactive/CorsWebFilter;' number='0'><tests>
+<test name='co.com.mrcompany.api.config.ConfigTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.config.ConfigTest]/[method:corsConfigurationShouldAllowOrigins()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.config.ConfigTest' method='corsConfigurationShouldAllowOrigins()V' number='9'><tests>
+<test name='co.com.mrcompany.api.config.ConfigTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.config.ConfigTest]/[method:corsConfigurationShouldAllowOrigins()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.config.CorsConfig' method='corsWebFilter(Ljava/lang/String;)Lorg/springframework/web/cors/reactive/CorsWebFilter;' number='1'><tests>
+<test name='co.com.mrcompany.api.config.ConfigTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.config.ConfigTest]/[method:corsConfigurationShouldAllowOrigins()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.config.ConfigTest' method='corsConfigurationShouldAllowOrigins()V' number='10'><tests>
+<test name='co.com.mrcompany.api.config.ConfigTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.config.ConfigTest]/[method:corsConfigurationShouldAllowOrigins()]'/>
+</tests>
+</block>
+<block classname='co.com.mrcompany.api.config.CorsConfig' method='corsWebFilter(Ljava/lang/String;)Lorg/springframework/web/cors/reactive/CorsWebFilter;' number='2'><tests>
+<test name='co.com.mrcompany.api.config.ConfigTest.[engine:junit-jupiter]/[class:co.com.mrcompany.api.config.ConfigTest]/[method:corsConfigurationShouldAllowOrigins()]'/>
+</tests>
+</block>
+</coverage>

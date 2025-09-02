@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <bytecodeTargetLevel target="21" />
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="CrediYa.Loan_App" options="-Amapstruct.suppressGeneratorTimestamp=true" />
+      <module name="CrediYa.Loan_App.app-service" options="-parameters" />
+      <module name="CrediYa.Loan_App.app-service.main" options="-parameters" />
+      <module name="CrediYa.Loan_App.app-service.test" options="-parameters" />
+      <module name="CrediYa.Loan_App.main" options="-Amapstruct.suppressGeneratorTimestamp=true" />
+      <module name="CrediYa.Loan_App.test" options="-Amapstruct.suppressGeneratorTimestamp=true" />
+      <module name="Loan_App" options="-Amapstruct.suppressGeneratorTimestamp=true" />
+      <module name="Loan_App.app-service" options="-parameters" />
+      <module name="Loan_App.app-service.main" options="-parameters" />
+      <module name="Loan_App.app-service.test" options="-parameters" />
+      <module name="Loan_App.main" options="-Amapstruct.suppressGeneratorTimestamp=true" />
+      <module name="Loan_App.test" options="-Amapstruct.suppressGeneratorTimestamp=true" />
+    </option>
+  </component>
+</project>

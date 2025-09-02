@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="co.com.mrcompany.api.config.ConfigTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2025-09-02T17:41:55.237Z" hostname="DESKTOP-TOJ04LP" time="0.011">
+  <properties/>
+  <testcase name="corsConfigurationShouldAllowOrigins()" classname="co.com.mrcompany.api.config.ConfigTest" time="0.011"/>
+  <system-out><![CDATA[
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.5.4)
+
+2025-09-02T12:41:55.062-05:00  INFO 24344 --- [    Test worker] co.com.mrcompany.api.config.ConfigTest   : Starting ConfigTest using Java 21.0.8 with PID 24344 (started by Exitosos in D:\Projects\Java\CrediYa\MicroservicioSolicitudes\infrastructure\entry-points\reactive-web)
+2025-09-02T12:41:55.063-05:00  INFO 24344 --- [    Test worker] co.com.mrcompany.api.config.ConfigTest   : No active profile set, falling back to 1 default profile: "default"
+2025-09-02T12:41:55.233-05:00  INFO 24344 --- [    Test worker] co.com.mrcompany.api.config.ConfigTest   : Started ConfigTest in 0.198 seconds (process running for 12.261)
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

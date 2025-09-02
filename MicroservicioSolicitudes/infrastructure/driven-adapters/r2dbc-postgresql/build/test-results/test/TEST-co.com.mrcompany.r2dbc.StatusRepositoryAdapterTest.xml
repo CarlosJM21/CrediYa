@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="co.com.mrcompany.r2dbc.StatusRepositoryAdapterTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2025-09-02T17:41:49.456Z" hostname="DESKTOP-TOJ04LP" time="0.152">
+  <properties/>
+  <testcase name="mustSaveValue()" classname="co.com.mrcompany.r2dbc.StatusRepositoryAdapterTest" time="0.132"/>
+  <testcase name="mustFindValueById()" classname="co.com.mrcompany.r2dbc.StatusRepositoryAdapterTest" time="0.005"/>
+  <testcase name="mustFindAllValues()" classname="co.com.mrcompany.r2dbc.StatusRepositoryAdapterTest" time="0.005"/>
+  <testcase name="mustFindByExample()" classname="co.com.mrcompany.r2dbc.StatusRepositoryAdapterTest" time="0.007"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

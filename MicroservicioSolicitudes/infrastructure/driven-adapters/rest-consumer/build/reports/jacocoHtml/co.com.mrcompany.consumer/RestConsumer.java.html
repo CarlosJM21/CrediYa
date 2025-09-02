@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="es"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>RestConsumer.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">rest-consumer</a> &gt; <a href="index.source.html" class="el_package">co.com.mrcompany.consumer</a> &gt; <span class="el_source">RestConsumer.java</span></div><h1>RestConsumer.java</h1><pre class="source lang-java linenums">package co.com.mrcompany.consumer;
+
+import co.com.mrcompany.model.userauth.gateways.UserAuthRepository;
+import io.github.resilience4j.circuitbreaker.annotation.CircuitBreaker;
+import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.http.MediaType;
+import org.springframework.stereotype.Service;
+import org.springframework.web.reactive.function.client.WebClient;
+import reactor.core.publisher.Mono;
+
+<span class="fc" id="L12">@Slf4j</span>
+@Service
+@RequiredArgsConstructor
+public class RestConsumer implements UserAuthRepository{
+    private final WebClient client;
+
+    @CircuitBreaker(name = &quot;validateUser&quot; /*, fallbackMethod = &quot;testGetOk&quot;*/)
+    public Mono&lt;Boolean&gt; ValidateUser(String email) {
+<span class="fc" id="L20">        return client.get()</span>
+<span class="fc" id="L21">                .uri(&quot;/api/Users/ByEmail/{Email}&quot;, email)</span>
+<span class="fc" id="L22">                .retrieve()</span>
+<span class="fc" id="L23">                .bodyToMono(UserResponse.class)</span>
+<span class="fc" id="L24">                .hasElement();</span>
+    }
+
+    public Mono&lt;Boolean&gt; testGetOk(String email,Exception ignored) {
+<span class="nc" id="L28">        log.info(&quot;[INFO] pass to fallback case.&quot;);</span>
+<span class="nc" id="L29">        return  Mono.just(false);</span>
+        /*client
+                .get()
+                .uri(&quot;/api/Users/ByEmail/{Email}&quot;, email)// TODO: change for another endpoint or destination
+                .retrieve()
+                .bodyToMono(UserResponse.class)
+                //.switchIfEmpty(Mono.error(new Exception(&quot;no funciono&quot;)))
+                .hasElement(); */
+  }
+
+   /* @CircuitBreaker(name = &quot;testPost&quot;)
+    public Mono&lt;UserResponse&gt; testPost() {
+        UserRequest request = UserRequest.builder()
+            .val1(&quot;exampleval1&quot;)
+            .val2(&quot;exampleval2&quot;)
+            .build();
+        return client
+                .post()
+                .body(Mono.just(request), UserRequest.class)
+                .retrieve()
+                .bodyToMono(UserResponse.class);
+    }*/
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.13.202504020838</span></div></body></html>

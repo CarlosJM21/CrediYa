@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="es"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>ApplicationCommandUseCase.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">usecase</a> &gt; <a href="index.source.html" class="el_package">co.com.mrcompany.usecase.loanapplication</a> &gt; <span class="el_source">ApplicationCommandUseCase.java</span></div><h1>ApplicationCommandUseCase.java</h1><pre class="source lang-java linenums">package co.com.mrcompany.usecase.loanapplication;
+
+import co.com.mrcompany.model.CustomExceptions.amontOutOfRange;
+import co.com.mrcompany.model.CustomExceptions.typeInvalidException;
+import co.com.mrcompany.model.CustomExceptions.userNotFount;
+import co.com.mrcompany.model.application.Application;
+import co.com.mrcompany.model.application.gateways.ApplicationRepository;
+import co.com.mrcompany.model.loantype.LoanType;
+import co.com.mrcompany.model.loantype.gateways.LoanTypeRepository;
+import co.com.mrcompany.model.userauth.gateways.UserAuthRepository;
+import lombok.RequiredArgsConstructor;
+import reactor.core.publisher.Flux;
+import reactor.core.publisher.Mono;
+
+import java.math.BigInteger;
+import java.util.UUID;
+
+@RequiredArgsConstructor
+public class ApplicationCommandUseCase implements ILoanApplicationUseCase {
+
+    private final ApplicationRepository repository;
+    private final LoanTypeRepository typeRepository;
+    private final UserAuthRepository userAuthRepository;
+
+    @Override
+    public Mono&lt;Application&gt; save(Application loanApplication) {
+<span class="nc" id="L27">        return typeRepository.findById(loanApplication.getIdLoanType())</span>
+<span class="nc" id="L28">                .switchIfEmpty(Mono.error(new typeInvalidException()))</span>
+<span class="nc" id="L29">                .flatMap(t -&gt; ValidAmount(t,loanApplication))</span>
+<span class="nc" id="L30">                .flatMap(x -&gt; checkAutoValidation(x,loanApplication) )</span>
+<span class="nc" id="L31">                .flatMap(a-&gt; validUser(a))</span>
+<span class="nc" id="L32">                .flatMap(repository::save);</span>
+    }
+
+    @Override
+    public Flux&lt;Application&gt; findAll() {
+<span class="nc" id="L37">        return repository.findAll();</span>
+    }
+
+    @Override
+    public Mono&lt;Application&gt; findById(UUID id) {
+<span class="nc" id="L42">        return repository.findById(id);</span>
+    }
+
+    @Override
+    public Flux&lt;Application&gt; findByEmail(String email) {
+<span class="nc" id="L47">        return repository.findByEmail(email);</span>
+    }
+
+    private Mono&lt;LoanType&gt; ValidAmount(LoanType loanType, Application app) {
+<span class="nc" id="L51">        BigInteger amount = app.getAmount();</span>
+<span class="nc bnc" id="L52" title="All 2 branches missed.">        return Mono.just(loanType).filter(t -&gt; amount.compareTo(t.getMinAmount() ) &gt;= 0  &amp;&amp;</span>
+<span class="nc bnc" id="L53" title="All 2 branches missed.">                                                         amount.compareTo(t.getMaxAmount()) &lt;= 0 )</span>
+<span class="nc" id="L54">                                  .switchIfEmpty(Mono.error(new amontOutOfRange()));</span>
+    }
+
+    private Mono&lt;Application&gt; validUser(Application app)
+    {
+<span class="nc" id="L59">        return Mono.just(app)</span>
+<span class="nc" id="L60">                   .filterWhen(a -&gt; userAuthRepository.ValidateUser(a.getEmail()))</span>
+<span class="nc" id="L61">                   .switchIfEmpty(Mono.error(new userNotFount()));</span>
+    }
+
+    private Mono&lt;Application&gt; checkAutoValidation(LoanType loanType,Application app){
+
+<span class="nc" id="L66">        return  Mono.just(app)</span>
+<span class="nc" id="L67">                .map(p -&gt; {</span>
+<span class="nc bnc" id="L68" title="All 2 branches missed.">                       if(loanType.getAutoValidation()){</span>
+<span class="nc" id="L69">                           p.setIdStatus(2);</span>
+                       }
+<span class="nc" id="L71">                    return p;</span>
+                    });
+                    //.filter(x -&gt; !loanType.getAutoValidation())
+                    //.switchIfEmpty(Mono.just(app))
+                    //.map( p -&gt;{ p.setIdStatus(2); return p;});
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.13.202504020838</span></div></body></html>

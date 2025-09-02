@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="co.com.mrcompany.api.RouterRestTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2025-09-02T17:41:54.460Z" hostname="DESKTOP-TOJ04LP" time="0.549">
+  <properties/>
+  <testcase name="testListenPOSTUseCase()" classname="co.com.mrcompany.api.RouterRestTest" time="0.549"/>
+  <system-out><![CDATA[
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.5.4)
+
+2025-09-02T12:41:52.138-05:00  INFO 24344 --- [    Test worker] co.com.mrcompany.api.RouterRestTest      : Starting RouterRestTest using Java 21.0.8 with PID 24344 (started by Exitosos in D:\Projects\Java\CrediYa\MicroservicioSolicitudes\infrastructure\entry-points\reactive-web)
+2025-09-02T12:41:52.145-05:00  INFO 24344 --- [    Test worker] co.com.mrcompany.api.RouterRestTest      : No active profile set, falling back to 1 default profile: "default"
+2025-09-02T12:41:54.439-05:00  INFO 24344 --- [    Test worker] co.com.mrcompany.api.RouterRestTest      : Started RouterRestTest in 3.047 seconds (process running for 11.467)
+2025-09-02T12:41:54.793-05:00  INFO 24344 --- [     parallel-1] create loan                              : onSubscribe(FluxOnErrorResume.ResumeSubscriber)
+2025-09-02T12:41:54.796-05:00  INFO 24344 --- [     parallel-1] create loan                              : request(unbounded)
+2025-09-02T12:41:54.821-05:00  INFO 24344 --- [     parallel-1] create loan                              : onNext(co.com.mrcompany.api.dtos.applicationRequest@6dd97820)
+2025-09-02T12:41:54.848-05:00  INFO 24344 --- [     parallel-1] create loan                              : onComplete()
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

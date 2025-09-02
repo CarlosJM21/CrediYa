@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="es"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>SwaggerConfig.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">reactive-web</a> &gt; <a href="index.source.html" class="el_package">co.com.mrcompany.api.config</a> &gt; <span class="el_source">SwaggerConfig.java</span></div><h1>SwaggerConfig.java</h1><pre class="source lang-java linenums">package co.com.mrcompany.api.config;
+
+import io.swagger.v3.oas.annotations.OpenAPIDefinition;
+import io.swagger.v3.oas.annotations.enums.SecuritySchemeType;
+import io.swagger.v3.oas.annotations.info.Contact;
+import io.swagger.v3.oas.annotations.info.Info;
+import io.swagger.v3.oas.annotations.info.License;
+import io.swagger.v3.oas.annotations.security.SecurityRequirement;
+import io.swagger.v3.oas.annotations.security.SecurityScheme;
+import io.swagger.v3.oas.annotations.servers.Server;
+import org.springframework.context.annotation.Configuration;
+
+@Configuration
+@OpenAPIDefinition(info = @Info(title = &quot;Loan Applications APIs&quot;,
+        version = &quot;1.0.0&quot;,
+        description = &quot;Microservices Loan Applications&quot;,
+        termsOfService = &quot;Terms and conditions applied&quot;,
+        contact = @Contact(name = &quot;Carlos M&quot;, email = &quot;carlos@gmail.com&quot;, url = &quot;piyush-garg.com&quot;),
+        license = @License(name = &quot;License&quot;)),
+        servers = {
+                @Server(description = &quot;devServer&quot;, url = &quot;http://localhost:8081&quot;),
+                @Server(description = &quot;testServer&quot;, url = &quot;http://localhost:8081&quot;),
+        },
+        security = @SecurityRequirement(name = &quot;bearerAuth&quot;))
+@SecurityScheme(name = &quot;bearerAuth&quot;, scheme = &quot;bearer&quot;, type = SecuritySchemeType.HTTP, description = &quot;JWT Bearer Loan Applications&quot;, bearerFormat = &quot;JWT&quot;)
+<span class="nc" id="L26">public class SwaggerConfig {</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.13.202504020838</span></div></body></html>

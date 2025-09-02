@@ -1,0 +1,86 @@
+Index: domain/usecase/src/test/java/co/com/mrcompany/usecase/loanapplication/ApplicationUseCaseTest.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package co.com.mrcompany.usecase.loanapplication;\r\n\r\nimport co.com.mrcompany.model.application.Application;\r\nimport co.com.mrcompany.model.application.gateways.ApplicationRepository;\r\nimport co.com.mrcompany.model.loantype.gateways.LoanTypeRepository;\r\nimport co.com.mrcompany.model.userauth.gateways.UserAuthRepository;\r\nimport org.junit.jupiter.api.BeforeEach;\r\nimport org.junit.jupiter.api.Test;\r\nimport org.junit.jupiter.api.extension.ExtendWith;\r\nimport org.mockito.InjectMocks;\r\nimport org.mockito.Mock;\r\nimport org.mockito.junit.jupiter.MockitoExtension;\r\nimport reactor.core.publisher.Flux;\r\nimport reactor.core.publisher.Mono;\r\nimport reactor.test.StepVerifier;\r\n\r\nimport java.math.BigInteger;\r\nimport java.util.UUID;\r\n\r\nimport static org.mockito.ArgumentMatchers.any;\r\nimport static org.mockito.Mockito.when;\r\n\r\n@ExtendWith(MockitoExtension.class)\r\npublic class ApplicationUseCaseTest {\r\n\r\n    @Mock\r\n    ApplicationRepository repository;\r\n\r\n    @Mock\r\n    LoanTypeRepository loanRepository;\r\n\r\n    @Mock\r\n    UserAuthRepository userRepository;\r\n\r\n    private Application app;\r\n\r\n    private UUID id;\r\n    private String email;\r\n\r\n    @BeforeEach\r\n    void setUp(){\r\n        email = \"pedroPerez@yopmail.com\";\r\n        id= UUID.fromString(\"422b5cfb-83bb-11f0-9973-ca1e79762f6b\");\r\n\r\n        app = new Application();\r\n        app.setIdStatus(1);\r\n        app.setId(id);\r\n        app.setEmail(email);\r\n        app.setAmount(new BigInteger(\"5000000\"));\r\n        app.setIdLoanType(3);\r\n        app.setTerm(24);\r\n    }\r\n\r\n    @Test\r\n    void findByIdApp() {\r\n        when(repository.findById(any(UUID.class))).thenReturn(Mono.just(app));\r\n\r\n        Mono<Application> result = repository.findById(id);\r\n\r\n        StepVerifier.create(result)\r\n                .expectNextMatches(value -> value.getId().equals(app.getId()))\r\n                .verifyComplete();\r\n    }\r\n\r\n    @Test\r\n    void saveApp() {\r\n        when(repository.save(any(Application.class))).thenReturn(Mono.just(app));\r\n\r\n        Mono<Application> result = repository.save(app);\r\n\r\n        StepVerifier.create(result)\r\n                .expectNextMatches(value -> value.getId().equals(app.getId()))\r\n                .verifyComplete();\r\n    }\r\n\r\n    @Test\r\n    void findAllApp() {\r\n        when(repository.findAll()).thenReturn(Flux.just(app));\r\n\r\n        Flux<Application> result = repository.findAll();\r\n\r\n        StepVerifier.create(result)\r\n                .expectNextMatches(value -> value.getId().equals(app.getId()))\r\n                .verifyComplete();\r\n    }\r\n\r\n    @Test\r\n    void findAByEmailApp() {\r\n        when(repository.findByEmail(any(String.class))).thenReturn(Flux.just(app));\r\n\r\n        Flux<Application> result = repository.findByEmail(email);\r\n\r\n        StepVerifier.create(result)\r\n                .expectNextMatches(value -> value.getId().equals(app.getId()))\r\n                .verifyComplete();\r\n    }\r\n}\r\n
+===================================================================
+diff --git a/domain/usecase/src/test/java/co/com/mrcompany/usecase/loanapplication/ApplicationUseCaseTest.java b/domain/usecase/src/test/java/co/com/mrcompany/usecase/loanapplication/ApplicationUseCaseTest.java
+--- a/domain/usecase/src/test/java/co/com/mrcompany/usecase/loanapplication/ApplicationUseCaseTest.java	(revision 1e962f058b83071fe699797fb6d39388ec81f294)
++++ b/domain/usecase/src/test/java/co/com/mrcompany/usecase/loanapplication/ApplicationUseCaseTest.java	(date 1756835655516)
+@@ -18,11 +18,14 @@
+ import java.util.UUID;
+ 
+ import static org.mockito.ArgumentMatchers.any;
+-import static org.mockito.Mockito.when;
++import static org.mockito.Mockito.*;
+ 
+ @ExtendWith(MockitoExtension.class)
+ public class ApplicationUseCaseTest {
+ 
++    @Mock
++    ApplicationCommandUseCase appUseCase;
++
+     @Mock
+     ApplicationRepository repository;
+ 
+@@ -53,45 +56,53 @@
+ 
+     @Test
+     void findByIdApp() {
+-        when(repository.findById(any(UUID.class))).thenReturn(Mono.just(app));
++        when(appUseCase.findById(any(UUID.class))).thenReturn(Mono.just(app));
+ 
+-        Mono<Application> result = repository.findById(id);
++        Mono<Application> result = appUseCase.findById(id);
+ 
+         StepVerifier.create(result)
+                 .expectNextMatches(value -> value.getId().equals(app.getId()))
+                 .verifyComplete();
++
++        verify(appUseCase, times(1)).findById(id);
+     }
+ 
+     @Test
+     void saveApp() {
+-        when(repository.save(any(Application.class))).thenReturn(Mono.just(app));
++        when(appUseCase.save(any(Application.class))).thenReturn(Mono.just(app));
+ 
+-        Mono<Application> result = repository.save(app);
++        Mono<Application> result = appUseCase.save(app);
+ 
+         StepVerifier.create(result)
+                 .expectNextMatches(value -> value.getId().equals(app.getId()))
+                 .verifyComplete();
++
++        verify(appUseCase, times(1)).save(app);
+     }
+ 
+     @Test
+     void findAllApp() {
+-        when(repository.findAll()).thenReturn(Flux.just(app));
++        when(appUseCase.findAll()).thenReturn(Flux.just(app));
+ 
+-        Flux<Application> result = repository.findAll();
++        Flux<Application> result = appUseCase.findAll();
+ 
+         StepVerifier.create(result)
+                 .expectNextMatches(value -> value.getId().equals(app.getId()))
+                 .verifyComplete();
++
++        verify(appUseCase, times(1)).findAll();
+     }
+ 
+     @Test
+     void findAByEmailApp() {
+-        when(repository.findByEmail(any(String.class))).thenReturn(Flux.just(app));
++        when(appUseCase.findByEmail(any(String.class))).thenReturn(Flux.just(app));
+ 
+-        Flux<Application> result = repository.findByEmail(email);
++        Flux<Application> result = appUseCase.findByEmail(email);
+ 
+         StepVerifier.create(result)
+                 .expectNextMatches(value -> value.getId().equals(app.getId()))
+                 .verifyComplete();
++
++        verify(appUseCase, times(1)).findByEmail(email);
+     }
+ }
