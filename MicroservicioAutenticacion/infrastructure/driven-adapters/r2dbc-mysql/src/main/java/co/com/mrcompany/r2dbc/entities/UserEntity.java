@@ -30,7 +30,7 @@ public class UserEntity {
     @Column("address")
     private String address;
     @Column("id_rol")
-    private Integer idrol;
+    private Integer idRol;
     @Column("baseSalary")
     private BigInteger baseSalary;
 

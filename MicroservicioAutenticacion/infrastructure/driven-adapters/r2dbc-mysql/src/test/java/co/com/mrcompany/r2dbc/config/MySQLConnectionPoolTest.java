@@ -9,7 +9,7 @@ import org.mockito.MockitoAnnotations;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.mockito.Mockito.when;
 
-class PostgreSQLConnectionPoolTest {
+class MySQLConnectionPoolTest {
 
     @InjectMocks
     private MySQLConnectionPool connectionPool;
@@ -23,9 +23,9 @@ class PostgreSQLConnectionPoolTest {
         MockitoAnnotations.openMocks(this);
 
         when(properties.host()).thenReturn("localhost");
-        when(properties.port()).thenReturn(5432);
-        when(properties.database()).thenReturn("dbName");
-        when(properties.username()).thenReturn("username");
+        when(properties.port()).thenReturn(3306);
+        when(properties.database()).thenReturn("auth");
+        when(properties.username()).thenReturn("CrediUserdata");
         when(properties.password()).thenReturn("password");
     }
 

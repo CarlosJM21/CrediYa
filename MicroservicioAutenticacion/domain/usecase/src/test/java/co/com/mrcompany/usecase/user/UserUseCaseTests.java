@@ -42,8 +42,8 @@ public class UserUseCaseTests {
         userRequest.setName("Pedro");
         userRequest.setLastName("Perez");
         userRequest.setEmail(email);
-        userRequest.setDNI("1090200100");
-        userRequest.setId_rol(1);
+        userRequest.setDni("1090200100");
+        userRequest.setIdRol(1);
         userRequest.setBaseSalary( new BigInteger("2000000"));
         userRequest.setBirthDate( LocalDate.of(2000, 12, 24));
         userRequest.setCellphone("3102001001");
@@ -54,8 +54,8 @@ public class UserUseCaseTests {
         userSuccess.setName("Pedro");
         userSuccess.setLastName("Perez");
         userSuccess.setEmail(email);
-        userSuccess.setDNI("1090200100");
-        userSuccess.setId_rol(1);
+        userSuccess.setDni("1090200100");
+        userSuccess.setIdRol(1);
         userSuccess.setBaseSalary( new BigInteger("2000000"));
         userSuccess.setBirthDate( LocalDate.of(2000, 12, 24));
         userSuccess.setCellphone("3102001001");
