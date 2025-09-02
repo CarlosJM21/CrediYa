@@ -15,7 +15,7 @@ import reactor.core.publisher.Mono;
 public class RestConsumer implements UserAuthRepository{
     private final WebClient client;
 
-    @CircuitBreaker(name = "validateUser" , fallbackMethod = "testGetOk")
+    @CircuitBreaker(name = "validateUser" /*, fallbackMethod = "testGetOk"*/)
     public Mono<Boolean> ValidateUser(String email) {
         return client.get()
                 .uri("/api/Users/ByEmail/{Email}", email)
@@ -25,9 +25,7 @@ public class RestConsumer implements UserAuthRepository{
     }
 
     public Mono<Boolean> testGetOk(String email,Exception ignored) {
-
         log.info("[INFO] pass to fallback case.");
-
         return  Mono.just(false);
         /*client
                 .get()

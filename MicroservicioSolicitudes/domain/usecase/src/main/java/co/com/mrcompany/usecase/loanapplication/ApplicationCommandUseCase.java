@@ -64,8 +64,14 @@ public class ApplicationCommandUseCase implements ILoanApplicationUseCase {
     private Mono<Application> checkAutoValidation(LoanType loanType,Application app){
 
         return  Mono.just(app)
-                    .filter(x -> loanType.getAutoValidation())
-                    .switchIfEmpty(Mono.just(app))
-                    .map( p ->{ p.setIdStatus(3); return p;});
+                .map(p -> {
+                       if(loanType.getAutoValidation()){
+                           p.setIdStatus(2);
+                       }
+                    return p;
+                    });
+                    //.filter(x -> !loanType.getAutoValidation())
+                    //.switchIfEmpty(Mono.just(app))
+                    //.map( p ->{ p.setIdStatus(2); return p;});
     }
 }

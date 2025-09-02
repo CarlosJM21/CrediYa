@@ -29,12 +29,11 @@ private final ApplicationMapper mapper;
                 .map(mapper::toResponse)
                 .flatMap(ServerResponse.created(location)::bodyValue);
     }
-/*
-    public Mono<ServerResponse> listenGETOtherUseCase(ServerRequest serverRequest) {
-        // useCase2.logic();
+
+    public Mono<ServerResponse> testOk(ServerRequest serverRequest) {
         return ServerResponse.ok().bodyValue("");
     }
-
+    /*
     public Mono<ServerResponse> listenPOSTUseCase(ServerRequest serverRequest) {
         // useCase.logic();
         return ServerResponse.ok().bodyValue("");

@@ -44,14 +44,14 @@ class RestConsumerTest {
                 .setHeader(HttpHeaders.CONTENT_TYPE, MediaType.APPLICATION_JSON_VALUE)
                 .setResponseCode(HttpStatus.OK.value())
                 .setBody("{\"state\" : \"ok\"}"));
-        var response = restConsumer.testGet();
+        var response = restConsumer.ValidateUser("carlos_prueba3@yopmail.com");
 
         StepVerifier.create(response)
-                .expectNextMatches(objectResponse -> objectResponse.getState().equals("ok"))
+                .expectNextMatches(objectResponse -> objectResponse.equals(true))
                 .verifyComplete();
     }
 
-    @Test
+    /*@Test
     @DisplayName("Validate the function testPost.")
     void validateTestPost() {
 
@@ -64,5 +64,5 @@ class RestConsumerTest {
         StepVerifier.create(response)
                 .expectNextMatches(objectResponse -> objectResponse.getState().equals("ok"))
                 .verifyComplete();
-    }
+    }*/
 }

@@ -33,8 +33,8 @@ public class RouterRest {
             }
     )
     public RouterFunction<ServerResponse> routerFunction(Handler handler) {
-        return route(POST("/api/loan/Apply"), handler::applyToLoan);
-                //.andRoute(GET("/api/usecase/path"), handler::listenPOSTUseCase)
+        return route(POST("/api/loan/Apply"), handler::applyToLoan)
+                .andRoute(GET("/api/loan/test"), handler::testOk);
                 //.and(route(GET("/api/otherusercase/path"), handler::listenGETOtherUseCase));
     }
 }

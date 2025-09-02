@@ -5,9 +5,9 @@ spring:
     url: "r2dbc:mariadb//localhost:3316"
     host: "localhost"
     port: "3316"
-    database: "application"
+    database: "Application"
     username: "CrediUserdata"
-    password: "za.8%q96@Y>"
+    password: "za.8_q96@Y>"
   application:
     name: "Loan_App"
   devtools:
