@@ -53,38 +53,30 @@ public class UserUseCase  implements  IUserUseCase{
     }
 
     protected Mono<UUID> validUUID(UUID id){
-        if(id == null && id.toString().trim().isEmpty()){
-            return Mono.error(new NullPointerException("The values of field \"Id\" don't allow null"));
-        }
-        return Mono.just(id);
+        return Mono.just(id)
+                    .filter(x -> id != null && !id.toString().trim().isEmpty() )
+                    .switchIfEmpty(Mono.error(new NullPointerException("The values of field \"Id\" don't allow null")));
     }
 
     protected Mono<User> UserIsNull(User user)
     {
-        if(user == null){
-            return Mono.error(new NullPointerException("The User to edit can't be null."));
-        }
-        return Mono.just(user);
+        return Mono.just(user)
+                    .filter(u -> user != null)
+                    .switchIfEmpty(Mono.error(new NullPointerException("The User to edit can't be null.")));
     }
 
     protected Mono<User> validRangeSalary(User user)
     {
-        BigInteger salary = user.getBaseSalary();
-        if (salary.compareTo( BigInteger.ZERO)  >= 0 && salary.compareTo(BigInteger.valueOf(15000000)) <= 0)
-        {
-            return Mono.just(user);
-        }
-        return Mono.error( new WrongSalaryRangeException());
+        return Mono.just(user).filter(u -> u.getBaseSalary().compareTo( BigInteger.ZERO)  >= 0 &&
+                                                 u.getBaseSalary().compareTo(BigInteger.valueOf(15000000)) <= 0)
+                .switchIfEmpty(Mono.error( new WrongSalaryRangeException()));
     }
 
     protected Mono<User> NotExistsUser(User user)
     {
-       return repository.existsByEmail(user.getEmail())
-               .flatMap(v ->{
-                   if(v){
-                       return Mono.error(new EmailExistsException());
-                   }
-                   return Mono.just(user);
-               });
+        return  repository.existsByEmail(user.getEmail())
+                          .filter(u -> !u)
+                          .switchIfEmpty(Mono.error(new EmailExistsException()))
+                          .then(Mono.just(user));
     }
 }

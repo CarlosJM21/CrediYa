@@ -127,6 +127,10 @@ tasks.withType(JavaCompile).configureEach {
     }
 }*/
 
-tasks.named('wrapper') {
+/*tasks.named('wrapper') {
     gradleVersion = '8.14.3'
 }
+
+tasks.named('prepareKotlinBuildScriptModel') {
+
+} */

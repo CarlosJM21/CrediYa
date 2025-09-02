@@ -1,7 +1,7 @@
 package DomainException;
 
 public class EmailExistsException extends RuntimeException {
-    private static  String messageExc ="El Usuario con ese email ya existe.";
+    private static  String messageExc ="The User already Exists.";
     private String field = "Email";
     public EmailExistsException() {
         super(messageExc);

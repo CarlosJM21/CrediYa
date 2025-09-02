@@ -1,0 +1,19 @@
+services:
+  mariadb:
+    image: 'mariadb:latest'
+    container_name: CrediYa_loan_db
+    restart: unless-stopped
+    environment:
+      COMPOSE_PROJECT_NAME: "Loan"
+      MYSQL_ROOT_HOST: "%"
+      MYSQL_ROOT_PASSWORD: "zaA41.Vv8_q96/Y>"
+      MYSQL_DATABASE:  "application"
+      MYSQL_USER: "CrediUserdata"
+      MYSQL_PASSWORD: "za.8_q96@Y>"
+    ports:
+      - "3316:3306" # Map host port 3316 to container port 3316
+    volumes:
+      - mariadb_data:/var/lib/mysql # Persist data to a Docker volume
+      - ./init-scripts:/docker-entrypoint-initdb.d # Optional: for initial SQL scripts
+volumes:
+  mariadb_data:
