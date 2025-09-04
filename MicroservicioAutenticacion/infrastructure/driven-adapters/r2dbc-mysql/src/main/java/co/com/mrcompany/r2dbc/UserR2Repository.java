@@ -16,5 +16,4 @@ public interface UserR2Repository extends ReactiveCrudRepository<UserEntity, UUI
 
     Mono<Boolean> existsByEmail(String email);
 
-    Mono<User> SingUp(User user);
 }

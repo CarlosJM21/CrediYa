@@ -27,24 +27,6 @@ public class UserRepositoryAdapter extends ReactiveAdapterOperations<
     }
 
     @Override
-    public Mono<User> SingUp(User user) {
-        Mono<Boolean> userExists = repository.findByEmail(user.getEmail()).hasElement();
-        return  repository.findByEmail(user.getEmail()).hasElement()
-                          .filter() ; /* userExists
-                .flatMap(exists -> exists ?
-                        Mono.error(new Throwable("email already in use"))
-                        : userReactiveMongoRepository.save(userDocument))
-                .map(UserMapper::mapToModel);*/
-
-        Mono<Boolean> userExists = userReactiveMongoRepository.findByEmail(userDocument.getEmail()).hasElement();
-        return userExists
-                .flatMap(exists -> exists ?
-                        Mono.error(new Throwable("email already in use"))
-                        : userReactiveMongoRepository.save(userDocument))
-                .map(UserMapper::mapToModel);
-    }
-
-    @Override
     @Query("select u.* from User u  Join  Role r on u.id_rol = r.id where email = :email")
     public Mono<User> findByEmail( @Param("email")String email) {
         return repository.findByEmail(email);
