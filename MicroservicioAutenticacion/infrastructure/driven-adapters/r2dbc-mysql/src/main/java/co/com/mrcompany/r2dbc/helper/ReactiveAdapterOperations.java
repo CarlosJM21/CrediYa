@@ -49,24 +49,30 @@ public abstract class ReactiveAdapterOperations<E, D, I, R extends ReactiveCrudR
     }
 
     protected Mono<D> saveData(D data) {
-        return repository.save(data);
+        return repository.save(data)
+                         .as(tx::transactional);
     }
 
     protected Flux<D> saveData(Flux<D> data) {
-        return repository.saveAll(data);
+        return repository.saveAll(data)
+                         .as(tx::transactional);
     }
 
     public Mono<E> findById(I id) {
-        return repository.findById(id).map(this::toEntity);
+        return repository.findById(id)
+                         .as(tx::transactional)
+                         .map(this::toEntity);
     }
 
     public Flux<E> findByExample(E entity) {
         return repository.findAll(Example.of(toData(entity)))
-                .as(tx::transactional)
-                .map(this::toEntity);
+                         .as(tx::transactional)
+                         .map(this::toEntity);
     }
 
     public Flux<E> findAll() {
-        return repository.findAll().map(this::toEntity);
+        return repository.findAll()
+                         .as(tx::transactional)
+                         .map(this::toEntity);
     }
 }

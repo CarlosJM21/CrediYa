@@ -59,8 +59,6 @@ class RouterRestTest {
         Mockito.when(loanAppUseCase.save(any(Application.class))).thenReturn(Mono.just(app));
     }
 
-
-
     @Test
     void testListenPOSTUseCase() {
         webTestClient.post()

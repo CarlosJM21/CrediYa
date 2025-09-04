@@ -3,6 +3,7 @@ package co.com.mrcompany.usecase.user;
 import DomainException.EmailExistsException;
 import DomainException.WrongSalaryRangeException;
 import co.com.mrcompany.model.user.User;
+import co.com.mrcompany.model.user.gateways.IPasswordEncoder;
 import co.com.mrcompany.model.user.gateways.UserRepository;
 import lombok.RequiredArgsConstructor;
 import reactor.core.publisher.Flux;
@@ -15,12 +16,17 @@ import java.util.UUID;
 public class UserUseCase  implements  IUserUseCase{
 
     private final UserRepository repository;
+    private final IPasswordEncoder encoder;
 
     @Override
     public Mono<User> create(User user) {
         return validRangeSalary(user)
                 .flatMap(this::NotExistsUser)
-                        .flatMap(repository::save);
+                .map(u -> {
+                             u.setPassword(encoder.encodeSimple(u.getPassword()));
+                            return u;
+                })
+                .flatMap(repository::save);
     }
 
     @Override
@@ -79,4 +85,5 @@ public class UserUseCase  implements  IUserUseCase{
                           .switchIfEmpty(Mono.error(new EmailExistsException()))
                           .then(Mono.just(user));
     }
+
 }

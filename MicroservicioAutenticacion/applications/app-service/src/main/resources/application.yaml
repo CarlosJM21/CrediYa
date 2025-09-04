@@ -36,3 +36,7 @@ cors:
 loggin:
   level:
     org.springframework.r2dbc=DEBUG:
+jwt:
+  secret: ${JWT_SECRET}
+  expiration: ${JWT_EXPIRATION}
+  expirationRefresh: ${JWT_EXPIRATION_REFRESH}

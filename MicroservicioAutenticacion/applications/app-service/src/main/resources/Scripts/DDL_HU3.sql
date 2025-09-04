@@ -7,3 +7,13 @@ CREATE TABLE Role(
 );
 
  ALTER TABLE User ADD CONSTRAINT fk_User_Role FOREIGN KEY (id_rol) REFERENCES Role(id) ON DELETE CASCADE
+
+ ALTER TABLE User ADD Column password VARCHAR(MAX) Not Null;
+
+CREATE TABLE Token(
+                     id             UUID PRIMARY    KEY DEFAULT (UUID()),
+                     email 	        VARCHAR(100) 	Not Null,
+                     token          VARCHAR(MAX) 	Not Null,
+                     tokenRefresh   VARCHAR(MAX) 	Not Null,
+                     isValid        BIT             Not Null
+);
