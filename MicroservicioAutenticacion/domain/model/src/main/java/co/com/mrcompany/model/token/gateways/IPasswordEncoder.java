@@ -1,4 +1,4 @@
-package co.com.mrcompany.model.user.gateways;
+package co.com.mrcompany.model.token.gateways;
 
 import reactor.core.publisher.Mono;
 

@@ -1,5 +1,7 @@
 package co.com.mrcompany.security.jwt;
 
+import co.com.mrcompany.model.Exceptions.InfraestructureException.InvalidAuthException;
+import co.com.mrcompany.model.Exceptions.InfraestructureException.TokenNotFoundException;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.server.reactive.ServerHttpRequest;
 import org.springframework.stereotype.Component;
@@ -16,16 +18,19 @@ public class JwtFilter implements WebFilter {
         ServerHttpRequest request = exchange.getRequest();
         String path = request.getPath().value();
 
-        if(path.contains("auth"))
+        if( path.contains("Auth") || path.contains("swagger") || path.contains("webjars") ||
+            path.contains("docs") || path.startsWith("/v3/api-docs") ||
+            path.startsWith("/swagger-ui") || path.startsWith("/webjars/swagger-ui") ||
+            path.equals("/api/v1/login") ) //|| path.contains("Users") || path.startsWith("/api/Users/")
             return chain.filter(exchange);
 
         String auth = request.getHeaders().getFirst(HttpHeaders.AUTHORIZATION);
 
         if(auth == null)
-            return Mono.error(new Throwable("no token was found"));
+            return Mono.error(new TokenNotFoundException());
 
         if(!auth.startsWith("Bearer "))
-            return Mono.error(new Throwable("invalid auth"));
+            return Mono.error(new InvalidAuthException());
         String token = auth.replace("Bearer ", "");
         exchange.getAttributes().put("token", token);
 

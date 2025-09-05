@@ -1,4 +1,4 @@
-package co.com.mrcompany.model.user;
+package co.com.mrcompany.model.role;
 
 import lombok.*;
 

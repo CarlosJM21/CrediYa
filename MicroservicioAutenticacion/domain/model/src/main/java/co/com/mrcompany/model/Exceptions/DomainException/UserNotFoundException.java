@@ -1,4 +1,4 @@
-package DomainException;
+package co.com.mrcompany.model.Exceptions.DomainException;
 
 public class UserNotFoundException extends RuntimeException{
     private static  String messageExc ="The User to edit can't be null.";

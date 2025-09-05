@@ -1,4 +1,4 @@
-package InfraestructureException;
+package co.com.mrcompany.model.Exceptions.InfraestructureException;
 
 public class BadCredentialsException extends RuntimeException {
     private static  String messageExc ="Bad Credentials.";

@@ -1,6 +1,6 @@
 package co.com.mrcompany.security.encoder;
 
-import co.com.mrcompany.model.user.gateways.IPasswordEncoder;
+import co.com.mrcompany.model.token.gateways.IPasswordEncoder;
 import lombok.AllArgsConstructor;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Component;

@@ -1,5 +1,7 @@
 package co.com.mrcompany.security.jwt;
 
+import co.com.mrcompany.model.Exceptions.InfraestructureException.BadTokenException;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.ReactiveAuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
@@ -25,7 +27,7 @@ public class JwtManager implements ReactiveAuthenticationManager {
         return Mono.just(authentication)
                 .map(auth -> jwtProvider.getClaims(auth.getCredentials().toString()))
                 .log()
-                .onErrorResume(e -> Mono.error(new Throwable("bad token")))
+                .onErrorResume(e -> Mono.error(new BadTokenException()))
                 .map(claims -> new UsernamePasswordAuthenticationToken(
                         claims.getSubject(),
                         null,

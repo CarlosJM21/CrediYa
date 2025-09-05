@@ -1,8 +1,9 @@
 package co.com.mrcompany.security.jwt;
 
-import InfraestructureException.TokenExpiresException;
-import co.com.mrcompany.model.user.Token;
+
+import co.com.mrcompany.model.token.Token;
 import co.com.mrcompany.model.user.User;
+import co.com.mrcompany.model.token.gateways.IJwtProvider;
 import io.jsonwebtoken.*;
 import io.jsonwebtoken.io.Decoders;
 import io.jsonwebtoken.security.Keys;
@@ -20,7 +21,7 @@ import java.util.logging.Logger;
 import java.util.stream.Stream;
 
 @Component
-public class JwtProvider {
+public class JwtProvider implements IJwtProvider {
 
     private static final Logger LOGGER =  Logger.getLogger(JwtProvider.class.getName());
 
@@ -84,7 +85,7 @@ public class JwtProvider {
                     .getSubject();
             return true;
         } catch (ExpiredJwtException e) {
-            LOGGER.severe( new TokenExpiresException().getMessage() );
+            LOGGER.severe( "Token Expires");
         } catch (UnsupportedJwtException e) {
             LOGGER.severe("token unsupported");
         } catch (MalformedJwtException e) {

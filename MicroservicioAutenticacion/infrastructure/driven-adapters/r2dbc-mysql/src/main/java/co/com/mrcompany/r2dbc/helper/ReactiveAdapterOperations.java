@@ -75,4 +75,8 @@ public abstract class ReactiveAdapterOperations<E, D, I, R extends ReactiveCrudR
                          .as(tx::transactional)
                          .map(this::toEntity);
     }
+
+    public Flux<E> saveAllEntitiesData(Flux<E> entities) {
+        return saveAllEntities(entities);
+    }
 }

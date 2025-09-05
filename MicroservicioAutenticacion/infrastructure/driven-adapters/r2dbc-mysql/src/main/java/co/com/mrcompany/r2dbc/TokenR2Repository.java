@@ -1,6 +1,6 @@
 package co.com.mrcompany.r2dbc;
 
-import co.com.mrcompany.model.user.Token;
+import co.com.mrcompany.model.token.Token;
 import co.com.mrcompany.model.user.User;
 import co.com.mrcompany.r2dbc.entities.TokenEntity;
 import org.springframework.data.repository.query.ReactiveQueryByExampleExecutor;
@@ -13,9 +13,5 @@ import java.util.UUID;
 public interface TokenR2Repository extends ReactiveCrudRepository<TokenEntity, UUID>,
         ReactiveQueryByExampleExecutor<TokenEntity> {
 
-    Flux<Token> saveAllEntities(Flux<Token> tokens);
-
     Flux<Token> findByEmail(String email);
-
-    Mono<Token> login(User user);
 }

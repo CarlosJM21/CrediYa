@@ -1,6 +1,9 @@
 package co.com.mrcompany.api;
 
+import co.com.mrcompany.api.dto.request.LoginDto;
+import co.com.mrcompany.api.dto.request.TokenDto;
 import co.com.mrcompany.api.dto.request.UserRequestDto;
+import co.com.mrcompany.api.dto.response.TokenResponse;
 import co.com.mrcompany.api.dto.response.UserResponseDto;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.Parameter;
@@ -42,7 +45,7 @@ public class UserRouterRest {
                             parameters = { @Parameter(in = ParameterIn.PATH, name = "Id") })
         ),
         @RouterOperation( path = "/api/Users/New",
-                produces = { MediaType.APPLICATION_JSON_VALUE }, method = RequestMethod.POST, beanClass = UserHandler.class, beanMethod = "New",
+                produces = { MediaType.APPLICATION_JSON_VALUE }, method = RequestMethod.POST, beanClass = UserHandler.class, beanMethod = "userNew",
                 operation = @Operation( operationId = "New",
                 responses = { @ApiResponse( responseCode = "200", description = "Successful Operation",
                                 content = @Content(schema = @Schema( implementation = UserResponseDto.class )))},
@@ -68,15 +71,32 @@ public class UserRouterRest {
                         responses = { @ApiResponse( responseCode = "200", description = "Successful Operation",
                                 content = @Content(schema =  @Schema( implementation = UserResponseDto.class )))},
                         parameters = { @Parameter(in = ParameterIn.PATH, name = "Email") })
+        ),
+        @RouterOperation( path = "/api/Auth/login",
+                produces = { MediaType.APPLICATION_JSON_VALUE }, method = RequestMethod.POST, beanClass = UserHandler.class, beanMethod = "login",
+                operation = @Operation( operationId = "login",
+                        responses = { @ApiResponse( responseCode = "200", description = "Successful Operation",
+                                content = @Content(schema =  @Schema( implementation = TokenResponse.class )))},
+                        requestBody = @RequestBody( content = @Content(schema = @Schema(implementation = LoginDto.class ))))
+        ),
+        @RouterOperation( path = "/api/Auth/validate",
+                produces = { MediaType.APPLICATION_JSON_VALUE }, method = RequestMethod.POST, beanClass = UserHandler.class, beanMethod = "login",
+                operation = @Operation( operationId = "login",
+                        responses = { @ApiResponse( responseCode = "200", description = "Successful Operation",
+                                content = @Content(schema =  @Schema( implementation = Boolean.class )))},
+                        requestBody = @RequestBody( content = @Content(schema = @Schema(implementation = TokenDto.class ))))
         )
     })
-    public RouterFunction<ServerResponse> routerFunction(UserHandler handler) {
+    public RouterFunction<ServerResponse> routerFunction(UserHandler handler /*, AuthHandler authHandler*/) {
         return route(POST("/api/Users/New"), handler::userNew)
-                .andRoute(GET("/api/Users"), handler::users)
+                .and(route(GET("/api/Users"), handler::users))
                 .and(route(GET("/api/Users/{Id}"), handler::user))
                 .and(route(GET("/api/Users/ByEmail/{Email}"), handler::userByEmail))
                 .and(route().PUT("/api/Users", handler::edit).build())
-                .and(route().DELETE("/api/Users/{Id}", handler::delete).build());
+                .and(route().DELETE("/api/Users/{Id}", handler::delete).build())
+                //Auth
+                .and(route(POST("/api/Auth/login"), handler::login))
+                .and(route(POST("/api/Auth/validate"), handler::validate));
                 //.filter(f ->GlobalExceptionHandler); //revisar filtros
     }
 }

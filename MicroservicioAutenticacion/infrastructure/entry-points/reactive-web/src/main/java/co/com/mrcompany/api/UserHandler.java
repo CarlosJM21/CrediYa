@@ -1,12 +1,17 @@
 package co.com.mrcompany.api;
 
+import co.com.mrcompany.api.dto.request.LoginDto;
+import co.com.mrcompany.api.dto.request.TokenDto;
 import co.com.mrcompany.api.dto.request.UserRequestDto;
+import co.com.mrcompany.api.mappers.TokenMapper;
 import co.com.mrcompany.api.mappers.UserMapper;
+import co.com.mrcompany.usecase.user.ITokenUseCase;
 import co.com.mrcompany.usecase.user.IUserUseCase;
 import io.swagger.v3.oas.annotations.Operation;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.ResponseStatus;
@@ -26,8 +31,13 @@ public class UserHandler {
 private final IUserUseCase userUC;
 private final UserMapper mapper;
 
+private final ITokenUseCase tokenUC;
+private final TokenMapper tokenMapper;
+
+
 private static String badrequest = "Ocurrio un Error interno";
 
+  // @PreAuthorize("permitAll()")
     @Operation(summary = "Create New User.", description = "Allow Add new User.")
     public Mono<ServerResponse> userNew(ServerRequest serverRequest) {
         URI location = URI.create("/api/Users/New");
@@ -41,6 +51,7 @@ private static String badrequest = "Ocurrio un Error interno";
                 //.doOnError(e -> log.error("exception:{}",e) );
     }
 
+   // @PreAuthorize("hasAuthority('3')")
     @ResponseStatus(HttpStatus.OK)
     @Operation(summary = "Retreive User associated with Id.", description = "Fetch User Object associated with the Id provided.")
     public Mono<ServerResponse> user(ServerRequest serverRequest) {
@@ -87,5 +98,31 @@ private static String badrequest = "Ocurrio un Error interno";
                      //.switchIfEmpty(Mono.error(new NotFoundException("User not found")))
                      .flatMap(ServerResponse.ok()::bodyValue);
               //  .doOnError(ServerResponse.badRequest()::bodyValue(badrequest));
+    }
+
+    @Operation(summary = "Login.", description = "Allow user's authentication.")
+    public Mono<ServerResponse> login(ServerRequest serverRequest) {
+        URI location = URI.create("/api/Auth/login");
+
+        return serverRequest.bodyToMono( LoginDto.class)
+                .log( "login" )
+                .map(mapper::loginToDomain)
+                .flatMap(tokenUC::login)
+                .map(tokenMapper::toResponse)
+                .flatMap(ServerResponse.created(location)::bodyValue);
+    }
+
+    @ResponseStatus(HttpStatus.OK)
+    @Operation(summary = "Validate Token.", description = "Validate tokens of another  applications.")
+    public Mono<ServerResponse> validate(ServerRequest serverRequest) {
+        URI location = URI.create("/api/Auth/validate");
+
+        return serverRequest.bodyToMono( TokenDto.class)
+                .log( "validate" )
+                .map(tokenMapper::toDomain)
+                .flatMap(tokenUC::validateToken)
+                //.map(mapper::toResponse)
+                .flatMap(ServerResponse.created(location)::bodyValue);
+        //.switchIfEmpty(Mono.error());
     }
 }

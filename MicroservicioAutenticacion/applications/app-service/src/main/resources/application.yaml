@@ -37,6 +37,6 @@ loggin:
   level:
     org.springframework.r2dbc=DEBUG:
 jwt:
-  secret: ${JWT_SECRET}
-  expiration: ${JWT_EXPIRATION}
-  expirationRefresh: ${JWT_EXPIRATION_REFRESH}
+  secret: "MWphLWQhaDNpX2RycWh8Zjl6N0BzYjRyOHfDsWx5Lzk3eGZ2LnY1"   #${JWT_SECRET}
+  expiration: 3600000 #${JWT_EXPIRATION}
+  expirationRefresh: 300000   #${JWT_EXPIRATION_REFRESH}

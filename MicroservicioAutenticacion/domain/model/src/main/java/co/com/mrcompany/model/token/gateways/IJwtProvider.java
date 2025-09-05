@@ -1,6 +1,6 @@
-package co.com.mrcompany.model.user.gateways;
+package co.com.mrcompany.model.token.gateways;
 
-import co.com.mrcompany.model.user.Token;
+import co.com.mrcompany.model.token.Token;
 import co.com.mrcompany.model.user.User;
 
 public interface IJwtProvider {

@@ -1,4 +1,4 @@
-package DomainException;
+package co.com.mrcompany.model.Exceptions.DomainException;
 
 public class EmailExistsException extends RuntimeException {
     private static  String messageExc ="The User already Exists.";

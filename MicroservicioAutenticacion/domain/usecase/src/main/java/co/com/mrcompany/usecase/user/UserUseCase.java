@@ -1,9 +1,9 @@
 package co.com.mrcompany.usecase.user;
 
-import DomainException.EmailExistsException;
-import DomainException.WrongSalaryRangeException;
+import co.com.mrcompany.model.Exceptions.DomainException.EmailExistsException;
+import co.com.mrcompany.model.Exceptions.DomainException.WrongSalaryRangeException;
 import co.com.mrcompany.model.user.User;
-import co.com.mrcompany.model.user.gateways.IPasswordEncoder;
+import co.com.mrcompany.model.token.gateways.IPasswordEncoder;
 import co.com.mrcompany.model.user.gateways.UserRepository;
 import lombok.RequiredArgsConstructor;
 import reactor.core.publisher.Flux;

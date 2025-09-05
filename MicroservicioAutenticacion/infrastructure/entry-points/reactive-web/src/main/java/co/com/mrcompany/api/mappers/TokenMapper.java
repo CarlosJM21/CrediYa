@@ -2,7 +2,7 @@ package co.com.mrcompany.api.mappers;
 
 import co.com.mrcompany.api.dto.request.TokenDto;
 import co.com.mrcompany.api.dto.response.TokenResponse;
-import co.com.mrcompany.model.user.Token;
+import co.com.mrcompany.model.token.Token;
 import org.mapstruct.Mapper;
 import org.mapstruct.ReportingPolicy;
 

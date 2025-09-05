@@ -1,10 +1,8 @@
-package co.com.mrcompany.model.user.gateways;
+package co.com.mrcompany.model.role.gateways;
 
-import co.com.mrcompany.model.user.Role;
+import co.com.mrcompany.model.role.Role;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
-
-import java.util.UUID;
 
 public interface RoleRepository {
 

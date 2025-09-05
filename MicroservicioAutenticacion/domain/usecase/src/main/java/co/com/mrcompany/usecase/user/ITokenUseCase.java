@@ -1,6 +1,6 @@
 package co.com.mrcompany.usecase.user;
 
-import co.com.mrcompany.model.user.Token;
+import co.com.mrcompany.model.token.Token;
 import co.com.mrcompany.model.user.User;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
