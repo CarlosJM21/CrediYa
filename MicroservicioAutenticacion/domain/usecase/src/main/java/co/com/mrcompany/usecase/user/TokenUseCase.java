@@ -1,23 +1,22 @@
 package co.com.mrcompany.usecase.user;
 
 import co.com.mrcompany.model.Exceptions.InfraestructureException.BadCredentialsException;
+import co.com.mrcompany.model.Exceptions.InfraestructureException.InvalidTokenException;
+import co.com.mrcompany.model.Exceptions.InfraestructureException.InvalidationException;
 import co.com.mrcompany.model.Exceptions.InfraestructureException.TokenExpiresException;
 import co.com.mrcompany.model.token.Token;
-import co.com.mrcompany.model.user.User;
 import co.com.mrcompany.model.token.gateways.IJwtProvider;
 import co.com.mrcompany.model.token.gateways.IPasswordEncoder;
 import co.com.mrcompany.model.token.gateways.TokenRepository;
+import co.com.mrcompany.model.user.User;
 import co.com.mrcompany.model.user.gateways.UserRepository;
 import lombok.RequiredArgsConstructor;
-import lombok.extern.slf4j.Slf4j;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
 import java.util.Comparator;
 import java.util.List;
 import java.util.UUID;
-import java.util.logging.Logger;
-import java.util.stream.Collectors;
 
 @RequiredArgsConstructor
 public class TokenUseCase  implements  ITokenUseCase{
@@ -59,17 +58,15 @@ public class TokenUseCase  implements  ITokenUseCase{
 
     @Override
     public Mono<Token> login(User user) {
-        var response = InvalidatedTokens(user)
-                        .log("login")
-                        .switchIfEmpty(Mono.error(new IllegalArgumentException("The token is Invalid."))) //TODO: Cambiar por un error de invalidacion: intente de nuevo
-                        .thenReturn( userRepository.findByEmail(user.getEmail())
+        return InvalidatedTokens(user)
+                .log("login")
+                .switchIfEmpty(Mono.error(new InvalidationException()))
+                .thenReturn( userRepository.findByEmail(user.getEmail())
                         .filterWhen(u -> encoder.matches(user.getPassword(), u.getPassword()))
                         .switchIfEmpty(Mono.error(new BadCredentialsException()))
                         .map(u ->  provider.createToken(u))
                         .flatMap(repository::save))
-                        .flatMap(r -> r);
-
-        return response;
+                .flatMap(r -> r);
     }
 
     @Override
@@ -77,6 +74,7 @@ public class TokenUseCase  implements  ITokenUseCase{
         return repository.findByEmail(token.getEmail())
                          .filter(t -> t.getIsValid().equals(true) &&
                                              t.getToken().equals(token.getToken()))
+                         .switchIfEmpty(Mono.error(new InvalidTokenException()))
                          .collectList()
                          .map(l-> l.stream().max( Comparator.comparing(Token::getCreatedAt)).get())
                          .filter(t -> t.getIsValid())
@@ -85,22 +83,12 @@ public class TokenUseCase  implements  ITokenUseCase{
     }
 
     private Mono<Boolean> InvalidatedTokens(User user){
-        return /*repository.findByEmail(user.getEmail())
-                .filter(token -> token.getIsValid().equals(true))
-                .collectList()
-                .flatMap(tokenList -> {
-                    List<Token> modifiedTokens =tokenList.stream()
-                            .map(this::SetValues)
-                            .collect(Collectors.toList());
-                    return repository.saveAll( Flux.fromStream(modifiedTokens.stream()) ).last(); });
-                })
-                .hasElement();*/
-                repository.findByEmail(user.getEmail())
+        return repository.findByEmail(user.getEmail())
                 .filter(t -> t.getIsValid().equals(true))
                 .collectList()
                 .flatMapMany(this::SetValues)
                 .transform(repository::saveAll)
-                .collectList()
+                .last()
                 .hasElement();
     }
 
@@ -114,6 +102,6 @@ public class TokenUseCase  implements  ITokenUseCase{
         tokens.forEach(t ->{
             t.setIsValid(false);
         });
-        return Flux.fromStream(tokens.stream());
+        return Flux.fromIterable(tokens);
     }
 }
