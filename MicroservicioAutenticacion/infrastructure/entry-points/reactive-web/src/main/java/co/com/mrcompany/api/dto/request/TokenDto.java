@@ -11,6 +11,6 @@ import lombok.Setter;
 @AllArgsConstructor
 public class TokenDto {
    public  String email;
+   public  String type;
    public  String token;
-   public  String tokenRefresh;
 }

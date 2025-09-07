@@ -1,4 +1,4 @@
-package co.com.mrcompany.model.Exceptions.InfraestructureException;
+package co.com.mrcompany.model.Exceptions.infraestructureException;
 
 public class TokenNotFoundException extends RuntimeException {
     private static  String messageExc ="Token Not Found.";

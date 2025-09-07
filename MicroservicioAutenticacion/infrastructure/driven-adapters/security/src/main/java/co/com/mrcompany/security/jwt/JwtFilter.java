@@ -1,7 +1,7 @@
 package co.com.mrcompany.security.jwt;
 
-import co.com.mrcompany.model.Exceptions.InfraestructureException.InvalidAuthException;
-import co.com.mrcompany.model.Exceptions.InfraestructureException.TokenNotFoundException;
+import co.com.mrcompany.model.Exceptions.infraestructureException.InvalidAuthException;
+import co.com.mrcompany.model.Exceptions.infraestructureException.TokenNotFoundException;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.server.reactive.ServerHttpRequest;
 import org.springframework.stereotype.Component;

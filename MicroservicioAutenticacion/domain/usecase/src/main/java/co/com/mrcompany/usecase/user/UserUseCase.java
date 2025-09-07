@@ -1,7 +1,7 @@
 package co.com.mrcompany.usecase.user;
 
-import co.com.mrcompany.model.Exceptions.DomainException.EmailExistsException;
-import co.com.mrcompany.model.Exceptions.DomainException.WrongSalaryRangeException;
+import co.com.mrcompany.model.Exceptions.domainException.EmailExistsException;
+import co.com.mrcompany.model.Exceptions.domainException.WrongSalaryRangeException;
 import co.com.mrcompany.model.user.User;
 import co.com.mrcompany.model.token.gateways.IPasswordEncoder;
 import co.com.mrcompany.model.user.gateways.UserRepository;

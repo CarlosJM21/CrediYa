@@ -1,4 +1,4 @@
-package co.com.mrcompany.model.Exceptions.InfraestructureException;
+package co.com.mrcompany.model.Exceptions.infraestructureException;
 
 public class TokenExpiresException extends RuntimeException {
     private static  String messageExc ="token expired";

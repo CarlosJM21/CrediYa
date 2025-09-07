@@ -15,6 +15,15 @@ services:
     volumes:
       - mariadb_data:/var/lib/mysql # Persist data to a Docker volume
       - ./init-scripts:/docker-entrypoint-initdb.d # Optional: for initial SQL scripts
+  auth:
+    image: auth
+    build:
+      context: ./Deployment
+      dockerfile: Dockerfile
+    ports:
+      - 8080:8080
+    depends_on:
+      serviceName: mariadb
  # sonarqube:
  #   image: sonarqube:community
  #   ports:

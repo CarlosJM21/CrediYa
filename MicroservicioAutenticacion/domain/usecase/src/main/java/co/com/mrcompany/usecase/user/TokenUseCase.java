@@ -1,9 +1,9 @@
 package co.com.mrcompany.usecase.user;
 
-import co.com.mrcompany.model.Exceptions.InfraestructureException.BadCredentialsException;
-import co.com.mrcompany.model.Exceptions.InfraestructureException.InvalidTokenException;
-import co.com.mrcompany.model.Exceptions.InfraestructureException.InvalidationException;
-import co.com.mrcompany.model.Exceptions.InfraestructureException.TokenExpiresException;
+import co.com.mrcompany.model.Exceptions.infraestructureException.BadCredentialsException;
+import co.com.mrcompany.model.Exceptions.infraestructureException.InvalidTokenException;
+import co.com.mrcompany.model.Exceptions.infraestructureException.InvalidationException;
+import co.com.mrcompany.model.Exceptions.infraestructureException.TokenExpiresException;
 import co.com.mrcompany.model.token.Token;
 import co.com.mrcompany.model.token.gateways.IJwtProvider;
 import co.com.mrcompany.model.token.gateways.IPasswordEncoder;

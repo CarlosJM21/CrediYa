@@ -1,7 +1,6 @@
 package co.com.mrcompany.security.jwt;
 
-import co.com.mrcompany.model.Exceptions.InfraestructureException.BadTokenException;
-import org.springframework.beans.factory.annotation.Autowired;
+import co.com.mrcompany.model.Exceptions.infraestructureException.BadTokenException;
 import org.springframework.security.authentication.ReactiveAuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
@@ -35,7 +34,8 @@ public class JwtManager implements ReactiveAuthenticationManager {
                                 .map(role -> (List<Map<String, String>>) role)
                                 .flatMap(role -> role.stream()
                                         .map(r -> r.get("authority"))
-                                        .map(SimpleGrantedAuthority::new))
+                                        //.map(SimpleGrantedAuthority::new))
+                                        .map(r -> new SimpleGrantedAuthority("ROLE_" + r)))
                                 .toList())
                 );
     }

@@ -40,7 +40,8 @@ public class SecurityConfig {
                                             "/swagger-ui/",
                                             "/webjars/swagger-ui/**",
                                             "/api/Auth/**").permitAll()
-                        .pathMatchers("/api/Users/**").hasAnyRole("2","3").anyExchange().authenticated()
+                        .pathMatchers("/api/Users/**")
+                                .hasAnyRole("2","3").anyExchange().authenticated()
                 )
                 .addFilterAfter(jwtFilter, SecurityWebFiltersOrder.FIRST)
                 .securityContextRepository(securityContextRepository)

@@ -36,16 +36,25 @@ public class RestConsumer implements UserAuthRepository{
                 .hasElement(); */
   }
 
-   /* @CircuitBreaker(name = "testPost")
-    public Mono<UserResponse> testPost() {
-        UserRequest request = UserRequest.builder()
-            .val1("exampleval1")
-            .val2("exampleval2")
-            .build();
-        return client
-                .post()
-                .body(Mono.just(request), UserRequest.class)
+    @CircuitBreaker(name = "validateToken" /*, fallbackMethod = "testGetOk"*/)
+    public Mono<Boolean> ValidateToken(String email) {
+
+        return client.get()
+                .uri("/api/Users/ByEmail/{Email}", email)
                 .retrieve()
-                .bodyToMono(UserResponse.class);
-    }*/
+                .bodyToMono(UserResponse.class)
+                .hasElement();
+    }
+
+    public Mono<Boolean> tokenGetOk(String Token,Exception ignored) {
+        log.info("[INFO] pass to fallback case.");
+        return  Mono.just(false);
+        /*client
+                .get()
+                .uri("/api/Users/ByEmail/{Email}", email)// TODO: change for another endpoint or destination
+                .retrieve()
+                .bodyToMono(UserResponse.class)
+                //.switchIfEmpty(Mono.error(new Exception("no funciono")))
+                .hasElement(); */
+    }
 }
