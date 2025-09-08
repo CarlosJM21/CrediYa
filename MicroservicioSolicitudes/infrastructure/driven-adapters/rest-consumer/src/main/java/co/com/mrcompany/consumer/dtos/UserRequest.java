@@ -1,4 +1,4 @@
-package co.com.mrcompany.consumer;
+package co.com.mrcompany.consumer.dtos;
 
 import lombok.Builder;
 import lombok.AllArgsConstructor;
@@ -12,5 +12,5 @@ import lombok.Setter;
 @AllArgsConstructor
 @Builder(toBuilder = true)
 public class UserRequest {
-    private String email;
+    public String email;
 }

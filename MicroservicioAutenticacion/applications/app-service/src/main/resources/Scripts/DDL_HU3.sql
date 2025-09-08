@@ -13,7 +13,7 @@ CREATE TABLE Role(
 CREATE TABLE Token(
                      id             UUID PRIMARY    KEY DEFAULT (UUID()),
                      email 	        VARCHAR(100) 	Not Null,
-                     token          VARCHAR(MAX) 	Not Null,
-                     tokenRefresh   VARCHAR(MAX) 	Not Null,
+                     token          TEXT         	Not Null,
+                     tokenRefresh   TEXT         	Not Null,
                      isValid        BIT             Not Null
 );

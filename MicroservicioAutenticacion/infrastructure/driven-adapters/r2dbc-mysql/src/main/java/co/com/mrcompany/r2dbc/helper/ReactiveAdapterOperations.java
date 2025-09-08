@@ -1,5 +1,6 @@
 package co.com.mrcompany.r2dbc.helper;
 
+import lombok.extern.slf4j.Slf4j;
 import org.reactivecommons.utils.ObjectMapper;
 import org.springframework.data.domain.Example;
 import org.springframework.data.repository.query.ReactiveQueryByExampleExecutor;
@@ -11,6 +12,7 @@ import reactor.core.publisher.Mono;
 import java.lang.reflect.ParameterizedType;
 import java.util.function.Function;
 
+@Slf4j
 public abstract class ReactiveAdapterOperations<E, D, I, R extends ReactiveCrudRepository<D, I> & ReactiveQueryByExampleExecutor<D>> {
     protected R repository;
     protected ObjectMapper mapper;
@@ -48,6 +50,7 @@ public abstract class ReactiveAdapterOperations<E, D, I, R extends ReactiveCrudR
 
     protected Mono<D> saveData(D data) {
         return repository.save(data)
+                         .onErrorResume(e ->Mono.error(e))
                          .as(tx::transactional);
     }
 

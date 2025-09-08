@@ -88,8 +88,8 @@ public class TokenUseCase  implements  ITokenUseCase{
                 .collectList()
                 .flatMapMany(this::SetValues)
                 .transform(repository::saveAll)
-                .last()
-                .hasElement();
+               // .last()
+                .hasElements();
     }
 
     private Token SetValues(Token token){

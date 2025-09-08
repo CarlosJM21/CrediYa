@@ -11,6 +11,7 @@ WORKDIR /deployment
 COPY --from=build  /deployment/build/libs/*.jar CrediYa.Autenticacion.jar
 ENV JAVA_OPTS=" -Xshareclasses:name=cacheapp,cacheDir=/cache,nonfatal -XX:+UseContainerSupport -XX:MaxRAMPercentage=70 -Djava.security.egd=file:/dev/./urandom"
 EXPOSE 8080
+USER appuser
 ENTRYPOINT ["java","-Dspring.profiles.active=prod","-jar","CrediYa.Autenticacion.jar"]
 
 #validar lo de abajo

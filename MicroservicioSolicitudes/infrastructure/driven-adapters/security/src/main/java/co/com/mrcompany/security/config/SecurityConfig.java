@@ -1,16 +1,14 @@
 package co.com.mrcompany.security.config;
 
-import co.com.mrcompany.security.repository.SecurityContextRepository;
 import co.com.mrcompany.security.jwt.JwtFilter;
+import co.com.mrcompany.security.repository.SecurityContextRepository;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.http.HttpMethod;
 import org.springframework.security.config.annotation.method.configuration.EnableReactiveMethodSecurity;
 import org.springframework.security.config.annotation.web.reactive.EnableWebFluxSecurity;
 import org.springframework.security.config.web.server.SecurityWebFiltersOrder;
 import org.springframework.security.config.web.server.ServerHttpSecurity;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
-import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.server.SecurityWebFilterChain;
 
 @Configuration
@@ -38,15 +36,10 @@ public class SecurityConfig {
                                             "/v3/api-docs/**",
                                             "/swagger-ui.html",
                                             "/swagger-ui/",
-                                            "/webjars/swagger-ui/**",
-                                            "/api/Auth/**").permitAll()
-                        .pathMatchers("/api/Users",
-                                                  "/api/Users/{Id}",
-                                                  "/api/Users/New",
-                                                  "/api/Users",
-                                                  "/api/Users/{Id}")
-                                .hasAnyRole("2","3")
-                        .pathMatchers("/api/Users/ByEmail")
+                                            "/api/status",
+                                            "/api/types",
+                                            "/").permitAll()
+                        .pathMatchers("/api/loan/Apply")
                                 .hasAnyRole("1","2","3").anyExchange().authenticated()
                 )
                 .addFilterAfter(jwtFilter, SecurityWebFiltersOrder.FIRST)

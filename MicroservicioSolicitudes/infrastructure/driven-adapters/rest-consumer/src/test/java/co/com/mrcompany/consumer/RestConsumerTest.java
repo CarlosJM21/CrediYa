@@ -44,7 +44,7 @@ class RestConsumerTest {
                 .setHeader(HttpHeaders.CONTENT_TYPE, MediaType.APPLICATION_JSON_VALUE)
                 .setResponseCode(HttpStatus.OK.value())
                 .setBody("{\"state\" : \"ok\"}"));
-        var response = restConsumer.ValidateUser("carlos_prueba3@yopmail.com");
+        var response = restConsumer.ValidateUser("carlos_prueba3@yopmail.com","token");
 
         StepVerifier.create(response)
                 .expectNextMatches(objectResponse -> objectResponse.equals(true))
