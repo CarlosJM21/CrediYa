@@ -5,6 +5,7 @@ import co.com.mrcompany.api.dto.request.TokenDto;
 import co.com.mrcompany.api.dto.request.UserRequestDto;
 import co.com.mrcompany.api.dto.response.TokenResponse;
 import co.com.mrcompany.api.dto.response.UserResponseDto;
+import co.com.mrcompany.model.role.Role;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.Parameter;
 import io.swagger.v3.oas.annotations.enums.ParameterIn;
@@ -85,6 +86,13 @@ public class UserRouterRest {
                         responses = { @ApiResponse( responseCode = "200", description = "Successful Operation",
                                 content = @Content(schema =  @Schema( implementation = Boolean.class )))},
                         requestBody = @RequestBody( content = @Content(schema = @Schema(implementation = TokenDto.class ))))
+        ),
+        @RouterOperation( path = "/api/Roles",
+                produces = { MediaType.APPLICATION_JSON_VALUE }, method = RequestMethod.GET, beanClass = UserHandler.class, beanMethod = "roles",
+                operation = @Operation( operationId = "roles",
+                        responses = { @ApiResponse( responseCode = "200", description = "Successful Operation",
+                                content = @Content(schema = @Schema( implementation = Role.class )))}
+                       )
         )
     })
     public RouterFunction<ServerResponse> routerFunction(UserHandler handler /*, AuthHandler authHandler*/) {
@@ -96,7 +104,9 @@ public class UserRouterRest {
                 .and(route().DELETE("/api/Users/{Id}", handler::delete).build())
                 //Auth
                 .and(route(POST("/api/Auth/login"), handler::login))
-                .and(route(POST("/api/Auth/validate"), handler::validate));
+                .and(route(POST("/api/Auth/validate"), handler::validate))
+                //Role
+                .and(route().GET("/api/Roles", handler::roles).build());
                 //.filter(f ->GlobalExceptionHandler); //revisar filtros
     }
 }

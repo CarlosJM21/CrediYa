@@ -46,7 +46,8 @@ public class SecurityConfig {
                                                   "/api/Users",
                                                   "/api/Users/{Id}")
                                 .hasAnyRole("2","3")
-                        .pathMatchers("/api/Users/ByEmail")
+                        .pathMatchers("/api/Users/ByEmail",
+                                                  "/api/Roles")
                                 .hasAnyRole("1","2","3").anyExchange().authenticated()
                 )
                 .addFilterAfter(jwtFilter, SecurityWebFiltersOrder.FIRST)

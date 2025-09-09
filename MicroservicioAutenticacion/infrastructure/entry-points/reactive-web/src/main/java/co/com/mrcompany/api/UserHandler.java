@@ -5,6 +5,7 @@ import co.com.mrcompany.api.dto.request.TokenDto;
 import co.com.mrcompany.api.dto.request.UserRequestDto;
 import co.com.mrcompany.api.mappers.TokenMapper;
 import co.com.mrcompany.api.mappers.UserMapper;
+import co.com.mrcompany.usecase.user.IRoleUseCase;
 import co.com.mrcompany.usecase.user.ITokenUseCase;
 import co.com.mrcompany.usecase.user.IUserUseCase;
 import io.swagger.v3.oas.annotations.Operation;
@@ -30,6 +31,8 @@ public class UserHandler {
 
 private final IUserUseCase userUC;
 private final UserMapper mapper;
+
+private final IRoleUseCase RoleUC;
 
 private final ITokenUseCase tokenUC;
 private final TokenMapper tokenMapper;
@@ -98,6 +101,14 @@ private static String badrequest = "Ocurrio un Error interno";
                      //.switchIfEmpty(Mono.error(new NotFoundException("User not found")))
                      .flatMap(ServerResponse.ok()::bodyValue);
               //  .doOnError(ServerResponse.badRequest()::bodyValue(badrequest));
+    }
+
+    @Operation(summary = "Retreive The List of Roles.", description = "Fetch List of Roles.")
+    public Mono<ServerResponse> roles(ServerRequest serverRequest) {
+        return RoleUC.findAll()
+                .log("ListRoles")
+                .collectList()
+                .flatMap(ServerResponse.ok()::bodyValue);
     }
 
     @Operation(summary = "Login.", description = "Allow user's authentication.")
