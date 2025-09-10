@@ -4,6 +4,7 @@ import co.com.mrcompany.api.dtos.ApplicationResponse;
 import co.com.mrcompany.api.dtos.applicationRequest;
 import co.com.mrcompany.api.mappers.ApplicationMapper;
 import co.com.mrcompany.model.application.Application;
+import co.com.mrcompany.model.token.Token;
 import co.com.mrcompany.usecase.loanapplication.ILoanApplicationUseCase;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
@@ -56,10 +57,8 @@ class RouterRestTest {
 
         Mockito.when(mapper.toDomain(any(applicationRequest.class))).thenReturn(app);
         Mockito.when(mapper.toResponse(any(Application.class))).thenReturn(response);
-        Mockito.when(loanAppUseCase.save(any(Application.class))).thenReturn(Mono.just(app));
+        Mockito.when(loanAppUseCase.save(any(Application.class), any(Token.class))).thenReturn(Mono.just(app));
     }
-
-
 
     @Test
     void testListenPOSTUseCase() {

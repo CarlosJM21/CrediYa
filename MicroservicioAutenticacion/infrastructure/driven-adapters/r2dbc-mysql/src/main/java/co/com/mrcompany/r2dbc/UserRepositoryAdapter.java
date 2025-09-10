@@ -4,6 +4,7 @@ import co.com.mrcompany.model.user.User;
 import co.com.mrcompany.model.user.gateways.UserRepository;
 import co.com.mrcompany.r2dbc.entities.UserEntity;
 import co.com.mrcompany.r2dbc.helper.ReactiveAdapterOperations;
+import jakarta.persistence.NamedStoredProcedureQuery;
 import org.reactivecommons.utils.ObjectMapper;
 import org.springframework.data.r2dbc.repository.Query;
 import org.springframework.data.repository.query.Param;
@@ -34,7 +35,8 @@ public class UserRepositoryAdapter extends ReactiveAdapterOperations<
 
     @Override
     public Mono<Boolean> existsByEmail(String email) {
-        return repository.existsByEmail(email).as(tx::transactional);
+        return repository.existsByEmail(email)
+                         .as(tx::transactional);
     }
 
     @Override

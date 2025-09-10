@@ -5,9 +5,9 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.stream.Collectors;
 
-import DomainException.EmailExistsException;
-import DomainException.UserNotFoundException;
-import DomainException.WrongSalaryRangeException;
+import co.com.mrcompany.model.Exceptions.domainException.EmailExistsException;
+import co.com.mrcompany.model.Exceptions.domainException.UserNotFoundException;
+import co.com.mrcompany.model.Exceptions.domainException.WrongSalaryRangeException;
 import co.com.mrcompany.api.Exception.Models.ValidationError;
 import co.com.mrcompany.api.Exception.Models.Validations;
 import co.com.mrcompany.api.Exception.Models.ErrorCode;

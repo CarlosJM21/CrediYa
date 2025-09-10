@@ -30,3 +30,10 @@ CREATE TABLE applications(
                      INDEX App_loantype (id_loantype),
                      FOREIGN KEY (id_loantype) REFERENCES loantype(id) ON DELETE CASCADE
 );
+
+CREATE TABLE Token(
+                     id             Integer PRIMARY KEY AUTO_INCREMENT,
+                     email 	        VARCHAR(100) 	Not Null,
+		             role           VARCHAR(20)		Not Null,
+                     token          TEXT         	Not Null,
+);

@@ -32,7 +32,11 @@ management:
       probes:
         enabled: true
 cors:
-  allowed-origins: "http://localhost:4200,http://localhost:8080"
+  allowed-origins: "http://localhost:4200,http://localhost:8080,http://localhost:8081"
 loggin:
   level:
     org.springframework.r2dbc=DEBUG:
+jwt:
+  secret: "MWphLWQhaDNpX2RycWh8Zjl6N0BzYjRyOHfDsWx5Lzk3eGZ2LnY1"   #${JWT_SECRET}
+  expiration: 3600000 #${JWT_EXPIRATION}
+  expirationRefresh: 300000   #${JWT_EXPIRATION_REFRESH}

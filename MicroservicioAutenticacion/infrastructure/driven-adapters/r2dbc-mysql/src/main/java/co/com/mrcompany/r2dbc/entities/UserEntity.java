@@ -21,6 +21,8 @@ public class UserEntity {
     private String lastName;
     @Column("email")
     private String email;
+    @Column("password")
+    private String password;
     @Column("DNI")
     private String dni;
     @Column("cellphone")

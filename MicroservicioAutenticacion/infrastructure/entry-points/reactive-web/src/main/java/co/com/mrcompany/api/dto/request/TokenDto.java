@@ -1,6 +1,5 @@
-package co.com.mrcompany.consumer;
+package co.com.mrcompany.api.dto.request;
 
-import lombok.Builder;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -10,7 +9,8 @@ import lombok.Setter;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-@Builder(toBuilder = true)
-public class UserRequest {
-    private String email;
+public class TokenDto {
+   public  String email;
+   public  String type;
+   public  String token;
 }

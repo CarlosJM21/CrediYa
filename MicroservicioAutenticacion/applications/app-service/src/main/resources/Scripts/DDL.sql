@@ -19,6 +19,16 @@ CREATE TABLE User(
                      email 	    VARCHAR(150) 	Not Null,
                      id_rol     Integer         Not Null,
                      BaseSalary BIGINT 		    Not null,
+                     password   TEXT            Not Null,
                      INDEX User_role (id_rol),
                      FOREIGN KEY (id_rol) REFERENCES Role(id) ON DELETE CASCADE
+);
+
+CREATE TABLE Token(
+                     id             UUID PRIMARY    KEY DEFAULT (UUID()),
+                     email 	        VARCHAR(100) 	Not Null,
+                     token          TEXT         	Not Null,
+                     tokenRefresh   TEXT         	Not Null,
+                     isValid        BIT             Not Null,
+                     createdAt      Date            Not Null DEFAULT CURRENT_TIMESTAMP
 );

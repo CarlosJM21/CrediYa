@@ -5,6 +5,8 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.beans.Transient;
+import java.math.BigDecimal;
 import java.math.BigInteger;
 import java.util.UUID;
 
@@ -21,4 +23,18 @@ public class Application {
     @Builder.Default
     private Integer    idStatus = 1;
     private Integer    idLoanType;
+    private Long       totalItems;
+
+    public ApplicationDetail toAppDetail()
+    {
+        return new ApplicationDetail().builder()
+                .id(this.getId())
+                .email(this.getEmail())
+                .status(this.getIdStatus().toString())
+                .loanType(this.getIdLoanType().toString())
+                .amount(this.getAmount())
+                .term(this.getTerm())
+                .monthAmount( new BigDecimal(this.amount))
+                .build();
+    }
 }

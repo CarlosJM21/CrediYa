@@ -30,7 +30,18 @@ public class ApplicationRepositoryAdapter extends ReactiveAdapterOperations<
     public Flux<Application> findByEmail(@Param("email")String email) {
         return repository.findByEmail(email);
     }
-/*
+
+    @Override
+    public Flux<Application> allFilter( Integer offset, Integer size, Integer status ) {
+        return repository.allFilter(offset, size, status);
+    }
+
+
+    @Override
+    public Mono<Long> countByStatus(Integer status){
+       return  repository.countBystatus(status);
+    }
+    /*
     @Override
     public Mono<Boolean> existsByEmail(String email) {
         return repository.existsByEmail(email).as(tx::transactional);

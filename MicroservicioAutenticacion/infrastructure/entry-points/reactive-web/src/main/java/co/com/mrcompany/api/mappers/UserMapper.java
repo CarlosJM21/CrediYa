@@ -1,5 +1,6 @@
 package co.com.mrcompany.api.mappers;
 
+import co.com.mrcompany.api.dto.request.LoginDto;
 import co.com.mrcompany.api.dto.request.UserRequestDto;
 import co.com.mrcompany.api.dto.response.UserResponseDto;
 import co.com.mrcompany.model.user.User;
@@ -12,4 +13,6 @@ public interface UserMapper {
     UserResponseDto toResponse(User domain);
 
     User toDomain(UserRequestDto request);
+
+    User loginToDomain(LoginDto request);
 }

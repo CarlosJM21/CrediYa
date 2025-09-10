@@ -15,4 +15,5 @@ public interface UserR2Repository extends ReactiveCrudRepository<UserEntity, UUI
     Mono<User> findByEmail(String email);
 
     Mono<Boolean> existsByEmail(String email);
+
 }

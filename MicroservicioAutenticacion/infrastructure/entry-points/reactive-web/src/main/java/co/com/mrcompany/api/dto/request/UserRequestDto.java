@@ -27,6 +27,9 @@ public class UserRequestDto {
     @Email(message = "The Field \"Email\" have a bad format." )
     public String   email;
 
+    @NotBlank(message="The Field \"Passwrod\" not Allowed null or blank values.")
+    public String   password;
+
     @NotBlank(message="The Field \"DNI\" not Allowed null or blank values.")
     public String   dni;
 

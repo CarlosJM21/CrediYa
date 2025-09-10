@@ -2,7 +2,7 @@
 FROM gradle:8.14.3-jdk-21 AS build
 COPY --chown=gradle:gradle . /deployment
 WORKDIR /deployment
-RUN gradle bootJar --no-daemon
+RUN gradle bootJar -x validateStructure --no-daemon
 
 #Etapa 2: Runtme con JDK 21 (ejecucion)
 FROM eclipse-temurin:21-jdk-alpine

@@ -7,7 +7,9 @@ import co.com.mrcompany.model.application.Application;
 import co.com.mrcompany.model.application.gateways.ApplicationRepository;
 import co.com.mrcompany.model.loantype.LoanType;
 import co.com.mrcompany.model.loantype.gateways.LoanTypeRepository;
+import co.com.mrcompany.model.token.Token;
 import co.com.mrcompany.model.userauth.gateways.UserAuthRepository;
+import co.com.mrcompany.usecase.token.TokenLoanUseCase;
 import lombok.RequiredArgsConstructor;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
@@ -21,14 +23,15 @@ public class ApplicationCommandUseCase implements ILoanApplicationUseCase {
     private final ApplicationRepository repository;
     private final LoanTypeRepository typeRepository;
     private final UserAuthRepository userAuthRepository;
+    private final TokenLoanUseCase tokenUseCase;
 
     @Override
-    public Mono<Application> save(Application loanApplication) {
+    public Mono<Application> save(Application loanApplication, Token token) {
         return typeRepository.findById(loanApplication.getIdLoanType())
                 .switchIfEmpty(Mono.error(new typeInvalidException()))
-                .flatMap(t -> ValidAmount(t,loanApplication))
+                .flatMap(t -> validAmount(t,loanApplication))
                 .flatMap(x -> checkAutoValidation(x,loanApplication) )
-                .flatMap(a-> validUser(a))
+                .flatMap(a ->this.validUser(a,token))
                 .flatMap(repository::save);
     }
 
@@ -43,22 +46,43 @@ public class ApplicationCommandUseCase implements ILoanApplicationUseCase {
     }
 
     @Override
+    public Flux<Application> allFilter(Integer offset, Integer size, Integer status) {
+        return repository.allFilter(offset,size,status);
+    }
+
+    @Override
+    public Mono<Long> countByStatus(Integer status) {
+        return repository.countByStatus(status);
+    }
+
+    @Override
     public Flux<Application> findByEmail(String email) {
         return repository.findByEmail(email);
     }
 
-    private Mono<LoanType> ValidAmount(LoanType loanType, Application app) {
+    private Mono<LoanType> validAmount(LoanType loanType, Application app) {
         BigInteger amount = app.getAmount();
         return Mono.just(loanType).filter(t -> amount.compareTo(t.getMinAmount() ) >= 0  &&
                                                          amount.compareTo(t.getMaxAmount()) <= 0 )
                                   .switchIfEmpty(Mono.error(new amontOutOfRange()));
     }
 
-    private Mono<Application> validUser(Application app)
+    private Mono<Application> validUser(Application app, Token token)
     {
-        return Mono.just(app)
-                   .filterWhen(a -> userAuthRepository.ValidateUser(a.getEmail()))
-                   .switchIfEmpty(Mono.error(new userNotFount()));
+       return Mono.zip(Mono.just(app), Mono.just(token) )
+                .flatMap(data->{
+                           var application = data.getT1();
+                           var tokenInner = data.getT2();
+
+
+                          return Mono.just(application)
+                                     .filterWhen(a ->userAuthRepository.ValidateUser(application.getEmail(),tokenInner.getToken())
+                                                                                 .hasElement()
+                                                                                 .flatMap(r -> this.validateRole(tokenInner, a.getEmail())
+                                                                                                           .map(rr -> r && rr))
+                                                )
+                                     .switchIfEmpty( Mono.error(new userNotFount()) ) ;
+                    });
     }
 
     private Mono<Application> checkAutoValidation(LoanType loanType,Application app){
@@ -73,5 +97,10 @@ public class ApplicationCommandUseCase implements ILoanApplicationUseCase {
                     //.filter(x -> !loanType.getAutoValidation())
                     //.switchIfEmpty(Mono.just(app))
                     //.map( p ->{ p.setIdStatus(2); return p;});
+    }
+
+    private Mono<Boolean>  validateRole(Token token, String email){
+        Integer role = Integer.parseInt(token.getRole());
+        return  Mono.just(  role > 1 || (role == 1 && token.getEmail().equals(email)) );
     }
 }

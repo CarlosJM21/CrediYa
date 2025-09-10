@@ -57,3 +57,7 @@ resilience4j:
         slidingWindowSize: 10
         minimumNumberOfCalls: 10
         waitDurationInOpenState: "10s"
+jwt:
+  secret: "MWphLWQhaDNpX2RycWh8Zjl6N0BzYjRyOHfDsWx5Lzk3eGZ2LnY1"   #${JWT_SECRET}
+  expiration: 3600000 #${JWT_EXPIRATION}
+  expirationRefresh: 300000   #${JWT_EXPIRATION_REFRESH}

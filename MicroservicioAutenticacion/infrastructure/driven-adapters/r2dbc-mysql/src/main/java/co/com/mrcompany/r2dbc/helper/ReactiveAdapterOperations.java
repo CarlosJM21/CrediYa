@@ -1,5 +1,6 @@
 package co.com.mrcompany.r2dbc.helper;
 
+import lombok.extern.slf4j.Slf4j;
 import org.reactivecommons.utils.ObjectMapper;
 import org.springframework.data.domain.Example;
 import org.springframework.data.repository.query.ReactiveQueryByExampleExecutor;
@@ -11,6 +12,7 @@ import reactor.core.publisher.Mono;
 import java.lang.reflect.ParameterizedType;
 import java.util.function.Function;
 
+@Slf4j
 public abstract class ReactiveAdapterOperations<E, D, I, R extends ReactiveCrudRepository<D, I> & ReactiveQueryByExampleExecutor<D>> {
     protected R repository;
     protected ObjectMapper mapper;
@@ -38,35 +40,43 @@ public abstract class ReactiveAdapterOperations<E, D, I, R extends ReactiveCrudR
 
     public Mono<E> save(E entity) {
         return saveData(toData(entity))
-                .as(tx::transactional)
                 .map(this::toEntity);
     }
 
     protected Flux<E> saveAllEntities(Flux<E> entities) {
         return saveData(entities.map(this::toData))
-                .as(tx::transactional)
                 .map(this::toEntity);
     }
 
     protected Mono<D> saveData(D data) {
-        return repository.save(data);
+        return repository.save(data)
+                         .onErrorResume(e ->Mono.error(e))
+                         .as(tx::transactional);
     }
 
     protected Flux<D> saveData(Flux<D> data) {
-        return repository.saveAll(data);
+        return repository.saveAll(data)
+                         .as(tx::transactional);
     }
 
     public Mono<E> findById(I id) {
-        return repository.findById(id).map(this::toEntity);
+        return repository.findById(id)
+                         .as(tx::transactional)
+                         .map(this::toEntity);
     }
 
     public Flux<E> findByExample(E entity) {
         return repository.findAll(Example.of(toData(entity)))
-                .as(tx::transactional)
-                .map(this::toEntity);
+                         .map(this::toEntity);
     }
 
     public Flux<E> findAll() {
-        return repository.findAll().map(this::toEntity);
+        return repository.findAll()
+                         .as(tx::transactional)
+                         .map(this::toEntity);
+    }
+
+    public Flux<E> saveAllEntitiesData(Flux<E> entities) {
+        return saveAllEntities(entities);
     }
 }

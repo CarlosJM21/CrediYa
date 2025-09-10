@@ -1,5 +1,6 @@
 package co.com.mrcompany.model.user.gateways;
 
+import co.com.mrcompany.model.token.Token;
 import co.com.mrcompany.model.user.User;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
@@ -19,4 +20,5 @@ public interface UserRepository {
     Mono<Boolean> existsByEmail(String email);
 
     Mono<Boolean> delete(UUID id);
+
 }

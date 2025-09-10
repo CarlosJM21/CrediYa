@@ -1,4 +1,4 @@
-package DomainException;
+package co.com.mrcompany.model.Exceptions.domainException;
 
 public class WrongSalaryRangeException extends RuntimeException {
     private static  String messageExc ="The values of field \"BaseSalary\" must be between 0 and 1500000";

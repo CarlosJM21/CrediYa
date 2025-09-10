@@ -38,7 +38,7 @@ public abstract class ReactiveAdapterOperations<E, D, I, R extends ReactiveCrudR
 
     public Mono<E> save(E entity) {
         return saveData(toData(entity))
-                .as(tx::transactional)
+                //.as(tx::transactional)
                 .map(this::toEntity);
     }
 
@@ -70,5 +70,10 @@ public abstract class ReactiveAdapterOperations<E, D, I, R extends ReactiveCrudR
         return repository.findAll()
                 .as(tx::transactional)
                 .map(this::toEntity);
+    }
+
+    public Mono delete(E entity)
+    {
+        return repository.delete( toData(entity) );
     }
 }
