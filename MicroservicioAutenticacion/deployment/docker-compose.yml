@@ -23,7 +23,7 @@ services:
     ports:
       - 8080:8080
     depends_on:
-      serviceName: mariadb
+      serviceName: CrediYa_db
  # sonarqube:
  #   image: sonarqube:community
  #   ports:

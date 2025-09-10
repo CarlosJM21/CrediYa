@@ -16,4 +16,8 @@ public interface ILoanApplicationUseCase{
     Flux<Application> findByEmail(String email);
 
     Mono<Application> findById(UUID id);
+
+    Flux<Application> allFilter(Integer offset, Integer size, Integer status );
+
+    Mono<Long> countByStatus(Integer status);
 }

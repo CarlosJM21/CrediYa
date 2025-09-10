@@ -40,7 +40,10 @@ public class SecurityConfig {
                                             "/api/types",
                                             "/").permitAll()
                         .pathMatchers("/api/loan/Apply")
-                                .hasAnyRole("1","2","3").anyExchange().authenticated()
+                                .hasAnyRole("1","2","3")
+                        .pathMatchers("/api/loan/details")
+                                .hasAnyRole("1","2","3")
+                        .anyExchange().authenticated()
                 )
                 .addFilterAfter(jwtFilter, SecurityWebFiltersOrder.FIRST)
                 .securityContextRepository(securityContextRepository)

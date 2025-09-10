@@ -46,6 +46,16 @@ public class ApplicationCommandUseCase implements ILoanApplicationUseCase {
     }
 
     @Override
+    public Flux<Application> allFilter(Integer offset, Integer size, Integer status) {
+        return repository.allFilter(offset,size,status);
+    }
+
+    @Override
+    public Mono<Long> countByStatus(Integer status) {
+        return repository.countByStatus(status);
+    }
+
+    @Override
     public Flux<Application> findByEmail(String email) {
         return repository.findByEmail(email);
     }

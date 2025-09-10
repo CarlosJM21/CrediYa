@@ -15,7 +15,12 @@ public interface ApplicationRepository {
     Mono<Application> findById(UUID id);
 
     Flux<Application> findByEmail(String email);
-    /* Mono<Boolean> existsByEmail(String email);
+
+    Flux<Application> allFilter(Integer offset, Integer size, Integer status );
+
+    Mono<Long> countByStatus(Integer status);
+    /*
+    Mono<Boolean> existsByEmail(String email);
 
     Mono<Boolean> delete(UUID id); */
 }

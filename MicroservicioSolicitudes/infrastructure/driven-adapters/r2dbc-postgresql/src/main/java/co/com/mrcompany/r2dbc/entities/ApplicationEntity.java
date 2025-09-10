@@ -5,6 +5,8 @@ import java.util.UUID;
 
 import lombok.Data;
 import org.springframework.data.annotation.Id;
+import org.springframework.data.annotation.ReadOnlyProperty;
+import org.springframework.data.annotation.Transient;
 import org.springframework.data.relational.core.mapping.Column;
 import org.springframework.data.relational.core.mapping.Table;
 
@@ -39,4 +41,9 @@ public class ApplicationEntity {
      */
     @Column("id_loantype")
     private Integer    idLoanType;
+    /**
+     * id loan  total items filter
+     */
+    @ReadOnlyProperty
+    private Long       totalItems;
 }

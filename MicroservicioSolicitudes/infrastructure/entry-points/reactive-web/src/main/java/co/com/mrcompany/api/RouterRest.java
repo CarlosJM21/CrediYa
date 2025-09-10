@@ -1,6 +1,7 @@
 package co.com.mrcompany.api;
 
 import co.com.mrcompany.api.dtos.applicationRequest;
+import co.com.mrcompany.model.application.ApplicationDetail;
 import co.com.mrcompany.model.loantype.LoanType;
 import co.com.mrcompany.model.status.Status;
 import io.swagger.v3.oas.annotations.Operation;
@@ -45,13 +46,20 @@ public class RouterRest {
                             responses = { @ApiResponse(responseCode = "200", description = "Get All Loan Types.",
                             content = @Content( schema = @Schema(implementation = LoanType.class)))}
                     )
+            ),
+            @RouterOperation( path = "/api/loan/details",
+                    produces = { MediaType.APPLICATION_JSON_VALUE }, method = RequestMethod.GET, beanClass = Handler.class, beanMethod = "appDetails",
+                    operation = @Operation( operationId = "appDetails",
+                            responses = { @ApiResponse(responseCode = "200", description = "Get Loan application paginted.",
+                                    content = @Content( schema = @Schema(implementation = ApplicationDetail.class)))}
+                    )
             )
     })
     public RouterFunction<ServerResponse> routerFunction(Handler handler) {
         return route(POST("/api/loan/Apply"), handler::applyToLoan)
                 .andRoute(GET("/api/status"), handler::statusList)
                 .andRoute(GET("/api/types"), handler::loanTypes)
+                .andRoute(GET("/api/loan/details"), handler::appDetails)
                 .andRoute(GET("/api/loan/test"), handler::testOk);
-                //.and(route(GET("/api/otherusercase/path"), handler::listenGETOtherUseCase));
     }
 }

@@ -4,6 +4,7 @@ import co.com.mrcompany.api.dtos.applicationRequest;
 import co.com.mrcompany.api.mappers.ApplicationMapper;
 import co.com.mrcompany.model.token.Token;
 import co.com.mrcompany.security.jwt.JwtProvider;
+import co.com.mrcompany.usecase.loanapplication.IAppDetailUseCase;
 import co.com.mrcompany.usecase.loanapplication.ILoanApplicationUseCase;
 import co.com.mrcompany.usecase.loantype.ILoanTypeUseCase;
 import co.com.mrcompany.usecase.status.IStatusUseCase;
@@ -27,6 +28,7 @@ private final ILoanApplicationUseCase loanAppUseCase;
 private final ILoanTypeUseCase  typeUseCase;
 private final IStatusUseCase statusUseCase;
 private final ITokenLoanUseCase tokenUseCase;
+private final IAppDetailUseCase detailUseCase;
 private final ApplicationMapper mapper;
 private final JwtProvider jwtProvider;
 
@@ -63,6 +65,23 @@ private final JwtProvider jwtProvider;
 
     public Mono<ServerResponse> testOk(ServerRequest serverRequest) {
         return ServerResponse.ok().bodyValue("");
+    }
+
+    public Mono<ServerResponse> appDetails(ServerRequest serverRequest) {
+       // URI location = URI.create("/api/loan/details");
+
+        String tokenText = serverRequest.headers().asHttpHeaders()
+                .getFirst(HttpHeaders.AUTHORIZATION)
+                .replace("Bearer ", "");
+
+        var size = serverRequest.queryParam("size").isEmpty() ? 3 : Integer.parseInt(serverRequest.queryParam("size").get());
+        var page = serverRequest.queryParam("page").isEmpty() ? 1 : Integer.parseInt(serverRequest.queryParam("page").get());
+        var status = serverRequest.queryParam("status").isEmpty() ? 1 : Integer.parseInt(serverRequest.queryParam("status").get());
+
+        return this.saveToken(tokenText)
+                    .log("Details applications")
+                   .flatMap( t-> detailUseCase.appDetail( size,page,status ,t))
+                   .flatMap(ServerResponse.ok()::bodyValue);
     }
 
     private Mono<Token> saveToken(String tokenText) {
