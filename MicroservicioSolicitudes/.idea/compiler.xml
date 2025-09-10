@@ -11,11 +11,12 @@
         <module name="CrediYa.Loan_App.app-service.test" />
         <module name="CrediYa.Loan_App.model.main" />
         <module name="CrediYa.Loan_App.rest-consumer.test" />
+        <module name="CrediYa.Loan_App.security.main" />
         <module name="CrediYa.Loan_App.model.test" />
         <module name="CrediYa.Loan_App.r2dbc-postgresql.main" />
         <module name="CrediYa.Loan_App.app-service.main" />
+        <module name="CrediYa.Loan_App.security.test" />
         <module name="CrediYa.Loan_App.reactive-web.test" />
-        <module name="CrediYa.Loan_App.rest-consumer.main" />
         <module name="CrediYa.Loan_App.r2dbc-postgresql.test" />
         <module name="CrediYa.Loan_App.usecase.test" />
       </profile>
@@ -26,6 +27,7 @@
           <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.mapstruct/mapstruct-processor/1.6.3/52e345c907fbf173b376586c7f8b131d53fa5867/mapstruct-processor-1.6.3.jar" />
         </processorPath>
         <module name="CrediYa.Loan_App.reactive-web.main" />
+        <module name="CrediYa.Loan_App.rest-consumer.main" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="21" />

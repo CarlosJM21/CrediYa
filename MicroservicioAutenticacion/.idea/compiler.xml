@@ -10,8 +10,10 @@
         <module name="CrediYa.Autenticacion.r2dbc-mysql.main" />
         <module name="CrediYa.Autenticacion.usecase.test" />
         <module name="CrediYa.Autenticacion.reactive-web.test" />
+        <module name="CrediYa.Autenticacion.security.test" />
         <module name="CrediYa.Autenticacion.r2dbc-mysql.test" />
         <module name="CrediYa.Autenticacion.usecase.main" />
+        <module name="CrediYa.Autenticacion.security.main" />
         <module name="CrediYa.Autenticacion.app-service.main" />
         <module name="CrediYa.Autenticacion.model.main" />
         <module name="CrediYa.Autenticacion.app-service.test" />

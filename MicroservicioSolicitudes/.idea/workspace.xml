@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2d0c8cc8-849a-4c5d-a4c4-b7859d08837d" name="Changes" comment="chore: add git ignore in projects">
-      <change beforePath="$PROJECT_DIR$/../MicroservicioAutenticacion/.gradle/configuration-cache/configuration-cache.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../MicroservicioAutenticacion/.gradle/configuration-cache/configuration-cache.lock" afterDir="false" />
-    </list>
+    <list default="true" id="2d0c8cc8-849a-4c5d-a4c4-b7859d08837d" name="Changes" comment="chore:  se agregan hashes" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -358,7 +356,15 @@
       <option name="project" value="LOCAL" />
       <updated>1756846469253</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="chore:  se agregan hashes">
+      <option name="closed" value="true" />
+      <created>1757545612542</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1757545612542</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -380,7 +386,8 @@
     <MESSAGE value="Fix:  se ajustan y valida la funcionalidad principal&#10;&#10;1. se ajustan las validaciones del caso de uso configuraciones y demas&#10;2. se ajusta el resconsumer&#10;3. se comienza con las pruebas de entry point y el restconsumer" />
     <MESSAGE value="Feat: se agregan los test unitarios." />
     <MESSAGE value="chore: add git ignore in projects" />
-    <option name="LAST_COMMIT_MESSAGE" value="chore: add git ignore in projects" />
+    <MESSAGE value="chore:  se agregan hashes" />
+    <option name="LAST_COMMIT_MESSAGE" value="chore:  se agregan hashes" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -404,40 +411,32 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/infrastructure/driven-adapters/rest-consumer/src/main/java/co/com/mrcompany/consumer/RestConsumer.java</url>
-          <line>19</line>
+          <line>27</line>
           <option name="timeStamp" value="5" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/domain/usecase/src/main/java/co/com/mrcompany/usecase/loanapplication/ApplicationCommandUseCase.java</url>
-          <line>58</line>
+          <line>71</line>
           <option name="timeStamp" value="6" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/domain/usecase/src/main/java/co/com/mrcompany/usecase/loanapplication/ApplicationCommandUseCase.java</url>
-          <line>65</line>
+          <line>89</line>
           <option name="timeStamp" value="7" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/domain/usecase/src/main/java/co/com/mrcompany/usecase/loanapplication/ApplicationCommandUseCase.java</url>
-          <line>51</line>
-          <properties>
-            <option name="lambda-ordinal" value="-1" />
-          </properties>
-          <option name="timeStamp" value="8" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/infrastructure/driven-adapters/rest-consumer/src/main/java/co/com/mrcompany/consumer/RestConsumer.java</url>
-          <line>28</line>
+          <line>37</line>
           <option name="timeStamp" value="9" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/infrastructure/entry-points/reactive-web/src/main/java/co/com/mrcompany/api/Handler.java</url>
-          <line>24</line>
+          <line>44</line>
           <option name="timeStamp" value="12" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/domain/usecase/src/main/java/co/com/mrcompany/usecase/loanapplication/ApplicationCommandUseCase.java</url>
-          <line>26</line>
+          <line>29</line>
           <option name="timeStamp" value="13" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
