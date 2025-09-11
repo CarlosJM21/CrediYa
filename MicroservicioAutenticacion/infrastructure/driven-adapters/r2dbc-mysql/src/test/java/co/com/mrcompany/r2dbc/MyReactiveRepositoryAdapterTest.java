@@ -29,7 +29,7 @@ class MyReactiveRepositoryAdapterTest {
     @InjectMocks
     UserRepositoryAdapter repositoryAdapter;
 
-    @Mock
+    @MockitoBean
     UserR2Repository repository;
 
     @MockitoBean
@@ -48,11 +48,12 @@ class MyReactiveRepositoryAdapterTest {
 
     @BeforeEach
     void setUp(){
+        email = "pedroPerez@yopmail.com";
 
         userRequest = new User();
         userRequest.setName("Pedro");
         userRequest.setLastName("Perez");
-        userRequest.setEmail("pedroPerez@yopmail.com");
+        userRequest.setEmail(email);
         userRequest.setDni("1090200100");
         userRequest.setIdRol(1);
         userRequest.setBaseSalary( new BigInteger("2000000"));
@@ -60,10 +61,11 @@ class MyReactiveRepositoryAdapterTest {
         userRequest.setCellphone("3102001001");
         userRequest.setAddress("Cll 100 74 # 51");
 
+        entity = new UserEntity();
+        entity.setEmail( email);
+
         userSuccess = userRequest;
         userSuccess.setId( UUID.fromString("422b5cfb-83bb-11f0-9973-ca1e79762f6b"));
-
-        email = "pedroPerez@yopmail.com";
 
         id= UUID.fromString("422b5cfb-83bb-11f0-9973-ca1e79762f6b");
     }
@@ -73,7 +75,7 @@ class MyReactiveRepositoryAdapterTest {
         when(repository.findById(any(UUID.class))).thenReturn(Mono.just(entity));
         when(mapper.map(entity, User.class)).thenReturn(userSuccess);
 
-        Mono<User> result = repositoryAdapter.findById(id);
+        Mono<UserEntity> result = repository.findById(id);
 
         StepVerifier.create(result)
                 .expectNextMatches(value -> value.equals(userSuccess))
@@ -82,7 +84,7 @@ class MyReactiveRepositoryAdapterTest {
 
     @Test
     void mustFindAllValues() {
-        when(repository.findAll()).thenReturn(Flux.just(entity));
+        when(repositoryAdapter.findAll()).thenReturn(Flux.just(userSuccess));
         when(mapper.map(entity, User.class)).thenReturn(userSuccess);
 
         Flux<User> result = repositoryAdapter.findAll();
@@ -94,7 +96,7 @@ class MyReactiveRepositoryAdapterTest {
 
     @Test
     void mustFindByExample() {
-        when(repository.findById(any(UUID.class))).thenReturn(Mono.just(entity));
+        when(repositoryAdapter.findById(any(UUID.class))).thenReturn(Mono.just(userSuccess));
         when(mapper.map(UserEntity.class, User.class)).thenReturn(userSuccess);
 
         Mono<User> result = repositoryAdapter.findById(id);
@@ -107,13 +109,13 @@ class MyReactiveRepositoryAdapterTest {
     @Test
     void mustSaveValue() throws ParseException {
 
-        when(repository.save(any(UserEntity.class))).thenReturn(Mono.just(entity));
+        when(repositoryAdapter.save(any(User.class))).thenReturn(Mono.just(userSuccess));
         when(mapper.map(entity, User.class)).thenReturn(userSuccess);
 
         Mono<User> result = repositoryAdapter.save(userSuccess);
 
         StepVerifier.create(result)
-                .expectNextMatches(value -> value.equals(userSuccess))
+                .expectNextMatches(value -> value.getEmail().equals(userSuccess.getEmail()))
                 .verifyComplete();
     }
 

@@ -1,5 +1,6 @@
 CREATE DATABASE application;
 
+
 USE application;
 
 CREATE TABLE loantype(
@@ -53,4 +54,3 @@ INSERT INTO Application.Token (id, email, role, token) VALUES
 (5, 'carlos_1@yopmail.com', '3', 'eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJjYXJsb3NfMUB5b3BtYWlsLmNvbSIsInR5cGUiOiJiYXNpYyIsInJvbGVzIjpbeyJhdXRob3JpdHkiOiIzIn1dLCJpYXQiOjE3NTczNjYxOTYsImV4cCI6MTc1NzM2OTc5Nn0.NkehmA2ZTodfOYCIv47MUY3oukaYJpJVaHVG8UevGQ4'),
 (13, 'pedro1@yopmail.com', '1', 'eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJwZWRybzFAeW9wbWFpbC5jb20iLCJ0eXBlIjoiYmFzaWMiLCJyb2xlcyI6W3siYXV0aG9yaXR5IjoiMSJ9XSwiaWF0IjoxNzU3MzY3MDk0LCJleHAiOjE3NTczNzA2OTR9.l2lHpEPof494XrRrxODkY3hTnBzaKl3mBSMkzf074jg'),
 (14, 'pedro1@yopmail.com', '1', 'eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJwZWRybzFAeW9wbWFpbC5jb20iLCJ0eXBlIjoiYmFzaWMiLCJyb2xlcyI6W3siYXV0aG9yaXR5IjoiMSJ9XSwiaWF0IjoxNzU3MzY3MDk0LCJleHAiOjE3NTczNzA2OTR9.l2lHpEPof494XrRrxODkY3hTnBzaKl3mBSMkzf074jg');
-

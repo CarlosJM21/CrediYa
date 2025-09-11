@@ -64,8 +64,8 @@ public class AppDetailUseCase implements IAppDetailUseCase{
 
     private Mono<ApplicationDetail> getUserData(ApplicationDetail appDetail,Token token) {
 
-        var localUser = users.size() == 0 ?  new UserAuth().builder().email("").build()
-                         : users.stream().filter(u->  u.email.equals(appDetail.getEmail())).toList().getFirst();
+        var localUser = users.size() == 0  ?  new UserAuth().builder().email("").build()
+                         : users.stream().filter(u->  u.email.equals(appDetail.getEmail())).findFirst().orElse(new UserAuth().builder().email("").build());
 
         return  users.size() == 0 && localUser.email.isEmpty()
                 ?  userAuthRepository.ValidateUser(appDetail.getEmail(), token.getToken())

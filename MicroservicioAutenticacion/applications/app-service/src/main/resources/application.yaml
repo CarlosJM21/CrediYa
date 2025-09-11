@@ -7,7 +7,7 @@ server:
 spring:
   r2dbc:
     url: "r2dbc:mariadb//localhost:3306"
-    host: "localhost"
+    host: "host.docker.internal"
     port: "3306"
     database: "auth"
     username: "CrediUserdata"

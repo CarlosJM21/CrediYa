@@ -5,16 +5,15 @@ services:
     restart: unless-stopped
     environment:
       COMPOSE_PROJECT_NAME: "Auth"
-      MYSQL_ROOT_HOST: "%"
       MYSQL_ROOT_PASSWORD: "zaA41.Vv8_q96/Y>"
       MYSQL_DATABASE: "auth"
       MYSQL_USER: "CrediUserdata"
       MYSQL_PASSWORD: "za.8%q96@Y>"
     ports:
-      - "3306:3306" # Map host port 3316 to container port 3316
+      - "3306:3306" # Map host port 3306 to container port 3306
     volumes:
       - mariadb_data:/var/lib/mysql/auth/ # Persist data to a Docker volume
-      - ./init-scripts:/docker-entrypoint-initdb.d/auth # Optional: for initial SQL scripts
+      - ./init-scripts/auth:/docker-entrypoint-initdb.d # Optional: for initial SQL scripts
 
   dbloan:
     image: 'mariadb:latest'
@@ -22,16 +21,15 @@ services:
     restart: unless-stopped
     environment:
       COMPOSE_PROJECT_NAME: "Loan"
-      MYSQL_ROOT_HOST: "%"
       MYSQL_ROOT_PASSWORD: "zaA41.Vv8_q96/Y>"
       MYSQL_DATABASE:  "application"
       MYSQL_USER: "CrediUserdata"
       MYSQL_PASSWORD: "za.8_q96@Y>"
     ports:
-      - "3316:3306" # Map host port 3316 to container port 3316
+      - "3316:3306" # Map host port 3316 to container port 336
     volumes:
       - loandb_data:/var/lib/mysql/loan/ # Persist data to a Docker volume
-      - ./init-scripts:/docker-entrypoint-init-loandb.d/loan # Optional: for initial SQL scripts
+      - ./init-scripts/loan:/docker-entrypoint-initdb.d # Optional: for initial SQL scripts
 
   auth:
     image: auth
@@ -39,12 +37,10 @@ services:
       context: ./MicroservicioAutenticacion
       dockerfile: Deployment/Dockerfile
     container_name: Auth-Services
-    enviroment:
-     SPRING_PROFILES_ACTIVE_ default
     ports:
       - 8080:8080
     depends_on:
-      serviceName: CrediYa_db
+      - mariadb
     networks:
       - crediYa-network
 
@@ -54,13 +50,11 @@ services:
       context: ./MicroservicioSolicitudes
       dockerfile: Deployment/Dockerfile
     container_name: Loan-Services
-    enviroment:
-     SPRING_PROFILES_ACTIVE_ default
     ports:
       - 8081:8081
     depends_on:
-      - CrediYa_loan_db
-      - Auth-Services
+      - dbloan
+      - auth
     networks:
       - crediYa-network
 

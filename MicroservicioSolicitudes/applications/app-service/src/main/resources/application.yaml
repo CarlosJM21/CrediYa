@@ -3,9 +3,9 @@ server:
 spring:
   r2dbc:
     url: "r2dbc:mariadb//localhost:3316"
-    host: "localhost"
+    host: "host.docker.internal"
     port: "3316"
-    database: "Application"
+    database: "application"
     username: "CrediUserdata"
     password: "za.8_q96@Y>"
   application:

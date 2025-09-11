@@ -22,8 +22,8 @@ services:
       dockerfile: Dockerfile
     ports:
       - 8080:8080
-    depends_on:
-      serviceName: CrediYa_db
+   # depends_on:
+   #   - CrediYa_db
  # sonarqube:
  #   image: sonarqube:community
  #   ports:
