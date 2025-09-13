@@ -3,10 +3,12 @@ package co.com.mrcompany.usecase.loanapplication;
 import co.com.mrcompany.model.CustomExceptions.amontOutOfRange;
 import co.com.mrcompany.model.CustomExceptions.typeInvalidException;
 import co.com.mrcompany.model.CustomExceptions.userNotFount;
+import co.com.mrcompany.model.StatusEnum;
 import co.com.mrcompany.model.application.Application;
 import co.com.mrcompany.model.application.gateways.ApplicationRepository;
 import co.com.mrcompany.model.loantype.LoanType;
 import co.com.mrcompany.model.loantype.gateways.LoanTypeRepository;
+import co.com.mrcompany.model.sqs.ISQSSender;
 import co.com.mrcompany.model.token.Token;
 import co.com.mrcompany.model.userauth.gateways.UserAuthRepository;
 import co.com.mrcompany.usecase.token.TokenLoanUseCase;
@@ -24,6 +26,7 @@ public class ApplicationCommandUseCase implements ILoanApplicationUseCase {
     private final LoanTypeRepository typeRepository;
     private final UserAuthRepository userAuthRepository;
     private final TokenLoanUseCase tokenUseCase;
+    private final ISQSSender sqsSender;
 
     @Override
     public Mono<Application> save(Application loanApplication, Token token) {
@@ -56,8 +59,20 @@ public class ApplicationCommandUseCase implements ILoanApplicationUseCase {
     }
 
     @Override
+    public Mono<Integer> UpdateStatus(StatusEnum status, UUID id) {
+        return repository.UpdateStatus(status.ordinal(),id)
+                         .map(n -> { this.sendEmail(status.ordinal(),id);
+                                             return n; } );
+    }
+
+    @Override
     public Flux<Application> findByEmail(String email) {
         return repository.findByEmail(email);
+    }
+
+    private Mono<String> sendEmail(Integer status, UUID id){
+      String message = String.format("{ \"id\": \"{0}\"  \"status\": \"{1}\" }",id.toString(), status.toString()) ;
+        return sqsSender.send(message);
     }
 
     private Mono<LoanType> validAmount(LoanType loanType, Application app) {
@@ -73,7 +88,6 @@ public class ApplicationCommandUseCase implements ILoanApplicationUseCase {
                 .flatMap(data->{
                            var application = data.getT1();
                            var tokenInner = data.getT2();
-
 
                           return Mono.just(application)
                                      .filterWhen(a ->userAuthRepository.ValidateUser(application.getEmail(),tokenInner.getToken())

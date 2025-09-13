@@ -5,6 +5,8 @@ import co.com.mrcompany.model.application.ApplicationDetail;
 import co.com.mrcompany.model.loantype.LoanType;
 import co.com.mrcompany.model.status.Status;
 import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.Parameter;
+import io.swagger.v3.oas.annotations.Parameters;
 import io.swagger.v3.oas.annotations.media.Content;
 import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.parameters.RequestBody;
@@ -18,8 +20,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.reactive.function.server.RouterFunction;
 import org.springframework.web.reactive.function.server.ServerResponse;
 
-import static org.springframework.web.reactive.function.server.RequestPredicates.GET;
-import static org.springframework.web.reactive.function.server.RequestPredicates.POST;
+import static javax.management.Query.in;
+import static org.springframework.web.reactive.function.server.RequestPredicates.*;
 import static org.springframework.web.reactive.function.server.RouterFunctions.route;
 
 @Configuration
@@ -50,8 +52,20 @@ public class RouterRest {
             @RouterOperation( path = "/api/loan/details",
                     produces = { MediaType.APPLICATION_JSON_VALUE }, method = RequestMethod.GET, beanClass = Handler.class, beanMethod = "appDetails",
                     operation = @Operation( operationId = "appDetails",
-                            responses = { @ApiResponse(responseCode = "200", description = "Get Loan application paginted.",
-                                    content = @Content( schema = @Schema(implementation = ApplicationDetail.class)))}
+                            responses = { @ApiResponse(responseCode = "200", description = "Get Loan application paginated.",
+                                    content = @Content( schema = @Schema(implementation = ApplicationDetail.class)))},
+                            parameters = {
+                                    @Parameter(name = "page", description = "Page number", example = "1", required = true),
+                                    @Parameter(name = "size", description = "pagination's size ", example = "3", required = true),
+                                    @Parameter(name = "status", description = "status of application loan ", example = "pending")
+                            }
+                    )
+            ),
+            @RouterOperation( path = "/api/loan/setStatus/{Id}/{Status}",
+                    produces = { MediaType.APPLICATION_JSON_VALUE }, method = RequestMethod.PATCH, beanClass = Handler.class, beanMethod = "setStatus",
+                    operation = @Operation( operationId = "setStatus",
+                            responses = { @ApiResponse(responseCode = "200", description = "Set status Loan application.",
+                                    content = @Content( schema = @Schema(implementation = Integer.class)))}
                     )
             )
     })
@@ -60,6 +74,7 @@ public class RouterRest {
                 .andRoute(GET("/api/status"), handler::statusList)
                 .andRoute(GET("/api/types"), handler::loanTypes)
                 .andRoute(GET("/api/loan/details"), handler::appDetails)
+                .andRoute(PATCH("/api/loan/setStatus/{Id}/{Status}"), handler::setStatus)
                 .andRoute(GET("/api/loan/test"), handler::testOk);
     }
 }

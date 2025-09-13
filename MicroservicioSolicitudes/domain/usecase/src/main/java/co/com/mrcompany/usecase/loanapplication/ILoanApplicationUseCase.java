@@ -1,5 +1,6 @@
 package co.com.mrcompany.usecase.loanapplication;
 
+import co.com.mrcompany.model.StatusEnum;
 import co.com.mrcompany.model.application.Application;
 import co.com.mrcompany.model.token.Token;
 import reactor.core.publisher.Flux;
@@ -20,4 +21,6 @@ public interface ILoanApplicationUseCase{
     Flux<Application> allFilter(Integer offset, Integer size, Integer status );
 
     Mono<Long> countByStatus(Integer status);
+
+    Mono<Integer> UpdateStatus(StatusEnum status, UUID id);
 }

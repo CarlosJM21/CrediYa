@@ -41,6 +41,12 @@ public class ApplicationRepositoryAdapter extends ReactiveAdapterOperations<
     public Mono<Long> countByStatus(Integer status){
        return  repository.countBystatus(status);
     }
+
+    @Override
+    public Mono<Integer> UpdateStatus(Integer status, UUID id){
+        return  repository.UpdateStatus(status,id);
+    }
+
     /*
     @Override
     public Mono<Boolean> existsByEmail(String email) {

@@ -19,6 +19,8 @@ public interface ApplicationRepository {
     Flux<Application> allFilter(Integer offset, Integer size, Integer status );
 
     Mono<Long> countByStatus(Integer status);
+
+    Mono<Integer> UpdateStatus(Integer status, UUID id);
     /*
     Mono<Boolean> existsByEmail(String email);
 
