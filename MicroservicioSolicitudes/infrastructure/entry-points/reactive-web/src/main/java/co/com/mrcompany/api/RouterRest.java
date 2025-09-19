@@ -1,5 +1,6 @@
 package co.com.mrcompany.api;
 
+import co.com.mrcompany.api.dtos.SetStatusRequest;
 import co.com.mrcompany.api.dtos.applicationRequest;
 import co.com.mrcompany.model.application.ApplicationDetail;
 import co.com.mrcompany.model.loantype.LoanType;
@@ -61,11 +62,12 @@ public class RouterRest {
                             }
                     )
             ),
-            @RouterOperation( path = "/api/loan/setStatus/{Id}/{Status}",
+            @RouterOperation( path = "/api/loan/setStatus",
                     produces = { MediaType.APPLICATION_JSON_VALUE }, method = RequestMethod.PATCH, beanClass = Handler.class, beanMethod = "setStatus",
                     operation = @Operation( operationId = "setStatus",
                             responses = { @ApiResponse(responseCode = "200", description = "Set status Loan application.",
-                                    content = @Content( schema = @Schema(implementation = Integer.class)))}
+                                    content = @Content( schema = @Schema(implementation = Integer.class)))},
+                            requestBody = @RequestBody( content = @Content(schema = @Schema(implementation = SetStatusRequest.class )))
                     )
             )
     })
@@ -74,7 +76,7 @@ public class RouterRest {
                 .andRoute(GET("/api/status"), handler::statusList)
                 .andRoute(GET("/api/types"), handler::loanTypes)
                 .andRoute(GET("/api/loan/details"), handler::appDetails)
-                .andRoute(PATCH("/api/loan/setStatus/{Id}/{Status}"), handler::setStatus)
+                .andRoute(PATCH("/api/loan/setStatus"), handler::setStatus)
                 .andRoute(GET("/api/loan/test"), handler::testOk);
     }
 }

@@ -5,9 +5,11 @@ import co.com.mrcompany.model.application.gateways.ApplicationRepository;
 import co.com.mrcompany.model.loantype.LoanType;
 import co.com.mrcompany.model.loantype.gateways.LoanTypeRepository;
 import co.com.mrcompany.model.userauth.gateways.UserAuthRepository;
+import co.com.mrcompany.usecase.loanapplication.ApplicationCommandUseCase;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
+import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 import reactor.core.publisher.Flux;
@@ -22,6 +24,9 @@ import static org.mockito.Mockito.when;
 
 @ExtendWith(MockitoExtension.class)
 public class LoanTypeUseCaseTest {
+
+    @InjectMocks
+    LoanTypeUseCase useCase;
 
     @Mock
     LoanTypeRepository repository;
@@ -47,7 +52,7 @@ public class LoanTypeUseCaseTest {
     void findByIdApp() {
         when(repository.findById(any(Integer.class))).thenReturn(Mono.just(loan));
 
-        Mono<LoanType> result = repository.findById(id);
+        Mono<LoanType> result = useCase.findById(id);
 
         StepVerifier.create(result)
                 .expectNextMatches(value -> value.getId().equals(loan.getId()))
@@ -58,7 +63,7 @@ public class LoanTypeUseCaseTest {
     void findAllApp() {
         when(repository.findAll()).thenReturn(Flux.just(loan));
 
-        Flux<LoanType> result = repository.findAll();
+        Flux<LoanType> result = useCase.findAll();
 
         StepVerifier.create(result)
                 .expectNextMatches(value -> value.getId().equals(loan.getId()))
@@ -69,7 +74,7 @@ public class LoanTypeUseCaseTest {
     void findAByEmailApp() {
         when(repository.existsById(any(Integer.class))).thenReturn(Mono.just(true));
 
-        Mono<Boolean> result = repository.existsById(id);
+        Mono<Boolean> result = useCase.existsById(id);
 
         StepVerifier.create(result)
                 .expectNextMatches(value -> value.equals(true))

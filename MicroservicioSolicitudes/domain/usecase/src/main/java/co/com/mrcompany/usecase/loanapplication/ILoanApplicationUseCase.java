@@ -22,5 +22,5 @@ public interface ILoanApplicationUseCase{
 
     Mono<Long> countByStatus(Integer status);
 
-    Mono<Integer> UpdateStatus(StatusEnum status, UUID id);
+    Mono<Integer> UpdateStatus(StatusEnum status, UUID id, String email);
 }

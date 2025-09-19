@@ -2,6 +2,7 @@ package co.com.mrcompany.api.mappers;
 
 import co.com.mrcompany.api.dtos.ApplicationResponse;
 import co.com.mrcompany.api.dtos.applicationRequest;
+import co.com.mrcompany.model.StatusEnum;
 import co.com.mrcompany.model.application.Application;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
@@ -11,9 +12,13 @@ import org.mapstruct.ReportingPolicy;
 public interface ApplicationMapper {
 
    // @Mapping( source = "idStatus", target = "idStatus" )
-   // @Mapping( source = "idStatus", target = "status" )
+    @Mapping( source = "idStatus", target = "status" )
     ApplicationResponse toResponse(Application domain);
 
     @Mapping( source = "typeId", target = "idLoanType" )
     Application toDomain(applicationRequest request);
+
+    default Integer map(String value) {
+        return StatusEnum.valueOf(value).ordinal();
+    }
 }

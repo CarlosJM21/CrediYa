@@ -6,6 +6,7 @@ import co.com.mrcompany.model.CustomExceptions.userNotFount;
 import co.com.mrcompany.model.StatusEnum;
 import co.com.mrcompany.model.application.Application;
 import co.com.mrcompany.model.application.gateways.ApplicationRepository;
+import co.com.mrcompany.model.dtos.SendQueue;
 import co.com.mrcompany.model.loantype.LoanType;
 import co.com.mrcompany.model.loantype.gateways.LoanTypeRepository;
 import co.com.mrcompany.model.sqs.ISQSSender;
@@ -13,6 +14,7 @@ import co.com.mrcompany.model.token.Token;
 import co.com.mrcompany.model.userauth.gateways.UserAuthRepository;
 import co.com.mrcompany.usecase.token.TokenLoanUseCase;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
@@ -59,10 +61,15 @@ public class ApplicationCommandUseCase implements ILoanApplicationUseCase {
     }
 
     @Override
-    public Mono<Integer> UpdateStatus(StatusEnum status, UUID id) {
-        return repository.UpdateStatus(status.ordinal(),id)
-                         .map(n -> { this.sendEmail(status.ordinal(),id);
-                                             return n; } );
+    public Mono<Integer> UpdateStatus(StatusEnum status, UUID id, String email) {
+        return repository.UpdateStatus(status.ordinal(), id)
+                .log("insert in repository")
+                .flatMap(n ->
+                        this.sendEmail(new SendQueue(id.toString(),email, status.toString()))
+                                .doOnSuccess(msg -> System.out.println("Mensaje enviado: " + msg))
+                                .doOnError(error -> System.out.println("Error al enviar mensaje: " + error.getMessage()))
+                                .thenReturn(n)
+                );
     }
 
     @Override
@@ -70,9 +77,8 @@ public class ApplicationCommandUseCase implements ILoanApplicationUseCase {
         return repository.findByEmail(email);
     }
 
-    private Mono<String> sendEmail(Integer status, UUID id){
-      String message = String.format("{ \"id\": \"{0}\"  \"status\": \"{1}\" }",id.toString(), status.toString()) ;
-        return sqsSender.send(message);
+    private Mono<String> sendEmail( SendQueue message){
+        return sqsSender.send(message).log("send menssage");
     }
 
     private Mono<LoanType> validAmount(LoanType loanType, Application app) {

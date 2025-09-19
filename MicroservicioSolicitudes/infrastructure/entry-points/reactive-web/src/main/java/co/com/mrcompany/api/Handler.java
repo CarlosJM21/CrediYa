@@ -1,5 +1,6 @@
 package co.com.mrcompany.api;
 
+import co.com.mrcompany.api.dtos.SetStatusRequest;
 import co.com.mrcompany.api.dtos.applicationRequest;
 import co.com.mrcompany.api.mappers.ApplicationMapper;
 import co.com.mrcompany.model.StatusEnum;
@@ -87,11 +88,11 @@ private final JwtProvider jwtProvider;
     }
 
     public Mono<ServerResponse> setStatus(ServerRequest serverRequest) {
-        UUID id = UUID.fromString(serverRequest.pathVariable("Id"));
-        StatusEnum status =  StatusEnum.valueOf(serverRequest.pathVariable("Status"));
 
-        return  loanAppUseCase.UpdateStatus(status,id)
-                .log("set status")
+        return serverRequest.bodyToMono( SetStatusRequest.class)
+                .log( "set status loan" )
+                .flatMap( r ->
+                        loanAppUseCase.UpdateStatus( StatusEnum.valueOf(r.status.toUpperCase()),UUID.fromString(r.id),r.email))
                 .flatMap(ServerResponse.ok()::bodyValue);
     }
 

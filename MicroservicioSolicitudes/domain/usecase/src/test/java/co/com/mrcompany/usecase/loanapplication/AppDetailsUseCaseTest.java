@@ -11,6 +11,7 @@ import co.com.mrcompany.model.userauth.gateways.UserAuthRepository;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
+import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 import reactor.core.publisher.Flux;
@@ -23,13 +24,13 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 
-import static org.mockito.ArgumentMatchers.any;
+import static org.mockito.ArgumentMatchers.*;
 import static org.mockito.Mockito.when;
 
 @ExtendWith(MockitoExtension.class)
 public class AppDetailsUseCaseTest {
 
-    @Mock
+    @InjectMocks
     AppDetailUseCase appDetailUseCase;
 
     @Mock
@@ -120,8 +121,10 @@ public class AppDetailsUseCaseTest {
 
     @Test
     void appDetail() {
-        when(appDetailUseCase.appDetail(any(Integer.class), any(Integer.class), any(Integer.class), any(Token.class)))
-                            .thenReturn(Mono.just(pageDetail));
+       when(userAuthRepository.ValidateUser( anyString(), anyString())).thenReturn(Mono.just(user));
+       when(loanRepository.findById(anyInt())).thenReturn(Mono.just(type));
+       when(appUseCase.countByStatus(anyInt())).thenReturn(Mono.just(total));
+        when(appUseCase.allFilter(anyInt(),anyInt(),anyInt())).thenReturn(Flux.just(app));
 
         Mono<Page<ApplicationDetail>> result = appDetailUseCase.appDetail(size,page,status, token);
 
@@ -129,24 +132,4 @@ public class AppDetailsUseCaseTest {
                 .expectNextMatches(value -> value.totalItems.equals(total))
                 .verifyComplete();
     }
-/*
-        when(appUseCase.countByStatus(any(Integer.class))).thenReturn(Mono.just(total));
-        when(appUseCase.allFilter(any(Integer.class), any(Integer.class), any(Integer.class)))
-                .thenReturn(Flux.just(app));
-
-        when(loanRepository.findById(any(Integer.class))).thenReturn(Mono.just(type));
-
-        when(userAuthRepository.ValidateUser(any(String.class),any(String.class))).thenReturn(Mono.just(user));
-
-    @Test
-    void appDetail() {
-        when(appDetailUseCase.EnrichApplication(any(Application.class), any(Token.class)))
-                .thenReturn(Mono.just(appDetail));
-
-        Mono<Page<ApplicationDetail>> result = appDetailUseCase.appDetail(size,page,status, token);
-
-        StepVerifier.create(result)
-                .expectNextMatches(value -> value.totalItems.equals(total))
-                .verifyComplete();
-    }*/
 }

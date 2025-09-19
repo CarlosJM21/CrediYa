@@ -43,11 +43,10 @@ public class TokenUseCase  implements  ITokenUseCase{
 
     @Override
     public Mono<Boolean> edit(Token token) {
-        //TODO: terminar de ajustar la logica
         return repository.findByEmail(token.getEmail())
                 .filter(t -> t.getIsValid().equals(true))
                 .collectList()
-                .switchIfEmpty(Mono.error(new IllegalArgumentException("The token is Invalid."))) // TODO: create custom error
+                .switchIfEmpty(Mono.error(new InvalidTokenException()))
                 .flatMap(lt -> repository.save(lt.getFirst()))
                 .hasElement();
     }
@@ -64,7 +63,7 @@ public class TokenUseCase  implements  ITokenUseCase{
                 .thenReturn( userRepository.findByEmail(user.getEmail())
                         .filterWhen(u -> encoder.matches(user.getPassword(), u.getPassword()))
                         .switchIfEmpty(Mono.error(new BadCredentialsException()))
-                        .map(u ->  provider.createToken(u))
+                        .map(provider::createToken)
                         .flatMap(repository::save))
                 .flatMap(r -> r);
     }
@@ -77,12 +76,12 @@ public class TokenUseCase  implements  ITokenUseCase{
                          .switchIfEmpty(Mono.error(new InvalidTokenException()))
                          .collectList()
                          .map(l-> l.stream().max( Comparator.comparing(Token::getCreatedAt)).get())
-                         .filter(t -> t.getIsValid())
+                         .filter(Token::getIsValid)
                          .switchIfEmpty(Mono.error(new TokenExpiresException()))
                          .map( u -> provider.validate(u.getToken())); //validar expiracion
     }
 
-    private Mono<Boolean> InvalidatedTokens(User user){
+    protected Mono<Boolean> InvalidatedTokens(User user){
         return repository.findByEmail(user.getEmail())
                 .filter(t -> t.getIsValid().equals(true))
                 .collectList()
@@ -92,16 +91,14 @@ public class TokenUseCase  implements  ITokenUseCase{
                 .hasElements();
     }
 
-    private Token SetValues(Token token){
+    protected Token SetValues(Token token){
 
         token.setIsValid(false);
         return token;
     }
 
-    private Flux<Token> SetValues(List<Token> tokens){
-        tokens.forEach(t ->{
-            t.setIsValid(false);
-        });
+    protected Flux<Token> SetValues(List<Token> tokens){
+        tokens.forEach(t -> t.setIsValid(false));
         return Flux.fromIterable(tokens);
     }
 }
