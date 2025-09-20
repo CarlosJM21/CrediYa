@@ -7,6 +7,7 @@ import co.com.mrcompany.model.status.gateways.StatusRepository;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
+import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 import reactor.core.publisher.Flux;
@@ -20,6 +21,9 @@ import static org.mockito.Mockito.when;
 
 @ExtendWith(MockitoExtension.class)
 public class StatusUseCaseTest {
+
+    @InjectMocks
+    StatusUseCase useCase;
 
     @Mock
     StatusRepository repository;
@@ -43,7 +47,7 @@ public class StatusUseCaseTest {
     void findByIdApp() {
         when(repository.findById(any(Integer.class))).thenReturn(Mono.just(status));
 
-        Mono<Status> result = repository.findById(id);
+        Mono<Status> result = useCase.findById(id);
 
         StepVerifier.create(result)
                 .expectNextMatches(value -> value.getId().equals(status.getId()))
@@ -54,7 +58,7 @@ public class StatusUseCaseTest {
     void findAllApp() {
         when(repository.findAll()).thenReturn(Flux.just(status));
 
-        Flux<Status> result = repository.findAll();
+        Flux<Status> result = useCase.findAll();
 
         StepVerifier.create(result)
                 .expectNextMatches(value -> value.getId().equals(status.getId()))
@@ -65,7 +69,7 @@ public class StatusUseCaseTest {
     void findAByEmailApp() {
         when(repository.existsById(any(Integer.class))).thenReturn(Mono.just(true));
 
-        Mono<Boolean> result = repository.existsById(id);
+        Mono<Boolean> result = useCase.existsById(id);
 
         StepVerifier.create(result)
                 .expectNextMatches(value -> value.equals(true))

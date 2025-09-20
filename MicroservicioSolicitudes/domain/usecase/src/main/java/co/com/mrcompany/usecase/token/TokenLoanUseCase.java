@@ -33,7 +33,7 @@ public class TokenLoanUseCase implements ITokenLoanUseCase {
         return repository.findAll();
     }
 
-    private Mono<Boolean> DeleteExist(Token token)
+    public Mono<Boolean> DeleteExist(Token token)
     {
         return this.findAll()
                 .hasElements()

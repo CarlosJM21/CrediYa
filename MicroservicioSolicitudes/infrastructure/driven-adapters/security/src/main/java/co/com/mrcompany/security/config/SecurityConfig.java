@@ -42,8 +42,9 @@ public class SecurityConfig {
                                             "/").permitAll()
                         .pathMatchers("/api/loan/Apply")
                                 .hasAnyRole("1","2","3")
-                        .pathMatchers("/api/loan/details")
-                                .hasAnyRole("1","2","3")
+                        .pathMatchers("/api/loan/details",
+                                                 "/api/loan/setStatus")
+                                .hasAnyRole("2","3")
                         .anyExchange().authenticated()
                 )
                 .addFilterAfter(jwtFilter, SecurityWebFiltersOrder.FIRST)

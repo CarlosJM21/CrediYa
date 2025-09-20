@@ -7,11 +7,11 @@ server:
 spring:
   r2dbc:
     url: "r2dbc:mariadb//localhost:3306"
-    host: "host.docker.internal"
+    host: "host.docker.internal" #"localhost"
     port: "3306"
     database: "auth"
-    username: "CrediUserdata"
-    password: "za.8%q96@Y>"
+    username: "${DB_USER_AUTH}"
+    password: "${DB_PASS_AUTH}"
   application:
     name: "CrediYa.Autenticacion"
   devtools:
@@ -37,6 +37,6 @@ loggin:
   level:
     org.springframework.r2dbc=DEBUG:
 jwt:
-  secret: "MWphLWQhaDNpX2RycWh8Zjl6N0BzYjRyOHfDsWx5Lzk3eGZ2LnY1"   #${JWT_SECRET}
+  secret: "${JWT_SECRET}"
   expiration: 3600000 #${JWT_EXPIRATION}
   expirationRefresh: 300000   #${JWT_EXPIRATION_REFRESH}

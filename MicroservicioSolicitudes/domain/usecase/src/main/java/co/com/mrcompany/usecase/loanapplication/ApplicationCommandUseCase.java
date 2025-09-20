@@ -3,14 +3,18 @@ package co.com.mrcompany.usecase.loanapplication;
 import co.com.mrcompany.model.CustomExceptions.amontOutOfRange;
 import co.com.mrcompany.model.CustomExceptions.typeInvalidException;
 import co.com.mrcompany.model.CustomExceptions.userNotFount;
+import co.com.mrcompany.model.StatusEnum;
 import co.com.mrcompany.model.application.Application;
 import co.com.mrcompany.model.application.gateways.ApplicationRepository;
+import co.com.mrcompany.model.dtos.SendQueue;
 import co.com.mrcompany.model.loantype.LoanType;
 import co.com.mrcompany.model.loantype.gateways.LoanTypeRepository;
+import co.com.mrcompany.model.sqs.ISQSSender;
 import co.com.mrcompany.model.token.Token;
 import co.com.mrcompany.model.userauth.gateways.UserAuthRepository;
 import co.com.mrcompany.usecase.token.TokenLoanUseCase;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
@@ -24,6 +28,7 @@ public class ApplicationCommandUseCase implements ILoanApplicationUseCase {
     private final LoanTypeRepository typeRepository;
     private final UserAuthRepository userAuthRepository;
     private final TokenLoanUseCase tokenUseCase;
+    private final ISQSSender sqsSender;
 
     @Override
     public Mono<Application> save(Application loanApplication, Token token) {
@@ -56,8 +61,24 @@ public class ApplicationCommandUseCase implements ILoanApplicationUseCase {
     }
 
     @Override
+    public Mono<Integer> UpdateStatus(StatusEnum status, UUID id, String email) {
+        return repository.UpdateStatus(status.ordinal(), id)
+                .log("insert in repository")
+                .flatMap(n ->
+                        this.sendEmail(new SendQueue(id.toString(),email, status.toString()))
+                                .doOnSuccess(msg -> System.out.println("Mensaje enviado: " + msg))
+                                .doOnError(error -> System.out.println("Error al enviar mensaje: " + error.getMessage()))
+                                .thenReturn(n)
+                );
+    }
+
+    @Override
     public Flux<Application> findByEmail(String email) {
         return repository.findByEmail(email);
+    }
+
+    private Mono<String> sendEmail( SendQueue message){
+        return sqsSender.send(message).log("send menssage");
     }
 
     private Mono<LoanType> validAmount(LoanType loanType, Application app) {
@@ -73,7 +94,6 @@ public class ApplicationCommandUseCase implements ILoanApplicationUseCase {
                 .flatMap(data->{
                            var application = data.getT1();
                            var tokenInner = data.getT2();
-
 
                           return Mono.just(application)
                                      .filterWhen(a ->userAuthRepository.ValidateUser(application.getEmail(),tokenInner.getToken())
