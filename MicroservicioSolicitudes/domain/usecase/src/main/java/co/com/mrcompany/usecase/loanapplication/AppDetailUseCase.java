@@ -58,7 +58,7 @@ public class AppDetailUseCase implements IAppDetailUseCase{
     {
         appDetail.setLoanType(type.getTypeName());
         appDetail.setRate(type.getRate());
-        appDetail.setMonthAmount( type.MonthAmount(appDetail.getAmount(),appDetail.getTerm()));
+        appDetail.setMonthAmount( type.monthAmount(appDetail.getAmount(),appDetail.getTerm()));
         return appDetail;
     }
 
