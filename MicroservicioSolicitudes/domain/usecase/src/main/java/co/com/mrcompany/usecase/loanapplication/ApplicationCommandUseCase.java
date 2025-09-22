@@ -19,6 +19,8 @@ import co.com.mrcompany.model.userauth.gateways.UserAuthRepository;
 import co.com.mrcompany.usecase.token.TokenLoanUseCase;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
@@ -38,6 +40,7 @@ public class ApplicationCommandUseCase implements ILoanApplicationUseCase {
     private final TokenLoanUseCase tokenUseCase;
     private final ISQSSender sqsSender;
     private final ISQSBorrow sqsBorrow;
+    private final Logger logger = LoggerFactory.getLogger(getClass());
 
     private static String subjectStatus = "Estado de tu credito";
 
@@ -77,8 +80,8 @@ public class ApplicationCommandUseCase implements ILoanApplicationUseCase {
                 .log("insert in repository")
                 .flatMap(n ->
                         this.sendEmail(new SendQueue(email,subjectStatus,generateMessage(id.toString(),status.toString(), plan)))
-                                .doOnSuccess(msg -> System.out.println("Mensaje enviado: " + msg))
-                                .doOnError(error -> System.out.println("Error al enviar mensaje: " + error.getMessage()))
+                                .doOnSuccess(msg -> logger.info("Mensaje enviado: " + msg))
+                                .doOnError(error -> logger.error("Error al enviar mensaje: " + error.getMessage()))
                                 .thenReturn(n)
                 );
     }
@@ -128,8 +131,8 @@ public class ApplicationCommandUseCase implements ILoanApplicationUseCase {
                     .filter( x -> loanType.getAutoValidation())
                     .flatMap(x ->  this.generateData(loanType,app,token)
                                                 .flatMap(sqsBorrow::send)
-                                                .doOnSuccess(msg -> System.out.println("Mensaje enviado: " + msg))
-                                                .doOnError(error -> System.out.println("Error al enviar mensaje: " + error.getMessage()))
+                                                .doOnSuccess(msg -> logger.info("Mensaje enviado: " + msg))
+                                                .doOnError(error -> logger.error("Error al enviar mensaje: " + error.getMessage()))
                     )
                     .thenReturn(app);
     }
