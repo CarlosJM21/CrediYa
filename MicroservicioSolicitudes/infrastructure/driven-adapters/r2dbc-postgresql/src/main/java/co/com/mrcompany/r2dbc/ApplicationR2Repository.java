@@ -10,6 +10,7 @@ import org.springframework.data.repository.reactive.ReactiveCrudRepository;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
+import java.math.BigInteger;
 import java.util.UUID;
 
 
@@ -32,4 +33,10 @@ public interface ApplicationR2Repository extends ReactiveCrudRepository<Applicat
     @Modifying
     @Query("UPDATE applications SET id_status = :status where id = :id")
     Mono<Integer> UpdateStatus(@Param("status")  Integer status,@Param("id")  UUID id);
+
+    @Query("SELECT sum(a.amount) total\n" +
+            "FROM applications a\n" +
+            "WHERE a.email = COALESCE(:email, a.email)  and  a.id_status = COALESCE(:status, a.id_status)\n" +
+            "Group By a.email")
+    Mono<BigInteger> SumLoansByStatus(@Param("email") String email, @Param("status")  Integer status );
 }

@@ -3,10 +3,10 @@ package co.com.mrcompany.usecase.loanapplication;
 import co.com.mrcompany.model.StatusEnum;
 import co.com.mrcompany.model.application.Application;
 import co.com.mrcompany.model.application.gateways.ApplicationRepository;
-import co.com.mrcompany.model.dtos.SendQueue;
+import co.com.mrcompany.model.sqs.SendQueue;
 import co.com.mrcompany.model.loantype.LoanType;
 import co.com.mrcompany.model.loantype.gateways.LoanTypeRepository;
-import co.com.mrcompany.model.sqs.ISQSSender;
+import co.com.mrcompany.model.sqs.gateway.ISQSSender;
 import co.com.mrcompany.model.token.Token;
 import co.com.mrcompany.model.userauth.UserAuth;
 import co.com.mrcompany.model.userauth.gateways.UserAuthRepository;
@@ -16,8 +16,6 @@ import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
-import org.springframework.boot.test.context.TestConfiguration;
-import org.springframework.context.annotation.Bean;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 import reactor.test.StepVerifier;
@@ -29,7 +27,7 @@ import static org.mockito.ArgumentMatchers.*;
 import static org.mockito.Mockito.when;
 
 @ExtendWith(MockitoExtension.class)
-public class ApplicationUseCaseTest {
+class ApplicationUseCaseTest {
 
     @InjectMocks
     ApplicationCommandUseCase useCase;
@@ -178,7 +176,7 @@ public class ApplicationUseCaseTest {
         when(sqsSender.send(any(SendQueue.class))).thenReturn(Mono.just(id.toString()));
         when(repository.UpdateStatus(anyInt(), any(UUID.class))).thenReturn(Mono.just(offset));
 
-        Mono<Integer> result = useCase.UpdateStatus(statusEnum, id,email);
+        Mono<Integer> result = useCase.UpdateStatus(statusEnum, id,email,null);
 
         StepVerifier.create(result)
                 .expectNextMatches(value -> value.equals(offset))

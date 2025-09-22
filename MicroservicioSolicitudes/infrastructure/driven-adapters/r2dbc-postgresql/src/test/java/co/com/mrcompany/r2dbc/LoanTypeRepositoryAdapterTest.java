@@ -24,7 +24,6 @@ import static org.mockito.Mockito.when;
 
 @ExtendWith(MockitoExtension.class)
 class LoanTypeRepositoryAdapterTest {
-    // TODO: change four you own tests
 
     @InjectMocks
     LoanTypeRepositoryAdapter repositoryAdapter;

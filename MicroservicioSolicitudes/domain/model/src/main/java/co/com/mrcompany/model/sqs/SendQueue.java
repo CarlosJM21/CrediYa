@@ -1,4 +1,4 @@
-package co.com.mrcompany.model.dtos;
+package co.com.mrcompany.model.sqs;
 
 import lombok.*;
 
@@ -8,7 +8,7 @@ import lombok.*;
 @AllArgsConstructor
 @Builder(toBuilder = true)
 public class SendQueue {
-    public String id;
-    public String email;
-    public String status;
+    private String email;
+    private String subject;
+    private String message;
 }

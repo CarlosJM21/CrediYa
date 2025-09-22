@@ -1,15 +1,10 @@
 package co.com.mrcompany.model.loantype;
-import co.com.mrcompany.model.RateType;
-import lombok.Builder;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+
+import lombok.*;
 
 import java.math.BigDecimal;
 import java.math.BigInteger;
 import java.math.RoundingMode;
-import java.text.DecimalFormat;
 
 @Getter
 @Setter
@@ -25,7 +20,7 @@ public class LoanType {
     private String        rateType;
     private Boolean       autoValidation;
 
-    public BigDecimal MonthAmount(BigInteger debt, Integer term){
+    public BigDecimal monthAmount(BigInteger debt, Integer term){
         var innerRate = this.rateToNM();
 
         var bigTerm = new BigDecimal(term.toString());
@@ -37,7 +32,7 @@ public class LoanType {
         return quota.multiply(bigRate);
     }
 
-    protected  double  rateToNM()
+    public double rateToNM()
     {
         switch (this.rateType)
         {

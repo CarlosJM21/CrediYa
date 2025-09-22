@@ -1,8 +1,5 @@
 package co.com.mrcompany.usecase.token;
 
-import co.com.mrcompany.model.dtos.SendQueue;
-import co.com.mrcompany.model.sqs.ISQSSender;
-import co.com.mrcompany.model.status.Status;
 import co.com.mrcompany.model.token.Token;
 import co.com.mrcompany.model.token.gateways.tokenRepository;
 import org.junit.jupiter.api.BeforeEach;
@@ -15,14 +12,12 @@ import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 import reactor.test.StepVerifier;
 
-import java.util.UUID;
-
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.ArgumentMatchers.anyString;
 import static org.mockito.Mockito.when;
 
 @ExtendWith(MockitoExtension.class)
-public class TokenUseCaseTest {
+class TokenUseCaseTest {
 
     @InjectMocks
     TokenLoanUseCase useCase;

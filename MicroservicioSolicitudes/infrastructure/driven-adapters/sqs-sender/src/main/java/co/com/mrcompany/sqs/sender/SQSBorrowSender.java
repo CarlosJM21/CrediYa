@@ -1,11 +1,8 @@
 package co.com.mrcompany.sqs.sender;
 
 import co.com.mrcompany.model.sqs.DataLoan;
-import co.com.mrcompany.model.sqs.SendQueue;
-import co.com.mrcompany.model.sqs.gateway.ISQSSender;
+import co.com.mrcompany.model.sqs.gateway.ISQSBorrow;
 import co.com.mrcompany.sqs.sender.config.SQSSenderProperties;
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.stereotype.Service;
@@ -17,12 +14,13 @@ import software.amazon.awssdk.services.sqs.model.SendMessageResponse;
 @Service
 @Log4j2
 @RequiredArgsConstructor
-public class SQSSender implements ISQSSender {
+public class SQSBorrowSender implements ISQSBorrow {
     private final SQSSenderProperties properties;
     private final SqsAsyncClient client;
-    private final JsonHelper<SendQueue> helper;
+    private final JsonHelper<DataLoan> helper;
 
-    public Mono<String> send(SendQueue message) {
+    @Override
+    public Mono<String> send(DataLoan message) {
         return Mono.fromCallable(() -> buildRequest(helper.toJson(message)))
                 .flatMap(request -> Mono.fromFuture(client.sendMessage(request)))
                 .doOnNext(response -> log.debug("Message sent {}", response.messageId()))
@@ -31,7 +29,7 @@ public class SQSSender implements ISQSSender {
 
     private SendMessageRequest buildRequest(String message) {
         return SendMessageRequest.builder()
-                .queueUrl(properties.queueUrl())
+                .queueUrl(properties.queueBorrowUrl())
                 .messageBody(message)
                 .build();
     }

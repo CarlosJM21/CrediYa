@@ -1,6 +1,6 @@
-package co.com.mrcompany.model.sqs;
+package co.com.mrcompany.model.sqs.gateway;
 
-import co.com.mrcompany.model.dtos.SendQueue;
+import co.com.mrcompany.model.sqs.SendQueue;
 import reactor.core.publisher.Mono;
 
 public interface ISQSSender {

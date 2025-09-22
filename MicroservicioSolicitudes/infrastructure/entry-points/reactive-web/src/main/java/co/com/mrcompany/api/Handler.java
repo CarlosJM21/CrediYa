@@ -92,7 +92,7 @@ private final JwtProvider jwtProvider;
         return serverRequest.bodyToMono( SetStatusRequest.class)
                 .log( "set status loan" )
                 .flatMap( r ->
-                        loanAppUseCase.UpdateStatus( StatusEnum.valueOf(r.status.toUpperCase()),UUID.fromString(r.id),r.email))
+                        loanAppUseCase.UpdateStatus( StatusEnum.valueOf(r.status.toUpperCase()),UUID.fromString(r.id),r.email, null))
                 .flatMap(ServerResponse.ok()::bodyValue);
     }
 
