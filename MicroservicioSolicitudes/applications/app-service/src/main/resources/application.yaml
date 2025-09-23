@@ -38,7 +38,7 @@ adapter:
     url: "http://localhost:8080"
   sqs:
     region: "us-east-2"
-    queueUrl: "https://sqs.us-east-2.amazonaws.com/933270736007/CrediYaLoan"
+    queueUrl: "https://sqs.us-east-0.amazonaws.com/003000001001/CrediYa"
    # endpoint: "http://localhost:4566" # For localstack only
 resilience4j:
   circuitbreaker:
