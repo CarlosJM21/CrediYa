@@ -15,11 +15,9 @@ El proyecto esta estructurado en modulos siguiendo esta arquitectura limpia:
 
 ## Tecnologias ☕
 
-- ☕ Java 21+
-- 🌐 Spring WebFlux
-- 🗄️ R2DBC (Mariadb_MySQL)
+- 🍃 Spring WebFlux & ☕ Java 21+ ​​
 - 🏗️ Gradle (multi-modulo)
-- 📋 SLF4J for logging
+- 🦭 R2DBC (Mariadb_MySQL)
 - 📄 OpenAPI/Swagger para documentación de API's
 
 ## Referencias 🔗
