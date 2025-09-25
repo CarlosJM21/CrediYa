@@ -15,7 +15,7 @@ public class ApplicationResponse {
     public BigInteger amount;
     public Integer    term;
     public String     email;
-    public Integer    idStatus;
+    public String     idStatus;
     @Builder.Default
     public String     status = "Pending"; 
     public Integer    idLoanType;

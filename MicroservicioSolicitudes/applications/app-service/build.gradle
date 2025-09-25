@@ -1,6 +1,10 @@
 apply plugin: 'org.springframework.boot'
 
 dependencies {
+	implementation project(':loggin')
+	implementation project(':sqs-listener')
+	implementation project(':sqs-sender')
+	implementation project(':metrics')
 	implementation project(':security')
 	implementation project(':rest-consumer')
 	implementation 'org.springframework.boot:spring-boot-starter-webflux'

@@ -12,6 +12,7 @@ import org.springframework.transaction.reactive.TransactionalOperator;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
+import java.math.BigInteger;
 import java.util.UUID;
 
 @Repository
@@ -41,6 +42,17 @@ public class ApplicationRepositoryAdapter extends ReactiveAdapterOperations<
     public Mono<Long> countByStatus(Integer status){
        return  repository.countBystatus(status);
     }
+
+    @Override
+    public Mono<Integer> UpdateStatus(Integer status, UUID id){
+        return  repository.UpdateStatus(status,id);
+    }
+
+    @Override
+    public Mono<BigInteger> SumLoansByStatus(String email, Integer status) {
+        return repository.SumLoansByStatus(email, status);
+    }
+
     /*
     @Override
     public Mono<Boolean> existsByEmail(String email) {

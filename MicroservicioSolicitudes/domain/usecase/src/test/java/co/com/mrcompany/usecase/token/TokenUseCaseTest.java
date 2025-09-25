@@ -1,27 +1,29 @@
 package co.com.mrcompany.usecase.token;
 
-import co.com.mrcompany.model.status.Status;
 import co.com.mrcompany.model.token.Token;
 import co.com.mrcompany.model.token.gateways.tokenRepository;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
+import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 import reactor.test.StepVerifier;
 
-import java.util.UUID;
-
 import static org.mockito.ArgumentMatchers.any;
+import static org.mockito.ArgumentMatchers.anyString;
 import static org.mockito.Mockito.when;
 
 @ExtendWith(MockitoExtension.class)
-public class TokenUseCaseTest {
+class TokenUseCaseTest {
+
+    @InjectMocks
+    TokenLoanUseCase useCase;
 
     @Mock
-    TokenLoanUseCase repository;
+    tokenRepository repository;
 
     private Token token;
 
@@ -44,9 +46,10 @@ public class TokenUseCaseTest {
 
     @Test
     void createToken() {
-        when(repository.create(any(Token.class))).thenReturn(Mono.just(token));
+        when(repository.findAll()).thenReturn(Flux.just(token));
+        when(repository.save(any(Token.class))).thenReturn(Mono.just(token));
 
-        Mono<Token> result = repository.create(token);
+        Mono<Token> result = useCase.create(token);
 
         StepVerifier.create(result)
                 .expectNextMatches(value -> value.getToken().equals(token.getToken()))
@@ -55,9 +58,9 @@ public class TokenUseCaseTest {
 
     @Test
     void deleteToken() {
-        when(repository.delete(any(Token.class))).thenReturn(Mono.just(true));
+        when(repository.deleteById(any(Token.class))).thenReturn(Mono.just(true));
 
-        Mono<Boolean> result = repository.delete(token);
+        Mono<Boolean> result = useCase.delete(token);
 
         StepVerifier.create(result)
                 .expectNextMatches(value -> value.equals(Boolean.TRUE))
@@ -68,7 +71,7 @@ public class TokenUseCaseTest {
     void findByEmail() {
         when(repository.findByEmail(any(String.class))).thenReturn(Mono.just(token));
 
-        Mono<Token> result = repository.findByEmail(email);
+        Mono<Token> result = useCase.findByEmail(email);
 
         StepVerifier.create(result)
                 .expectNextMatches(value -> value.getToken().equals(token.getToken()))
@@ -79,10 +82,22 @@ public class TokenUseCaseTest {
     void findAll() {
         when(repository.findAll()).thenReturn(Flux.just(token));
 
-        Flux<Token> result = repository.findAll();
+        Flux<Token> result = useCase.findAll();
 
         StepVerifier.create(result)
                 .expectNextMatches(value -> value.getToken().equals(token.getToken()))
+                .verifyComplete();
+    }
+
+    @Test
+    void deleteExistToken() {
+        when(repository.findAll()).thenReturn(Flux.just(token));
+        when(repository.findByEmail(anyString())).thenReturn(Mono.just(token));
+
+        Mono<Boolean> result = useCase.DeleteExist(token);
+
+        StepVerifier.create(result)
+                .expectNextMatches(value -> value.equals(Boolean.TRUE))
                 .verifyComplete();
     }
 }

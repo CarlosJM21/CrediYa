@@ -1,0 +1,83 @@
+services:
+  mariadb:
+    image: 'mariadb:latest'
+    container_name: CrediYa_db
+    restart: unless-stopped
+    environment:
+      COMPOSE_PROJECT_NAME: "Auth"
+      MYSQL_ROOT_PASSWORD: "${ROOT_PASS}"
+      MYSQL_DATABASE: "auth"
+      MYSQL_USER: "${DB_USER_AUTH}"
+      MYSQL_PASSWORD: "${DB_PASS_AUTH}"
+    ports:
+      - "3306:3306" # Map host port 3306 to container port 3306
+    volumes:
+      - mariadb_data:/var/lib/mysql/auth/ # Persist data to a Docker volume
+      - ./init-scripts/auth:/docker-entrypoint-initdb.d # Optional: for initial SQL scripts
+    networks:
+      - crediYa-network
+
+  dbloan:
+    image: 'mariadb:latest'
+    container_name: CrediYa_loan_db
+    restart: unless-stopped
+    environment:
+      COMPOSE_PROJECT_NAME: "Loan"
+      MYSQL_ROOT_PASSWORD: "${ROOT_PASS}"
+      MYSQL_DATABASE:  "application"
+      MYSQL_USER: "${DB_USER}"
+      MYSQL_PASSWORD: "${DB_PASS}"
+    ports:
+      - "3316:3306" # Map host port 3316 to container port 3306
+    volumes:
+      - loandb_data:/var/lib/mysql/loan/ # Persist data to a Docker volume
+      - ./init-scripts/loan:/docker-entrypoint-initdb.d # Optional: for initial SQL scripts
+    networks:
+      - crediYa-network  
+
+  auth:
+    image: auth
+    build:
+      context: ./MicroservicioAutenticacion
+      dockerfile: Deployment/Dockerfile
+    container_name: Auth-Services
+    env_file: '.env'
+    environment:
+      DB_USER_AUTH : "${DB_USER_AUTH}"
+      DB_PASS_AUTH : "${DB_PASS_AUTH}"
+      JWT_SECRET : "${JWT_SECRET}"
+    ports:
+      - 8080:8080
+    depends_on:
+      - mariadb
+    networks:
+      - crediYa-network
+
+  loan:
+    image: loan
+    build:
+      context: ./MicroservicioSolicitudes
+      dockerfile: Deployment/Dockerfile
+    container_name: Loan-Services
+    env_file: '.env'
+    environment:
+      DB_USER : "${DB_USER}"
+      DB_PASS : "${DB_PASS}"
+      JWT_SECRET : "${JWT_SECRET}"
+      AWS_ACCESS_KEY_ID : "${AWS_ACCESS_KEY_ID}"
+      AWS_SECRET_ACCESS_KEY : "${AWS_SECRET_ACCESS_KEY}"
+    ports:
+      - 8081:8081
+    depends_on:
+      - dbloan
+      - auth
+    networks:
+      - crediYa-network
+
+volumes:
+  mariadb_data:
+  loandb_data:
+
+networks:
+  crediYa-network:
+    driver: bridge

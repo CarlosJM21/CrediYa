@@ -34,6 +34,7 @@ public class SecurityConfig {
                 .authorizeExchange(Specs ->
                         Specs.pathMatchers( "/v3/api-docs",
                                             "/v3/api-docs/**",
+                                            "/webjars/swagger-ui/**",
                                             "/swagger-ui.html",
                                             "/swagger-ui/",
                                             "/api/status",
@@ -41,8 +42,9 @@ public class SecurityConfig {
                                             "/").permitAll()
                         .pathMatchers("/api/loan/Apply")
                                 .hasAnyRole("1","2","3")
-                        .pathMatchers("/api/loan/details")
-                                .hasAnyRole("1","2","3")
+                        .pathMatchers("/api/loan/details",
+                                                 "/api/loan/setStatus")
+                                .hasAnyRole("2","3")
                         .anyExchange().authenticated()
                 )
                 .addFilterAfter(jwtFilter, SecurityWebFiltersOrder.FIRST)

@@ -32,7 +32,6 @@ public class AppDetailUseCase implements IAppDetailUseCase{
                         .flatMap( s ->{return appUseCase.countByStatus(status)
                                                     .map(c ->{ pageItem.dataPagination(size, page,c);
                                                                          return pageItem;});
-                                             //pageItem;
                         })
                         .flatMap( p -> appUseCase.allFilter(offset,size, status)
                                                                    .flatMap( a -> this.EnrichApplication(a,token))
@@ -58,14 +57,14 @@ public class AppDetailUseCase implements IAppDetailUseCase{
     {
         appDetail.setLoanType(type.getTypeName());
         appDetail.setRate(type.getRate());
-        appDetail.setMonthAmount( type.MonthAmount(appDetail.getAmount(),appDetail.getTerm()));
+        appDetail.setMonthAmount( type.monthAmount(appDetail.getAmount(),appDetail.getTerm()));
         return appDetail;
     }
 
     private Mono<ApplicationDetail> getUserData(ApplicationDetail appDetail,Token token) {
 
-        var localUser = users.size() == 0 ?  new UserAuth().builder().email("").build()
-                         : users.stream().filter(u->  u.email.equals(appDetail.getEmail())).toList().getFirst();
+        var localUser = users.size() == 0  ?  new UserAuth().builder().email("").build()
+                         : users.stream().filter(u->  u.email.equals(appDetail.getEmail())).findFirst().orElse(new UserAuth().builder().email("").build());
 
         return  users.size() == 0 && localUser.email.isEmpty()
                 ?  userAuthRepository.ValidateUser(appDetail.getEmail(), token.getToken())

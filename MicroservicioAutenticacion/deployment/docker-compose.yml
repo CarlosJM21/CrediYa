@@ -5,7 +5,7 @@ services:
     restart: unless-stopped
     environment:
       COMPOSE_PROJECT_NAME: "Auth"
-      MYSQL_ROOT_HOST: "%"
+     # MYSQL_ROOT_HOST: "%"
       MYSQL_ROOT_PASSWORD: "zaA41.Vv8_q96/Y>"
       MYSQL_DATABASE: "auth"
       MYSQL_USER: "CrediUserdata"
@@ -22,8 +22,8 @@ services:
       dockerfile: Dockerfile
     ports:
       - 8080:8080
-    depends_on:
-      serviceName: CrediYa_db
+   # depends_on:
+   #   - CrediYa_db
  # sonarqube:
  #   image: sonarqube:community
  #   ports:

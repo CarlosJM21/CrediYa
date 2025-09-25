@@ -58,27 +58,27 @@ public class UserUseCase  implements  IUserUseCase{
         return validUUID(id).flatMap(repository::delete);
     }
 
-    protected Mono<UUID> validUUID(UUID id){
+    public Mono<UUID> validUUID(UUID id){
         return Mono.just(id)
                     .filter(x -> id != null && !id.toString().trim().isEmpty() )
                     .switchIfEmpty(Mono.error(new NullPointerException("The values of field \"Id\" don't allow null")));
     }
 
-    protected Mono<User> UserIsNull(User user)
+    public Mono<User> UserIsNull(User user)
     {
         return Mono.just(user)
                     .filter(u -> user != null)
                     .switchIfEmpty(Mono.error(new NullPointerException("The User to edit can't be null.")));
     }
 
-    protected Mono<User> validRangeSalary(User user)
+    public Mono<User> validRangeSalary(User user)
     {
         return Mono.just(user).filter(u -> u.getBaseSalary().compareTo( BigInteger.ZERO)  >= 0 &&
                                                  u.getBaseSalary().compareTo(BigInteger.valueOf(15000000)) <= 0)
                 .switchIfEmpty(Mono.error( new WrongSalaryRangeException()));
     }
 
-    protected Mono<User> NotExistsUser(User user)
+    public Mono<User> NotExistsUser(User user)
     {
         return  repository.existsByEmail(user.getEmail())
                           .filter(u -> !u)

@@ -4,6 +4,7 @@ import co.com.mrcompany.model.application.Application;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
+import java.math.BigInteger;
 import java.util.UUID;
 
 public interface ApplicationRepository {
@@ -19,6 +20,10 @@ public interface ApplicationRepository {
     Flux<Application> allFilter(Integer offset, Integer size, Integer status );
 
     Mono<Long> countByStatus(Integer status);
+
+    Mono<Integer> UpdateStatus(Integer status, UUID id);
+
+    Mono<BigInteger> SumLoansByStatus(String email, Integer status );
     /*
     Mono<Boolean> existsByEmail(String email);
 

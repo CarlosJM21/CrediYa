@@ -3,11 +3,11 @@ server:
 spring:
   r2dbc:
     url: "r2dbc:mariadb//localhost:3316"
-    host: "localhost"
+    host: "localhost" #"host.docker.internal"
     port: "3316"
-    database: "Application"
-    username: "CrediUserdata"
-    password: "za.8_q96@Y>"
+    database: "application"
+    username: "${DB_USER}"
+    password: "${DB_PASS}"
   application:
     name: "Loan_App"
   devtools:
@@ -36,6 +36,10 @@ adapter:
   restconsumer:
     timeout: 5000
     url: "http://localhost:8080"
+  sqs:
+    region: "us-east-2"
+    queueUrl: "https://sqs.us-east-2.amazonaws.com/933270736007/CrediYaLoan"
+    queueBorrowUrl: "https://sqs.us-east-2.amazonaws.com/933270736007/Borrowing_Cap"
 resilience4j:
   circuitbreaker:
     instances:
@@ -58,6 +62,17 @@ resilience4j:
         minimumNumberOfCalls: 10
         waitDurationInOpenState: "10s"
 jwt:
-  secret: "MWphLWQhaDNpX2RycWh8Zjl6N0BzYjRyOHfDsWx5Lzk3eGZ2LnY1"   #${JWT_SECRET}
-  expiration: 3600000 #${JWT_EXPIRATION}
-  expirationRefresh: 300000   #${JWT_EXPIRATION_REFRESH}
+  secret: "${JWT_SECRET}"
+  expiration: 3600000
+  expirationRefresh: 300000
+aws:
+  accessKey: "${AWS_ACCESS_KEY_ID}"
+  secretKey: "${AWS_SECRET_ACCESS_KEY}"
+entrypoint:
+  sqs:
+    region: "us-east-2"
+    queueUrl: "https://sqs.us-east-2.amazonaws.com/933270736007/Borrow_Response2"
+    waitTimeSeconds: 20
+    maxNumberOfMessages: 10
+    visibilityTimeoutSeconds: 10
+    numberOfThreads: 1

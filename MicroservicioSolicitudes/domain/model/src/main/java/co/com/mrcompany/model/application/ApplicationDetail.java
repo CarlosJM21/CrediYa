@@ -17,7 +17,7 @@ public class ApplicationDetail {
     private String     name = "Pedro Prueba";
     private String     email;
     @Builder.Default
-    private BigInteger baseSalary = new BigInteger("1000000");
+    private BigInteger baseSalary = BigInteger.valueOf(1000000);
     private String     status;
     private String     loanType;
     private BigInteger amount;

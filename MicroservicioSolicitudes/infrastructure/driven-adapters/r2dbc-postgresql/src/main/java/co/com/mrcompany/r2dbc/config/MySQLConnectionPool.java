@@ -36,6 +36,8 @@ public class MySQLConnectionPool {
                 .allowPublicKeyRetrieval(true)
                 .build();
 
+        System.out.println(properties.username());
+
         ConnectionFactory connectionFactory = new MariadbConnectionFactory(dbConfiguration);
 
         ConnectionPoolConfiguration poolConfiguration = ConnectionPoolConfiguration.builder()

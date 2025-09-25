@@ -1,8 +1,12 @@
 package co.com.mrcompany.api;
 
+import co.com.mrcompany.api.dto.request.LoginDto;
 import co.com.mrcompany.api.dto.request.UserRequestDto;
+import co.com.mrcompany.api.dto.response.TokenResponse;
 import co.com.mrcompany.api.dto.response.UserResponseDto;
+import co.com.mrcompany.api.mappers.TokenMapper;
 import co.com.mrcompany.api.mappers.UserMapper;
+import co.com.mrcompany.model.token.Token;
 import co.com.mrcompany.model.user.User;
 import co.com.mrcompany.usecase.user.IUserUseCase;
 import org.assertj.core.api.Assertions;
@@ -38,14 +42,39 @@ class RouterRestTest {
     @MockitoBean
     private UserMapper userMapper;
 
+    @MockitoBean
+    private TokenMapper tokenMapper;
+
     private UserRequestDto userRequest;
 
     private UserResponseDto userResponse;
     private User user;
 
+    private LoginDto login;
+    private String tokenText = "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJwZWRybzFAeW9wbWFpbC5jb20iLCJ0eXBlIjoiYmFzaWMiLCJyb2xlcyI6W3siYXV0aG9yaXR5IjoiMSJ9XSwiaWF0IjoxNzU3MjE4MjMxLCJleHAiOjE3NTcyMjE4MzF9.myzDnIEKok0f_jjGbowLKamAZugZ4jhAkCYSHjXw4_Q";
+    private Token token;
+    private TokenResponse tokenResponse;
 
     @BeforeEach
     void setup() {
+        login = new LoginDto("carlos_1@yopmail.com","1234567@");
+
+        var hora = LocalDate.parse("2020-01-08");
+
+        token = new Token( UUID.randomUUID(),
+                           "carlos_1@yopmail.com",
+                           "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJwZWRybzFAeW9wbWFpbC5jb20iLCJ0eXBlIjoiYmFzaWMiLCJyb2xlcyI6W3siYXV0aG9yaXR5IjoiMSJ9XSwiaWF0IjoxNzU3MjE4MjMxLCJleHAiOjE3NTcyMjE4MzF9.myzDnIEKok0f_jjGbowLKamAZugZ4jhAkCYSHjXw4_Q",
+                           "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJwZWRybzFAeW9wbWFpbC5jb20iLCJ0eXBlIjoiYmFzaWMiLCJyb2xlcyI6W3siYXV0aG9yaXR5IjoiMSJ9XSwiaWF0IjoxNzU3MjE4MjMxLCJleHAiOjE3NTcyMjE4MzF9.myzDnIEKok0f_jjGbowLKamAZugZ4jhAkCYSHjXw4_Q",
+                           true,
+                            hora
+                         );
+
+        tokenResponse = new TokenResponse();
+        tokenResponse.setToken(token.getToken());
+        tokenResponse.setTokenRefresh(token.getTokenRefresh());
+        tokenResponse.setIsValid(token.getIsValid());
+
+
         userRequest = new UserRequestDto();
         userRequest.setName("Pedro");
         userRequest.setLastName("Perez");
@@ -88,12 +117,31 @@ class RouterRestTest {
     }
 
     @Test
+    void login() {
+        Mockito.when(tokenMapper.toResponse(any(Token.class)))
+               .thenReturn(tokenResponse);
+
+        webTestClient.post()
+                .uri("/api/Auth/login")
+                .accept(MediaType.APPLICATION_JSON)
+                .bodyValue(login)
+                .exchange()
+                .expectStatus().isOk()
+                .expectBody(TokenResponse.class)
+                .value(u -> {
+                    Assertions.assertThat(u.getToken()).isEqualTo( tokenResponse.getToken());
+                });
+    }
+
+
+    @Test
     void createUserTets() {
         Mockito.when(userMapper.toDomain(any(UserRequestDto.class))).thenReturn(user);
 
         webTestClient.post()
                 .uri("/api/Users/New")
                 .accept(MediaType.APPLICATION_JSON)
+                .header("Authorization", tokenText)
                 .bodyValue(userRequest)
                 .exchange()
                 .expectStatus().isCreated()

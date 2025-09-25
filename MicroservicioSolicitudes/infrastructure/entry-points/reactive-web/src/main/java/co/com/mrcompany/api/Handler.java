@@ -1,7 +1,9 @@
 package co.com.mrcompany.api;
 
+import co.com.mrcompany.api.dtos.SetStatusRequest;
 import co.com.mrcompany.api.dtos.applicationRequest;
 import co.com.mrcompany.api.mappers.ApplicationMapper;
+import co.com.mrcompany.model.StatusEnum;
 import co.com.mrcompany.model.token.Token;
 import co.com.mrcompany.security.jwt.JwtProvider;
 import co.com.mrcompany.usecase.loanapplication.IAppDetailUseCase;
@@ -18,6 +20,8 @@ import org.springframework.web.reactive.function.server.ServerResponse;
 import reactor.core.publisher.Mono;
 
 import java.net.URI;
+import java.util.Optional;
+import java.util.UUID;
 
 @Slf4j
 @Component
@@ -38,9 +42,6 @@ private final JwtProvider jwtProvider;
         String tokenText = serverRequest.headers().asHttpHeaders()
                                         .getFirst(HttpHeaders.AUTHORIZATION)
                                         .replace("Bearer ", "");
-
-        /*var token = this.saveToken(tokenText)
-                        .map(t -> {log.info(t.getId().toString()); return t;});*/
 
         return serverRequest.bodyToMono( applicationRequest.class)
                 .log( "create loan" )
@@ -67,21 +68,33 @@ private final JwtProvider jwtProvider;
         return ServerResponse.ok().bodyValue("");
     }
 
+    //@QueryParam("username")
     public Mono<ServerResponse> appDetails(ServerRequest serverRequest) {
-       // URI location = URI.create("/api/loan/details");
-
         String tokenText = serverRequest.headers().asHttpHeaders()
                 .getFirst(HttpHeaders.AUTHORIZATION)
                 .replace("Bearer ", "");
 
-        var size = serverRequest.queryParam("size").isEmpty() ? 3 : Integer.parseInt(serverRequest.queryParam("size").get());
-        var page = serverRequest.queryParam("page").isEmpty() ? 1 : Integer.parseInt(serverRequest.queryParam("page").get());
-        var status = serverRequest.queryParam("status").isEmpty() ? 1 : Integer.parseInt(serverRequest.queryParam("status").get());
+        var pathSize = serverRequest.queryParam("size");
+        var pathPage = serverRequest.queryParam("page");
+        var pathStatus =serverRequest.queryParam("status");
+
+        var size = pathSize.isPresent() ? Integer.parseInt(pathSize.get()) : 3;
+        var page = pathPage.isEmpty() ? 1 : Integer.parseInt(pathPage.get());
+        var status = pathStatus.isEmpty() ? null : Integer.parseInt(pathStatus.get()); //TODO:validate and set to enum
 
         return this.saveToken(tokenText)
                     .log("Details applications")
                    .flatMap( t-> detailUseCase.appDetail( size,page,status ,t))
                    .flatMap(ServerResponse.ok()::bodyValue);
+    }
+
+    public Mono<ServerResponse> setStatus(ServerRequest serverRequest) {
+
+        return serverRequest.bodyToMono( SetStatusRequest.class)
+                .log( "set status loan" )
+                .flatMap( r ->
+                        loanAppUseCase.UpdateStatus( StatusEnum.valueOf(r.status.toUpperCase()),UUID.fromString(r.id),r.email, Optional.empty()))
+                .flatMap(ServerResponse.ok()::bodyValue);
     }
 
     private Mono<Token> saveToken(String tokenText) {

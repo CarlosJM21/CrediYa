@@ -1,25 +1,37 @@
 package co.com.mrcompany.consumer;
 
 
+import co.com.mrcompany.consumer.mapper.UserMapper;
+import co.com.mrcompany.consumer.mapper.tokenMapper;
 import okhttp3.mockwebserver.MockResponse;
 import okhttp3.mockwebserver.MockWebServer;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
+import org.mockito.Mock;
+import org.mockito.junit.jupiter.MockitoExtension;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.web.reactive.function.client.WebClient;
 import reactor.test.StepVerifier;
+
 import java.io.IOException;
 
-
+@ExtendWith(MockitoExtension.class)
 class RestConsumerTest {
 
     private static RestConsumer restConsumer;
 
     private static MockWebServer mockBackEnd;
+
+    @Mock
+    private static UserMapper mapper;
+
+    @Mock
+    private static tokenMapper tokenMapper;
 
 
     @BeforeAll
@@ -27,7 +39,7 @@ class RestConsumerTest {
         mockBackEnd = new MockWebServer();
         mockBackEnd.start();
         var webClient = WebClient.builder().baseUrl(mockBackEnd.url("/").toString()).build();
-        restConsumer = new RestConsumer(webClient);
+        restConsumer = new RestConsumer(webClient,mapper, tokenMapper);
     }
 
     @AfterAll
@@ -47,7 +59,7 @@ class RestConsumerTest {
         var response = restConsumer.ValidateUser("carlos_prueba3@yopmail.com","token");
 
         StepVerifier.create(response)
-                .expectNextMatches(objectResponse -> objectResponse.equals(true))
+                .expectNextMatches(user -> user.getId().equals(true))
                 .verifyComplete();
     }
 

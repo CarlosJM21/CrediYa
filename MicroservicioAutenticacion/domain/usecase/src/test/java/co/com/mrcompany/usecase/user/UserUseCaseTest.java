@@ -1,11 +1,11 @@
 package co.com.mrcompany.usecase.user;
 
+import co.com.mrcompany.model.token.gateways.IPasswordEncoder;
 import co.com.mrcompany.model.user.User;
 import co.com.mrcompany.model.user.gateways.UserRepository;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
-import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 import reactor.core.publisher.Flux;
@@ -19,26 +19,31 @@ import java.util.UUID;
 import static org.mockito.Mockito.*;
 
 @ExtendWith(MockitoExtension.class)
-public class UserUseCaseTests {
+class UserUseCaseTest {
 
-    @Mock
-    private UserUseCase userUseCase;
+    //@InjectMocks
+    private IUserUseCase userUseCase;
 
     @Mock
     private UserRepository userRepository;
+    @Mock
+    private  IPasswordEncoder encoder;
 
     private User userRequest;
     private User userSuccess;
 
-    private UUID id;
+    private static String idText = "06e888d7-8eae-11f0-a63b-ea57337086b9";
+    private static final  UUID id= UUID.fromString(idText);
     private String email;
 
     @BeforeEach
     void setUp(){
+        userUseCase = new UserUseCase(userRepository, encoder);
+
         email = "pedroPerez@yopmail.com";
-        id= UUID.fromString("2aa69b7a-8218-11f0-9817-d6a10ef6d786");
 
         userRequest = new User();
+        userRequest.setId(id);
         userRequest.setName("Pedro");
         userRequest.setLastName("Perez");
         userRequest.setEmail(email);
@@ -48,6 +53,7 @@ public class UserUseCaseTests {
         userRequest.setBirthDate( LocalDate.of(2000, 12, 24));
         userRequest.setCellphone("3102001001");
         userRequest.setAddress("Cll 100 74 # 51");
+        userRequest.setPassword("123456");
 
         userSuccess = new User();
         userSuccess.setId(id);
@@ -60,58 +66,75 @@ public class UserUseCaseTests {
         userSuccess.setBirthDate( LocalDate.of(2000, 12, 24));
         userSuccess.setCellphone("3102001001");
         userSuccess.setAddress("Cll 100 74 # 51");
+        userSuccess.setPassword("123456");
     }
 
     @Test
     void CreatedUserTest(){
-        when(userUseCase.create(any(User.class))).thenReturn(Mono.just(userSuccess));
+        when( userRepository.save(any(User.class))).thenReturn(Mono.just(userSuccess));
+        when( userRepository.existsByEmail(anyString())).thenReturn(Mono.just(Boolean.FALSE));
+        when( encoder.encodeSimple(anyString())).thenReturn("$2a$10$WORYuN8CojVxmzofh.4S9.7dHnSf2703Vusn5/BdTOl37d/7rpJry");
 
         Mono<User> result = userUseCase.create(userRequest);
 
         StepVerifier.create(result)
                 .expectNext(userSuccess)
                 .verifyComplete();
-
-
-        verify(userUseCase, times(1)).create(userRequest);
     }
 
     @Test
     void GetUsersTest(){
-        when(userUseCase.findAll()).thenReturn(Flux.just(userSuccess));
+        when(userRepository.findAll()).thenReturn(Flux.just(userSuccess));
 
         Flux<User> result = userUseCase.findAll();
 
         StepVerifier.create(result)
                 .expectNext(userSuccess)
                 .verifyComplete();
+    }
 
-        verify(userUseCase, times(1)).findAll();
+    @Test
+    void GetUserByEmailTest(){
+        when(userRepository.findByEmail(anyString())).thenReturn(Mono.just(userSuccess));
+
+        Mono<User> result = userUseCase.findByEmail(email);
+
+        StepVerifier.create(result)
+                .expectNext(userSuccess);
     }
 
     @Test
     void GetUserTest(){
-        when(userUseCase.findById(any(UUID.class))).thenReturn(Mono.just(userSuccess));
+        when(userRepository.findById(any(UUID.class))).thenReturn(Mono.just(userSuccess));
 
         Mono<User> result = userUseCase.findById(id);
 
         StepVerifier.create(result)
                 .expectNext(userSuccess)
                 .verifyComplete();
-
-        verify(userUseCase, times(1)).findById(id);
     }
 
     @Test
-    void DeleteUserTest(){
-        when(userUseCase.delete(any(UUID.class))).thenReturn(Mono.just(true));
+    void EditUserTest(){
+        when( userRepository.existsByEmail(anyString())).thenReturn(Mono.just(Boolean.FALSE));
+        when( userRepository.save(any(User.class))).thenReturn(Mono.just(userSuccess));
+
+        Mono<Boolean> result = userUseCase.edit(userRequest);
+
+        StepVerifier.create(result)
+                .expectNext(Boolean.TRUE)
+                 .verifyComplete();
+    }
+
+    @Test
+    void delete(){
+
+        when(userRepository.delete(any(UUID.class))).thenReturn(Mono.just(true));
 
         Mono<Boolean> result = userUseCase.delete(id);
 
         StepVerifier.create(result)
                 .expectNext(true)
                 .verifyComplete();
-
-        verify(userUseCase, times(1)).delete(id);
     }
 }
