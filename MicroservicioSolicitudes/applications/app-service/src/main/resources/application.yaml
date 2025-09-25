@@ -40,6 +40,7 @@ adapter:
     region: "us-east-2"
     queueUrl: "https://sqs.us-east-2.amazonaws.com/933270736007/CrediYaLoan"
     queueBorrowUrl: "https://sqs.us-east-2.amazonaws.com/933270736007/Borrowing_Cap"
+    queueApproved: "https://sqs.us-east-2.amazonaws.com/933270736007/Approved"
 resilience4j:
   circuitbreaker:
     instances:

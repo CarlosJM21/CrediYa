@@ -1,14 +1,34 @@
-##Spring Configuration
 server:
   port: 8080
 spring:
   application:
-    name: CrediYa.Reports
+    name: "CrediYa.Reports"
   devtools:
     add-properties: false
   h2:
     console:
       enabled: true
-      path: /h2
+      path: "/h2"
   profiles:
-    include:
+    include: dev
+aws:
+  region: "us-east-2"
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "health,prometheus"
+  endpoint:
+    health:
+      probes:
+        enabled: true
+cors:
+  allowed-origins: "http://localhost:4200,http://localhost:8080"
+entrypoint:
+  sqs:
+    region: "us-east-2"
+    queueUrl: "https://sqs.us-east-2.amazonaws.com/933270736007/Approved"
+    waitTimeSeconds: 20
+    maxNumberOfMessages: 10
+    visibilityTimeoutSeconds: 10
+    numberOfThreads: 1

@@ -7,11 +7,13 @@ import co.com.mrcompany.model.Ilogger;
 import co.com.mrcompany.model.StatusEnum;
 import co.com.mrcompany.model.application.Application;
 import co.com.mrcompany.model.application.gateways.ApplicationRepository;
+import co.com.mrcompany.model.sqs.Approved;
 import co.com.mrcompany.model.sqs.DataLoan;
 import co.com.mrcompany.model.sqs.QuotaData;
 import co.com.mrcompany.model.sqs.SendQueue;
 import co.com.mrcompany.model.loantype.LoanType;
 import co.com.mrcompany.model.loantype.gateways.LoanTypeRepository;
+import co.com.mrcompany.model.sqs.gateway.ISQSApproved;
 import co.com.mrcompany.model.sqs.gateway.ISQSBorrow;
 import co.com.mrcompany.model.sqs.gateway.ISQSSender;
 import co.com.mrcompany.model.token.Token;
@@ -41,6 +43,7 @@ public class ApplicationCommandUseCase implements ILoanApplicationUseCase {
     private final TokenLoanUseCase tokenUseCase;
     private final ISQSSender sqsSender;
     private final ISQSBorrow sqsBorrow;
+    private final ISQSApproved sqsApproved;
     private final Ilogger logger;
 
     private static String subjectStatus = "Estado de tu credito";
@@ -52,7 +55,9 @@ public class ApplicationCommandUseCase implements ILoanApplicationUseCase {
                 .flatMap(t -> validAmount(t,loanApplication))
                 .flatMap(x ->  this.validUser(loanApplication,token)
                                              .flatMap(repository::save)
-                                             .flatMap(app ->checkAutoValidation(x,app,token)));
+                                             .flatMap(app ->checkAutoValidation(x,app,token))
+                                             .flatMap(app ->notifyApproved(app))
+                );
     }
 
     @Override
@@ -125,6 +130,17 @@ public class ApplicationCommandUseCase implements ILoanApplicationUseCase {
                                                 )
                                      .switchIfEmpty( Mono.error(new userNotFount()) ) ;
                     });
+    }
+
+    private Mono<Application> notifyApproved(Application app) {
+
+        return Mono.just(app)
+                .filter( a -> a.getIdStatus() == StatusEnum.APPROVED.ordinal() )
+                .flatMap( a -> sqsApproved.send( new Approved( a.getId(), a.getAmount()))
+                                                    .doOnSuccess(msg -> logger.logginInfo("Mensaje enviado: " + msg))
+                                                    .doOnError(error -> logger.logginError("Error al enviar mensaje: " + error.getMessage()))
+                )
+                .thenReturn(app);
     }
 
     private Mono<Application> checkAutoValidation(LoanType loanType,Application app, Token token){
@@ -202,11 +218,11 @@ public class ApplicationCommandUseCase implements ILoanApplicationUseCase {
         return text.toString();
     }
 
-    public static String padRight(String s, int n) {
-        return String.format("%-" + n + "s", s);
-    }
-
     public static String padLeft(String s, int n) {
         return String.format("%" + n + "s", s);
+    }
+
+    public static String padRight(String s, int n) {
+        return String.format("%-" + n + "s", s);
     }
 }

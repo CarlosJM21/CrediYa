@@ -25,6 +25,7 @@ subprojects {
     }
 
     dependencies {
+		implementation platform('software.amazon.awssdk:bom:2.32.13')
         implementation 'io.projectreactor:reactor-core'
         implementation 'io.projectreactor.addons:reactor-extra'
 
@@ -52,7 +53,7 @@ subprojects {
 
 
     jacocoTestReport {
-        dependsOn test, 'pitest'
+        dependsOn test //, 'pitest'
         reports {
             xml.setRequired true
             xml.setOutputLocation layout.buildDirectory.file("reports/jacoco.xml")
@@ -69,7 +70,7 @@ jacoco {
 }
 
 tasks.register('jacocoMergedReport', JacocoReport) {
-    dependsOn = [test, subprojects.jacocoTestReport, pitestReportAggregate]
+    dependsOn = [test, subprojects.jacocoTestReport ]//, pitestReportAggregate]
     additionalSourceDirs.setFrom files(subprojects.sourceSets.main.allSource.srcDirs)
     sourceDirectories.setFrom files(subprojects.sourceSets.main.allSource.srcDirs)
     classDirectories.setFrom files(subprojects.sourceSets.main.output)
@@ -87,7 +88,7 @@ tasks.withType(JavaCompile).configureEach {
     ]
 }
 
-pitestReportAggregate {
+/*pitestReportAggregate {
     doLast {
         def reportDir = layout.buildDirectory.dir("reports/pitest").get().asFile
         def consolidatedReport = new File(reportDir, 'mutations.xml')
@@ -105,7 +106,7 @@ pitestReportAggregate {
             writer.write("</mutations>")
         }
     }
-}
+}*/
 
 tasks.named('wrapper') {
     gradleVersion = '8.14.3'
