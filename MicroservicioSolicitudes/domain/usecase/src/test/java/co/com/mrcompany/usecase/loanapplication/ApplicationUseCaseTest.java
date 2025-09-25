@@ -1,8 +1,11 @@
 package co.com.mrcompany.usecase.loanapplication;
 
+import co.com.mrcompany.model.Ilogger;
 import co.com.mrcompany.model.StatusEnum;
 import co.com.mrcompany.model.application.Application;
 import co.com.mrcompany.model.application.gateways.ApplicationRepository;
+import co.com.mrcompany.model.sqs.DataLoan;
+import co.com.mrcompany.model.sqs.QuotaData;
 import co.com.mrcompany.model.sqs.SendQueue;
 import co.com.mrcompany.model.loantype.LoanType;
 import co.com.mrcompany.model.loantype.gateways.LoanTypeRepository;
@@ -20,7 +23,11 @@ import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 import reactor.test.StepVerifier;
 
+import java.math.BigDecimal;
 import java.math.BigInteger;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Optional;
 import java.util.UUID;
 
 import static org.mockito.ArgumentMatchers.*;
@@ -44,9 +51,14 @@ class ApplicationUseCaseTest {
     @Mock
     private ISQSSender sqsSender;
 
+    @Mock
+    private  Ilogger logger;
+
     private Application app;
     private LoanType loanType;
     private UserAuth user;
+    private DataLoan dataLoan;
+    private List<QuotaData> plan ;
 
     private UUID id;
     private String email;
@@ -101,6 +113,26 @@ class ApplicationUseCaseTest {
                 .build();
 
         statusEnum = StatusEnum.APPROVED;
+
+        dataLoan = new DataLoan().toBuilder()
+                                 .loanId(id)
+                                 .email(email)
+                                 .status("Pending")
+                                 .salary(new BigInteger("12000000"))
+                                 .currentLoans(new BigInteger("500000"))
+                                 .tax(0.018)
+                                 .build();
+
+        var data = new QuotaData().toBuilder()
+                                  .number(1)
+                                  .amount(new BigInteger("2500000"))
+                                  .monthQuota( new BigDecimal("2500000"))
+                                  .tax( new BigDecimal("46750.00"))
+                                  .interest( 0.018D )
+                                  .build();
+
+        plan = new ArrayList<QuotaData>();
+        plan.add(data);
     }
 
     @Test
@@ -176,10 +208,34 @@ class ApplicationUseCaseTest {
         when(sqsSender.send(any(SendQueue.class))).thenReturn(Mono.just(id.toString()));
         when(repository.UpdateStatus(anyInt(), any(UUID.class))).thenReturn(Mono.just(offset));
 
-        Mono<Integer> result = useCase.UpdateStatus(statusEnum, id,email,null);
+        Mono<Integer> result = useCase.UpdateStatus(statusEnum, id,email, Optional.empty());
 
         StepVerifier.create(result)
                 .expectNextMatches(value -> value.equals(offset))
                 .verifyComplete();
+    }
+
+    @Test
+    void updateByStatusWithPlan() {
+        when(sqsSender.send(any(SendQueue.class))).thenReturn(Mono.just(id.toString()));
+        when(repository.UpdateStatus(anyInt(), any(UUID.class))).thenReturn(Mono.just(offset));
+
+        Mono<Integer> result = useCase.UpdateStatus(statusEnum, id,email, Optional.of(plan));
+
+        StepVerifier.create(result)
+                .expectNextMatches(value -> value.equals(offset))
+                .verifyComplete();
+    }
+
+    @Test
+    void AWSupdateByStatus() {
+        //when(logger.LogginInfo(anyString()));
+        //when(sqsSender.send(any(SendQueue.class))).thenReturn(Mono.just(id.toString()));
+        when(repository.UpdateStatus(anyInt(), any(UUID.class))).thenReturn(Mono.just(offset));
+
+        Mono result = useCase.AutoUpdateStatus(dataLoan);
+
+        StepVerifier.create(result)
+                .expectComplete();
     }
 }

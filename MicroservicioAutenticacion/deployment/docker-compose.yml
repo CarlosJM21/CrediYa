@@ -5,7 +5,7 @@ services:
     restart: unless-stopped
     environment:
       COMPOSE_PROJECT_NAME: "Auth"
-      MYSQL_ROOT_HOST: "%"
+     # MYSQL_ROOT_HOST: "%"
       MYSQL_ROOT_PASSWORD: "zaA41.Vv8_q96/Y>"
       MYSQL_DATABASE: "auth"
       MYSQL_USER: "CrediUserdata"

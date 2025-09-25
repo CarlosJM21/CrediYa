@@ -3,7 +3,7 @@ server:
 spring:
   r2dbc:
     url: "r2dbc:mariadb//localhost:3316"
-    host: "host.docker.internal"
+    host: "localhost" #"host.docker.internal"
     port: "3316"
     database: "application"
     username: "${DB_USER}"
@@ -39,7 +39,7 @@ adapter:
   sqs:
     region: "us-east-2"
     queueUrl: "https://sqs.us-east-2.amazonaws.com/933270736007/CrediYaLoan"
-    queueBorrowUrl: "https://sqs.us-east-1.amazonaws.com/933270736007/Borrowing_Cap"
+    queueBorrowUrl: "https://sqs.us-east-2.amazonaws.com/933270736007/Borrowing_Cap"
 resilience4j:
   circuitbreaker:
     instances:
@@ -70,9 +70,8 @@ aws:
   secretKey: "${AWS_SECRET_ACCESS_KEY}"
 entrypoint:
   sqs:
-    region: "us-east-1"
-    #endpoint: "http://localhost:4566"
-    queueUrl: "https://sqs.us-east-1.amazonaws.com/933270736007/Borrowing_Response"
+    region: "us-east-2"
+    queueUrl: "https://sqs.us-east-2.amazonaws.com/933270736007/Borrow_Response2"
     waitTimeSeconds: 20
     maxNumberOfMessages: 10
     visibilityTimeoutSeconds: 10

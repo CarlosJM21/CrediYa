@@ -32,7 +32,6 @@ public class AppDetailUseCase implements IAppDetailUseCase{
                         .flatMap( s ->{return appUseCase.countByStatus(status)
                                                     .map(c ->{ pageItem.dataPagination(size, page,c);
                                                                          return pageItem;});
-                                             //pageItem;
                         })
                         .flatMap( p -> appUseCase.allFilter(offset,size, status)
                                                                    .flatMap( a -> this.EnrichApplication(a,token))

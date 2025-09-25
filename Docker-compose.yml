@@ -14,6 +14,8 @@ services:
     volumes:
       - mariadb_data:/var/lib/mysql/auth/ # Persist data to a Docker volume
       - ./init-scripts/auth:/docker-entrypoint-initdb.d # Optional: for initial SQL scripts
+    networks:
+      - crediYa-network
 
   dbloan:
     image: 'mariadb:latest'
@@ -30,6 +32,8 @@ services:
     volumes:
       - loandb_data:/var/lib/mysql/loan/ # Persist data to a Docker volume
       - ./init-scripts/loan:/docker-entrypoint-initdb.d # Optional: for initial SQL scripts
+    networks:
+      - crediYa-network  
 
   auth:
     image: auth
@@ -37,6 +41,11 @@ services:
       context: ./MicroservicioAutenticacion
       dockerfile: Deployment/Dockerfile
     container_name: Auth-Services
+    env_file: '.env'
+    environment:
+      DB_USER_AUTH : "${DB_USER_AUTH}"
+      DB_PASS_AUTH : "${DB_PASS_AUTH}"
+      JWT_SECRET : "${JWT_SECRET}"
     ports:
       - 8080:8080
     depends_on:
@@ -50,6 +59,13 @@ services:
       context: ./MicroservicioSolicitudes
       dockerfile: Deployment/Dockerfile
     container_name: Loan-Services
+    env_file: '.env'
+    environment:
+      DB_USER : "${DB_USER}"
+      DB_PASS : "${DB_PASS}"
+      JWT_SECRET : "${JWT_SECRET}"
+      AWS_ACCESS_KEY_ID : "${AWS_ACCESS_KEY_ID}"
+      AWS_SECRET_ACCESS_KEY : "${AWS_SECRET_ACCESS_KEY}"
     ports:
       - 8081:8081
     depends_on:

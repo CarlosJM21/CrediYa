@@ -3,6 +3,7 @@ package co.com.mrcompany.usecase.loanapplication;
 import co.com.mrcompany.model.CustomExceptions.amontOutOfRange;
 import co.com.mrcompany.model.CustomExceptions.typeInvalidException;
 import co.com.mrcompany.model.CustomExceptions.userNotFount;
+import co.com.mrcompany.model.Ilogger;
 import co.com.mrcompany.model.StatusEnum;
 import co.com.mrcompany.model.application.Application;
 import co.com.mrcompany.model.application.gateways.ApplicationRepository;
@@ -18,19 +19,19 @@ import co.com.mrcompany.model.userauth.UserAuth;
 import co.com.mrcompany.model.userauth.gateways.UserAuthRepository;
 import co.com.mrcompany.usecase.token.TokenLoanUseCase;
 import lombok.RequiredArgsConstructor;
-import lombok.extern.slf4j.Slf4j;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
+import java.math.BigDecimal;
 import java.math.BigInteger;
+import java.math.RoundingMode;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
 
-@Slf4j
+import static java.lang.Math.round;
+
 @RequiredArgsConstructor
 public class ApplicationCommandUseCase implements ILoanApplicationUseCase {
 
@@ -40,7 +41,7 @@ public class ApplicationCommandUseCase implements ILoanApplicationUseCase {
     private final TokenLoanUseCase tokenUseCase;
     private final ISQSSender sqsSender;
     private final ISQSBorrow sqsBorrow;
-    private final Logger logger = LoggerFactory.getLogger(getClass());
+    private final Ilogger logger;
 
     private static String subjectStatus = "Estado de tu credito";
 
@@ -78,10 +79,9 @@ public class ApplicationCommandUseCase implements ILoanApplicationUseCase {
     public Mono<Integer> UpdateStatus(StatusEnum status, UUID id, String email, Optional<List<QuotaData>> plan) {
         return repository.UpdateStatus(status.ordinal(), id)
                 .log("insert in repository")
-                .flatMap(n ->
-                        this.sendEmail(new SendQueue(email,subjectStatus,generateMessage(id.toString(),status.toString(), plan)))
-                                .doOnSuccess(msg -> logger.info("Mensaje enviado: " + msg))
-                                .doOnError(error -> logger.error("Error al enviar mensaje: " + error.getMessage()))
+                .flatMap(n -> this.sendEmail(new SendQueue(email,subjectStatus,generateMessage(id.toString(),status.toString(), plan)))
+                                .doOnSuccess(msg -> logger.logginInfo("Mensaje enviado: " + msg))
+                                .doOnError(error -> logger.logginError("Error al enviar mensaje: " + error.getMessage()))
                                 .thenReturn(n)
                 );
     }
@@ -94,7 +94,9 @@ public class ApplicationCommandUseCase implements ILoanApplicationUseCase {
     @Override
     public Mono AutoUpdateStatus(DataLoan data){
         var status =  StatusEnum.valueOf(data.getStatus().toUpperCase());
-        return this.UpdateStatus(status, data.getIdloan(), data.getEmail(), Optional.of(data.getPlan()));
+        return this.UpdateStatus(status, data.getLoanId(), data.getEmail(), Optional.of(data.getPlan()))
+                   .doOnSuccess(n ->  logger.logginInfo("Result of Auto Update: "+n ))
+                   .then();
     }
 
     private Mono<String> sendEmail( SendQueue message){
@@ -130,9 +132,9 @@ public class ApplicationCommandUseCase implements ILoanApplicationUseCase {
         return  Mono.just(app)
                     .filter( x -> loanType.getAutoValidation())
                     .flatMap(x ->  this.generateData(loanType,app,token)
-                                                .flatMap(sqsBorrow::send)
-                                                .doOnSuccess(msg -> logger.info("Mensaje enviado: " + msg))
-                                                .doOnError(error -> logger.error("Error al enviar mensaje: " + error.getMessage()))
+                                                .flatMap( d-> sqsBorrow.send(d))
+                                                .doOnSuccess(msg -> logger.logginInfo("Mensaje enviado: " + msg))
+                                                .doOnError(error -> logger.logginError("Error al enviar mensaje: " + error.getMessage()))
                     )
                     .thenReturn(app);
     }
@@ -140,13 +142,13 @@ public class ApplicationCommandUseCase implements ILoanApplicationUseCase {
     private Mono<DataLoan> generateData(LoanType loanType, Application app, Token token) {
 
         return Mono.zip( this.getUser(app.getEmail(),token.getToken()) ,
-                         repository.SumLoansByStatus(app.getEmail(), app.getIdStatus()) )
+                         repository.SumLoansByStatus(app.getEmail(), StatusEnum.APPROVED.ordinal()) )
                    .map(data->{
                     var user = data.getT1();
                     var total = data.getT2();
 
                         return DataLoan.builder()
-                               .idloan(app.getId())
+                               .loanId(app.getId())
                                .email(app.getEmail())
                                .amount(app.getAmount())
                                .salary( user.getBaseSalary())
@@ -172,27 +174,31 @@ public class ApplicationCommandUseCase implements ILoanApplicationUseCase {
 
         var text = String.format("Hola, %n Tu credito con id: %s ha sido %s %n",id,status);
 
-        if( !planB.isEmpty() && planB.size() > 0
-                && status.toUpperCase().equals(StatusEnum.APPROVED.toString())){
-            text += "%n"+this.addPlan(planB)+"%n";
-        }
-        text +=  "Un Saludo,%n Team CrediYA";
+        text += this.addPlan(planB, status);
+        text +=  "Un Saludo,\n Team CrediYA";
 
         return text;
     }
 
-    private String addPlan(List<QuotaData> plan){
+    private String addPlan(List<QuotaData> plan, String status){
+
+        if( (plan.isEmpty() || plan.size() <= 0)
+                || !status.toUpperCase().equals(StatusEnum.APPROVED.toString()) ){
+            return "";
+        }
+
         StringBuilder text = new StringBuilder();
-        text.append("| # |   amount   |   capital   |  interest  | tax | %n");
+        text.append("\n|  # |   amount   |    capital    |  interest   | tax  | \n");
 
         plan.forEach( item -> {
-          text.append("|"+padLeft(item.getNumber().toString(),2)+" |"+
-                          padLeft(item.getAmount().toString(), 11)+" |"+
-                          padLeft(item.getMonthQuota().toString(), 12)+" |"+
-                          padLeft(item.getInterest().toString(), 11)+" |"+
-                          padLeft(item.getTax().toString(), 4)+" | %n");
+          text.append("|"+padLeft(item.getNumber().toString(),3)+"|"+
+                          padLeft(item.getAmount().toString(), 11)+"|"+
+                          padLeft(item.getMonthQuota().setScale(2, RoundingMode.HALF_UP).toString(), 12)+"|"+
+                          padLeft(new BigDecimal(item.getInterest()).setScale(2, RoundingMode.HALF_UP).toString(), 11)+"|"+
+                          padLeft(item.getTax().setScale(3, RoundingMode.HALF_UP).toString(), 4)+"| \n");
         });
 
+        text.append("\n");
         return text.toString();
     }
 

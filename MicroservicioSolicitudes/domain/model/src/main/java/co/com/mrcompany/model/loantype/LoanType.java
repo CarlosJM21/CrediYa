@@ -38,7 +38,7 @@ public class LoanType {
         {
             case "EA": //(RateType.EA).name()
                 Double pow = 1.0/12;
-                 return  (Math.pow(( this.rate + 1), pow)-1);
+                 return  (Math.pow(( (this.rate/100) + 1), pow)-1);
             case "NM": //(RateType.NM).toString()
             default:
                 return this.rate;

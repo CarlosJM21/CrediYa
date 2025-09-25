@@ -1,9 +1,10 @@
 package co.com.mrcompany.sqs.sender;
 
-import co.com.mrcompany.model.sqs.SendQueue;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import org.springframework.stereotype.Component;
 
+@Component
 public class JsonHelper<T> {
 
     public String toJson(T dto) {

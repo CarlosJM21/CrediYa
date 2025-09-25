@@ -15,7 +15,7 @@ import java.util.UUID;
 @Builder(toBuilder = true)
 public class DataLoan {
 
-    private UUID             idloan;
+    private UUID             loanId;
     private String           email;
     private BigInteger       salary;
     private BigInteger       currentLoans;

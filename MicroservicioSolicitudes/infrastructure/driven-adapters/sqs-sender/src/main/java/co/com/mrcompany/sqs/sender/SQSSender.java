@@ -23,7 +23,7 @@ public class SQSSender implements ISQSSender {
     private final JsonHelper<SendQueue> helper;
 
     public Mono<String> send(SendQueue message) {
-        return Mono.fromCallable(() -> buildRequest(helper.toJson(message)))
+        return Mono.fromCallable(() -> this.buildRequest(helper.toJson(message)))
                 .flatMap(request -> Mono.fromFuture(client.sendMessage(request)))
                 .doOnNext(response -> log.debug("Message sent {}", response.messageId()))
                 .map(SendMessageResponse::messageId);

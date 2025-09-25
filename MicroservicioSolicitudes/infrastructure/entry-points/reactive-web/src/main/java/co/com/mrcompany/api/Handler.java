@@ -20,6 +20,7 @@ import org.springframework.web.reactive.function.server.ServerResponse;
 import reactor.core.publisher.Mono;
 
 import java.net.URI;
+import java.util.Optional;
 import java.util.UUID;
 
 @Slf4j
@@ -92,7 +93,7 @@ private final JwtProvider jwtProvider;
         return serverRequest.bodyToMono( SetStatusRequest.class)
                 .log( "set status loan" )
                 .flatMap( r ->
-                        loanAppUseCase.UpdateStatus( StatusEnum.valueOf(r.status.toUpperCase()),UUID.fromString(r.id),r.email, null))
+                        loanAppUseCase.UpdateStatus( StatusEnum.valueOf(r.status.toUpperCase()),UUID.fromString(r.id),r.email, Optional.empty()))
                 .flatMap(ServerResponse.ok()::bodyValue);
     }
 

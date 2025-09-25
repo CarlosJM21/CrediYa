@@ -14,6 +14,6 @@ public class QuotaData {
     private  Integer         number;
     private  BigInteger      amount;
     private  BigDecimal      monthQuota;
-    private  BigInteger      tax;
+    private  BigDecimal      tax;
     private  Double          interest;
 }

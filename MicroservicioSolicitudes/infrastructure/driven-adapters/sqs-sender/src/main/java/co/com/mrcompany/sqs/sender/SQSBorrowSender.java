@@ -21,7 +21,7 @@ public class SQSBorrowSender implements ISQSBorrow {
 
     @Override
     public Mono<String> send(DataLoan message) {
-        return Mono.fromCallable(() -> buildRequest(helper.toJson(message)))
+        return Mono.fromCallable(() -> this.buildRequest(helper.toJson(message)))
                 .flatMap(request -> Mono.fromFuture(client.sendMessage(request)))
                 .doOnNext(response -> log.debug("Message sent {}", response.messageId()))
                 .map(SendMessageResponse::messageId);

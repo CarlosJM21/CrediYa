@@ -34,7 +34,7 @@ public interface ApplicationR2Repository extends ReactiveCrudRepository<Applicat
     @Query("UPDATE applications SET id_status = :status where id = :id")
     Mono<Integer> UpdateStatus(@Param("status")  Integer status,@Param("id")  UUID id);
 
-    @Query("SELECT sum(a.amount) total\n" +
+    @Query("SELECT COALESCE(sum(a.amount),0) total\n" +
             "FROM applications a\n" +
             "WHERE a.email = COALESCE(:email, a.email)  and  a.id_status = COALESCE(:status, a.id_status)\n" +
             "Group By a.email")
