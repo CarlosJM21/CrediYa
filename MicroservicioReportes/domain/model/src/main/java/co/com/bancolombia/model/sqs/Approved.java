@@ -11,6 +11,6 @@ import java.util.UUID;
 @AllArgsConstructor
 @Builder(toBuilder = true)
 public class Approved {
-    private UUID loanId;
-    private BigInteger Amount ;
+    private String loanId;
+    private BigInteger amount ;
 }

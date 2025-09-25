@@ -1,5 +1,5 @@
 server:
-  port: 8080
+  port: 8082
 spring:
   application:
     name: "CrediYa.Reports"
@@ -10,7 +10,7 @@ spring:
       enabled: true
       path: "/h2"
   profiles:
-    include: dev
+    include: release
 aws:
   region: "us-east-2"
 management:
@@ -23,7 +23,7 @@ management:
       probes:
         enabled: true
 cors:
-  allowed-origins: "http://localhost:4200,http://localhost:8080"
+  allowed-origins: "http://localhost:4200,http://localhost:8082"
 entrypoint:
   sqs:
     region: "us-east-2"

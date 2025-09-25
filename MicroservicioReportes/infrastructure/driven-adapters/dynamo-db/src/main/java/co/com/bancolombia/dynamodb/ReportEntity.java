@@ -33,6 +33,7 @@ public class ReportEntity {
         this.metrica = id;
     }
 
+    @DynamoDbSortKey
     @DynamoDbAttribute("Cant")
     public Long getCant() {
         return cant;

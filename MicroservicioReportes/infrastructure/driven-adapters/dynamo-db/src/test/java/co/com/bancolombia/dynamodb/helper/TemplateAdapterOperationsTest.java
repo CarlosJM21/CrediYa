@@ -3,6 +3,7 @@ package co.com.bancolombia.dynamodb.helper;
 import co.com.bancolombia.dynamodb.DynamoReportAdapter;
 import co.com.bancolombia.dynamodb.ReportEntity;
 import co.com.bancolombia.model.Report;
+import co.com.bancolombia.model.helpers.IJsonConverter;
 import co.com.bancolombia.model.helpers.Ilogger;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -40,6 +41,9 @@ class TemplateAdapterOperationsTest {
 
     @Mock
     private Ilogger logger;
+
+    @Mock
+    private  IJsonConverter<ReportEntity> reportConverte;
 
     private ReportEntity reportEntity;
     private Report report;
@@ -83,7 +87,7 @@ class TemplateAdapterOperationsTest {
         when(mapper.map(reportEntity, ReportEntity.class)).thenReturn(reportEntity);
 
         DynamoReportAdapter dynamoReportAdapter =
-                new DynamoReportAdapter(dynamoDbEnhancedAsyncClient,dbDynamo, mapper,logger);
+                new DynamoReportAdapter(dynamoDbEnhancedAsyncClient,dbDynamo, mapper,logger,reportConverte);
 
         StepVerifier.create(dynamoReportAdapter.save(report))
                 .expectNextCount(1)
@@ -100,7 +104,7 @@ class TemplateAdapterOperationsTest {
         when(mapper.map(reportEntity, Object.class)).thenReturn("value");
 
         DynamoReportAdapter dynamoReportAdapter =
-                new DynamoReportAdapter(dynamoDbEnhancedAsyncClient,dbDynamo, mapper, logger);
+                new DynamoReportAdapter(dynamoDbEnhancedAsyncClient,dbDynamo, mapper, logger,reportConverte);
 
         StepVerifier.create(dynamoReportAdapter.getById(metrica))
                 .expectNext()
@@ -116,7 +120,7 @@ class TemplateAdapterOperationsTest {
                 .thenReturn(CompletableFuture.completedFuture(reportEntity));
 
         DynamoReportAdapter dynamoReportAdapter =
-                new DynamoReportAdapter(dynamoDbEnhancedAsyncClient,dbDynamo, mapper, logger);
+                new DynamoReportAdapter(dynamoDbEnhancedAsyncClient,dbDynamo, mapper, logger,reportConverte);
 
         StepVerifier.create(dynamoReportAdapter.delete(report))
                 .expectNext()

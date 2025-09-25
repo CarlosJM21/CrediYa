@@ -3,6 +3,7 @@ package co.com.bancolombia.dynamodb;
 import co.com.bancolombia.dynamodb.helper.TemplateAdapterOperations;
 import co.com.bancolombia.model.Report;
 import co.com.bancolombia.model.gateways.ReportRepository;
+import co.com.bancolombia.model.helpers.IJsonConverter;
 import co.com.bancolombia.model.helpers.Ilogger;
 import org.reactivecommons.utils.ObjectMapper;
 import org.springframework.stereotype.Repository;
@@ -27,9 +28,10 @@ public class DynamoReportAdapter extends TemplateAdapterOperations<Report, Strin
 
     private final DynamoDbEnhancedAsyncClient enhanced;
     private final DynamoDbAsyncClient dbDynamo;
+    private final IJsonConverter<ReportEntity> reportConverte;
 
     private static final String index = "Approved";
-    private static final String table = "Reporte";
+    private static final String table = "Report1";
 
     private final Ilogger logger;
 
@@ -39,11 +41,12 @@ public class DynamoReportAdapter extends TemplateAdapterOperations<Report, Strin
             .totalAmount(BigInteger.ZERO)
             .build();
 
-    public DynamoReportAdapter(DynamoDbEnhancedAsyncClient connectionFactory , DynamoDbAsyncClient dynamoDb, ObjectMapper mapper, Ilogger logger) {
-        super(connectionFactory, mapper, d -> mapper.map(d, Report.class), table, "Cant");
+    public DynamoReportAdapter(DynamoDbEnhancedAsyncClient connectionFactory , DynamoDbAsyncClient dynamoDb, ObjectMapper mapper, Ilogger logger, IJsonConverter<ReportEntity> reporConvert) {
+        super(connectionFactory, mapper, d -> mapper.map(d, Report.class), table);
         this.enhanced = connectionFactory;
         this.logger = logger;
         this.dbDynamo = dynamoDb;
+        this.reportConverte = reporConvert;
     }
 
     public Mono<List<Report>> getEntityBySomeKeys(String partitionKey, String sortKey) {
@@ -53,7 +56,7 @@ public class DynamoReportAdapter extends TemplateAdapterOperations<Report, Strin
 
     public Mono<List<Report>> getEntityBySomeKeysByIndex(String partitionKey, String sortKey) {
         QueryEnhancedRequest queryExpression = generateQueryExpression(partitionKey, sortKey);
-        return queryByIndex(queryExpression, "Cant");
+        return queryByIndex(queryExpression);
     }
 
     private QueryEnhancedRequest generateQueryExpression(String partitionKey, String sortKey) {
@@ -66,10 +69,24 @@ public class DynamoReportAdapter extends TemplateAdapterOperations<Report, Strin
     @Override
     public Mono<Report> getReport() {
         var tableItem = enhanced.table(table, TableSchema.fromBean(ReportEntity.class));
+        this.getById("Approved").doOnSuccess(s -> System.out.println(s.getTotalAmount().toString()) );
         return Mono.fromFuture(tableItem.getItem(getRequest()))
-                .map(this::toModel) // OJO ver si convierte cuando es null
+                //.map(this::toModel) // OJO ver si convierte cuando es null
+                .map(entity -> {   reportConverte.toJson(entity);
+                                                    return entity == null ? ReportEmpty
+                                                                   : Report.builder()
+                                                                            .metrica(entity.getMetrica())
+                                                                            .cant(entity.getCant())
+                                                                            .totalAmount(entity.getAmount() == null ? BigInteger.ZERO
+                                                                                                                    : entity.getAmount())
+                                                                            .build();
+                })
                 .switchIfEmpty(Mono.just(ReportEmpty))
                 .doOnError(e -> logger.logginError("GetReport - error", e));
+
+        /*.getById(index)
+                   .doOnSuccess( i -> logger.logginInfo("retorno exitoso: "+ reportConverte.toJson(i) ))
+                   .doOnError(e -> logger.logginError("GetReport - error", e));*/
     }
 
     @Override

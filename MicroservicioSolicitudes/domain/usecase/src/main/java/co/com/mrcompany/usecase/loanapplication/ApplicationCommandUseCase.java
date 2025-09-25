@@ -56,7 +56,7 @@ public class ApplicationCommandUseCase implements ILoanApplicationUseCase {
                 .flatMap(x ->  this.validUser(loanApplication,token)
                                              .flatMap(repository::save)
                                              .flatMap(app ->checkAutoValidation(x,app,token))
-                                             .flatMap(app ->notifyApproved(app))
+
                 );
     }
 
@@ -88,7 +88,8 @@ public class ApplicationCommandUseCase implements ILoanApplicationUseCase {
                                 .doOnSuccess(msg -> logger.logginInfo("Mensaje enviado: " + msg))
                                 .doOnError(error -> logger.logginError("Error al enviar mensaje: " + error.getMessage()))
                                 .thenReturn(n)
-                );
+                )
+                .flatMap(i ->notifyApproved(id).thenReturn(i));
     }
 
     @Override
@@ -132,15 +133,15 @@ public class ApplicationCommandUseCase implements ILoanApplicationUseCase {
                     });
     }
 
-    private Mono<Application> notifyApproved(Application app) {
-
-        return Mono.just(app)
+    private Mono notifyApproved(UUID id) {
+        Application innerApp;
+        return repository.findById(id)
                 .filter( a -> a.getIdStatus() == StatusEnum.APPROVED.ordinal() )
                 .flatMap( a -> sqsApproved.send( new Approved( a.getId(), a.getAmount()))
-                                                    .doOnSuccess(msg -> logger.logginInfo("Mensaje enviado: " + msg))
+                                                    .doOnSuccess(msg -> logger.logginInfo("Mensaje  Approved enviado: " + msg))
                                                     .doOnError(error -> logger.logginError("Error al enviar mensaje: " + error.getMessage()))
                 )
-                .thenReturn(app);
+                .then();
     }
 
     private Mono<Application> checkAutoValidation(LoanType loanType,Application app, Token token){
